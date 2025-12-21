@@ -1,10 +1,10 @@
 #include "../headers/Chunk.h"
 
-// cada vértice: pos(3) uv(2) texID(1)
+// each vertex: pos(3) uv(2) texID(1)
 static constexpr int STRIDE = 6;
 
 // ===============================================
-// TODAS AS FACES EM CCW (vistas de fora)
+// ALL FACES IN CCW
 // glFrontFace(GL_CCW) + glCullFace(GL_BACK)
 // ===============================================
 
