@@ -14,26 +14,26 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
 
 	GLuint vertex, fragment;
 
-	//Compilar o vertex shader
+	//Compile vertex shader
 	vertex = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertex, 1, &vShader, nullptr);
 	glCompileShader(vertex);
 	checkCompileErrors(vertex, "VERTEX");
 
-	//Compilar o fragment shader
+	//Compile fragment shader
 	fragment = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragment, 1, &fShader, nullptr);
 	glCompileShader(fragment);
 	checkCompileErrors(fragment, "FRAGMENT");
 
-	//Criar o programa
+	//Create program
 	ID = glCreateProgram();
 	glAttachShader(ID, vertex);
 	glAttachShader(ID, fragment);
 	glLinkProgram(ID);
 	checkCompileErrors(ID, "PROGRAM");
 
-	//Shaders podem ser deletados
+	//Shaders can be deleted
 	glDeleteShader(vertex);
 	glDeleteShader(fragment);
 }

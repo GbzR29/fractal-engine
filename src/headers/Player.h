@@ -13,7 +13,7 @@ public:
 private:
     Camera camera;
 
-    glm::vec3 position{0.0f, 48.0f, 0.0f};
+    glm::vec3 position{8.0f, 8.0f, 10.0f};
     glm::vec3 velocity{0.0f};
 
     float speed   = 5.0f;

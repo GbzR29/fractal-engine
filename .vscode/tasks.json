@@ -11,11 +11,10 @@
                 "-I${workspaceFolder}/include",
                 "-L${workspaceFolder}/lib",
 
-                // ---- 1. Compilar fontes ----
+                // ===================== Compile Fonts =====================
                 "${workspaceFolder}/src/core/main.cpp",
                 "${workspaceFolder}/src/core/glad.c",   
                 
-                //"${workspaceFolder}/src/core/*.cpp",
                 "${workspaceFolder}/src/core/Shader.cpp",
                 "${workspaceFolder}/src/core/Camera.cpp",
                 "${workspaceFolder}/src/core/TextureLoader.cpp",
@@ -23,16 +22,16 @@
                 "${workspaceFolder}/src/core/Input.cpp",
                 "${workspaceFolder}/src/core/Player.cpp",
                 
-                // ---- 2. Linkar GLFW NA ORDEM CERTA ----
-                "-lglfw3dll",   // tenta com dll primeiro
-                "-lglfw3",      // tenta estático
+                // ===================== Linking dlls =====================
+                "-lglfw3dll",   
+                "-lglfw3",      
                 "-lopengl32",
                 "-lgdi32",
                 "-luser32",
                 "-lkernel32",
                 "-lSDL3.dll",
 
-                // ---- 3. Gerar o .exe ----
+                // ===================== Generate .exe =====================
                 "-o",
                 "${workspaceFolder}/build/main.exe"
             ],

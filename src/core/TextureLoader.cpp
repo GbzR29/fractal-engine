@@ -18,19 +18,20 @@ void TextureLoader::loadTexture(GLuint texID, const char* path) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-    int w, h, ch;
+
+    int width, height, channel;
     stbi_set_flip_vertically_on_load(true);
-    unsigned char* img = stbi_load(path, &w, &h, &ch, 0);
+    unsigned char* img = stbi_load(path, &width, &height, &channel, 0);
 
     if (!img) {
         std::cout << "Erro ao carregar imagem: " << path << std::endl;
         return;
     }
 
-    GLenum format = (ch == 4) ? GL_RGBA : GL_RGB;
-    GLenum internalFormat = (ch == 4) ? GL_RGBA8 : GL_RGB8;
+    GLenum format = (channel == 4) ? GL_RGBA : GL_RGB;
+    GLenum internalFormat = (channel == 4) ? GL_RGBA8 : GL_RGB8;
 
-    glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, w, h, 0, format, GL_UNSIGNED_BYTE, img);
+    glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, format, GL_UNSIGNED_BYTE, img);
     glGenerateMipmap(GL_TEXTURE_2D);
 
     stbi_image_free(img);

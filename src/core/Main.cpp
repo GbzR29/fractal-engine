@@ -33,8 +33,9 @@ const int win_height = 720;
 
 int current_scene = 0;
 
-// timing
-float deltaTime = 0.0f;	// time between current frame and last frame
+// ================ timing =================
+// time between current frame and last frame
+float deltaTime = 0.0f;	
 float lastFrame = 0.0f;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -49,6 +50,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         glfwSetWindowShouldClose(window, true);
     }  
 
+	//testing a simple scene changer
 	if(key == GLFW_KEY_Y && action == GLFW_PRESS){
         std::cout << current_scene << std::endl;
 
@@ -65,14 +67,14 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 void centerWindow(GLFWwindow* window, GLFWmonitor* monitor) {
 
-    //Retorna o modo de vídeo atual do monitor, que contém a largura e altura da resolução em uso.
+    //Returns the monitor's current video mode, which includes the width and height of the resolution in use.
     const GLFWvidmode* mode = glfwGetVideoMode(monitor);   
     int monitorX, monitorY;    
 
-    //Obtém a posição do monitor em coordenadas de tela, o que é importante em configurações com múltiplos monitores.
+    //Retrieves the monitor's position in screen coordinates, which is important in setups with multiple monitors.
     glfwGetMonitorPos(monitor, &monitorX, &monitorY); 
 
-    // Calcular a posição central
+    //Calculate the central position.
     int posX = monitorX + (mode->width - win_width) / 2;
     int posY = monitorY + (mode->height - win_height) / 2;
 
@@ -127,7 +129,7 @@ void initWindow(){
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 
-		std::cerr << "Falha na inicialização do GLAD" << std::endl;
+		std::cerr << "GLAD initialization failed." << std::endl;
 	}
 
 	glEnable(GL_DEPTH_TEST);
@@ -135,14 +137,14 @@ void initWindow(){
 
 GLuint vao, vbo, ebo;
 
+//simple crosshair 
 void CreateGameUI(){
 
 	float vertex[] = {
-		//primeiro triangulo
-	   -0.05f, -0.05f,  0.0f, //inferior esquerdo
-		0.05f, -0.05f,  0.0f, //inferior direito
-		0.05f,  0.05f,  0.0f, //superior direito
-	   -0.05f,  0.05f,  0.0f, //superior esquerdo
+	   -0.05f, -0.05f,  0.0f, //bottom left
+		0.05f, -0.05f,  0.0f, //bottom right
+		0.05f,  0.05f,  0.0f, //top right
+	   -0.05f,  0.05f,  0.0f, //top left
 	};
 
 	unsigned int indices[] = {
@@ -169,11 +171,8 @@ void CreateGameUI(){
 
 }
 
+//draw simple crosshair
 void drawGameUI(Shader &ui_shader){
-
-	//glClearColor(0.3f, 0.3f, 0.3f, 1.0f);	
-	//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 	ui_shader.use();
 
 	glBindVertexArray(vao);
@@ -201,8 +200,6 @@ int main() {
 		chunks.emplace_back(glm::vec3(x_pos, 0.0f, 0.0f), shader);
 		x_pos += 16.0f;
 	}
-
-	//std::cout << "X:" << chunks[0].getPosition().x << " Y:" << chunks[0].getPosition().y << " Z:" << chunks[0].getPosition().z << std::endl;
 	
 	glEnable(GL_DEPTH_TEST);
 
@@ -234,5 +231,3 @@ int main() {
 void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     input.onMouseMove(xpos, ypos);
 }
-
-
