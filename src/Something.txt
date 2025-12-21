@@ -1,0 +1,24 @@
+I'll put all the code snippets here that I need to save quickly.
+
+// Um "blueprint" do chunk é gerado aqui, como se fosse um Tilemap de txt usado em jogos 2D
+// se for true é um bloco, se for false é ar
+// posso substituir por um enum depois para adicionar outros tipos de blocos
+
+/*void Chunk::generateBlocks() {
+    for (int x = 0; x < SIZE_X; x++){
+
+        for (int y = 0; y < SIZE_Y; y++){
+
+            for (int z = 0; z < SIZE_Z; z++){
+
+                blocks[x][y][z] = true; 
+            }                
+        }            
+    }
+}*/
+
+
+
+//Chunk generation with sample in 1D
+//float n = noise.sample2D(worldX, worldZ);
+//int height = static_cast<int>(n * (SIZE_Y - 1));

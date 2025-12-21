@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:/mingw64/bin/g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+
+                // ---- 1. Compilar fontes ----
+                "${workspaceFolder}/src/core/main.cpp",
+                "${workspaceFolder}/src/core/glad.c",   
+                
+                //"${workspaceFolder}/src/core/*.cpp",
+                "${workspaceFolder}/src/core/Shader.cpp",
+                "${workspaceFolder}/src/core/Camera.cpp",
+                "${workspaceFolder}/src/core/TextureLoader.cpp",
+                "${workspaceFolder}/src/core/Chunk.cpp",
+                "${workspaceFolder}/src/core/Input.cpp",
+                "${workspaceFolder}/src/core/Player.cpp",
+                
+                // ---- 2. Linkar GLFW NA ORDEM CERTA ----
+                "-lglfw3dll",   // tenta com dll primeiro
+                "-lglfw3",      // tenta estático
+                "-lopengl32",
+                "-lgdi32",
+                "-luser32",
+                "-lkernel32",
+                "-lSDL3.dll",
+
+                // ---- 3. Gerar o .exe ----
+                "-o",
+                "${workspaceFolder}/build/main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
