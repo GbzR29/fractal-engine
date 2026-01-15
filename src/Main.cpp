@@ -1,7 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 
-#include "../headers/Chunk.h"
-#include "../headers/Player.h"
+#include "headers/Chunk.h"
+#include "headers/Player.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
