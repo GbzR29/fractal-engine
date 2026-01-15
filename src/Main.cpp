@@ -92,10 +92,10 @@ void game_scene(GLFWwindow* window, Shader &shader, std::vector<Chunk> &chunks, 
 	input.update(window);
 	player.update(deltaTime, input);
 
-	for (auto& chunk : chunks)
+	/*for (auto& chunk : chunks)
 	{
 		//chunk.Draw(shader);
-	}
+	}*/
 	chunk.Draw(shader);
 
 	drawGameUI(ui_shader);
