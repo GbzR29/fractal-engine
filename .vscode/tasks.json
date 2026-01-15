@@ -12,7 +12,7 @@
                 "-L${workspaceFolder}/lib",
 
                 // ---- 1. Compilar fontes ----
-                "${workspaceFolder}/src/core/main.cpp",
+                "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/core/glad.c",   
                 
                 //"${workspaceFolder}/src/core/*.cpp",
