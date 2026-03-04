@@ -1,0 +1,3 @@
+C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/FractalEngine.dir
+C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/edit_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/rebuild_cache.dir
