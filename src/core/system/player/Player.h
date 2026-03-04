@@ -1,19 +1,41 @@
 #include "../camera/Camera.h"
 #include "../input/Input.h"
+#include "../environment/World.h"
+
+
+struct AABB {
+    glm::vec3 min, max;
+};
 
 class Player {
+
+    float width = 0.6f;
+    float height = 1.8f;
+    
+    AABB getAABB() {
+        return {
+            position - glm::vec3(width/2, 0, width/2), // min (pés)
+            position + glm::vec3(width/2, height, width/2) // max (cabeça)
+        };
+    }
+
 public:
     Player() = default;
 
-    void update(float dt, Input& input);
+    void update(float dt, Input& input, World& world);
     void applyGravity(float dt);
 
     void renderCamera(Shader& shader, int w, int h);
 
+    bool checkCollision(World& world);
+
+    bool onGround = false;
+    float jumpForce = 6.0f;
+
 private:
     Camera camera;
 
-    glm::vec3 position{30.0f, 30.0f, 30.0f};
+    glm::vec3 position{0.0f, 30.0f, 0.0f};
     glm::vec3 velocity{0.0f};
 
     float speed   = 5.0f;

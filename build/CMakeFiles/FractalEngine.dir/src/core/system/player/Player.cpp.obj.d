@@ -350,4 +350,13 @@ CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/type_ptr.inl \
  C:/Projetos/GITHUB~1/FRACTA~1/include/GLFW/glfw3.h \
- C:/Projetos/Github\ Projects/fractal-engine/src/core/system/input/Input.h
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/input/Input.h \
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/World.h \
+ C:/mingw64/include/c++/14.2.0/map \
+ C:/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_map.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/Chunk.h \
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/shader/Shader.h \
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/SimpleNoise.h \
+ C:/Projetos/Github\ Projects/fractal-engine/src/core/system/texture/TextureLoader.h

@@ -255,6 +255,30 @@ src/core/system/environment/Chunk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.s
 .PHONY : src/core/system/environment/Chunk.cpp.s
 
+src/core/system/environment/World.obj: src/core/system/environment/World.cpp.obj
+.PHONY : src/core/system/environment/World.obj
+
+# target to build an object file
+src/core/system/environment/World.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj
+.PHONY : src/core/system/environment/World.cpp.obj
+
+src/core/system/environment/World.i: src/core/system/environment/World.cpp.i
+.PHONY : src/core/system/environment/World.i
+
+# target to preprocess a source file
+src/core/system/environment/World.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.i
+.PHONY : src/core/system/environment/World.cpp.i
+
+src/core/system/environment/World.s: src/core/system/environment/World.cpp.s
+.PHONY : src/core/system/environment/World.s
+
+# target to generate assembly for a file
+src/core/system/environment/World.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.s
+.PHONY : src/core/system/environment/World.cpp.s
+
 src/core/system/input/Input.obj: src/core/system/input/Input.cpp.obj
 .PHONY : src/core/system/input/Input.obj
 
@@ -400,6 +424,9 @@ help:
 	@echo ... src/core/system/environment/Chunk.obj
 	@echo ... src/core/system/environment/Chunk.i
 	@echo ... src/core/system/environment/Chunk.s
+	@echo ... src/core/system/environment/World.obj
+	@echo ... src/core/system/environment/World.i
+	@echo ... src/core/system/environment/World.s
 	@echo ... src/core/system/input/Input.obj
 	@echo ... src/core/system/input/Input.i
 	@echo ... src/core/system/input/Input.s

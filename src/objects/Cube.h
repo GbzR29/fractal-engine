@@ -2,8 +2,8 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include "../headers/Shader.h"
-#include "../headers/TextureLoader.h"
+#include "../core/system/shader/Shader.h"
+#include "../core/system/texture/TextureLoader.h"
 
 #include <vector>
 

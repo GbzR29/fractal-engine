@@ -6,10 +6,11 @@ public:
     void update(GLFWwindow* window);
     void onMouseMove(double xposIn, double yposIn);
 
-    bool forward  = false;
-    bool back     = false;
-    bool left     = false;
-    bool right    = false;
+    bool forward = false;
+    bool back    = false;
+    bool left    = false;
+    bool right   = false;
+    bool jump    = false; // Nova variável para o pulo
 
     float mouseDX = 0.0f;
     float mouseDY = 0.0f;

@@ -11,16 +11,15 @@
 
 #include "system/player/Player.h"
 #include "system/shader/Shader.h"
-#include "system/environment/Chunk.h"
+#include "system/environment/World.h"
+#include "../objects/Cube.h"
+
+
 
 /**
- * @brief Current active scene.
+ * @brief Variáveis de controle de cena e tempo.
  */
 static int current_scene = 0;
-
-/**
- * @brief Frame timing variables.
- */
 static float deltaTime = 0.0f;
 static float lastFrame = 0.0f;
 
@@ -29,29 +28,22 @@ static float lastFrame = 0.0f;
  */
 static GLuint vao, vbo, ebo;
 
-/**
- * @brief Creates the in-game UI geometry.
- */
 void CreateGameUI()
 {
     float vertex[] = {
-        -0.05f, -0.05f, 0.0f,
-         0.05f, -0.05f, 0.0f,
-         0.05f,  0.05f, 0.0f,
-        -0.05f,  0.05f, 0.0f,
+        -0.01f, -0.01f, 0.0f,
+         0.01f, -0.01f, 0.0f,
+         0.01f,  0.01f, 0.0f,
+        -0.01f,  0.01f, 0.0f,
     };
 
-    unsigned int indices[] = {
-        0, 1, 2,
-        2, 3, 0,
-    };
+    unsigned int indices[] = { 0, 1, 2, 2, 3, 0 };
 
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
     glGenBuffers(1, &ebo);
 
     glBindVertexArray(vao);
-
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertex), vertex, GL_STATIC_DRAW);
 
@@ -60,13 +52,9 @@ void CreateGameUI()
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-
     glBindVertexArray(0);
 }
 
-/**
- * @brief Draws the UI elements.
- */
 void drawGameUI(Shader &ui_shader)
 {
     ui_shader.use();
@@ -76,41 +64,33 @@ void drawGameUI(Shader &ui_shader)
 
 /**
  * @brief Renders the main game scene.
+ * Note que agora passamos o World em vez do vector de Chunks.
  */
-void game_scene(Shader &shader, std::vector<Chunk> &chunks, Player &player, Shader &ui_shader, Chunk &chunk, Input &input,
-                Window &window)
+void game_scene(Shader &shader, World &world, Player &player, Shader &ui_shader, Input &input, Window &window)
 {
     glClearColor(0.38f, 0.76f, 0.9f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    shader.use();
+    // 1. Atualizar lógica (Movimentação + Colisão)
+    input.update(window.getNativeWindow());
+    player.update(deltaTime, input, world); // Aqui a mágica da colisão acontece
 
+    // 2. Renderizar Câmera
     player.renderCamera(shader, 1080, 720);
 
-    input.update(window.getNativeWindow());
-    player.update(deltaTime, input);
+    // 3. Renderizar Mundo
+    shader.use();
+    world.render(shader); // O World agora cuida do loop de desenho dos chunks
 
-    for (auto& c : chunks)
-    {
-        c.Draw(shader);
-    }
-
-    //chunk.Draw(shader);
-
+    // 4. Renderizar UI
     drawGameUI(ui_shader);
 }
 
-/**
- * @brief Renders the menu scene.
- */
 void menu_scene(Shader &ui_shader)
 {
     drawGameUI(ui_shader);
 }
 
-/**
- * @brief Initializes and runs the entire program.
- */
 void Init_Program()
 {
     Window window(1080, 720, "Fractal Engine");
@@ -121,24 +101,20 @@ void Init_Program()
         return;
     }
 
+    // Instanciamos o Player e o World
     Player player;
+    World world;
 
     Shader shader("shaders/vertex_shader.vert", "shaders/fragment_shader.frag");
-
     Shader ui_shader("shaders/ui_vShader.vert", "shaders/ui_fShader.frag");
 
     CreateGameUI();
 
-    Chunk chunk(glm::vec3(0.0f, 0.0f, 0.0f), shader);
-
-    std::vector<Chunk> chunks;
-
-    float x_pos = 0.0f;
-
-    for (size_t i = 0; i < 8; i++)
+    // 1. Gerar os Chunks dentro do World
+    for (int i = 0; i < 8; i++)
     {
-        chunks.emplace_back(glm::vec3(x_pos, 0.0f, 0.0f), shader);
-        x_pos += 16.0f;
+        // Usamos addChunk que organiza tudo no std::map
+        world.addChunk(glm::ivec3(i * 16, 0, 0), shader);
     }
 
     glEnable(GL_DEPTH_TEST);
@@ -148,13 +124,14 @@ void Init_Program()
 
     while (!window.shouldClose())
     {
-        float currentFrame = glfwGetTime();
+        float currentFrame = (float)glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
         if (current_scene == 0)
         {
-            game_scene(shader, chunks, player, ui_shader, chunk, window.getInput(), window);
+            // Passamos a referência do world aqui
+            game_scene(shader, world, player, ui_shader, window.getInput(), window);
         }
 
         if (current_scene == 1)

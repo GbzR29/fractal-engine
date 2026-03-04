@@ -84,12 +84,12 @@ clean: CMakeFiles/FractalEngine.dir/clean
 CMakeFiles/FractalEngine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target FractalEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target FractalEngine"
 .PHONY : CMakeFiles/FractalEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FractalEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FractalEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/FractalEngine.dir/rule
@@ -101,7 +101,7 @@ FractalEngine: CMakeFiles/FractalEngine.dir/rule
 # codegen rule for target.
 CMakeFiles/FractalEngine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target FractalEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Finished codegen for target FractalEngine"
 .PHONY : CMakeFiles/FractalEngine.dir/codegen
 
 # clean rule for target.

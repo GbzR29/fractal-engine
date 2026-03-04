@@ -12,22 +12,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # =====================
-# Sources
+# Sources (todos os .cpp dentro de src)
 # =====================
 
-set(SOURCES
-    src/Main.cpp
-    src/core/Program.cpp
-
-    src/core/system/camera/Camera.cpp
-    src/core/system/environment/Chunk.cpp
-    src/core/system/input/Input.cpp
-    src/core/system/player/Player.cpp
-    src/core/system/shader/Shader.cpp
-    src/core/system/texture/TextureLoader.cpp
-    src/core/system/window/Window.cpp
-
-    src/core/glad.c
+file(GLOB_RECURSE SOURCES
+    ${CMAKE_SOURCE_DIR}/src/*.cpp
+    ${CMAKE_SOURCE_DIR}/src/*.c
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

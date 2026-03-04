@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj.d"
   "CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj"
   "CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj.d"
+  "CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj"
+  "CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj.d"
   "CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj"
   "CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj.d"
   "CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj"
