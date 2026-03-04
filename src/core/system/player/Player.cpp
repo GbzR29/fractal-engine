@@ -1,63 +1,92 @@
 #include "Player.h"
+#include <iostream>
 
 void Player::update(float dt, Input& input, World& world) {
-    // 1. Rotação (independente de colisão)
+    // 1. Rotação da câmera
     camera.rotate(input.mouseDX, input.mouseDY);
 
-    // 2. Aplicar Gravidade
-    velocity.y += gravity * dt;
+    // Direções de movimento no plano XZ
+    glm::vec3 forward = glm::normalize(
+        glm::vec3(cos(glm::radians(camera.yaw)), 0.0f, sin(glm::radians(camera.yaw)))
+    );
 
-    // 2. Cálculo de movimento desejado
-    glm::vec3 forward = glm::normalize(glm::vec3(cos(glm::radians(camera.yaw)), 0.0f, sin(glm::radians(camera.yaw))));
-    glm::vec3 right = glm::normalize(glm::cross(forward, glm::vec3(0,1,0)));
-    
+    glm::vec3 right = glm::normalize(glm::cross(forward, glm::vec3(0, 1, 0)));
+
     glm::vec3 moveDir(0.0f);
+
     if (input.forward) moveDir += forward;
     if (input.back)    moveDir -= forward;
     if (input.left)    moveDir -= right;
     if (input.right)   moveDir += right;
-    
-    if (glm::length(moveDir) > 0) moveDir = glm::normalize(moveDir);
 
-    // 3. Mover Eixo X
-    position.x += moveDir.x * speed * dt;
-    if (checkCollision(world)) {
-        position.x -= moveDir.x * speed * dt; // Undo
+    if (glm::length(moveDir) > 0.0f)
+        moveDir = glm::normalize(moveDir);
+
+    // =============================
+    // DETECÇÃO DE CHÃO
+    // =============================
+    // Pequeno offset para verificar se há bloco logo abaixo
+    position.y -= 0.05f;
+    if (checkCollision(world))
+        onGround = true;
+    else
+        onGround = false;
+    position.y += 0.05f;
+
+    // =============================
+    // PULO
+    // =============================
+    if (input.jump && onGround)
+    {
+        velocity.y = jumpForce;
+        onGround = false;
     }
 
-    // 4. Mover Eixo Z
-    position.z += moveDir.z * speed * dt;
-    if (checkCollision(world)) {
-        position.z -= moveDir.z * speed * dt; // Undo
-    }
-
-    // 5. Gravidade e Eixo Y
+    // =============================
+    // GRAVIDADE
+    // =============================
     velocity.y += gravity * dt;
 
-    // 3. Pulo (Apenas se estiver no chão)
-    if (input.jump && onGround) {
-        // A velocidade vertical recebe o impulso instantâneo
-        velocity.y = jumpForce; 
-        onGround = false; // Ao pular, ele não está mais no chão
+    // =============================
+    // MOVIMENTO X
+    // =============================
+    position.x += moveDir.x * speed * dt;
+
+    if (checkCollision(world))
+    {
+        position.x -= moveDir.x * speed * dt;
     }
 
+    // =============================
+    // MOVIMENTO Z
+    // =============================
+    position.z += moveDir.z * speed * dt;
+
+    if (checkCollision(world))
+    {
+        position.z -= moveDir.z * speed * dt;
+    }
+
+    // =============================
+    // MOVIMENTO Y
+    // =============================
     position.y += velocity.y * dt;
 
-    if (checkCollision(world)) {
-        // Se houve colisão e ele estava caindo (vel < 0), ele bateu no chão
-        if (velocity.y < 0) {
+    if (checkCollision(world))
+    {
+        if (velocity.y < 0.0f)
             onGround = true;
-        }
-        
-        // Resolve a colisão (volta para a posição anterior e anula a velocidade)
+
         position.y -= velocity.y * dt;
-        velocity.y = 0;
+        velocity.y = 0.0f;
     }
 
-    bool wasOnGround = onGround;
-    onGround = false; 
+    // =============================
+    // Atualiza câmera
+    // =============================
+    camera.position = position + glm::vec3(0, 1.6f, 0);
 
-    camera.position = position + glm::vec3(0, 1.6f, 0); // Olhos na altura da cabeça
+    // Reset mouse delta
     input.mouseDX = 0.0f;
     input.mouseDY = 0.0f;
 }
