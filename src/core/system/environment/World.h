@@ -1,11 +1,11 @@
 #pragma once
-
 #include <map>
 #include <glm/glm.hpp>
 #include "Chunk.h"
+#include "../shader/Shader.h"
 
-// Estrutura para usar glm::ivec3 como chave no std::map
-struct ChunkPosComparator {
+// Comparador para usar glm::ivec3 como chave de map
+struct IVec3Cmp {
     bool operator()(const glm::ivec3& a, const glm::ivec3& b) const {
         if (a.x != b.x) return a.x < b.x;
         if (a.y != b.y) return a.y < b.y;
@@ -15,21 +15,31 @@ struct ChunkPosComparator {
 
 class World {
 public:
-    World() = default;
+    std::map<glm::ivec3, Chunk, IVec3Cmp> chunks;
 
-    // Adiciona um chunk manualmente ou via geração
+    // Adiciona um chunk na posição de mundo dada (deve ser múltiplo de SIZE)
+    // Após adicionar, remesheia os vizinhos para corrigir bordas
     void addChunk(glm::ivec3 pos, Shader& shader);
 
-    // Verifica se existe um bloco sólido em coordenadas globais
-    bool isBlockSolid(float wx, float wy, float wz);
+    // Gera um grid de chunks ao redor de uma posição central
+    // (útil para inicializar o mundo)
+    void generateWorld(int radiusX, int radiusZ, Shader& shader);
 
-    // Renderiza todos os chunks carregados
+    // Retorna a chave do chunk que contém a posição de mundo (wx, wy, wz)
+    glm::ivec3 getChunkKey(int wx, int wy, int wz) const;
+
+    // Retorna true se o bloco na posição de mundo é sólido
+    bool isBlockSolid(float wx, float wy, float wz) const;
+
+    // Retorna true se o bloco na posição de mundo é ar
+    bool isAirWorld(int wx, int wy, int wz) const;
+
     void render(Shader& shader);
 
-    // Mapa de chunks usando a posição global do chunk como chave
-    std::map<glm::ivec3, Chunk, ChunkPosComparator> chunks;
-
 private:
-    // Utilitário para converter coord. global em coord. de Chunk
-    glm::ivec3 getChunkCoords(int wx, int wy, int wz);
+    // Re-gera a mesh de um chunk já existente, passando o callback de vizinhos
+    void remeshChunk(glm::ivec3 key);
+
+    // Re-gera a mesh dos 4 vizinhos horizontais de um chunk
+    void remeshNeighbors(glm::ivec3 key);
 };

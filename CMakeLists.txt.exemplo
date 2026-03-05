@@ -1,0 +1,118 @@
+# Exemplo de CMakeLists.txt Modularizado
+# Coloque isto na raiz do projeto
+
+cmake_minimum_required(VERSION 3.20)
+
+project(FractalEngine
+    VERSION 0.1.0
+    DESCRIPTION "A scalable 3D graphics engine"
+    LANGUAGES CXX C
+)
+
+# =====================
+# C++ Standard
+# =====================
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# =====================
+# Output Directories
+# =====================
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+# =====================
+# Options
+# =====================
+option(FRACTAL_BUILD_TESTS "Build tests" OFF)
+option(FRACTAL_ENABLE_LOGGING "Enable logging" ON)
+option(FRACTAL_ENABLE_VALIDATION "Enable debug validation" ON)
+
+# =====================
+# Global Compiler Flags
+# =====================
+if(MSVC)
+    add_compile_options(/W4 /WX)  # Warnings as errors
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
+endif()
+
+# =====================
+# Find Dependencies
+# =====================
+find_package(OpenGL REQUIRED)
+
+# Adicionar include directories externas
+include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR}/include/third_party)
+
+# Link directories
+link_directories(${CMAKE_SOURCE_DIR}/lib)
+
+# =====================
+# Main Engine Library
+# =====================
+add_library(${PROJECT_NAME}_lib STATIC)
+
+# Add subdirectories (cada módulo adiciona seus próprios sources)
+add_subdirectory(src/core)
+add_subdirectory(src/graphics)
+add_subdirectory(src/renderer)
+add_subdirectory(src/scene)
+add_subdirectory(src/physics)
+add_subdirectory(src/input)
+add_subdirectory(src/world)
+add_subdirectory(src/ui)
+add_subdirectory(src/math)
+add_subdirectory(src/utils)
+add_subdirectory(src/third_party)
+
+# Configure library
+target_include_directories(${PROJECT_NAME}_lib PUBLIC
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+target_link_libraries(${PROJECT_NAME}_lib PUBLIC
+    OpenGL::OpenGL
+    glfw3dll
+    glfw3
+    lua55
+    SDL3
+)
+
+# =====================
+# Executable
+# =====================
+add_executable(${PROJECT_NAME} src/main.cpp)
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/src
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    ${PROJECT_NAME}_lib
+)
+
+# =====================
+# Tests (Optional)
+# =====================
+if(FRACTAL_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
+# =====================
+# Print Configuration
+# =====================
+message(STATUS "")
+message(STATUS "=== ${PROJECT_NAME} Configuration ===")
+message(STATUS "Build Type:           ${CMAKE_BUILD_TYPE}")
+message(STATUS "C++ Standard:         ${CMAKE_CXX_STANDARD}")
+message(STATUS "Source Directory:     ${CMAKE_SOURCE_DIR}")
+message(STATUS "Binary Directory:     ${CMAKE_BINARY_DIR}")
+message(STATUS "Build Tests:          ${FRACTAL_BUILD_TESTS}")
+message(STATUS "====================================")
+message(STATUS "")

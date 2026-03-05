@@ -86,11 +86,41 @@ CMakeFiles/FractalEngine.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/Main.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\Main.cpp" -o CMakeFiles\FractalEngine.dir\src\Main.cpp.s
 
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Application.cpp
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\Application.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\Application.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\Application.cpp"
+
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/core/Application.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\core\Application.cpp" > CMakeFiles\FractalEngine.dir\src\core\Application.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/core/Application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/Application.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\Application.cpp" -o CMakeFiles\FractalEngine.dir\src\core\Application.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Input.cpp
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\Input.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\Input.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\Input.cpp"
+
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/core/Input.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\core\Input.cpp" > CMakeFiles\FractalEngine.dir\src\core\Input.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/core/Input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/Input.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\Input.cpp" -o CMakeFiles\FractalEngine.dir\src\core\Input.cpp.s
+
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Program.cpp
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\Program.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\Program.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\Program.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.i: cmake_force
@@ -101,26 +131,41 @@ CMakeFiles/FractalEngine.dir/src/core/Program.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/Program.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\Program.cpp" -o CMakeFiles\FractalEngine.dir\src\core\Program.cpp.s
 
-CMakeFiles/FractalEngine.dir/src/core/glad.c.obj: CMakeFiles/FractalEngine.dir/flags.make
-CMakeFiles/FractalEngine.dir/src/core/glad.c.obj: CMakeFiles/FractalEngine.dir/includes_C.rsp
-CMakeFiles/FractalEngine.dir/src/core/glad.c.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/glad.c
-CMakeFiles/FractalEngine.dir/src/core/glad.c.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FractalEngine.dir/src/core/glad.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/glad.c.obj -MF CMakeFiles\FractalEngine.dir\src\core\glad.c.obj.d -o CMakeFiles\FractalEngine.dir\src\core\glad.c.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\glad.c"
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Time.cpp
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\Time.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\Time.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\Time.cpp"
 
-CMakeFiles/FractalEngine.dir/src/core/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/FractalEngine.dir/src/core/glad.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\core\glad.c" > CMakeFiles\FractalEngine.dir\src\core\glad.c.i
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/core/Time.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\core\Time.cpp" > CMakeFiles\FractalEngine.dir\src\core\Time.cpp.i
 
-CMakeFiles/FractalEngine.dir/src/core/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/FractalEngine.dir/src/core/glad.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\glad.c" -o CMakeFiles\FractalEngine.dir\src\core\glad.c.s
+CMakeFiles/FractalEngine.dir/src/core/Time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/Time.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\Time.cpp" -o CMakeFiles\FractalEngine.dir\src\core\Time.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Window.cpp
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\Window.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\Window.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\Window.cpp"
+
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/core/Window.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\core\Window.cpp" > CMakeFiles\FractalEngine.dir\src\core\Window.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/Window.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\Window.cpp" -o CMakeFiles\FractalEngine.dir\src\core\Window.cpp.s
 
 CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
 CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/camera/Camera.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\camera\Camera.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\camera\Camera.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\camera\Camera.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.i: cmake_force
@@ -135,7 +180,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: CMakeFil
 CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/Chunk.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\environment\Chunk.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\environment\Chunk.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\environment\Chunk.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.i: cmake_force
@@ -150,7 +195,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj: CMakeFil
 CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/World.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\environment\World.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\environment\World.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\environment\World.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.i: cmake_force
@@ -165,7 +210,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj: CMakeFiles/Fra
 CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/input/Input.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\input\Input.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\input\Input.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\input\Input.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.i: cmake_force
@@ -180,7 +225,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: CMakeFiles/F
 CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\player\Player.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\player\Player.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\player\Player.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.i: cmake_force
@@ -195,7 +240,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj: CMakeFiles/F
 CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/shader/Shader.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\shader\Shader.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\shader\Shader.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\shader\Shader.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.i: cmake_force
@@ -210,7 +255,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj: CMak
 CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/texture/TextureLoader.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\texture\TextureLoader.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\texture\TextureLoader.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\texture\TextureLoader.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.i: cmake_force
@@ -225,7 +270,7 @@ CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj: CMakeFiles/F
 CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/window/Window.cpp
 CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\core\system\window\Window.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\core\system\window\Window.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\core\system\window\Window.cpp"
 
 CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.i: cmake_force
@@ -236,11 +281,209 @@ CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\core\system\window\Window.cpp" -o CMakeFiles\FractalEngine.dir\src\core\system\window\Window.cpp.s
 
+CMakeFiles/FractalEngine.dir/src/glad.c.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/glad.c.obj: CMakeFiles/FractalEngine.dir/includes_C.rsp
+CMakeFiles/FractalEngine.dir/src/glad.c.obj: C:/Projetos/Github\ Projects/fractal-engine/src/glad.c
+CMakeFiles/FractalEngine.dir/src/glad.c.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/FractalEngine.dir/src/glad.c.obj"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/glad.c.obj -MF CMakeFiles\FractalEngine.dir\src\glad.c.obj.d -o CMakeFiles\FractalEngine.dir\src\glad.c.obj -c "C:\Projetos\Github Projects\fractal-engine\src\glad.c"
+
+CMakeFiles/FractalEngine.dir/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/FractalEngine.dir/src/glad.c.i"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\glad.c" > CMakeFiles\FractalEngine.dir\src\glad.c.i
+
+CMakeFiles/FractalEngine.dir/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/FractalEngine.dir/src/glad.c.s"
+	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\glad.c" -o CMakeFiles\FractalEngine.dir\src\glad.c.s
+
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Camera.cpp
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\renderer\Camera.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\renderer\Camera.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\renderer\Camera.cpp"
+
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\renderer\Camera.cpp" > CMakeFiles\FractalEngine.dir\src\renderer\Camera.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\renderer\Camera.cpp" -o CMakeFiles\FractalEngine.dir\src\renderer\Camera.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Mesh.cpp
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\renderer\Mesh.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\renderer\Mesh.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\renderer\Mesh.cpp"
+
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\renderer\Mesh.cpp" > CMakeFiles\FractalEngine.dir\src\renderer\Mesh.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\renderer\Mesh.cpp" -o CMakeFiles\FractalEngine.dir\src\renderer\Mesh.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Renderer.cpp
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\renderer\Renderer.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\renderer\Renderer.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\renderer\Renderer.cpp"
+
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\renderer\Renderer.cpp" > CMakeFiles\FractalEngine.dir\src\renderer\Renderer.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\renderer\Renderer.cpp" -o CMakeFiles\FractalEngine.dir\src\renderer\Renderer.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Shader.cpp
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\renderer\Shader.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\renderer\Shader.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\renderer\Shader.cpp"
+
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\renderer\Shader.cpp" > CMakeFiles\FractalEngine.dir\src\renderer\Shader.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\renderer\Shader.cpp" -o CMakeFiles\FractalEngine.dir\src\renderer\Shader.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Texture.cpp
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\renderer\Texture.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\renderer\Texture.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\renderer\Texture.cpp"
+
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\renderer\Texture.cpp" > CMakeFiles\FractalEngine.dir\src\renderer\Texture.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\renderer\Texture.cpp" -o CMakeFiles\FractalEngine.dir\src\renderer\Texture.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/scene/Components.cpp
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\scene\Components.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\scene\Components.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\scene\Components.cpp"
+
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\scene\Components.cpp" > CMakeFiles\FractalEngine.dir\src\scene\Components.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\scene\Components.cpp" -o CMakeFiles\FractalEngine.dir\src\scene\Components.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/scene/Entity.cpp
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\scene\Entity.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\scene\Entity.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\scene\Entity.cpp"
+
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\scene\Entity.cpp" > CMakeFiles\FractalEngine.dir\src\scene\Entity.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\scene\Entity.cpp" -o CMakeFiles\FractalEngine.dir\src\scene\Entity.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/scene/Scene.cpp
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\scene\Scene.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\scene\Scene.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\scene\Scene.cpp"
+
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\scene\Scene.cpp" > CMakeFiles\FractalEngine.dir\src\scene\Scene.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\scene\Scene.cpp" -o CMakeFiles\FractalEngine.dir\src\scene\Scene.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIElement.cpp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\ui\core\UIElement.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\ui\core\UIElement.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIElement.cpp"
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIElement.cpp" > CMakeFiles\FractalEngine.dir\src\ui\core\UIElement.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIElement.cpp" -o CMakeFiles\FractalEngine.dir\src\ui\core\UIElement.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIEventSystem.cpp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\ui\core\UIEventSystem.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\ui\core\UIEventSystem.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIEventSystem.cpp"
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIEventSystem.cpp" > CMakeFiles\FractalEngine.dir\src\ui\core\UIEventSystem.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIEventSystem.cpp" -o CMakeFiles\FractalEngine.dir\src\ui\core\UIEventSystem.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIManager.cpp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\ui\core\UIManager.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\ui\core\UIManager.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIManager.cpp"
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIManager.cpp" > CMakeFiles\FractalEngine.dir\src\ui\core\UIManager.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIManager.cpp" -o CMakeFiles\FractalEngine.dir\src\ui\core\UIManager.cpp.s
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj: CMakeFiles/FractalEngine.dir/flags.make
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj: CMakeFiles/FractalEngine.dir/includes_CXX.rsp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIREnderer.cpp
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj: CMakeFiles/FractalEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj -MF CMakeFiles\FractalEngine.dir\src\ui\core\UIREnderer.cpp.obj.d -o CMakeFiles\FractalEngine.dir\src\ui\core\UIREnderer.cpp.obj -c "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIREnderer.cpp"
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIREnderer.cpp" > CMakeFiles\FractalEngine.dir\src\ui\core\UIREnderer.cpp.i
+
+CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Projetos\Github Projects\fractal-engine\src\ui\core\UIREnderer.cpp" -o CMakeFiles\FractalEngine.dir\src\ui\core\UIREnderer.cpp.s
+
 # Object files for target FractalEngine
 FractalEngine_OBJECTS = \
 "CMakeFiles/FractalEngine.dir/src/Main.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj" \
-"CMakeFiles/FractalEngine.dir/src/core/glad.c.obj" \
+"CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj" \
@@ -248,14 +491,30 @@ FractalEngine_OBJECTS = \
 "CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj" \
 "CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj" \
-"CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj"
+"CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/glad.c.obj" \
+"CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj" \
+"CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj"
 
 # External object files for target FractalEngine
 FractalEngine_EXTERNAL_OBJECTS =
 
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/Main.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj
-bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/glad.c.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj
@@ -264,11 +523,24 @@ bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/player/Playe
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/glad.c.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/scene/Components.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/scene/Scene.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/ui/core/UIElement.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/ui/core/UIEventSystem.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj
+bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/build.make
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/linkLibs.rsp
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/objects1.rsp
 bin/FractalEngine.exe: CMakeFiles/FractalEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable bin\FractalEngine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable bin\FractalEngine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FractalEngine.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/Projetos/Github Projects/fractal-engine/bin/SDL3.dll" "C:/Projetos/Github Projects/fractal-engine/bin/glfw3.dll" "C:/Projetos/Github Projects/fractal-engine/bin/lua55.dll" "C:/Projetos/Github Projects/fractal-engine/build/bin"
 

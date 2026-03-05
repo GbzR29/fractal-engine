@@ -70,6 +70,20 @@ CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
  C:/mingw64/include/c++/14.2.0/numbers \
+ C:/mingw64/include/c++/14.2.0/functional \
+ C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+ C:/mingw64/include/c++/14.2.0/typeinfo \
+ C:/mingw64/include/c++/14.2.0/unordered_map \
+ C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+ C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+ C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+ C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+ C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+ C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+ C:/mingw64/include/c++/14.2.0/array \
+ C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
+ C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glad/glad.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/KHR/khrplatform.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
@@ -139,20 +153,6 @@ CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj: \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/../detail/type_vec3.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/../detail/type_vec3.inl \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/../detail/compute_vector_decl.hpp \
- C:/mingw64/include/c++/14.2.0/functional \
- C:/mingw64/include/c++/14.2.0/bits/std_function.h \
- C:/mingw64/include/c++/14.2.0/typeinfo \
- C:/mingw64/include/c++/14.2.0/unordered_map \
- C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
- C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
- C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
- C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
- C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
- C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
- C:/mingw64/include/c++/14.2.0/array \
- C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
- C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/../detail/_vectorize.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/vector_bool3_precision.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/./ext/vector_float3.hpp \

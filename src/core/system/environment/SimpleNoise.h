@@ -1,42 +1,33 @@
+#pragma once
+#include <cmath>
+
 class SimpleNoise {
 public:
     unsigned int seed;
 
     SimpleNoise(unsigned int s = 1337) : seed(s) {}
 
-    float random(int x) const {
-        x = (x << 13) ^ x;
-        return 1.0f - ((x * (x * x * 15731 + 789221) + seed) & 0x7fffffff) / 1073741824.0f;
-    }
-
+    // Hash determinístico 2D com seed embutido
     float random2D(int x, int z) const {
-        int n = x * 374761393 + z * 668265263 + seed * 31;
-        n = (n ^ (n >> 13)) * 1274126177;
-        return (n & 0x7fffffff) / 2147483648.0f;
+        unsigned int n = (unsigned int)(x * 1619 + z * 31337 + seed * 1013904223);
+        n = (n ^ (n >> 13)) * 1274126177u;
+        n = (n ^ (n >> 16));
+        return (float)(n & 0x7fffffff) / (float)0x7fffffff; // [0, 1]
     }
-
 
     float lerp(float a, float b, float t) const {
         return a + t * (b - a);
     }
 
+    // Smoothstep cúbico (evita artefatos de banda)
     float smooth(float t) const {
-        return t * t * (3 - 2 * t); // smoothstep
-    }
-
-    float sample(float x) const {
-        int x0 = (int)floor(x);
-        int x1 = x0 + 1;
-
-        float t = smooth(x - x0);
-
-        return lerp(random(x0), random(x1), t);
+        return t * t * (3.0f - 2.0f * t);
     }
 
     float sample2D(float x, float z) const {
-        int x0 = (int)floor(x);
+        int x0 = (int)std::floor(x);
         int x1 = x0 + 1;
-        int z0 = (int)floor(z);
+        int z0 = (int)std::floor(z);
         int z1 = z0 + 1;
 
         float tx = smooth(x - x0);
@@ -47,28 +38,25 @@ public:
         float v01 = random2D(x0, z1);
         float v11 = random2D(x1, z1);
 
-        float a = lerp(v00, v10, tx);
-        float b = lerp(v01, v11, tx);
-
-        return lerp(a, b, tz);
+        return lerp(lerp(v00, v10, tx), lerp(v01, v11, tx), tz);
     }
 
-    float fractalNoise(float x, float z) const {
-        float value = 0.0f;
+    // fractalNoise retorna valor em [0, 1]
+    // scale: tamanho do bioma (quanto maior, mais suave)
+    // octaves: detalhamento (4~6 é bom)
+    float fractalNoise(float x, float z, float scale = 80.0f, int octaves = 5) const {
+        float value     = 0.0f;
         float amplitude = 1.0f;
-        float frequency = 0.01f;
-        float max = 0.0f;
+        float frequency = 1.0f / scale;
+        float maxVal    = 0.0f;
 
-        for (int i = 0; i < 4; i++) {
-            value += sample2D(x * frequency, z * frequency) * amplitude;
-            max += amplitude;
-
-            amplitude *= 0.5f;
-            frequency *= 2.0f;
+        for (int i = 0; i < octaves; i++) {
+            value   += sample2D(x * frequency, z * frequency) * amplitude;
+            maxVal  += amplitude;
+            amplitude  *= 0.5f;
+            frequency  *= 2.0f;
         }
 
-        return value / max;
+        return value / maxVal; // normalizado [0, 1]
     }
-
-
 };
