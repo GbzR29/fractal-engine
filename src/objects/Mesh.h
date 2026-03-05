@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Cube.h"
 
 enum faces {

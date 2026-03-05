@@ -19,6 +19,7 @@ using namespace fractal_engine::graphics;
 using namespace fractal_engine::world;
 using namespace fractal_engine::input;
 using namespace fractal_engine::core;
+using namespace fractal_engine::scene;
 
 
 

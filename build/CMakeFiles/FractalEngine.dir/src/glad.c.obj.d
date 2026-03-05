@@ -23,7 +23,7 @@ CMakeFiles/FractalEngine.dir/src/glad.c.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
  C:/mingw64/x86_64-w64-mingw32/include/string.h \
  C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Projetos/GITHUB~1/FRACTA~1/include/THIRD_~1/glad/glad.h \
+ C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glad/glad.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/THIRD_~1/KHR/khrplatform.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \

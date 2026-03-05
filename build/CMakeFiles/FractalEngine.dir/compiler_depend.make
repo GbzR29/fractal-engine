@@ -221,7 +221,6 @@ CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: C:/Projetos/Github\ Proje
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.h \
   C:/Projetos/Github\ Projects/fractal-engine/src/objects/Cube.h \
   C:/mingw64/include/c++/14.2.0/array \
   C:/mingw64/include/c++/14.2.0/backward/binders.h \
@@ -450,205 +449,389 @@ CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: C:/Projetos/Github\ Proje
 
 CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Time.cpp
 
-CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Window.cpp
+CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Window.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/core/Window.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode.h \
+  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/charconv \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/ctime \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/format \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/ios \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/locale \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/ostream \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/span \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/variant \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.cpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/GLFW/glfw3.h \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/KHR/khrplatform.h \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glad/glad.h \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/compute_vector_relational.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/setup.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/_vectorize.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/compute_vector_decl.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/setup.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_mat2x2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_mat2x2.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec2.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec3.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec4.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/scalar_int_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/scalar_uint_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_double2x2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_double2x2_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_float2x2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_float2x2_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool2_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool3_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool4_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double2_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double3_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double4_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float2_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float3_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float4_precision.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int2_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int3_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int4_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint2_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint3_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint4.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint4_sized.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/simd/platform.h \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/_fixes.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_integer.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_packing.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_trigonometric.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/qualifier.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/setup.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_half.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_half.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/fwd.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/glm.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_clip_space.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_clip_space.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_projection.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_projection.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_transform.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_transform.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/epsilon.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/epsilon.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/quaternion.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/quaternion.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/vec1.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/matrix_transform.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/matrix_transform.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/type_ptr.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/type_ptr.inl \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/integer.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/mat2x2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/packing.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/trigonometric.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec2.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec3.hpp \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/common.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/_fixes.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/compute_common.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_common.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_exponential.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_geometric.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_matrix.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_vector_relational.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/setup.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_float.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x3.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x4.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x2.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x3.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x4.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x2.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x3.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x4.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_quat.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_quat.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_vec1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_vec1.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/exponential.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x2_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x2_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x2_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x2_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x3_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x4_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_common.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_common.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_double.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_double_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_float.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_float_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_geometric.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_geometric.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_relational.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_relational.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_transform.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_transform.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_trigonometric.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_trigonometric.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/scalar_constants.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/scalar_constants.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_bool1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_bool1_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_double1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_double1_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_float1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_float1_precision.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_int1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_int1_sized.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_relational.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_relational.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_uint1.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_uint1_sized.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/geometric.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/gtc/constants.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/gtc/constants.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat2x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat2x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x4.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/matrix.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/glm/vector_relational.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/camera/Camera.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/Chunk.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/SimpleNoise.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/World.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/input/Input.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/shader/Shader.h \
-  C:/Projetos/Github\ Projects/fractal-engine/src/core/system/texture/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Camera.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/simd/platform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/qualifier.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_exponential.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_matrix.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_float.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_quat.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_quat.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_double.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_double_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int1_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint1_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
   C:/mingw64/include/c++/14.2.0/array \
   C:/mingw64/include/c++/14.2.0/backward/binders.h \
   C:/mingw64/include/c++/14.2.0/bit \
@@ -875,8 +1058,8 @@ CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj: C:/Projetos/
   C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.h
 
 CMakeFiles/FractalEngine.dir/src/glad.c.obj: C:/Projetos/Github\ Projects/fractal-engine/src/glad.c \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/KHR/khrplatform.h \
-  C:/Projetos/GITHUB~1/FRACTA~1/include/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/adxintrin.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/ammintrin.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxbf16intrin.h \
@@ -1152,6 +1335,971 @@ CMakeFiles/FractalEngine.dir/src/glad.c.obj: C:/Projetos/Github\ Projects/fracta
   C:/mingw64/x86_64-w64-mingw32/include/wtypes.h \
   C:/mingw64/x86_64-w64-mingw32/include/wtypesbase.h
 
+CMakeFiles/FractalEngine.dir/src/graphics/Camera.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Camera.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Camera.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/simd/platform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/qualifier.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_exponential.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_matrix.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_float.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_quat.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_quat.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_double.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_double_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int1_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint1_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
+  C:/mingw64/include/c++/14.2.0/algorithm \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cassert \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/cfloat \
+  C:/mingw64/include/c++/14.2.0/climits \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/cmath \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/cstring \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
+  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/functional \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
+  C:/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/unordered_map \
+  C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/float.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/string.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h
+
+CMakeFiles/FractalEngine.dir/src/graphics/Shader.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Shader.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/simd/platform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/qualifier.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_exponential.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_matrix.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/mingw64/include/c++/14.2.0/bits/fstream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/quoted_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode.h \
+  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cassert \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/cfloat \
+  C:/mingw64/include/c++/14.2.0/charconv \
+  C:/mingw64/include/c++/14.2.0/climits \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/cmath \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/ctime \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
+  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/format \
+  C:/mingw64/include/c++/14.2.0/fstream \
+  C:/mingw64/include/c++/14.2.0/functional \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/iomanip \
+  C:/mingw64/include/c++/14.2.0/ios \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/locale \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/ostream \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/span \
+  C:/mingw64/include/c++/14.2.0/sstream \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
+  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/unordered_map \
+  C:/mingw64/include/c++/14.2.0/variant \
+  C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/float.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
+
+CMakeFiles/FractalEngine.dir/src/graphics/Texture.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Texture.cpp
+
+CMakeFiles/FractalEngine.dir/src/graphics/TextureLoader.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/graphics/TextureLoader.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/stb_image/stb_image.h \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode.h \
+  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/charconv \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/cmath \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/ctime \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
+  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/format \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/ios \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/locale \
+  C:/mingw64/include/c++/14.2.0/math.h \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/ostream \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/span \
+  C:/mingw64/include/c++/14.2.0/sstream \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
+  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/unordered_map \
+  C:/mingw64/include/c++/14.2.0/variant \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/emmintrin.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mmintrin.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xmmintrin.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/string.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
+
+CMakeFiles/FractalEngine.dir/src/input/Input.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/input/Input.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/GL/gl.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h
+
 CMakeFiles/FractalEngine.dir/src/renderer/Mesh.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Mesh.cpp
 
 CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Renderer.cpp
@@ -1170,6 +2318,693 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: C:/Projetos/Github\ 
 
 CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIREnderer.cpp
 
+CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/world/Chunk.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/simd/platform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/qualifier.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_exponential.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_matrix.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
+  C:/mingw64/include/c++/14.2.0/bits/unicode.h \
+  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
+  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cassert \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/cfloat \
+  C:/mingw64/include/c++/14.2.0/charconv \
+  C:/mingw64/include/c++/14.2.0/climits \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/cmath \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/ctime \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
+  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/format \
+  C:/mingw64/include/c++/14.2.0/functional \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/ios \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/locale \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/ostream \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/span \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
+  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/unordered_map \
+  C:/mingw64/include/c++/14.2.0/variant \
+  C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/float.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
+
+CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/world/World.cpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint4_sized.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/simd/platform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_trigonometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/qualifier.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_exponential.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_matrix.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_vector_relational.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x3.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec1.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x3_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp \
+  C:/mingw64/include/c++/14.2.0/array \
+  C:/mingw64/include/c++/14.2.0/backward/binders.h \
+  C:/mingw64/include/c++/14.2.0/bit \
+  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
+  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
+  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
+  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
+  C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+  C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
+  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
+  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
+  C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
+  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
+  C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
+  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_abs.h \
+  C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+  C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+  C:/mingw64/include/c++/14.2.0/bits/utility.h \
+  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/version.h \
+  C:/mingw64/include/c++/14.2.0/cassert \
+  C:/mingw64/include/c++/14.2.0/cctype \
+  C:/mingw64/include/c++/14.2.0/cerrno \
+  C:/mingw64/include/c++/14.2.0/cfloat \
+  C:/mingw64/include/c++/14.2.0/climits \
+  C:/mingw64/include/c++/14.2.0/clocale \
+  C:/mingw64/include/c++/14.2.0/cmath \
+  C:/mingw64/include/c++/14.2.0/compare \
+  C:/mingw64/include/c++/14.2.0/concepts \
+  C:/mingw64/include/c++/14.2.0/cstddef \
+  C:/mingw64/include/c++/14.2.0/cstdint \
+  C:/mingw64/include/c++/14.2.0/cstdio \
+  C:/mingw64/include/c++/14.2.0/cstdlib \
+  C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+  C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
+  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/mingw64/include/c++/14.2.0/functional \
+  C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/limits \
+  C:/mingw64/include/c++/14.2.0/map \
+  C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/numbers \
+  C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/string \
+  C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+  C:/mingw64/include/c++/14.2.0/tuple \
+  C:/mingw64/include/c++/14.2.0/type_traits \
+  C:/mingw64/include/c++/14.2.0/typeinfo \
+  C:/mingw64/include/c++/14.2.0/unordered_map \
+  C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
+  C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+  C:/mingw64/x86_64-w64-mingw32/include/float.h \
+  C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+  C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+  C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+  C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h
+
 
 C:/Projetos/Github\ Projects/fractal-engine/src/Main.cpp:
 
@@ -1181,15 +3016,13 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compu
 
 C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/epsilon.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int2.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/cetintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp:
 
@@ -1199,11 +3032,11 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaterni
 
 C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h:
 
-C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vpopcntdqvlintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp:
+C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h:
 
@@ -1215,21 +3048,19 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/core/Window.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x2.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2_precision.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/stringapiset.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_decl.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/rtmintrin.h:
+C:/mingw64/x86_64-w64-mingw32/include/sys/types.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/cldemoteintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_trigonometric.hpp:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/rtmintrin.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/sys/types.h:
+C:/Projetos/Github\ Projects/fractal-engine/src/world/World.cpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h:
 
@@ -1245,10 +3076,6 @@ C:/mingw64/x86_64-w64-mingw32/include/vadefs.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x3.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_exponential.inl:
-
 C:/mingw64/x86_64-w64-mingw32/include/_mingw.h:
 
 C:/mingw64/include/c++/14.2.0/bits/std_function.h:
@@ -1258,8 +3085,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleN
 C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int3.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/stdarg.h:
 
@@ -1283,27 +3108,23 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float2_precision.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp:
+C:/mingw64/x86_64-w64-mingw32/include/stdint.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512cdintrin.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/stdint.h:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x4_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/core/Program.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4_precision.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double2_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double3.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bf16vlintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/src/core/Application.cpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bf16vlintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/core/Program.cpp:
 
@@ -1315,9 +3136,9 @@ C:/mingw64/include/c++/14.2.0/bits/codecvt.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/mmeapi.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x3.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Camera.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm3dnow.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4_precision.hpp:
 
@@ -1327,8 +3148,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_f
 
 C:/mingw64/include/c++/14.2.0/bits/stl_pair.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/vector_relational.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.hpp:
@@ -1336,10 +3155,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h:
 
 C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_relational.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double3_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool2_precision.hpp:
 
@@ -1351,11 +3166,11 @@ C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/lzcntintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3_precision.hpp:
 
 C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/lzcntintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_common.hpp:
 
@@ -1369,8 +3184,6 @@ C:/mingw64/include/c++/14.2.0/streambuf:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x3_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp:
@@ -1383,23 +3196,21 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2_precision.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double4_precision.hpp:
-
 C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float3.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vpopcntdqintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec2.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fmaintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vpopcntdqintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x2.hpp:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/prfchiintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fmaintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl:
 
@@ -1409,17 +3220,11 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_relational.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x2.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec3.inl:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x2.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x4.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double2.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool3.hpp:
 
@@ -1430,8 +3235,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_b
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x3_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool4_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool3_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double3.hpp:
 
@@ -1448,6 +3251,8 @@ C:/mingw64/x86_64-w64-mingw32/include/limits.h:
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double4.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/scene/Components.cpp:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Texture.cpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4.hpp:
 
@@ -1467,9 +3272,9 @@ C:/mingw64/include/c++/14.2.0/system_error:
 
 C:/mingw64/x86_64-w64-mingw32/include/systemtopologyapi.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vp2intersectvlintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int4_sized.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vp2intersectvlintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint2.hpp:
 
@@ -1482,8 +3287,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_u
 C:/mingw64/x86_64-w64-mingw32/include/process.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x4.inl:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_uint3.hpp:
 
@@ -1511,6 +3314,8 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/quali
 
 C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h:
 
+C:/mingw64/include/c++/14.2.0/algorithm:
+
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_integer.inl:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_packing.inl:
@@ -1521,11 +3326,7 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_
 
 C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIREnderer.cpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_float1_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/matrix_transform.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp:
 
@@ -1533,19 +3334,13 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_f
 
 C:/mingw64/include/c++/14.2.0/debug/assertions.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x2_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl:
 
 C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h:
 
 C:/mingw64/include/c++/14.2.0/cstddef:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/packing.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x3.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.inl:
 
@@ -1555,17 +3350,15 @@ C:/mingw64/x86_64-w64-mingw32/include/msxml.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/bmiintrin.h:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/bmi2intrin.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int2.hpp:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/bmiintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool4.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/epsilon.inl:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fxsrintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.inl:
 
@@ -1577,17 +3370,17 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_t
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mmintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/matrix.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mmintrin.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/pshpack2.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/tsxldtrkintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxifmaintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/type_ptr.inl:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxifmaintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.cpp:
 
@@ -1597,31 +3390,23 @@ C:/mingw64/include/c++/14.2.0/string:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x2.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_projection.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_double2x2_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.inl:
 
 C:/mingw64/include/c++/14.2.0/bits/memory_resource.h:
 
-C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mwaitxintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp:
+C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/driverspecs.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_common.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/fwd.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/func_geometric.inl:
 
@@ -1637,6 +3422,8 @@ C:/mingw64/x86_64-w64-mingw32/include/bemapiset.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_float.hpp:
 
+C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Camera.cpp:
+
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float_precision.hpp:
 
 C:/mingw64/include/c++/14.2.0/concepts:
@@ -1647,17 +3434,17 @@ C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x3.inl:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mwaitintrin.h:
-
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mwaitintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x4.inl:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/smmintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/smmintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x2.inl:
 
@@ -1671,19 +3458,21 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sm4intrin.h:
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sha512intrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat3x4.inl:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512erintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sm4intrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x3.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512erintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat4x2.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat4x2.hpp:
+
+C:/mingw64/include/c++/14.2.0/sstream:
 
 C:/mingw64/x86_64-w64-mingw32/include/concurrencysal.h:
 
@@ -1711,8 +3500,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_
 
 C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x4_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/exponential.hpp:
 
 C:/mingw64/include/c++/14.2.0/new:
@@ -1720,8 +3507,6 @@ C:/mingw64/include/c++/14.2.0/new:
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x3_precision.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/float.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/compute_vector_relational.hpp:
 
 C:/mingw64/include/c++/14.2.0/ctime:
 
@@ -1731,19 +3516,17 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/vaesintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/integer.hpp:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xtestintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x2_precision.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/winsvc.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x3.hpp:
-
 C:/mingw64/x86_64-w64-mingw32/include/signal.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/adxintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double3x3_precision.hpp:
 
@@ -1757,17 +3540,11 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_d
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double4x2.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_double4.hpp:
+C:/mingw64/x86_64-w64-mingw32/include/locale.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/objbase.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float2x3.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int4_sized.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/locale.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/compute_vector_decl.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/datetimeapi.h:
 
@@ -1786,6 +3563,8 @@ C:/mingw64/x86_64-w64-mingw32/include/threadpoolapiset.h:
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x3_precision.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float3x4.hpp:
+
+C:/mingw64/include/c++/14.2.0/bits/fstream.tcc:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_float4x2.hpp:
 
@@ -1809,8 +3588,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaterni
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_double_precision.hpp:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float4_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_float.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_geometric.inl:
@@ -1819,21 +3596,15 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaterni
 
 C:/mingw64/x86_64-w64-mingw32/include/fileapi.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x3_precision.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/winreg.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.inl:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec3.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/_timeval.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_matrix.inl:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.inl:
 
@@ -1855,10 +3626,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_c
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/_fixes.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x3.hpp:
-
 C:/mingw64/include/c++/14.2.0/array:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_bool1_precision.hpp:
@@ -1867,23 +3634,17 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_d
 
 C:/mingw64/include/c++/14.2.0/bits/basic_string.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pmmintrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_double1_precision.hpp:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pmmintrin.h:
+
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec2.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/common.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float1_precision.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/objidlbase.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_int1_sized.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x4.hpp:
 
 C:/mingw64/include/c++/14.2.0/bits/move_only_function.h:
 
@@ -1895,11 +3656,11 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/geometric.hp
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.hpp:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fma4intrin.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/constants.inl:
 
 C:/mingw64/x86_64-w64-mingw32/include/pthread.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fma4intrin.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/ole2.h:
 
@@ -1911,19 +3672,15 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x4.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x4.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_common.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vector_relational.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.h:
-
-C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h:
 
 C:/mingw64/include/c++/14.2.0/backward/binders.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/rpcnsip.h:
 
 C:/mingw64/include/c++/14.2.0/bits/invoke.h:
+
+C:/mingw64/include/c++/14.2.0/bits/quoted_string.h:
 
 C:/mingw64/include/c++/14.2.0/bit:
 
@@ -1939,23 +3696,17 @@ C:/mingw64/include/c++/14.2.0/cwchar:
 
 C:/mingw64/include/c++/14.2.0/bits/allocator.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_transform.inl:
-
 C:/mingw64/include/c++/14.2.0/bits/basic_ios.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/matrix_transform.inl:
-
-C:/mingw64/x86_64-w64-mingw32/include/nb30.h:
-
-C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/_fixes.hpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Mesh.cpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/x86gprintrin.h:
 
 C:/mingw64/include/c++/14.2.0/bits/erase_if.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/nb30.h:
+
+C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc:
 
 C:/mingw64/include/c++/14.2.0/bits/char_traits.h:
 
@@ -1975,8 +3726,6 @@ C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h:
 
 C:/mingw64/include/c++/14.2.0/bits/exception.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x4_precision.hpp:
-
 C:/mingw64/include/c++/14.2.0/bits/exception_defines.h:
 
 C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h:
@@ -1989,27 +3738,25 @@ C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h:
 
 C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512ifmaintrin.h:
-
 C:/mingw64/include/c++/14.2.0/bits/ios_base.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sgxintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512ifmaintrin.h:
 
 C:/mingw64/include/c++/14.2.0/bits/istream.tcc:
 
-C:/mingw64/include/c++/14.2.0/unordered_map:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sgxintrin.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sm3intrin.h:
+C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/rdseedintrin.h:
 
-C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/sm3intrin.h:
+
+C:/mingw64/include/c++/14.2.0/unordered_map:
 
 C:/mingw64/include/c++/14.2.0/bits/locale_classes.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_double2x2.hpp:
 
 C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc:
 
@@ -2027,13 +3774,9 @@ C:/mingw64/include/c++/14.2.0/bits/locale_facets.h:
 
 C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512fp16intrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x4_precision.hpp:
-
 C:/mingw64/include/c++/14.2.0/bits/localefwd.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/KHR/khrplatform.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512fp16intrin.h:
 
 C:/mingw64/include/c++/14.2.0/type_traits:
 
@@ -2047,9 +3790,9 @@ C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h:
 
 C:/mingw64/include/c++/14.2.0/bits/move.h:
 
-C:/mingw64/include/c++/14.2.0/bits/nested_exception.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/shaintrin.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec2.hpp:
+C:/mingw64/include/c++/14.2.0/bits/nested_exception.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xopintrin.h:
 
@@ -2059,6 +3802,8 @@ C:/mingw64/include/c++/14.2.0/bits/node_handle.h:
 
 C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h:
 
+C:/mingw64/include/c++/14.2.0/math.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/shellapi.h:
 
 C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h:
@@ -2067,7 +3812,9 @@ C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h:
 
 C:/mingw64/include/c++/14.2.0/bits/range_access.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float3_precision.hpp:
+C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.h:
 
 C:/mingw64/include/c++/14.2.0/bits/ranges_base.h:
 
@@ -2078,8 +3825,6 @@ C:/mingw64/x86_64-w64-mingw32/include/winsock.h:
 C:/mingw64/include/c++/14.2.0/bits/ranges_util.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/namespaceapi.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_transform.hpp:
 
 C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h:
 
@@ -2095,35 +3840,27 @@ C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
 C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vlbwintrin.h:
+
 C:/mingw64/include/c++/14.2.0/bits/stl_construct.h:
 
 C:/mingw64/include/c++/14.2.0/bits/stl_function.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/trigonometric.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glad/glad.h:
+C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx5124vnniwintrin.h:
 
-C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float2.hpp:
-
 C:/mingw64/x86_64-w64-mingw32/include/winsmcrd.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_uint1_sized.hpp:
 
 C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h:
 
 C:/mingw64/include/c++/14.2.0/bits/stl_map.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_trigonometric.inl:
-
 C:/mingw64/include/c++/14.2.0/bits/stl_multimap.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pconfigintrin.h:
-
 C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pconfigintrin.h:
 
 C:/mingw64/include/c++/14.2.0/ext/atomicity.h:
 
@@ -2145,13 +3882,7 @@ C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc:
 
 C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_common.inl:
-
 C:/mingw64/include/c++/14.2.0/bits/stringfwd.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/enqcmdintrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x3_precision.hpp:
 
 C:/mingw64/include/c++/14.2.0/bits/unicode.h:
 
@@ -2159,15 +3890,13 @@ C:/mingw64/include/c++/14.2.0/cstdio:
 
 C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool3.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/f16cintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/enqcmdintrin.h:
 
 C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h:
 
-C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/f16cintrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/compute_common.hpp:
+C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h:
 
 C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h:
 
@@ -2177,11 +3906,13 @@ C:/mingw64/include/c++/14.2.0/format:
 
 C:/mingw64/include/c++/14.2.0/bits/utility.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512fp16vlintrin.h:
+C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h:
 
 C:/mingw64/include/c++/14.2.0/bits/vector.tcc:
 
 C:/mingw64/include/c++/14.2.0/map:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512fp16vlintrin.h:
 
 C:/mingw64/include/c++/14.2.0/bits/version.h:
 
@@ -2193,6 +3924,8 @@ C:/mingw64/include/c++/14.2.0/cassert:
 
 C:/mingw64/include/c++/14.2.0/cctype:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx2intrin.h:
+
 C:/mingw64/include/c++/14.2.0/cfloat:
 
 C:/mingw64/include/c++/14.2.0/climits:
@@ -2203,37 +3936,29 @@ C:/mingw64/include/c++/14.2.0/cmath:
 
 C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
 
-C:/mingw64/include/c++/14.2.0/compare:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/clzerointrin.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_vector_relational.inl:
+C:/mingw64/include/c++/14.2.0/compare:
 
 C:/mingw64/include/c++/14.2.0/cstdint:
 
-C:/mingw64/include/c++/14.2.0/cstdlib:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_clip_space.inl:
-
 C:/mingw64/x86_64-w64-mingw32/include/debugapi.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_uint1.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/string.h:
 
+C:/mingw64/include/c++/14.2.0/cstdlib:
+
 C:/mingw64/include/c++/14.2.0/cstring:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxfp16intrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_common.inl:
-
 C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxfp16intrin.h:
 
 C:/mingw64/include/c++/14.2.0/cwctype:
 
 C:/mingw64/include/c++/14.2.0/debug/debug.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_double_precision.hpp:
 
 C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h:
 
@@ -2247,13 +3972,9 @@ C:/mingw64/include/c++/14.2.0/ext/type_traits.h:
 
 C:/mingw64/include/c++/14.2.0/functional:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_quat.inl:
-
 C:/mingw64/include/c++/14.2.0/initializer_list:
 
 C:/mingw64/include/c++/14.2.0/string_view:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/glm.hpp:
 
 C:/mingw64/include/c++/14.2.0/ios:
 
@@ -2261,41 +3982,29 @@ C:/mingw64/include/c++/14.2.0/iostream:
 
 C:/mingw64/include/c++/14.2.0/numbers:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/setup.hpp:
-
 C:/mingw64/include/c++/14.2.0/optional:
 
 C:/mingw64/include/c++/14.2.0/span:
 
-C:/mingw64/include/c++/14.2.0/stdexcept:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int2_sized.hpp:
-
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
+
+C:/mingw64/include/c++/14.2.0/stdexcept:
 
 C:/mingw64/x86_64-w64-mingw32/include/poppack.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxvnniint16intrin.h:
-
 C:/mingw64/include/c++/14.2.0/stdlib.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxvnniint16intrin.h:
 
 C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc:
 
 C:/mingw64/x86_64-w64-mingw32/include/synchapi.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/matrix.hpp:
-
 C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc:
 
 C:/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x3.hpp:
-
 C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/gtc/constants.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/scalar_int_sized.hpp:
 
 C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc:
 
@@ -2307,17 +4016,13 @@ C:/mingw64/x86_64-w64-mingw32/include/realtimeapiset.h:
 
 C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bitalgintrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/input/Input.h:
-
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bitalgintrin.h:
 
 C:/mingw64/include/c++/14.2.0/tuple:
 
 C:/mingw64/include/c++/14.2.0/typeinfo:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x3.inl:
 
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h:
 
@@ -2325,13 +4030,9 @@ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/GLFW/glfw3.h:
-
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h:
 
 C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float3.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/dpapi.h:
 
@@ -2342,10 +4043,6 @@ C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h:
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/rpcsal.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/texture/TextureLoader.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_bool1.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h:
 
@@ -2359,9 +4056,7 @@ C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x3_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x4.hpp:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/movdirintrin.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/ctype.h:
 
@@ -2373,11 +4068,9 @@ C:/mingw64/x86_64-w64-mingw32/include/malloc.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/math.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_float.hpp:
-
 C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx5124fmapsintrin.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h:
 
@@ -2389,13 +4082,11 @@ C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/popcntintrin.h:
-
 C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
 
-C:/mingw64/x86_64-w64-mingw32/include/stdlib.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/popcntintrin.h:
 
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec3.hpp:
+C:/mingw64/x86_64-w64-mingw32/include/stdlib.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h:
 
@@ -2407,263 +4098,13 @@ C:/mingw64/x86_64-w64-mingw32/include/wchar.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/wctype.h:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_double1.hpp:
-
 C:/Projetos/Github\ Projects/fractal-engine/src/core/Window.cpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/_vectorize.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_mat2x2.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/ia32intrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxintrin.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_mat2x2.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec4.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_vec4.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/scalar_uint_sized.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/prsht.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_float2x2.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_float2x2_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool2.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/ioapiset.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool2_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_bool4_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int4.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/serializeintrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bf16intrin.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_float2_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_int3_sized.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_float.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint2.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512pfintrin.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint2_sized.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint3.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_clip_space.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint3_sized.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint4.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/vector_uint4_sized.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vp2intersectintrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vldqintrin.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/simd/platform.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_integer.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/func_packing.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/qualifier.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x4_precision.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_half.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/detail/type_half.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_projection.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/ext/matrix_transform.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmivlintrin.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/epsilon.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/quaternion.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/quaternion.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/vec1.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/dde.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/type_ptr.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/gtc/type_ptr.inl:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/mat2x2.hpp:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec2.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/windows.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/playsoundapi.h:
-
-C:/Projetos/GITHUB~1/FRACTA~1/include/glm/vec4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/func_geometric.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/setup.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat2x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x2.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat3x4.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x2.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x2.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x3.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_mat4x4.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_quat.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_vec1.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/detail/type_vec1.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/exponential.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double2x4_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x2_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double3x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x2.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/wincon.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x2_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x3_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_double4x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float2x4_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x2.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/scalar_constants.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x2_precision.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/interlockedapi.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/handleapi.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x3_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float3x4.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/matrix_float4x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_double.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_float_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_geometric.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_geometric.inl:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx5124fmapsintrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_relational.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_relational.inl:
-
-C:/mingw64/x86_64-w64-mingw32/include/objidl.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_transform.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/quaternion_trigonometric.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/geometric.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/scalar_constants.inl:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_bool1_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_double1_precision.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_float1.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_int1.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_int1_sized.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/ext/vector_relational.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/gtc/constants.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat2x3.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat2x4.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/unknwn.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x2.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat3x4.hpp:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/glm/mat4x3.hpp:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/prfchwintrin.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/camera/Camera.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/Chunk.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/SimpleNoise.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/environment/World.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/src/core/system/shader/Shader.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/glad.c:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/adxintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/ammintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxbf16intrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/ammintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxcomplexintrin.h:
 
@@ -2671,7 +4112,9 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxint8intrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxtileintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx2intrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bf16intrin.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/serializeintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512bitalgvlintrin.h:
 
@@ -2687,11 +4130,15 @@ C:/mingw64/x86_64-w64-mingw32/include/winnt.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512ifmavlintrin.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512pfintrin.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/specstrings.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/oaidl.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmi2intrin.h:
+
+C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/namedpipeapi.h:
 
@@ -2701,7 +4148,11 @@ C:/mingw64/x86_64-w64-mingw32/include/minwindef.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmiintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vlbwintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vbmivlintrin.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vldqintrin.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vp2intersectintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vlintrin.h:
 
@@ -2709,7 +4160,13 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vnniintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vnnivlintrin.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxintrin.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/ia32intrin.h:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxneconvertintrin.h:
+
+C:/mingw64/include/c++/14.2.0/bits/ranges_algo.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avxvnniint8intrin.h:
 
@@ -2719,13 +4176,9 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/clflushoptintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/clwbintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/clzerointrin.h:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/cmpccxaddintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/emmintrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/fxsrintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/gfniintrin.h:
 
@@ -2737,17 +4190,11 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/keylockerintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/lwpintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm3dnow.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/movdirintrin.h:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pkuintrin.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/prfchiintrin.h:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/prfchwintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/raointintrin.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/shaintrin.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h:
 
@@ -2787,6 +4234,8 @@ C:/mingw64/x86_64-w64-mingw32/include/bcrypt.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/commdlg.h:
 
+C:/mingw64/x86_64-w64-mingw32/include/dde.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/ddeml.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h:
@@ -2797,11 +4246,17 @@ C:/mingw64/x86_64-w64-mingw32/include/fibersapi.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/guiddef.h:
 
+C:/mingw64/x86_64-w64-mingw32/include/interlockedapi.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/handleapi.h:
+
 C:/Projetos/Github\ Projects/fractal-engine/src/scene/Entity.cpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/heapapi.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/inaddr.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/ioapiset.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/joystickapi.h:
 
@@ -2831,9 +4286,15 @@ C:/mingw64/x86_64-w64-mingw32/include/mmsystem.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/ncrypt.h:
 
+C:/mingw64/x86_64-w64-mingw32/include/objidl.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/oleauto.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/oleidl.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/windows.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/playsoundapi.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/processenv.h:
 
@@ -2842,6 +4303,10 @@ C:/mingw64/x86_64-w64-mingw32/include/processtopologyapi.h:
 C:/mingw64/x86_64-w64-mingw32/include/profileapi.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/propidl.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/prsht.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h:
 
@@ -2885,11 +4350,15 @@ C:/mingw64/x86_64-w64-mingw32/include/timezoneapi.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/tvout.h:
 
+C:/mingw64/x86_64-w64-mingw32/include/unknwn.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/urlmon.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/winapifamily.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/winbase.h:
+
+C:/mingw64/x86_64-w64-mingw32/include/wincon.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/winefs.h:
 
@@ -2913,6 +4382,26 @@ C:/mingw64/x86_64-w64-mingw32/include/wow64apiset.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/wtypes.h:
 
+C:/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/graphics/Shader.cpp:
+
+C:/mingw64/include/c++/14.2.0/bits/sstream.tcc:
+
+C:/mingw64/include/c++/14.2.0/fstream:
+
+C:/mingw64/include/c++/14.2.0/iomanip:
+
+C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/graphics/TextureLoader.cpp:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/stb_image/stb_image.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/input/Input.cpp:
+
+C:/mingw64/x86_64-w64-mingw32/include/GL/gl.h:
+
 C:/Projetos/Github\ Projects/fractal-engine/src/renderer/Renderer.cpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/scene/Scene.cpp:
@@ -2920,3 +4409,5 @@ C:/Projetos/Github\ Projects/fractal-engine/src/scene/Scene.cpp:
 C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIElement.cpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIManager.cpp:
+
+C:/Projetos/Github\ Projects/fractal-engine/src/world/Chunk.cpp:

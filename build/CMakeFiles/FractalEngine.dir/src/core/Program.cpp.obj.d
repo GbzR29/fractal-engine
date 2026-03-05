@@ -414,7 +414,6 @@ CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/scene/Player.h \
- C:/Projetos/Github\ Projects/fractal-engine/src/core/system/player/Player.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/graphics/Camera.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/graphics/Shader.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/world/World.h \
