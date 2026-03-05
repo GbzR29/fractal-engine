@@ -1,13 +1,18 @@
 #pragma once
 #include <vector>
 #include <functional>
-#include <glad/glad.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include "../shader/Shader.h"
+#include <third_party/glad/glad.h>
+#include <third_party/glm/glm.hpp>
+#include <third_party/glm/gtc/matrix_transform.hpp>
+#include "fractal_engine/graphics/Shader.h"
 #include "SimpleNoise.h"
 
-#include "../texture/TextureLoader.h"
+#include "fractal_engine/graphics/TextureLoader.h"
+
+namespace fractal_engine::world {
+
+using fractal_engine::graphics::Shader;
+using fractal_engine::graphics::TextureLoader;
 
 // Tipos de bloco
 enum BlockType : uint8_t {
@@ -58,3 +63,4 @@ private:
     void addFace(const float* face, int x, int y, int z, float faceType);
     //void TextureLoader(GLuint& tex, const char* path);
 };
+} // namespace fractal_engine::world

@@ -1,7 +1,6 @@
-#ifndef PROGRAM_H
-#define PROGRAM_H
+#pragma once
 
-#include "system/window/Window.h"
+#include "fractal_engine/core/Window.h"
 
 /**
  * @brief Initializes and runs the entire application.
@@ -11,5 +10,3 @@
  * the main loop of the program.
  */
 void Init_Program();
-
-#endif

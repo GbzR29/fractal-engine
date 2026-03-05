@@ -1,5 +1,7 @@
-#include "World.h"
+#include "fractal_engine/world/World.h"
 #include <cmath>
+
+namespace fractal_engine::world {
 
 // ─────────────────────────────────────────────
 // Helpers de coordenada
@@ -114,3 +116,5 @@ void World::render(Shader& shader) {
         chunk.Draw(shader);
     }
 }
+
+} // namespace fractal_engine::world

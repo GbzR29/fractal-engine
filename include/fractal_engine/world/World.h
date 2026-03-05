@@ -6,6 +6,8 @@
 
 namespace fractal_engine::world {
 
+using fractal_engine::graphics::Shader;
+
 // Comparador para usar glm::ivec3 como chave de map
 struct IVec3Cmp {
     bool operator()(const glm::ivec3& a, const glm::ivec3& b) const {

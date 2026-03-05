@@ -1,5 +1,7 @@
-#include "Chunk.h"
+#include "fractal_engine/world/Chunk.h"
 #include <iostream>
+
+namespace fractal_engine::world {
 
 // ─────────────────────────────────────────────
 // Faces (posição relativa ao centro do bloco)
@@ -250,3 +252,5 @@ void Chunk::Draw(Shader& shader) {
     // glGenerateMipmap(GL_TEXTURE_2D);
     // stbi_image_free(data);
 }*/
+
+} // namespace fractal_engine::world

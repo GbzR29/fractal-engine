@@ -1,9 +1,9 @@
 #pragma once
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include "../core/system/shader/Shader.h"
-#include "../core/system/texture/TextureLoader.h"
+#include <third_party/glm/glm.hpp>
+#include <third_party/glm/gtc/matrix_transform.hpp>
+#include "fractal_engine/graphics/Shader.h"
+#include "fractal_engine/graphics/TextureLoader.h"
 
 #include <vector>
 

@@ -7,6 +7,8 @@
 
 namespace fractal_engine::core {
 
+using fractal_engine::input::Input;
+
 /**
  * @class Window
  * @brief Responsible for creating and managing the application window and OpenGL context.

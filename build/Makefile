@@ -183,30 +183,6 @@ src/core/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Application.cpp.s
 .PHONY : src/core/Application.cpp.s
 
-src/core/Input.obj: src/core/Input.cpp.obj
-.PHONY : src/core/Input.obj
-
-# target to build an object file
-src/core/Input.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Input.cpp.obj
-.PHONY : src/core/Input.cpp.obj
-
-src/core/Input.i: src/core/Input.cpp.i
-.PHONY : src/core/Input.i
-
-# target to preprocess a source file
-src/core/Input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Input.cpp.i
-.PHONY : src/core/Input.cpp.i
-
-src/core/Input.s: src/core/Input.cpp.s
-.PHONY : src/core/Input.s
-
-# target to generate assembly for a file
-src/core/Input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Input.cpp.s
-.PHONY : src/core/Input.cpp.s
-
 src/core/Program.obj: src/core/Program.cpp.obj
 .PHONY : src/core/Program.obj
 
@@ -279,102 +255,6 @@ src/core/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Window.cpp.s
 .PHONY : src/core/Window.cpp.s
 
-src/core/system/camera/Camera.obj: src/core/system/camera/Camera.cpp.obj
-.PHONY : src/core/system/camera/Camera.obj
-
-# target to build an object file
-src/core/system/camera/Camera.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.obj
-.PHONY : src/core/system/camera/Camera.cpp.obj
-
-src/core/system/camera/Camera.i: src/core/system/camera/Camera.cpp.i
-.PHONY : src/core/system/camera/Camera.i
-
-# target to preprocess a source file
-src/core/system/camera/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.i
-.PHONY : src/core/system/camera/Camera.cpp.i
-
-src/core/system/camera/Camera.s: src/core/system/camera/Camera.cpp.s
-.PHONY : src/core/system/camera/Camera.s
-
-# target to generate assembly for a file
-src/core/system/camera/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/camera/Camera.cpp.s
-.PHONY : src/core/system/camera/Camera.cpp.s
-
-src/core/system/environment/Chunk.obj: src/core/system/environment/Chunk.cpp.obj
-.PHONY : src/core/system/environment/Chunk.obj
-
-# target to build an object file
-src/core/system/environment/Chunk.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.obj
-.PHONY : src/core/system/environment/Chunk.cpp.obj
-
-src/core/system/environment/Chunk.i: src/core/system/environment/Chunk.cpp.i
-.PHONY : src/core/system/environment/Chunk.i
-
-# target to preprocess a source file
-src/core/system/environment/Chunk.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.i
-.PHONY : src/core/system/environment/Chunk.cpp.i
-
-src/core/system/environment/Chunk.s: src/core/system/environment/Chunk.cpp.s
-.PHONY : src/core/system/environment/Chunk.s
-
-# target to generate assembly for a file
-src/core/system/environment/Chunk.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/Chunk.cpp.s
-.PHONY : src/core/system/environment/Chunk.cpp.s
-
-src/core/system/environment/World.obj: src/core/system/environment/World.cpp.obj
-.PHONY : src/core/system/environment/World.obj
-
-# target to build an object file
-src/core/system/environment/World.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.obj
-.PHONY : src/core/system/environment/World.cpp.obj
-
-src/core/system/environment/World.i: src/core/system/environment/World.cpp.i
-.PHONY : src/core/system/environment/World.i
-
-# target to preprocess a source file
-src/core/system/environment/World.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.i
-.PHONY : src/core/system/environment/World.cpp.i
-
-src/core/system/environment/World.s: src/core/system/environment/World.cpp.s
-.PHONY : src/core/system/environment/World.s
-
-# target to generate assembly for a file
-src/core/system/environment/World.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/environment/World.cpp.s
-.PHONY : src/core/system/environment/World.cpp.s
-
-src/core/system/input/Input.obj: src/core/system/input/Input.cpp.obj
-.PHONY : src/core/system/input/Input.obj
-
-# target to build an object file
-src/core/system/input/Input.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.obj
-.PHONY : src/core/system/input/Input.cpp.obj
-
-src/core/system/input/Input.i: src/core/system/input/Input.cpp.i
-.PHONY : src/core/system/input/Input.i
-
-# target to preprocess a source file
-src/core/system/input/Input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.i
-.PHONY : src/core/system/input/Input.cpp.i
-
-src/core/system/input/Input.s: src/core/system/input/Input.cpp.s
-.PHONY : src/core/system/input/Input.s
-
-# target to generate assembly for a file
-src/core/system/input/Input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/input/Input.cpp.s
-.PHONY : src/core/system/input/Input.cpp.s
-
 src/core/system/player/Player.obj: src/core/system/player/Player.cpp.obj
 .PHONY : src/core/system/player/Player.obj
 
@@ -398,78 +278,6 @@ src/core/system/player/Player.s: src/core/system/player/Player.cpp.s
 src/core/system/player/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.s
 .PHONY : src/core/system/player/Player.cpp.s
-
-src/core/system/shader/Shader.obj: src/core/system/shader/Shader.cpp.obj
-.PHONY : src/core/system/shader/Shader.obj
-
-# target to build an object file
-src/core/system/shader/Shader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.obj
-.PHONY : src/core/system/shader/Shader.cpp.obj
-
-src/core/system/shader/Shader.i: src/core/system/shader/Shader.cpp.i
-.PHONY : src/core/system/shader/Shader.i
-
-# target to preprocess a source file
-src/core/system/shader/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.i
-.PHONY : src/core/system/shader/Shader.cpp.i
-
-src/core/system/shader/Shader.s: src/core/system/shader/Shader.cpp.s
-.PHONY : src/core/system/shader/Shader.s
-
-# target to generate assembly for a file
-src/core/system/shader/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/shader/Shader.cpp.s
-.PHONY : src/core/system/shader/Shader.cpp.s
-
-src/core/system/texture/TextureLoader.obj: src/core/system/texture/TextureLoader.cpp.obj
-.PHONY : src/core/system/texture/TextureLoader.obj
-
-# target to build an object file
-src/core/system/texture/TextureLoader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.obj
-.PHONY : src/core/system/texture/TextureLoader.cpp.obj
-
-src/core/system/texture/TextureLoader.i: src/core/system/texture/TextureLoader.cpp.i
-.PHONY : src/core/system/texture/TextureLoader.i
-
-# target to preprocess a source file
-src/core/system/texture/TextureLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.i
-.PHONY : src/core/system/texture/TextureLoader.cpp.i
-
-src/core/system/texture/TextureLoader.s: src/core/system/texture/TextureLoader.cpp.s
-.PHONY : src/core/system/texture/TextureLoader.s
-
-# target to generate assembly for a file
-src/core/system/texture/TextureLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/texture/TextureLoader.cpp.s
-.PHONY : src/core/system/texture/TextureLoader.cpp.s
-
-src/core/system/window/Window.obj: src/core/system/window/Window.cpp.obj
-.PHONY : src/core/system/window/Window.obj
-
-# target to build an object file
-src/core/system/window/Window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.obj
-.PHONY : src/core/system/window/Window.cpp.obj
-
-src/core/system/window/Window.i: src/core/system/window/Window.cpp.i
-.PHONY : src/core/system/window/Window.i
-
-# target to preprocess a source file
-src/core/system/window/Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.i
-.PHONY : src/core/system/window/Window.cpp.i
-
-src/core/system/window/Window.s: src/core/system/window/Window.cpp.s
-.PHONY : src/core/system/window/Window.s
-
-# target to generate assembly for a file
-src/core/system/window/Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/window/Window.cpp.s
-.PHONY : src/core/system/window/Window.cpp.s
 
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
@@ -495,29 +303,125 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/renderer/Camera.obj: src/renderer/Camera.cpp.obj
-.PHONY : src/renderer/Camera.obj
+src/graphics/Camera.obj: src/graphics/Camera.cpp.obj
+.PHONY : src/graphics/Camera.obj
 
 # target to build an object file
-src/renderer/Camera.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.obj
-.PHONY : src/renderer/Camera.cpp.obj
+src/graphics/Camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Camera.cpp.obj
+.PHONY : src/graphics/Camera.cpp.obj
 
-src/renderer/Camera.i: src/renderer/Camera.cpp.i
-.PHONY : src/renderer/Camera.i
+src/graphics/Camera.i: src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.i
 
 # target to preprocess a source file
-src/renderer/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.i
-.PHONY : src/renderer/Camera.cpp.i
+src/graphics/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.cpp.i
 
-src/renderer/Camera.s: src/renderer/Camera.cpp.s
-.PHONY : src/renderer/Camera.s
+src/graphics/Camera.s: src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.s
 
 # target to generate assembly for a file
-src/renderer/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Camera.cpp.s
-.PHONY : src/renderer/Camera.cpp.s
+src/graphics/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.cpp.s
+
+src/graphics/Shader.obj: src/graphics/Shader.cpp.obj
+.PHONY : src/graphics/Shader.obj
+
+# target to build an object file
+src/graphics/Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Shader.cpp.obj
+.PHONY : src/graphics/Shader.cpp.obj
+
+src/graphics/Shader.i: src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.i
+
+# target to preprocess a source file
+src/graphics/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.cpp.i
+
+src/graphics/Shader.s: src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.s
+
+# target to generate assembly for a file
+src/graphics/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.cpp.s
+
+src/graphics/Texture.obj: src/graphics/Texture.cpp.obj
+.PHONY : src/graphics/Texture.obj
+
+# target to build an object file
+src/graphics/Texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Texture.cpp.obj
+.PHONY : src/graphics/Texture.cpp.obj
+
+src/graphics/Texture.i: src/graphics/Texture.cpp.i
+.PHONY : src/graphics/Texture.i
+
+# target to preprocess a source file
+src/graphics/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Texture.cpp.i
+.PHONY : src/graphics/Texture.cpp.i
+
+src/graphics/Texture.s: src/graphics/Texture.cpp.s
+.PHONY : src/graphics/Texture.s
+
+# target to generate assembly for a file
+src/graphics/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/Texture.cpp.s
+.PHONY : src/graphics/Texture.cpp.s
+
+src/graphics/TextureLoader.obj: src/graphics/TextureLoader.cpp.obj
+.PHONY : src/graphics/TextureLoader.obj
+
+# target to build an object file
+src/graphics/TextureLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/TextureLoader.cpp.obj
+.PHONY : src/graphics/TextureLoader.cpp.obj
+
+src/graphics/TextureLoader.i: src/graphics/TextureLoader.cpp.i
+.PHONY : src/graphics/TextureLoader.i
+
+# target to preprocess a source file
+src/graphics/TextureLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/TextureLoader.cpp.i
+.PHONY : src/graphics/TextureLoader.cpp.i
+
+src/graphics/TextureLoader.s: src/graphics/TextureLoader.cpp.s
+.PHONY : src/graphics/TextureLoader.s
+
+# target to generate assembly for a file
+src/graphics/TextureLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/graphics/TextureLoader.cpp.s
+.PHONY : src/graphics/TextureLoader.cpp.s
+
+src/input/Input.obj: src/input/Input.cpp.obj
+.PHONY : src/input/Input.obj
+
+# target to build an object file
+src/input/Input.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/input/Input.cpp.obj
+.PHONY : src/input/Input.cpp.obj
+
+src/input/Input.i: src/input/Input.cpp.i
+.PHONY : src/input/Input.i
+
+# target to preprocess a source file
+src/input/Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/input/Input.cpp.i
+.PHONY : src/input/Input.cpp.i
+
+src/input/Input.s: src/input/Input.cpp.s
+.PHONY : src/input/Input.s
+
+# target to generate assembly for a file
+src/input/Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/input/Input.cpp.s
+.PHONY : src/input/Input.cpp.s
 
 src/renderer/Mesh.obj: src/renderer/Mesh.cpp.obj
 .PHONY : src/renderer/Mesh.obj
@@ -566,54 +470,6 @@ src/renderer/Renderer.s: src/renderer/Renderer.cpp.s
 src/renderer/Renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.s
 .PHONY : src/renderer/Renderer.cpp.s
-
-src/renderer/Shader.obj: src/renderer/Shader.cpp.obj
-.PHONY : src/renderer/Shader.obj
-
-# target to build an object file
-src/renderer/Shader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.obj
-.PHONY : src/renderer/Shader.cpp.obj
-
-src/renderer/Shader.i: src/renderer/Shader.cpp.i
-.PHONY : src/renderer/Shader.i
-
-# target to preprocess a source file
-src/renderer/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.i
-.PHONY : src/renderer/Shader.cpp.i
-
-src/renderer/Shader.s: src/renderer/Shader.cpp.s
-.PHONY : src/renderer/Shader.s
-
-# target to generate assembly for a file
-src/renderer/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Shader.cpp.s
-.PHONY : src/renderer/Shader.cpp.s
-
-src/renderer/Texture.obj: src/renderer/Texture.cpp.obj
-.PHONY : src/renderer/Texture.obj
-
-# target to build an object file
-src/renderer/Texture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.obj
-.PHONY : src/renderer/Texture.cpp.obj
-
-src/renderer/Texture.i: src/renderer/Texture.cpp.i
-.PHONY : src/renderer/Texture.i
-
-# target to preprocess a source file
-src/renderer/Texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.i
-.PHONY : src/renderer/Texture.cpp.i
-
-src/renderer/Texture.s: src/renderer/Texture.cpp.s
-.PHONY : src/renderer/Texture.s
-
-# target to generate assembly for a file
-src/renderer/Texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/renderer/Texture.cpp.s
-.PHONY : src/renderer/Texture.cpp.s
 
 src/scene/Components.obj: src/scene/Components.cpp.obj
 .PHONY : src/scene/Components.obj
@@ -783,6 +639,54 @@ src/ui/core/UIREnderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.s
 .PHONY : src/ui/core/UIREnderer.cpp.s
 
+src/world/Chunk.obj: src/world/Chunk.cpp.obj
+.PHONY : src/world/Chunk.obj
+
+# target to build an object file
+src/world/Chunk.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj
+.PHONY : src/world/Chunk.cpp.obj
+
+src/world/Chunk.i: src/world/Chunk.cpp.i
+.PHONY : src/world/Chunk.i
+
+# target to preprocess a source file
+src/world/Chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.i
+.PHONY : src/world/Chunk.cpp.i
+
+src/world/Chunk.s: src/world/Chunk.cpp.s
+.PHONY : src/world/Chunk.s
+
+# target to generate assembly for a file
+src/world/Chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.s
+.PHONY : src/world/Chunk.cpp.s
+
+src/world/World.obj: src/world/World.cpp.obj
+.PHONY : src/world/World.obj
+
+# target to build an object file
+src/world/World.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj
+.PHONY : src/world/World.cpp.obj
+
+src/world/World.i: src/world/World.cpp.i
+.PHONY : src/world/World.i
+
+# target to preprocess a source file
+src/world/World.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/World.cpp.i
+.PHONY : src/world/World.cpp.i
+
+src/world/World.s: src/world/World.cpp.s
+.PHONY : src/world/World.s
+
+# target to generate assembly for a file
+src/world/World.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/World.cpp.s
+.PHONY : src/world/World.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -799,9 +703,6 @@ help:
 	@echo ... src/core/Application.obj
 	@echo ... src/core/Application.i
 	@echo ... src/core/Application.s
-	@echo ... src/core/Input.obj
-	@echo ... src/core/Input.i
-	@echo ... src/core/Input.s
 	@echo ... src/core/Program.obj
 	@echo ... src/core/Program.i
 	@echo ... src/core/Program.s
@@ -811,48 +712,33 @@ help:
 	@echo ... src/core/Window.obj
 	@echo ... src/core/Window.i
 	@echo ... src/core/Window.s
-	@echo ... src/core/system/camera/Camera.obj
-	@echo ... src/core/system/camera/Camera.i
-	@echo ... src/core/system/camera/Camera.s
-	@echo ... src/core/system/environment/Chunk.obj
-	@echo ... src/core/system/environment/Chunk.i
-	@echo ... src/core/system/environment/Chunk.s
-	@echo ... src/core/system/environment/World.obj
-	@echo ... src/core/system/environment/World.i
-	@echo ... src/core/system/environment/World.s
-	@echo ... src/core/system/input/Input.obj
-	@echo ... src/core/system/input/Input.i
-	@echo ... src/core/system/input/Input.s
 	@echo ... src/core/system/player/Player.obj
 	@echo ... src/core/system/player/Player.i
 	@echo ... src/core/system/player/Player.s
-	@echo ... src/core/system/shader/Shader.obj
-	@echo ... src/core/system/shader/Shader.i
-	@echo ... src/core/system/shader/Shader.s
-	@echo ... src/core/system/texture/TextureLoader.obj
-	@echo ... src/core/system/texture/TextureLoader.i
-	@echo ... src/core/system/texture/TextureLoader.s
-	@echo ... src/core/system/window/Window.obj
-	@echo ... src/core/system/window/Window.i
-	@echo ... src/core/system/window/Window.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s
-	@echo ... src/renderer/Camera.obj
-	@echo ... src/renderer/Camera.i
-	@echo ... src/renderer/Camera.s
+	@echo ... src/graphics/Camera.obj
+	@echo ... src/graphics/Camera.i
+	@echo ... src/graphics/Camera.s
+	@echo ... src/graphics/Shader.obj
+	@echo ... src/graphics/Shader.i
+	@echo ... src/graphics/Shader.s
+	@echo ... src/graphics/Texture.obj
+	@echo ... src/graphics/Texture.i
+	@echo ... src/graphics/Texture.s
+	@echo ... src/graphics/TextureLoader.obj
+	@echo ... src/graphics/TextureLoader.i
+	@echo ... src/graphics/TextureLoader.s
+	@echo ... src/input/Input.obj
+	@echo ... src/input/Input.i
+	@echo ... src/input/Input.s
 	@echo ... src/renderer/Mesh.obj
 	@echo ... src/renderer/Mesh.i
 	@echo ... src/renderer/Mesh.s
 	@echo ... src/renderer/Renderer.obj
 	@echo ... src/renderer/Renderer.i
 	@echo ... src/renderer/Renderer.s
-	@echo ... src/renderer/Shader.obj
-	@echo ... src/renderer/Shader.i
-	@echo ... src/renderer/Shader.s
-	@echo ... src/renderer/Texture.obj
-	@echo ... src/renderer/Texture.i
-	@echo ... src/renderer/Texture.s
 	@echo ... src/scene/Components.obj
 	@echo ... src/scene/Components.i
 	@echo ... src/scene/Components.s
@@ -874,6 +760,12 @@ help:
 	@echo ... src/ui/core/UIREnderer.obj
 	@echo ... src/ui/core/UIREnderer.i
 	@echo ... src/ui/core/UIREnderer.s
+	@echo ... src/world/Chunk.obj
+	@echo ... src/world/Chunk.i
+	@echo ... src/world/Chunk.s
+	@echo ... src/world/World.obj
+	@echo ... src/world/World.i
+	@echo ... src/world/World.s
 .PHONY : help
 
 

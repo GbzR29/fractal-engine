@@ -2,17 +2,23 @@
 
 #include "Program.h"
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include <third_party/glm/glm.hpp>
+#include <third_party/glm/gtc/matrix_transform.hpp>
+#include <third_party/glm/gtc/type_ptr.hpp>
 
 #include <iostream>
 #include <vector>
 
-#include "system/player/Player.h"
-#include "system/shader/Shader.h"
-#include "system/environment/World.h"
+#include "fractal_engine/scene/Player.h"
+#include "fractal_engine/graphics/Shader.h"
+#include "fractal_engine/world/World.h"
+#include "fractal_engine/input/Input.h"
 #include "../objects/Cube.h"
+
+using namespace fractal_engine::graphics;
+using namespace fractal_engine::world;
+using namespace fractal_engine::input;
+using namespace fractal_engine::core;
 
 
 

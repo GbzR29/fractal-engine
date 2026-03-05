@@ -1,7 +1,12 @@
-#include "../camera/Camera.h"
-#include "../input/Input.h"
-#include "../environment/World.h"
+#pragma once
 
+#include "fractal_engine/graphics/Camera.h"
+#include "fractal_engine/input/Input.h"
+#include "fractal_engine/world/World.h"
+
+using namespace fractal_engine::graphics;
+using namespace fractal_engine::input;
+using namespace fractal_engine::world;
 
 struct AABB {
     glm::vec3 min, max;
