@@ -255,30 +255,6 @@ src/core/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Window.cpp.s
 .PHONY : src/core/Window.cpp.s
 
-src/core/system/player/Player.obj: src/core/system/player/Player.cpp.obj
-.PHONY : src/core/system/player/Player.obj
-
-# target to build an object file
-src/core/system/player/Player.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.obj
-.PHONY : src/core/system/player/Player.cpp.obj
-
-src/core/system/player/Player.i: src/core/system/player/Player.cpp.i
-.PHONY : src/core/system/player/Player.i
-
-# target to preprocess a source file
-src/core/system/player/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.i
-.PHONY : src/core/system/player/Player.cpp.i
-
-src/core/system/player/Player.s: src/core/system/player/Player.cpp.s
-.PHONY : src/core/system/player/Player.s
-
-# target to generate assembly for a file
-src/core/system/player/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/system/player/Player.cpp.s
-.PHONY : src/core/system/player/Player.cpp.s
-
 src/glad.obj: src/glad.c.obj
 .PHONY : src/glad.obj
 
@@ -519,6 +495,30 @@ src/scene/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/scene/Entity.cpp.s
 .PHONY : src/scene/Entity.cpp.s
 
+src/scene/Player.obj: src/scene/Player.cpp.obj
+.PHONY : src/scene/Player.obj
+
+# target to build an object file
+src/scene/Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/scene/Player.cpp.obj
+.PHONY : src/scene/Player.cpp.obj
+
+src/scene/Player.i: src/scene/Player.cpp.i
+.PHONY : src/scene/Player.i
+
+# target to preprocess a source file
+src/scene/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/scene/Player.cpp.i
+.PHONY : src/scene/Player.cpp.i
+
+src/scene/Player.s: src/scene/Player.cpp.s
+.PHONY : src/scene/Player.s
+
+# target to generate assembly for a file
+src/scene/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/scene/Player.cpp.s
+.PHONY : src/scene/Player.cpp.s
+
 src/scene/Scene.obj: src/scene/Scene.cpp.obj
 .PHONY : src/scene/Scene.obj
 
@@ -712,9 +712,6 @@ help:
 	@echo ... src/core/Window.obj
 	@echo ... src/core/Window.i
 	@echo ... src/core/Window.s
-	@echo ... src/core/system/player/Player.obj
-	@echo ... src/core/system/player/Player.i
-	@echo ... src/core/system/player/Player.s
 	@echo ... src/glad.obj
 	@echo ... src/glad.i
 	@echo ... src/glad.s
@@ -745,6 +742,9 @@ help:
 	@echo ... src/scene/Entity.obj
 	@echo ... src/scene/Entity.i
 	@echo ... src/scene/Entity.s
+	@echo ... src/scene/Player.obj
+	@echo ... src/scene/Player.i
+	@echo ... src/scene/Player.s
 	@echo ... src/scene/Scene.obj
 	@echo ... src/scene/Scene.i
 	@echo ... src/scene/Scene.s
