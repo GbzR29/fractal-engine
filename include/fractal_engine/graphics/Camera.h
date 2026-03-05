@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../shader/Shader.h" // esse Shader tem o GLAD
+#include "fractal_engine/graphics/Shader.h"
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include <third_party/glm/glm.hpp>
+#include <third_party/glm/gtc/matrix_transform.hpp>
+#include <third_party/glm/gtc/type_ptr.hpp>
 
-#include <GLFW/glfw3.h>
+#include <third_party/GLFW/glfw3.h>
+
+namespace fractal_engine::graphics {
 
 // declarações (extern) — apenas declaração no header
 extern glm::vec3 cameraPos;
@@ -33,4 +35,6 @@ public:
 
     void rotate(float dx, float dy);
 };
+
+} // namespace fractal_engine::graphics
 

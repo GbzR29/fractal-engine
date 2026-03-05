@@ -1,9 +1,11 @@
-#include "Shader.h"
+#include "fractal_engine/graphics/Shader.h"
 
 #include <fstream>
 #include <sstream>
 #include <iostream>
 #include <iomanip>
+
+namespace fractal_engine::graphics {
 
 // ===============================
 // Construtor
@@ -164,3 +166,5 @@ void Shader::setMat4(const std::string& name, const glm::mat4& mat) const
         &mat[0][0]
     );
 }
+
+} // namespace fractal_engine::graphics

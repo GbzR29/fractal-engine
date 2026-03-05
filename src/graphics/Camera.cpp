@@ -1,5 +1,7 @@
-#include "Camera.h"
+#include "fractal_engine/graphics/Camera.h"
 #include <algorithm>
+
+namespace fractal_engine::graphics {
 
 glm::mat4 Camera::getView() const {
 
@@ -33,3 +35,5 @@ void Camera::rotate(float dx, float dy) {
 
     pitch = std::clamp(pitch, -89.0f, 89.0f);
 }
+
+} // namespace fractal_engine::graphics

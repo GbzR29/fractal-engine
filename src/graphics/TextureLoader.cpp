@@ -1,11 +1,13 @@
-#include "TextureLoader.h"
+#include "fractal_engine/graphics/TextureLoader.h"
 #include <iostream>
 #include <sstream>
 
 // stb_image deve ser definido UMA VEZ em todo o projeto.
 // Se já foi definido em outro .cpp, remova a linha abaixo.
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image/stb_image.h>
+#include <third_party/stb_image/stb_image.h>
+
+namespace fractal_engine::graphics {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Definição do cache estático
@@ -109,3 +111,4 @@ void TextureLoader::clearCache() {
     }
     s_cache.clear();
 }
+} // namespace fractal_engine::graphics

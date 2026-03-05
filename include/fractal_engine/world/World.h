@@ -1,8 +1,10 @@
 #pragma once
 #include <map>
-#include <glm/glm.hpp>
-#include "Chunk.h"
-#include "../shader/Shader.h"
+#include <third_party/glm/glm.hpp>
+#include "fractal_engine/world/Chunk.h"
+#include "fractal_engine/graphics/Shader.h"
+
+namespace fractal_engine::world {
 
 // Comparador para usar glm::ivec3 como chave de map
 struct IVec3Cmp {
@@ -43,3 +45,5 @@ private:
     // Re-gera a mesh dos 4 vizinhos horizontais de um chunk
     void remeshNeighbors(glm::ivec3 key);
 };
+
+} // namespace fractal_engine::world

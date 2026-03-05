@@ -1,9 +1,10 @@
-#ifndef SHADER_H
-#define SHADER_H
+#pragma once
 
-#include <glad/glad.h>
+#include <third_party/glad/glad.h>
 #include <string>
-#include <glm/glm.hpp>
+#include <third_party/glm/glm.hpp>
+
+namespace fractal_engine::graphics {
 
 class Shader {
 
@@ -26,4 +27,4 @@ class Shader {
 	
 };
 
-#endif
+} // namespace fractal_engine::graphics

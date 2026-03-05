@@ -1,10 +1,11 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#pragma once
 
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include <third_party/glad/glad.h>
+#include <third_party/GLFW/glfw3.h>
 
-#include "../input/Input.h"
+#include "fractal_engine/input/Input.h"
+
+namespace fractal_engine::core {
 
 /**
  * @class Window
@@ -100,4 +101,4 @@ private:
     static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 };
 
-#endif
+} // namespace fractal_engine::core

@@ -1,4 +1,6 @@
-#include "Input.h"
+#include "fractal_engine/input/Input.h"
+
+namespace fractal_engine::input {
 
 void Input::update(GLFWwindow* window) {
 
@@ -28,7 +30,9 @@ void Input::onMouseMove(double xposIn, double yposIn) {
 
     mouseDX += xpos - lastX; 
     mouseDY += lastY - ypos; 
-    
+
     lastX = xpos;
     lastY = ypos;
 }
+
+} // namespace fractal_engine::input

@@ -1,5 +1,7 @@
 #pragma once
-#include <GLFW/glfw3.h>
+#include <third_party/GLFW/glfw3.h>
+
+namespace fractal_engine::input {
 
 class Input {
 public:
@@ -20,3 +22,5 @@ private:
     float lastY = 0.0f;
     bool firstMouse = true;
 };
+
+} // namespace fractal_engine::input

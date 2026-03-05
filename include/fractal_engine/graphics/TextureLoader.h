@@ -1,7 +1,9 @@
 #pragma once
-#include <glad/glad.h>
+#include <third_party/glad/glad.h>
 #include <string>
 #include <unordered_map>
+
+namespace fractal_engine::graphics {
 
 class TextureLoader {
 public:
@@ -21,3 +23,5 @@ private:
     // path -> OpenGL texture ID
     static std::unordered_map<std::string, GLuint> s_cache;
 };
+
+} // namespace fractal_engine::graphics
