@@ -12,7 +12,10 @@ void GameScene::init() {
     // 2. Spawn do player DEPOIS do mundo pronto — scan de blocos reais
     player.initializeAtTerrainHeight(world, 0.0f, 0.0f);
 
-    // 3. UI
+    // 3. BlockOutline para visualização de bloco selecionado
+    blockOutline.init();
+
+    // 4. UI
     initCrosshair();
 }
 
@@ -26,6 +29,14 @@ void GameScene::render(Input& input, Window& window) {
 
     player.renderCamera(worldShader, screenW, screenH);
     world.render(worldShader);
+    
+    // ── Renderiza o outline do bloco sendo olhado ──────────────────────────
+    blockOutline.render(
+        player.targetBlock,
+        player.getView(),
+        player.getProjection(screenW, screenH)
+    );
+    
     drawCrosshair();
 }
 

@@ -26,12 +26,14 @@ CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.obj: C:/Projetos/Github\ Projec
 
 CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/GameScene.cpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/core/Window.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Camera.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/scene/Player.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Blockoutline.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Raycast.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
@@ -421,12 +423,14 @@ CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.obj: C:/Projetos/Github\ Pro
 
 CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/core/Program.cpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/core/Window.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Camera.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/input/Input.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/scene/Player.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Blockoutline.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Raycast.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
@@ -4794,7 +4798,7 @@ CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj: C:/Projetos/Github\ Projec
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Perlin3d.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/TerrainGenerator.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
@@ -5136,12 +5140,6 @@ CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj: C:/Projetos/Github\ Projec
 
 CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/world/Raycast.cpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Raycast.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_vectorize.hpp \
@@ -5155,6 +5153,7 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec3.inl \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_vec4.inl \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/setup.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_int_sized.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/scalar_uint_sized.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_double2x2.hpp \
@@ -5202,6 +5201,19 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_half.inl \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/fwd.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/glm.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Raycast.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/World.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_clip_space.inl \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_projection.hpp \
@@ -5210,13 +5222,6 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/matrix_transform.inl \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/matrix_transform.inl \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/integer.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat2x2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/packing.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/trigonometric.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec2.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec3.hpp \
-  C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/vec4.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/_fixes.hpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_common.hpp \
@@ -5297,6 +5302,8 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/bit \
   C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
   C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
   C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
   C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
@@ -5316,6 +5323,12 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
   C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
   C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
   C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
   C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
   C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
@@ -5323,6 +5336,7 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
   C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/mingw64/include/c++/14.2.0/bits/postypes.h \
   C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
@@ -5346,6 +5360,8 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
   C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
   C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
   C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
@@ -5368,25 +5384,34 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/cstdio \
   C:/mingw64/include/c++/14.2.0/cstdlib \
   C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
   C:/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/mingw64/include/c++/14.2.0/debug/debug.h \
   C:/mingw64/include/c++/14.2.0/exception \
   C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
   C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
   C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
   C:/mingw64/include/c++/14.2.0/functional \
   C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/ios \
   C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
   C:/mingw64/include/c++/14.2.0/limits \
   C:/mingw64/include/c++/14.2.0/map \
   C:/mingw64/include/c++/14.2.0/new \
   C:/mingw64/include/c++/14.2.0/optional \
+  C:/mingw64/include/c++/14.2.0/ostream \
   C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
   C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
   C:/mingw64/include/c++/14.2.0/string \
   C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
   C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
   C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
   C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
@@ -5404,10 +5429,16 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/include/c++/14.2.0/typeinfo \
   C:/mingw64/include/c++/14.2.0/unordered_map \
   C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
@@ -5420,8 +5451,10 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
   C:/mingw64/x86_64-w64-mingw32/include/assert.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -5432,24 +5465,36 @@ CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj: C:/Projetos/Github\ Proj
   C:/mingw64/x86_64-w64-mingw32/include/locale.h \
   C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
   C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
   C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/mingw64/x86_64-w64-mingw32/include/wchar.h
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.obj: C:/Projetos/Github\ Projects/fractal-engine/src/world/TerrainGenerator.cpp \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/Shader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/graphics/TextureLoader.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Chunk.h \
-  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h \
+  C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Perlin3d.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/TerrainGenerator.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glad/glad.h \
   C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp \
@@ -5915,6 +5960,8 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/include/c++/14.2.0/bit \
   C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
   C:/mingw64/include/c++/14.2.0/bits/allocator.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
+  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
   C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
   C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
@@ -5922,22 +5969,32 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
   C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+  C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
   C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
   C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
   C:/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+  C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
   C:/mingw64/include/c++/14.2.0/bits/functexcept.h \
   C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
   C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
   C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
   C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
   C:/mingw64/include/c++/14.2.0/bits/invoke.h \
+  C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
+  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
   C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
   C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
   C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
   C:/mingw64/include/c++/14.2.0/bits/move.h \
+  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/mingw64/include/c++/14.2.0/bits/new_allocator.h \
   C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
+  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/mingw64/include/c++/14.2.0/bits/postypes.h \
   C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
@@ -5961,6 +6018,8 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
+  C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
   C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
   C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
   C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
@@ -5983,23 +6042,33 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/include/c++/14.2.0/cstdio \
   C:/mingw64/include/c++/14.2.0/cstdlib \
   C:/mingw64/include/c++/14.2.0/cwchar \
+  C:/mingw64/include/c++/14.2.0/cwctype \
   C:/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/mingw64/include/c++/14.2.0/debug/debug.h \
+  C:/mingw64/include/c++/14.2.0/exception \
   C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
+  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
   C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
   C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
   C:/mingw64/include/c++/14.2.0/functional \
   C:/mingw64/include/c++/14.2.0/initializer_list \
+  C:/mingw64/include/c++/14.2.0/ios \
   C:/mingw64/include/c++/14.2.0/iosfwd \
+  C:/mingw64/include/c++/14.2.0/iostream \
+  C:/mingw64/include/c++/14.2.0/istream \
   C:/mingw64/include/c++/14.2.0/limits \
   C:/mingw64/include/c++/14.2.0/map \
   C:/mingw64/include/c++/14.2.0/new \
+  C:/mingw64/include/c++/14.2.0/ostream \
   C:/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
+  C:/mingw64/include/c++/14.2.0/stdexcept \
   C:/mingw64/include/c++/14.2.0/stdlib.h \
+  C:/mingw64/include/c++/14.2.0/streambuf \
   C:/mingw64/include/c++/14.2.0/string \
   C:/mingw64/include/c++/14.2.0/string_view \
+  C:/mingw64/include/c++/14.2.0/system_error \
   C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
   C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
   C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
@@ -6017,10 +6086,16 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/include/c++/14.2.0/typeinfo \
   C:/mingw64/include/c++/14.2.0/unordered_map \
   C:/mingw64/include/c++/14.2.0/vector \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
@@ -6033,8 +6108,10 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
   C:/mingw64/x86_64-w64-mingw32/include/assert.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+  C:/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
   C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -6045,17 +6122,29 @@ CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj: C:/Projetos/Github\ Projec
   C:/mingw64/x86_64-w64-mingw32/include/locale.h \
   C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/mingw64/x86_64-w64-mingw32/include/math.h \
+  C:/mingw64/x86_64-w64-mingw32/include/process.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/mingw64/x86_64-w64-mingw32/include/signal.h \
   C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+  C:/mingw64/x86_64-w64-mingw32/include/time.h \
   C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/mingw64/x86_64-w64-mingw32/include/wchar.h
+  C:/mingw64/x86_64-w64-mingw32/include/wchar.h \
+  C:/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 
 C:/Projetos/Github\ Projects/fractal-engine/src/Main.cpp:
@@ -6066,25 +6155,35 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/compute_vector_relational.hpp:
 
+C:/mingw64/x86_64-w64-mingw32/include/fileapi.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp:
+
+C:/mingw64/x86_64-w64-mingw32/include/winreg.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Blockoutline.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.inl:
+
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/GLFW/glfw3.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/cetintrin.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/common.hpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/corecrt.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.hpp:
-
-C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/detail/type_mat2x2.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vpopcntdqvlintrin.h:
 
 C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc:
+
+C:/mingw64/x86_64-w64-mingw32/include/corecrt.h:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/vector_float4_precision.hpp:
+
+C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/gtc/quaternion.hpp:
+
+C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h:
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/KHR/khrplatform.h:
 
@@ -6638,14 +6737,6 @@ C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaterni
 
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.hpp:
 
-C:/mingw64/x86_64-w64-mingw32/include/fileapi.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/mat3x2.hpp:
-
-C:/mingw64/x86_64-w64-mingw32/include/winreg.h:
-
-C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_relational.inl:
-
 C:/Projetos/Github\ Projects/fractal-engine/include/third_party/glm/ext/quaternion_transform.hpp:
 
 C:/mingw64/x86_64-w64-mingw32/include/_timeval.h:
@@ -6727,10 +6818,6 @@ C:/mingw64/include/c++/14.2.0/bits/invoke.h:
 C:/mingw64/include/c++/14.2.0/bits/quoted_string.h:
 
 C:/mingw64/include/c++/14.2.0/bit:
-
-C:/mingw64/include/c++/14.2.0/locale:
-
-C:/mingw64/x86_64-w64-mingw32/include/cderr.h:
 
 C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h:
 
@@ -7256,6 +7343,10 @@ C:/mingw64/x86_64-w64-mingw32/include/_bsd_types.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/basetsd.h:
 
+C:/mingw64/include/c++/14.2.0/locale:
+
+C:/mingw64/x86_64-w64-mingw32/include/cderr.h:
+
 C:/mingw64/x86_64-w64-mingw32/include/cguid.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/commdlg.h:
@@ -7482,4 +7573,4 @@ C:/Projetos/Github\ Projects/fractal-engine/src/ui/core/UIManager.cpp:
 
 C:/Projetos/Github\ Projects/fractal-engine/src/world/Chunk.cpp:
 
-C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/SimpleNoise.h:
+C:/Projetos/Github\ Projects/fractal-engine/include/fractal_engine/world/Perlin3d.h:

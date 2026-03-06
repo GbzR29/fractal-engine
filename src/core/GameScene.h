@@ -4,6 +4,7 @@
 #include "fractal_engine/scene/Player.h"
 #include "fractal_engine/input/Input.h"
 #include "fractal_engine/core/Window.h"
+#include "fractal_engine/world/Blockoutline.h"
 
 using namespace fractal_engine::graphics;
 using namespace fractal_engine::world;
@@ -31,6 +32,7 @@ private:
 
     World  world;
     Player player;
+    fractal_engine::renderer::BlockOutline blockOutline;
 
     GLuint crosshairVAO = 0, crosshairVBO = 0;
 

@@ -1,6 +1,7 @@
 #include "fractal_engine/world/World.h"
 #include <cmath>
 #include <limits>
+#include <iostream>
 
 namespace fractal_engine::world {
 
@@ -31,8 +32,18 @@ bool World::isAirWorld(int wx, int wy, int wz) const {
         lz < 0 || lz >= Chunk::SIZE_Z) {
         return true;
     }
+    
+    bool isAir = it->second.isAir(lx, ly, lz);
+    
+    // DEBUG: Para posição específica
+    static int debugCount = 0;
+    if (!isAir && wx == 0 && wy == 19 && wz == -3 && debugCount++ < 20) {
+        std::cout << "[WORLD] Bloco sólido encontrado em mundo (" << wx << "," << wy << "," << wz << ") "
+                  << "chunk=" << key.x << "," << key.y << "," << key.z << " "
+                  << "local=" << lx << "," << ly << "," << lz << "\n";
+    }
 
-    return it->second.isAir(lx, ly, lz);
+    return isAir;
 }
 
 bool World::isBlockSolid(float wx, float wy, float wz) const {

@@ -1,6 +1,6 @@
 #pragma once
 #include <third_party/glm/glm.hpp>
-#include "SimpleNoise.h"
+#include "Perlin3d.h"
 
 namespace fractal_engine::world {
 
@@ -41,7 +41,7 @@ public:
     void                  resetToDefaultParams();
 
 private:
-    SimpleNoise   noise;
+    Perlin3D   noise;
     TerrainParams params;
 
     BlockType determinBlockType(

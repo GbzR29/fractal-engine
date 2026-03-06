@@ -37,6 +37,10 @@ public:
     void applyGravity(float dt);
 
     void renderCamera(Shader& shader, int w, int h);
+    
+    // ────── Matrizes para renderização ──────────────────────────────────────
+    glm::mat4 getView() const { return camera.getView(); }
+    glm::mat4 getProjection(int w, int h) const { return camera.getProjection(w, h); }
 
     bool checkCollision(World& world);
 
