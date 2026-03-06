@@ -80,3 +80,21 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     ${RUNTIME_DLLS}
     $<TARGET_FILE_DIR:${PROJECT_NAME}>
 )
+
+# =====================
+# Copy shaders and assets to build directory
+# =====================
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/src/shaders
+    $<TARGET_FILE_DIR:${PROJECT_NAME}>/shaders
+    COMMENT "Copying shaders to build directory..."
+)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/src/assets
+    $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
+    COMMENT "Copying assets to build directory..."
+)

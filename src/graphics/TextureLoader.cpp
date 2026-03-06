@@ -41,7 +41,7 @@ void TextureLoader::loadInto(GLuint texID, const char* path) {
     unsigned char* data = stbi_load(path, &width, &height, &channels, 0);
 
     if (!data) {
-        logError("Falha ao carregar \"" + std::string(path) + "\" — " + stbi_failure_reason());
+        logError("Failed to load \"" + std::string(path) + "\" — " + stbi_failure_reason());
 
         // Textura magenta 1x1 como fallback visual (fácil de identificar)
         unsigned char fallback[] = { 255, 0, 255, 255 };
@@ -52,8 +52,8 @@ void TextureLoader::loadInto(GLuint texID, const char* path) {
     }
 
     if (channels != 3 && channels != 4) {
-        logWarn("\"" + std::string(path) + "\" tem " + std::to_string(channels) +
-                " canais — esperado 3 (RGB) ou 4 (RGBA). Pode haver artefatos visuais.");
+        logWarn("\"" + std::string(path) + "\" has " + std::to_string(channels) +
+                " channels — expected 3 (RGB) or 4 (RGBA). Visual artifacts may occur.");
     }
 
     GLenum format         = (channels == 4) ? GL_RGBA  : GL_RGB;
@@ -64,7 +64,7 @@ void TextureLoader::loadInto(GLuint texID, const char* path) {
     stbi_image_free(data);
 
     std::ostringstream oss;
-    oss << "Carregada  \"" << path << "\"  "
+    oss << "Loaded  \"" << path << "\"  "
         << width << "x" << height << "  "
         << channels << "ch  id=" << texID;
     logInfo(oss.str());

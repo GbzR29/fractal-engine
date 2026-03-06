@@ -21,10 +21,10 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
     std::string fragmentCode = readFile(fragmentPath);
 
     if (vertexCode.empty())
-        std::cout << "ERRO: Vertex shader vazio ou não encontrado.\n";
+        std::cout << "ERROR: Vertex shader is empty or not found.\n";
 
     if (fragmentCode.empty())
-        std::cout << "ERRO: Fragment shader vazio ou não encontrado.\n";
+        std::cout << "ERROR: Fragment shader is empty or not found.\n";
 
     const char* vShader = vertexCode.c_str();
     const char* fShader = fragmentCode.c_str();
@@ -77,7 +77,7 @@ std::string Shader::readFile(const char* filepath)
 
     if (!file.is_open())
     {
-        std::cout << "ERRO: Não foi possível abrir o shader: "
+        std::cout << "ERROR: Could not open shader file: "
                   << filepath << std::endl;
         return "";
     }
@@ -104,14 +104,14 @@ void Shader::checkCompileErrors(GLuint shader, std::string type)
             glGetShaderInfoLog(shader, 4096, nullptr, infoLog);
 
             std::cout << "\n========== SHADER ERROR ==========\n";
-            std::cout << "Tipo : " << type << std::endl;
+            std::cout << "Type : " << type << std::endl;
             std::cout << "----------------------------------\n";
             std::cout << infoLog << std::endl;
             std::cout << "==================================\n";
         }
         else
         {
-            std::cout << "Shader compilado com sucesso: "
+            std::cout << "Shader compiled successfully: "
                       << type << std::endl;
         }
     }
@@ -129,7 +129,7 @@ void Shader::checkCompileErrors(GLuint shader, std::string type)
         }
         else
         {
-            std::cout << "Shader program linkado com sucesso.\n";
+            std::cout << "Shader program linked successfully.\n";
         }
     }
 }
