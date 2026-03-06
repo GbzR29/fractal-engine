@@ -1,5 +1,7 @@
 #include "fractal_engine/world/Chunk.h"
+#include "fractal_engine/world/TerrainGenerator.h"
 #include <iostream>
+#include <cmath>
 
 namespace fractal_engine::world {
 
@@ -81,6 +83,7 @@ Chunk::Chunk(glm::vec3 pos, Shader& shader) : position(pos) {
     shader.setInt("texTop",    0);
     shader.setInt("texBottom", 1);
     shader.setInt("texSide",   2);
+    shader.setInt("texStone",  3);
 }
 
 Chunk::~Chunk() {
@@ -90,35 +93,23 @@ Chunk::~Chunk() {
 }
 
 // ─────────────────────────────────────────────
-// Geração de blocos
+// Geração de blocos com TerrainGenerator
 // ─────────────────────────────────────────────
 void Chunk::generateBlocks() {
-    for (int x = 0; x < SIZE_X; x++) {
-        for (int z = 0; z < SIZE_Z; z++) {
-            int worldX = (int)position.x + x;
-            int worldZ = (int)position.z + z;
-
-            // Noise retorna [0,1]; mapeamos para altura de terreno
-            float n = noise.fractalNoise((float)worldX, (float)worldZ, 80.0f, 5);
-
-            // Altura do terreno: entre 8 e SIZE_Y * 0.75 para variar bem
-            int minHeight = 8;
-            int maxHeight = (int)(SIZE_Y * 0.75f);
-            int surfaceY  = minHeight + (int)(n * (maxHeight - minHeight));
-
-            for (int y = 0; y < SIZE_Y; y++) {
-                if (y > surfaceY) {
-                    blocks[x][y][z] = BLOCK_AIR;
-                } else if (y == surfaceY) {
-                    blocks[x][y][z] = BLOCK_GRASS;  // camada de grama
-                } else if (y >= surfaceY - 3) {
-                    blocks[x][y][z] = BLOCK_DIRT;   // 3 camadas de terra
-                } else {
-                    blocks[x][y][z] = BLOCK_STONE;  // pedra abaixo
-                }
-            }
-        }
-    }
+    // Usar o TerrainGenerator para gerar os blocos
+    static TerrainGenerator terrainGen(1337);
+    
+    // Converter array 3D para ponteiro linear
+    // O array blocks[SIZE_X][SIZE_Y][SIZE_Z] decai para BlockType*
+    terrainGen.generateChunkBlocks(
+        &blocks[0][0][0],
+        (int)position.x,
+        (int)position.y,
+        (int)position.z,
+        SIZE_X,
+        SIZE_Y,
+        SIZE_Z
+    );
 }
 
 // ─────────────────────────────────────────────
@@ -136,6 +127,13 @@ BlockType Chunk::getBlock(int x, int y, int z) const {
     return blocks[x][y][z];
 }
 
+void Chunk::setBlock(int x, int y, int z, BlockType blockType) {
+    if (x < 0 || x >= SIZE_X || y < 0 || y >= SIZE_Y || z < 0 || z >= SIZE_Z)
+        return; // Fora dos limites, ignorar
+    
+    blocks[x][y][z] = blockType;
+}
+
 // ─────────────────────────────────────────────
 // Geração de mesh com suporte a vizinhos
 // ─────────────────────────────────────────────
@@ -148,10 +146,27 @@ void Chunk::generateMesh(std::function<bool(int,int,int)> worldIsAir) {
                 if (blocks[x][y][z] == BLOCK_AIR) continue;
 
                 // Determina o faceType pelo tipo de bloco
-                // topo de grama = 0 (textura de grama), resto lateral = 2
-                float topFace  = (blocks[x][y][z] == BLOCK_GRASS) ? 0.0f : 2.0f;
-                float botFace  = 1.0f; // fundo sempre usa textura de terra/pedra
-                float sideFace = 2.0f;
+                float topFace  = 1.0f;  // padrão
+                float botFace  = 1.0f;  // padrão
+                float sideFace = 2.0f;  // padrão
+
+                // Configurar texturas específicas para cada tipo de bloco
+                if (blocks[x][y][z] == BLOCK_GRASS) {
+                    // Grama: topo especial (0), fundo terra (1), lados grama (2)
+                    topFace  = 0.0f;
+                    botFace  = 1.0f;
+                    sideFace = 2.0f;
+                } else if (blocks[x][y][z] == BLOCK_STONE) {
+                    // Pedra: todas as faces usam textura de pedra (3)
+                    topFace  = 3.0f;
+                    botFace  = 3.0f;
+                    sideFace = 3.0f;
+                } else if (blocks[x][y][z] == BLOCK_DIRT) {
+                    // Terra: textura terra em todos os lados (1)
+                    topFace  = 1.0f;
+                    botFace  = 1.0f;
+                    sideFace = 1.0f;
+                }
 
                 // Lambda que checa se um vizinho (em coords locais) é ar,
                 // consultando o World para posições fora dos limites do chunk

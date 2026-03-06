@@ -40,22 +40,16 @@ CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/type_traits \
  C:/mingw64/include/c++/14.2.0/bits/move.h \
  C:/mingw64/include/c++/14.2.0/bits/utility.h \
- C:/mingw64/include/c++/14.2.0/compare \
- C:/mingw64/include/c++/14.2.0/concepts \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
- C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
- C:/mingw64/include/c++/14.2.0/new \
- C:/mingw64/include/c++/14.2.0/bits/exception.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+ C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
  C:/mingw64/include/c++/14.2.0/debug/debug.h \
  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
- C:/mingw64/include/c++/14.2.0/bit C:/mingw64/include/c++/14.2.0/limits \
+ C:/mingw64/include/c++/14.2.0/bit C:/mingw64/include/c++/14.2.0/concepts \
+ C:/mingw64/include/c++/14.2.0/limits \
  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
@@ -115,23 +109,22 @@ CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/tuple \
  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
- C:/mingw64/include/c++/14.2.0/initializer_list \
- C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
- C:/mingw64/include/c++/14.2.0/numbers \
  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
  C:/mingw64/include/c++/14.2.0/bits/std_function.h \
+ C:/mingw64/include/c++/14.2.0/new \
+ C:/mingw64/include/c++/14.2.0/bits/exception.h \
  C:/mingw64/include/c++/14.2.0/typeinfo \
  C:/mingw64/include/c++/14.2.0/unordered_map \
+ C:/mingw64/include/c++/14.2.0/initializer_list \
  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
  C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
  C:/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
  C:/mingw64/include/c++/14.2.0/bits/allocator.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
@@ -148,8 +141,7 @@ CMakeFiles/FractalEngine.dir/src/renderer/Renderer.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/mingw64/include/c++/14.2.0/array \
- C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
- C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+ C:/mingw64/include/c++/14.2.0/compare \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/../detail/_vectorize.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/vector_bool3_precision.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/vector_float3.hpp \

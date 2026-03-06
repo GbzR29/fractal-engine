@@ -48,16 +48,6 @@ CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/type_traits \
  C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
  C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
- C:/mingw64/include/c++/14.2.0/compare \
- C:/mingw64/include/c++/14.2.0/concepts \
- C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
- C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
- C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
- C:/mingw64/include/c++/14.2.0/debug/assertions.h \
  C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  C:/mingw64/include/c++/14.2.0/clocale \
@@ -97,17 +87,22 @@ CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+ C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
+ C:/mingw64/include/c++/14.2.0/debug/assertions.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
- C:/mingw64/include/c++/14.2.0/bits/utility.h \
+ C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
  C:/mingw64/include/c++/14.2.0/backward/binders.h \
  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+ C:/mingw64/include/c++/14.2.0/bits/utility.h \
  C:/mingw64/include/c++/14.2.0/debug/debug.h \
  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
- C:/mingw64/include/c++/14.2.0/bit \
+ C:/mingw64/include/c++/14.2.0/bit C:/mingw64/include/c++/14.2.0/concepts \
  C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
  C:/mingw64/include/c++/14.2.0/bits/range_access.h \
@@ -115,11 +110,9 @@ CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
  C:/mingw64/include/c++/14.2.0/string_view \
  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
- C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
- C:/mingw64/include/c++/14.2.0/numbers \
  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
  C:/mingw64/include/c++/14.2.0/ext/string_conversions.h \
  C:/mingw64/include/c++/14.2.0/cstdlib \
@@ -138,7 +131,6 @@ CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/mingw64/include/c++/14.2.0/tuple \
- C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
  C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
  C:/mingw64/include/c++/14.2.0/system_error \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -154,30 +146,6 @@ CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
  C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
- C:/mingw64/include/c++/14.2.0/format C:/mingw64/include/c++/14.2.0/array \
- C:/mingw64/include/c++/14.2.0/charconv \
- C:/mingw64/include/c++/14.2.0/limits \
- C:/mingw64/include/c++/14.2.0/locale \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- C:/mingw64/include/c++/14.2.0/ctime \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
- C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
- C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
- C:/mingw64/include/c++/14.2.0/optional \
- C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- C:/mingw64/include/c++/14.2.0/span C:/mingw64/include/c++/14.2.0/variant \
- C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
- C:/mingw64/include/c++/14.2.0/bits/unicode.h \
- C:/mingw64/include/c++/14.2.0/cstdint \
- C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
- C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
- C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc

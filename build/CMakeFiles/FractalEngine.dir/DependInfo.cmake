@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Projetos/Github Projects/fractal-engine/src/glad.c" "CMakeFiles/FractalEngine.dir/src/glad.c.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/glad.c.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/Main.cpp" "CMakeFiles/FractalEngine.dir/src/Main.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/Main.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/core/Application.cpp" "CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/Application.cpp.obj.d"
+  "C:/Projetos/Github Projects/fractal-engine/src/core/Engine.cpp" "CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.obj.d"
+  "C:/Projetos/Github Projects/fractal-engine/src/core/GameScene.cpp" "CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/core/Program.cpp" "CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/Program.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/core/Time.cpp" "CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/Time.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/core/Window.cpp" "CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/core/Window.cpp.obj.d"
@@ -30,6 +32,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Projetos/Github Projects/fractal-engine/src/ui/core/UIManager.cpp" "CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/ui/core/UIREnderer.cpp" "CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/ui/core/UIREnderer.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/world/Chunk.cpp" "CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.obj.d"
+  "C:/Projetos/Github Projects/fractal-engine/src/world/Raycast.cpp" "CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj.d"
+  "C:/Projetos/Github Projects/fractal-engine/src/world/TerrainGenerator.cpp" "CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.obj.d"
   "C:/Projetos/Github Projects/fractal-engine/src/world/World.cpp" "CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj" "gcc" "CMakeFiles/FractalEngine.dir/src/world/World.cpp.obj.d"
   )
 

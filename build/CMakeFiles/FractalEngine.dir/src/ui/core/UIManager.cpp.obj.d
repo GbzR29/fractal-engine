@@ -20,25 +20,21 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_construct.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- C:/mingw64/include/c++/14.2.0/bits/iterator_concepts.h \
- C:/mingw64/include/c++/14.2.0/concepts \
- C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_cmp.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
  C:/mingw64/include/c++/14.2.0/bits/concept_check.h \
  C:/mingw64/include/c++/14.2.0/debug/assertions.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_pair.h \
  C:/mingw64/include/c++/14.2.0/bits/utility.h \
- C:/mingw64/include/c++/14.2.0/compare \
  C:/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
  C:/mingw64/include/c++/14.2.0/ext/type_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
+ C:/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
  C:/mingw64/include/c++/14.2.0/debug/debug.h \
  C:/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
- C:/mingw64/include/c++/14.2.0/bit \
+ C:/mingw64/include/c++/14.2.0/bit C:/mingw64/include/c++/14.2.0/concepts \
  C:/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
@@ -58,18 +54,13 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
  C:/mingw64/include/c++/14.2.0/tuple \
  C:/mingw64/include/c++/14.2.0/bits/invoke.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_util.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_base.h \
- C:/mingw64/include/c++/14.2.0/initializer_list \
- C:/mingw64/include/c++/14.2.0/bits/max_size_type.h \
- C:/mingw64/include/c++/14.2.0/numbers \
  C:/mingw64/include/c++/14.2.0/bits/stl_function.h \
  C:/mingw64/include/c++/14.2.0/backward/binders.h \
  C:/mingw64/include/c++/14.2.0/bits/functional_hash.h \
  C:/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
- C:/mingw64/include/c++/14.2.0/ostream \
+ C:/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
+ C:/mingw64/include/c++/14.2.0/iosfwd \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
- C:/mingw64/include/c++/14.2.0/ios C:/mingw64/include/c++/14.2.0/iosfwd \
  C:/mingw64/include/c++/14.2.0/bits/stringfwd.h \
  C:/mingw64/include/c++/14.2.0/bits/postypes.h \
  C:/mingw64/include/c++/14.2.0/cwchar \
@@ -80,21 +71,11 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- C:/mingw64/include/c++/14.2.0/exception \
- C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
- C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+ C:/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
  C:/mingw64/include/c++/14.2.0/typeinfo \
- C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
- C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
- C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
- C:/mingw64/include/c++/14.2.0/clocale \
- C:/mingw64/x86_64-w64-mingw32/include/locale.h \
- C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
- C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/mingw64/include/c++/14.2.0/cctype \
- C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
- C:/mingw64/include/c++/14.2.0/bits/ios_base.h \
+ C:/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
+ C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
+ C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/mingw64/include/c++/14.2.0/ext/atomicity.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
@@ -116,12 +97,39 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
  C:/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_classes.h \
+ C:/mingw64/include/c++/14.2.0/ext/concurrence.h \
+ C:/mingw64/include/c++/14.2.0/exception \
+ C:/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+ C:/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+ C:/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+ C:/mingw64/include/c++/14.2.0/bits/shared_ptr_atomic.h \
+ C:/mingw64/include/c++/14.2.0/bits/atomic_base.h \
+ C:/mingw64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
+ C:/mingw64/include/c++/14.2.0/backward/auto_ptr.h \
+ C:/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h \
+ C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
+ C:/mingw64/include/c++/14.2.0/vector \
+ C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/mingw64/include/c++/14.2.0/initializer_list \
+ C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/mingw64/include/c++/14.2.0/bits/range_access.h \
+ C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+ C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
+ C:/mingw64/include/c++/14.2.0/cstddef \
+ C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
+ C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/ui/UIElement.h \
  C:/mingw64/include/c++/14.2.0/string \
+ C:/mingw64/include/c++/14.2.0/bits/char_traits.h \
+ C:/mingw64/include/c++/14.2.0/bits/localefwd.h \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+ C:/mingw64/include/c++/14.2.0/clocale \
+ C:/mingw64/x86_64-w64-mingw32/include/locale.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/mingw64/include/c++/14.2.0/cctype \
+ C:/mingw64/x86_64-w64-mingw32/include/ctype.h \
  C:/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
  C:/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
- C:/mingw64/include/c++/14.2.0/bits/refwrap.h \
- C:/mingw64/include/c++/14.2.0/bits/range_access.h \
  C:/mingw64/include/c++/14.2.0/bits/basic_string.h \
  C:/mingw64/include/c++/14.2.0/string_view \
  C:/mingw64/include/c++/14.2.0/bits/string_view.tcc \
@@ -137,73 +145,12 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/cerrno \
  C:/mingw64/include/c++/14.2.0/bits/charconv.h \
  C:/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
- C:/mingw64/include/c++/14.2.0/bits/memory_resource.h \
- C:/mingw64/include/c++/14.2.0/cstddef \
- C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
- C:/mingw64/include/c++/14.2.0/system_error \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
- C:/mingw64/include/c++/14.2.0/stdexcept \
- C:/mingw64/include/c++/14.2.0/streambuf \
- C:/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
- C:/mingw64/include/c++/14.2.0/bits/basic_ios.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets.h \
- C:/mingw64/include/c++/14.2.0/cwctype \
- C:/mingw64/x86_64-w64-mingw32/include/wctype.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- C:/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
- C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
- C:/mingw64/include/c++/14.2.0/format C:/mingw64/include/c++/14.2.0/array \
- C:/mingw64/include/c++/14.2.0/charconv \
- C:/mingw64/include/c++/14.2.0/limits \
- C:/mingw64/include/c++/14.2.0/locale \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- C:/mingw64/include/c++/14.2.0/ctime \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
- C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
- C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
- C:/mingw64/include/c++/14.2.0/optional \
- C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- C:/mingw64/include/c++/14.2.0/span C:/mingw64/include/c++/14.2.0/variant \
- C:/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_algobase.h \
- C:/mingw64/include/c++/14.2.0/bits/unicode.h \
- C:/mingw64/include/c++/14.2.0/cstdint \
- C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
- C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
- C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/mingw64/include/c++/14.2.0/bits/unicode-data.h \
- C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
- C:/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
- C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
- C:/mingw64/include/c++/14.2.0/ext/concurrence.h \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr_atomic.h \
- C:/mingw64/include/c++/14.2.0/bits/atomic_base.h \
- C:/mingw64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
- C:/mingw64/include/c++/14.2.0/bits/atomic_wait.h \
- C:/mingw64/include/c++/14.2.0/bits/std_mutex.h \
- C:/mingw64/include/c++/14.2.0/backward/auto_ptr.h \
- C:/mingw64/include/c++/14.2.0/bits/ranges_uninitialized.h \
- C:/mingw64/include/c++/14.2.0/bits/out_ptr.h \
- C:/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h \
- C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
- C:/mingw64/include/c++/14.2.0/vector \
- C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
- C:/Projetos/GITHUB~1/FRACTA~1/include/fractal_engine/ui/UIElement.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/glm.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/detail/_fixes.hpp \
  C:/mingw64/include/c++/14.2.0/cmath \
  C:/mingw64/x86_64-w64-mingw32/include/math.h \
  C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+ C:/mingw64/include/c++/14.2.0/limits \
  C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
  C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
  C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
@@ -220,6 +167,7 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/cassert \
  C:/mingw64/x86_64-w64-mingw32/include/assert.h \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/detail/../simd/platform.h \
+ C:/mingw64/include/c++/14.2.0/cstdint \
  C:/mingw64/include/c++/14.2.0/climits \
  C:/mingw64/include/c++/14.2.0/cfloat \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
@@ -256,10 +204,11 @@ CMakeFiles/FractalEngine.dir/src/ui/core/UIManager.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
  C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
  C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
+ C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
- C:/mingw64/include/c++/14.2.0/bits/move_only_function.h \
- C:/mingw64/include/c++/14.2.0/bits/mofunc_impl.h \
+ C:/mingw64/include/c++/14.2.0/array \
+ C:/mingw64/include/c++/14.2.0/compare \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/../detail/_vectorize.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/vector_bool3_precision.hpp \
  C:/Projetos/GITHUB~1/FRACTA~1/include/third_party/glm/./ext/vector_float3.hpp \

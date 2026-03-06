@@ -5,6 +5,8 @@ add_library(fractal_engine_world
     OBJECT
     Chunk.cpp
     World.cpp
+    Raycast.cpp
+    TerrainGenerator.cpp
 )
 
 target_include_directories(fractal_engine_world
