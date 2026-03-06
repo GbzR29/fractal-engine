@@ -38,7 +38,30 @@ public:
     // Retorna true se o bloco na posição de mundo é ar
     bool isAirWorld(int wx, int wy, int wz) const;
 
+    /**
+     * @brief Encontra a altura do primeiro bloco sólido a partir de uma altura máxima
+     * 
+     * @param worldX Coordenada X
+     * @param worldZ Coordenada Z
+     * @param maxHeight Altura máxima para procurar (padrão: 100)
+     * 
+     * @return A altura do primeiro bloco sólido encontrado, ou -1 se nenhum for encontrado
+     */
+    float getTerrainHeightAt(float worldX, float worldZ, float maxHeight = 100.0f) const;
+
     void render(Shader& shader);
+
+    // ─────────────────────────────────────────────
+    // SISTEMA DE QUEBRA/CONSTRUÇÃO DE BLOCOS
+    // ─────────────────────────────────────────────
+
+    // Quebra um bloco na posição especificada
+    // Retorna true se conseguiu quebrar
+    bool breakBlock(glm::ivec3 pos);
+
+    // Coloca um bloco na posição especificada (se estiver vazio)
+    // Retorna true se conseguiu colocar
+    bool placeBlock(glm::ivec3 pos, BlockType blockType = BLOCK_STONE);
 
 private:
     // Re-gera a mesh de um chunk já existente, passando o callback de vizinhos

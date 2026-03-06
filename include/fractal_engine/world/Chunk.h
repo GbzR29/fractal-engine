@@ -5,8 +5,6 @@
 #include <third_party/glm/glm.hpp>
 #include <third_party/glm/gtc/matrix_transform.hpp>
 #include "fractal_engine/graphics/Shader.h"
-#include "SimpleNoise.h"
-
 #include "fractal_engine/graphics/TextureLoader.h"
 
 namespace fractal_engine::world {
@@ -51,6 +49,9 @@ public:
 
     BlockType getBlock(int x, int y, int z) const;
 
+    // Define um bloco na posição LOCAL
+    void setBlock(int x, int y, int z, BlockType blockType);
+
 private:
     BlockType blocks[SIZE_X][SIZE_Y][SIZE_Z];
     std::vector<float> vertices;
@@ -58,9 +59,6 @@ private:
     GLuint vao = 0, vbo = 0;
     GLuint textures[4]; // top, bottom, side_stone, side_dirt
 
-    SimpleNoise noise{1337};
-
     void addFace(const float* face, int x, int y, int z, float faceType);
-    //void TextureLoader(GLuint& tex, const char* path);
 };
 } // namespace fractal_engine::world

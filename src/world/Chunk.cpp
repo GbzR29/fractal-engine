@@ -1,60 +1,69 @@
 #include "fractal_engine/world/Chunk.h"
+#include "fractal_engine/world/TerrainGenerator.h"
 #include <iostream>
+#include <cmath>
 
 namespace fractal_engine::world {
 
-// ─────────────────────────────────────────────
-// Faces (posição relativa ao centro do bloco)
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX: Faces agora usam coordenadas de CANTO [0, 1] em vez de CENTRO [-0.5, 0.5]
+//
+// O sistema de raycasting e colisão trata um bloco em (x, y, z) como ocupando
+// o cubo [x, x+1] × [y, y+1] × [z, z+1].
+// Antes as faces usavam centro em (x, y, z) com extensão ±0.5 — isso causava
+// um deslocamento de meio bloco entre visual e lógica.
+//
 // Cada vértice: x, y, z, u, v, faceType
 // faceType: 0=topo, 1=fundo, 2=lateral
-// ─────────────────────────────────────────────
-static const float FACE_RIGHT[] = {
-    0.5f,-0.5f,-0.5f,  0.0f,0.0f, 2,
-    0.5f, 0.5f,-0.5f,  0.0f,1.0f, 2,
-    0.5f, 0.5f, 0.5f,  1.0f,1.0f, 2,
-    0.5f, 0.5f, 0.5f,  1.0f,1.0f, 2,
-    0.5f,-0.5f, 0.5f,  1.0f,0.0f, 2,
-    0.5f,-0.5f,-0.5f,  0.0f,0.0f, 2
+// ─────────────────────────────────────────────────────────────────────────────
+
+static const float FACE_RIGHT[] = {   // face +X (x = 1)
+    1,0,0,  0,0, 2,
+    1,1,0,  0,1, 2,
+    1,1,1,  1,1, 2,
+    1,1,1,  1,1, 2,
+    1,0,1,  1,0, 2,
+    1,0,0,  0,0, 2,
 };
-static const float FACE_LEFT[] = {
-   -0.5f,-0.5f, 0.5f,  0.0f,0.0f, 2,
-   -0.5f, 0.5f, 0.5f,  0.0f,1.0f, 2,
-   -0.5f, 0.5f,-0.5f,  1.0f,1.0f, 2,
-   -0.5f, 0.5f,-0.5f,  1.0f,1.0f, 2,
-   -0.5f,-0.5f,-0.5f,  1.0f,0.0f, 2,
-   -0.5f,-0.5f, 0.5f,  0.0f,0.0f, 2
+static const float FACE_LEFT[] = {    // face -X (x = 0)
+    0,0,1,  0,0, 2,
+    0,1,1,  0,1, 2,
+    0,1,0,  1,1, 2,
+    0,1,0,  1,1, 2,
+    0,0,0,  1,0, 2,
+    0,0,1,  0,0, 2,
 };
-static const float FACE_TOP[] = {
-   -0.5f, 0.5f, 0.5f,  0.0f,0.0f, 0,
-    0.5f, 0.5f, 0.5f,  1.0f,0.0f, 0,
-    0.5f, 0.5f,-0.5f,  1.0f,1.0f, 0,
-    0.5f, 0.5f,-0.5f,  1.0f,1.0f, 0,
-   -0.5f, 0.5f,-0.5f,  0.0f,1.0f, 0,
-   -0.5f, 0.5f, 0.5f,  0.0f,0.0f, 0
+static const float FACE_TOP[] = {     // face +Y (y = 1)
+    0,1,1,  0,0, 0,
+    1,1,1,  1,0, 0,
+    1,1,0,  1,1, 0,
+    1,1,0,  1,1, 0,
+    0,1,0,  0,1, 0,
+    0,1,1,  0,0, 0,
 };
-static const float FACE_BOTTOM[] = {
-   -0.5f,-0.5f,-0.5f,  0.0f,1.0f, 1,
-    0.5f,-0.5f,-0.5f,  1.0f,1.0f, 1,
-    0.5f,-0.5f, 0.5f,  1.0f,0.0f, 1,
-    0.5f,-0.5f, 0.5f,  1.0f,0.0f, 1,
-   -0.5f,-0.5f, 0.5f,  0.0f,0.0f, 1,
-   -0.5f,-0.5f,-0.5f,  0.0f,1.0f, 1
+static const float FACE_BOTTOM[] = {  // face -Y (y = 0)
+    0,0,0,  0,1, 1,
+    1,0,0,  1,1, 1,
+    1,0,1,  1,0, 1,
+    1,0,1,  1,0, 1,
+    0,0,1,  0,0, 1,
+    0,0,0,  0,1, 1,
 };
-static const float FACE_FRONT[] = {
-   -0.5f,-0.5f, 0.5f,  0.0f,0.0f, 2,
-    0.5f,-0.5f, 0.5f,  1.0f,0.0f, 2,
-    0.5f, 0.5f, 0.5f,  1.0f,1.0f, 2,
-    0.5f, 0.5f, 0.5f,  1.0f,1.0f, 2,
-   -0.5f, 0.5f, 0.5f,  0.0f,1.0f, 2,
-   -0.5f,-0.5f, 0.5f,  0.0f,0.0f, 2
+static const float FACE_FRONT[] = {   // face +Z (z = 1)
+    0,0,1,  0,0, 2,
+    1,0,1,  1,0, 2,
+    1,1,1,  1,1, 2,
+    1,1,1,  1,1, 2,
+    0,1,1,  0,1, 2,
+    0,0,1,  0,0, 2,
 };
-static const float FACE_BACK[] = {
-    0.5f,-0.5f,-0.5f,  1.0f,0.0f, 2,
-   -0.5f,-0.5f,-0.5f,  0.0f,0.0f, 2,
-   -0.5f, 0.5f,-0.5f,  0.0f,1.0f, 2,
-   -0.5f, 0.5f,-0.5f,  0.0f,1.0f, 2,
-    0.5f, 0.5f,-0.5f,  1.0f,1.0f, 2,
-    0.5f,-0.5f,-0.5f,  1.0f,0.0f, 2
+static const float FACE_BACK[] = {    // face -Z (z = 0)
+    1,0,0,  1,0, 2,
+    0,0,0,  0,0, 2,
+    0,1,0,  0,1, 2,
+    0,1,0,  0,1, 2,
+    1,1,0,  1,1, 2,
+    1,0,0,  1,0, 2,
 };
 
 // ─────────────────────────────────────────────
@@ -62,15 +71,13 @@ static const float FACE_BACK[] = {
 // ─────────────────────────────────────────────
 Chunk::Chunk(glm::vec3 pos, Shader& shader) : position(pos) {
     generateBlocks();
-    // Mesh gerada depois pelo World (que pode passar os vizinhos)
-    // mas geramos uma primeira passagem sem vizinhos para já ter algo
     generateMesh();
 
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
     glGenTextures(4, textures);
 
-    uploadMesh(); // envia para GPU
+    uploadMesh();
 
     TextureLoader(textures[0], "assets/grass_top.png");
     TextureLoader(textures[1], "assets/dirt.png");
@@ -81,6 +88,7 @@ Chunk::Chunk(glm::vec3 pos, Shader& shader) : position(pos) {
     shader.setInt("texTop",    0);
     shader.setInt("texBottom", 1);
     shader.setInt("texSide",   2);
+    shader.setInt("texStone",  3);
 }
 
 Chunk::~Chunk() {
@@ -90,35 +98,17 @@ Chunk::~Chunk() {
 }
 
 // ─────────────────────────────────────────────
-// Geração de blocos
+// Geração de blocos com TerrainGenerator
 // ─────────────────────────────────────────────
 void Chunk::generateBlocks() {
-    for (int x = 0; x < SIZE_X; x++) {
-        for (int z = 0; z < SIZE_Z; z++) {
-            int worldX = (int)position.x + x;
-            int worldZ = (int)position.z + z;
-
-            // Noise retorna [0,1]; mapeamos para altura de terreno
-            float n = noise.fractalNoise((float)worldX, (float)worldZ, 80.0f, 5);
-
-            // Altura do terreno: entre 8 e SIZE_Y * 0.75 para variar bem
-            int minHeight = 8;
-            int maxHeight = (int)(SIZE_Y * 0.75f);
-            int surfaceY  = minHeight + (int)(n * (maxHeight - minHeight));
-
-            for (int y = 0; y < SIZE_Y; y++) {
-                if (y > surfaceY) {
-                    blocks[x][y][z] = BLOCK_AIR;
-                } else if (y == surfaceY) {
-                    blocks[x][y][z] = BLOCK_GRASS;  // camada de grama
-                } else if (y >= surfaceY - 3) {
-                    blocks[x][y][z] = BLOCK_DIRT;   // 3 camadas de terra
-                } else {
-                    blocks[x][y][z] = BLOCK_STONE;  // pedra abaixo
-                }
-            }
-        }
-    }
+    static TerrainGenerator terrainGen(1337);
+    terrainGen.generateChunkBlocks(
+        &blocks[0][0][0],
+        (int)position.x,
+        (int)position.y,
+        (int)position.z,
+        SIZE_X, SIZE_Y, SIZE_Z
+    );
 }
 
 // ─────────────────────────────────────────────
@@ -126,7 +116,7 @@ void Chunk::generateBlocks() {
 // ─────────────────────────────────────────────
 bool Chunk::isAir(int x, int y, int z) const {
     if (x < 0 || x >= SIZE_X || y < 0 || y >= SIZE_Y || z < 0 || z >= SIZE_Z)
-        return true; // fora dos limites = ar (será tratado pelo callback do World)
+        return true;
     return blocks[x][y][z] == BLOCK_AIR;
 }
 
@@ -136,6 +126,12 @@ BlockType Chunk::getBlock(int x, int y, int z) const {
     return blocks[x][y][z];
 }
 
+void Chunk::setBlock(int x, int y, int z, BlockType blockType) {
+    if (x < 0 || x >= SIZE_X || y < 0 || y >= SIZE_Y || z < 0 || z >= SIZE_Z)
+        return;
+    blocks[x][y][z] = blockType;
+}
+
 // ─────────────────────────────────────────────
 // Geração de mesh com suporte a vizinhos
 // ─────────────────────────────────────────────
@@ -143,44 +139,43 @@ void Chunk::generateMesh(std::function<bool(int,int,int)> worldIsAir) {
     vertices.clear();
 
     for (int x = 0; x < SIZE_X; x++) {
-        for (int y = 0; y < SIZE_Y; y++) {
-            for (int z = 0; z < SIZE_Z; z++) {
-                if (blocks[x][y][z] == BLOCK_AIR) continue;
+    for (int y = 0; y < SIZE_Y; y++) {
+    for (int z = 0; z < SIZE_Z; z++) {
+        if (blocks[x][y][z] == BLOCK_AIR) continue;
 
-                // Determina o faceType pelo tipo de bloco
-                // topo de grama = 0 (textura de grama), resto lateral = 2
-                float topFace  = (blocks[x][y][z] == BLOCK_GRASS) ? 0.0f : 2.0f;
-                float botFace  = 1.0f; // fundo sempre usa textura de terra/pedra
-                float sideFace = 2.0f;
+        float topFace, botFace, sideFace;
 
-                // Lambda que checa se um vizinho (em coords locais) é ar,
-                // consultando o World para posições fora dos limites do chunk
-                auto neighborIsAir = [&](int lx, int ly, int lz) -> bool {
-                    // Dentro do chunk: consulta local
-                    if (lx >= 0 && lx < SIZE_X &&
-                        ly >= 0 && ly < SIZE_Y &&
-                        lz >= 0 && lz < SIZE_Z) {
-                        return isAir(lx, ly, lz);
-                    }
-                    // Fora do chunk: converte para coords de mundo e consulta World
-                    if (worldIsAir) {
-                        int wx = (int)position.x + lx;
-                        int wy = (int)position.y + ly;
-                        int wz = (int)position.z + lz;
-                        return worldIsAir(wx, wy, wz);
-                    }
-                    return true; // sem callback: expõe a face (pior caso)
-                };
-
-                if (neighborIsAir(x+1, y, z)) addFace(FACE_RIGHT,  x, y, z, sideFace);
-                if (neighborIsAir(x-1, y, z)) addFace(FACE_LEFT,   x, y, z, sideFace);
-                if (neighborIsAir(x, y+1, z)) addFace(FACE_TOP,    x, y, z, topFace);
-                if (neighborIsAir(x, y-1, z)) addFace(FACE_BOTTOM, x, y, z, botFace);
-                if (neighborIsAir(x, y, z+1)) addFace(FACE_FRONT,  x, y, z, sideFace);
-                if (neighborIsAir(x, y, z-1)) addFace(FACE_BACK,   x, y, z, sideFace);
-            }
+        switch (blocks[x][y][z]) {
+            case BLOCK_GRASS:
+                topFace = 0; botFace = 1; sideFace = 2; break;
+            case BLOCK_STONE:
+                topFace = botFace = sideFace = 3; break;
+            case BLOCK_DIRT:
+            default:
+                topFace = botFace = sideFace = 1; break;
         }
-    }
+
+        auto neighborIsAir = [&](int lx, int ly, int lz) -> bool {
+            if (lx >= 0 && lx < SIZE_X &&
+                ly >= 0 && ly < SIZE_Y &&
+                lz >= 0 && lz < SIZE_Z)
+                return isAir(lx, ly, lz);
+            if (worldIsAir) {
+                int wx = (int)position.x + lx;
+                int wy = (int)position.y + ly;
+                int wz = (int)position.z + lz;
+                return worldIsAir(wx, wy, wz);
+            }
+            return true;
+        };
+
+        if (neighborIsAir(x+1, y,   z  )) addFace(FACE_RIGHT,  x, y, z, sideFace);
+        if (neighborIsAir(x-1, y,   z  )) addFace(FACE_LEFT,   x, y, z, sideFace);
+        if (neighborIsAir(x,   y+1, z  )) addFace(FACE_TOP,    x, y, z, topFace);
+        if (neighborIsAir(x,   y-1, z  )) addFace(FACE_BOTTOM, x, y, z, botFace);
+        if (neighborIsAir(x,   y,   z+1)) addFace(FACE_FRONT,  x, y, z, sideFace);
+        if (neighborIsAir(x,   y,   z-1)) addFace(FACE_BACK,   x, y, z, sideFace);
+    }}}
 }
 
 // ─────────────────────────────────────────────
@@ -197,7 +192,7 @@ void Chunk::uploadMesh() {
     glBufferData(GL_ARRAY_BUFFER,
                  vertices.size() * sizeof(float),
                  vertices.data(),
-                 GL_DYNAMIC_DRAW); // DYNAMIC porque o chunk pode ser remeshado
+                 GL_DYNAMIC_DRAW);
 
     // layout: position(3), uv(2), faceType(1)
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, STRIDE * sizeof(float), (void*)0);
@@ -213,19 +208,22 @@ void Chunk::uploadMesh() {
 }
 
 // ─────────────────────────────────────────────
-// Helpers
+// addFace
 // ─────────────────────────────────────────────
 void Chunk::addFace(const float* face, int x, int y, int z, float faceType) {
     for (int i = 0; i < 6 * STRIDE; i += STRIDE) {
         vertices.push_back(face[i + 0] + x);
         vertices.push_back(face[i + 1] + y);
         vertices.push_back(face[i + 2] + z);
-        vertices.push_back(face[i + 3]);       // u
-        vertices.push_back(face[i + 4]);       // v
-        vertices.push_back(faceType);          // sobrescreve o faceType da face com o do bloco
+        vertices.push_back(face[i + 3]);   // u
+        vertices.push_back(face[i + 4]);   // v
+        vertices.push_back(faceType);      // sobrescreve faceType da face
     }
 }
 
+// ─────────────────────────────────────────────
+// Draw
+// ─────────────────────────────────────────────
 void Chunk::Draw(Shader& shader) {
     if (vertices.empty()) return;
 
@@ -241,16 +239,5 @@ void Chunk::Draw(Shader& shader) {
     glDrawArrays(GL_TRIANGLES, 0, (GLsizei)(vertices.size() / STRIDE));
     glBindVertexArray(0);
 }
-
-/*void Chunk::TextureLoader(GLuint& tex, const char* path) {
-    // Implemente com stb_image ou similar
-    // Exemplo mínimo:
-    // stbi_set_flip_vertically_on_load(true);
-    // int w,h,ch; unsigned char* data = stbi_load(path,&w,&h,&ch,0);
-    // glBindTexture(GL_TEXTURE_2D, tex);
-    // glTexImage2D(GL_TEXTURE_2D,0,GL_RGB,w,h,0,ch==4?GL_RGBA:GL_RGB,GL_UNSIGNED_BYTE,data);
-    // glGenerateMipmap(GL_TEXTURE_2D);
-    // stbi_image_free(data);
-}*/
 
 } // namespace fractal_engine::world

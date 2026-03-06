@@ -8,6 +8,8 @@ add_library(fractal_engine_core
     Application.cpp
     Time.cpp
     Window.cpp
+    GameScene.cpp
+    GameScene.h
 )
 
 target_include_directories(fractal_engine_core

@@ -34,6 +34,9 @@ public:
     glm::mat4 getProjection(int w, int h) const;
 
     void rotate(float dx, float dy);
+
+    // Retorna o vetor unitário de direção frontal (para onde a câmera está olhando)
+    glm::vec3 getFront() const;
 };
 
 } // namespace fractal_engine::graphics

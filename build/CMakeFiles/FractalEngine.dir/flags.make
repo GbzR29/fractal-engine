@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/FractalEngine.dir/includes_C.rsp
 
-C_FLAGS = -Wall -Wextra -g
+C_FLAGS = -g -Wall -Wextra -g
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = @CMakeFiles/FractalEngine.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=gnu++23 -Wall -Wextra -g
+CXX_FLAGS = -g -std=gnu++17 -Wall -Wextra -g
 

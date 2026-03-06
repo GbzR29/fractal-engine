@@ -36,4 +36,13 @@ void Camera::rotate(float dx, float dy) {
     pitch = std::clamp(pitch, -89.0f, 89.0f);
 }
 
+glm::vec3 Camera::getFront() const {
+    glm::vec3 front{
+        cos(glm::radians(yaw)) * cos(glm::radians(pitch)),
+        sin(glm::radians(pitch)),
+        sin(glm::radians(yaw)) * cos(glm::radians(pitch))
+    };
+    return glm::normalize(front);
+}
+
 } // namespace fractal_engine::graphics

@@ -91,13 +91,6 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : all
 
-# The main codegen target
-codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" "C:\Projetos\Github Projects\fractal-engine\build\\CMakeFiles\progress.marks"
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
-.PHONY : codegen
-
 # The main clean target
 clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
@@ -182,6 +175,54 @@ src/core/Application.s: src/core/Application.cpp.s
 src/core/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Application.cpp.s
 .PHONY : src/core/Application.cpp.s
+
+src/core/Engine.obj: src/core/Engine.cpp.obj
+.PHONY : src/core/Engine.obj
+
+# target to build an object file
+src/core/Engine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.obj
+.PHONY : src/core/Engine.cpp.obj
+
+src/core/Engine.i: src/core/Engine.cpp.i
+.PHONY : src/core/Engine.i
+
+# target to preprocess a source file
+src/core/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.i
+.PHONY : src/core/Engine.cpp.i
+
+src/core/Engine.s: src/core/Engine.cpp.s
+.PHONY : src/core/Engine.s
+
+# target to generate assembly for a file
+src/core/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/Engine.cpp.s
+.PHONY : src/core/Engine.cpp.s
+
+src/core/GameScene.obj: src/core/GameScene.cpp.obj
+.PHONY : src/core/GameScene.obj
+
+# target to build an object file
+src/core/GameScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.obj
+.PHONY : src/core/GameScene.cpp.obj
+
+src/core/GameScene.i: src/core/GameScene.cpp.i
+.PHONY : src/core/GameScene.i
+
+# target to preprocess a source file
+src/core/GameScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.i
+.PHONY : src/core/GameScene.cpp.i
+
+src/core/GameScene.s: src/core/GameScene.cpp.s
+.PHONY : src/core/GameScene.s
+
+# target to generate assembly for a file
+src/core/GameScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/core/GameScene.cpp.s
+.PHONY : src/core/GameScene.cpp.s
 
 src/core/Program.obj: src/core/Program.cpp.obj
 .PHONY : src/core/Program.obj
@@ -663,6 +704,54 @@ src/world/Chunk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Chunk.cpp.s
 .PHONY : src/world/Chunk.cpp.s
 
+src/world/Raycast.obj: src/world/Raycast.cpp.obj
+.PHONY : src/world/Raycast.obj
+
+# target to build an object file
+src/world/Raycast.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.obj
+.PHONY : src/world/Raycast.cpp.obj
+
+src/world/Raycast.i: src/world/Raycast.cpp.i
+.PHONY : src/world/Raycast.i
+
+# target to preprocess a source file
+src/world/Raycast.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.i
+.PHONY : src/world/Raycast.cpp.i
+
+src/world/Raycast.s: src/world/Raycast.cpp.s
+.PHONY : src/world/Raycast.s
+
+# target to generate assembly for a file
+src/world/Raycast.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/Raycast.cpp.s
+.PHONY : src/world/Raycast.cpp.s
+
+src/world/TerrainGenerator.obj: src/world/TerrainGenerator.cpp.obj
+.PHONY : src/world/TerrainGenerator.obj
+
+# target to build an object file
+src/world/TerrainGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.obj
+.PHONY : src/world/TerrainGenerator.cpp.obj
+
+src/world/TerrainGenerator.i: src/world/TerrainGenerator.cpp.i
+.PHONY : src/world/TerrainGenerator.i
+
+# target to preprocess a source file
+src/world/TerrainGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.i
+.PHONY : src/world/TerrainGenerator.cpp.i
+
+src/world/TerrainGenerator.s: src/world/TerrainGenerator.cpp.s
+.PHONY : src/world/TerrainGenerator.s
+
+# target to generate assembly for a file
+src/world/TerrainGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/world/TerrainGenerator.cpp.s
+.PHONY : src/world/TerrainGenerator.cpp.s
+
 src/world/World.obj: src/world/World.cpp.obj
 .PHONY : src/world/World.obj
 
@@ -693,7 +782,6 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... codegen
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... FractalEngine
@@ -703,6 +791,12 @@ help:
 	@echo ... src/core/Application.obj
 	@echo ... src/core/Application.i
 	@echo ... src/core/Application.s
+	@echo ... src/core/Engine.obj
+	@echo ... src/core/Engine.i
+	@echo ... src/core/Engine.s
+	@echo ... src/core/GameScene.obj
+	@echo ... src/core/GameScene.i
+	@echo ... src/core/GameScene.s
 	@echo ... src/core/Program.obj
 	@echo ... src/core/Program.i
 	@echo ... src/core/Program.s
@@ -763,6 +857,12 @@ help:
 	@echo ... src/world/Chunk.obj
 	@echo ... src/world/Chunk.i
 	@echo ... src/world/Chunk.s
+	@echo ... src/world/Raycast.obj
+	@echo ... src/world/Raycast.i
+	@echo ... src/world/Raycast.s
+	@echo ... src/world/TerrainGenerator.obj
+	@echo ... src/world/TerrainGenerator.i
+	@echo ... src/world/TerrainGenerator.s
 	@echo ... src/world/World.obj
 	@echo ... src/world/World.i
 	@echo ... src/world/World.s
