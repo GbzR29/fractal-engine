@@ -87,7 +87,7 @@ void Player::update(float dt, Input& input, World& world) {
     // Atualiza câmera
     // =============================
     camera.position = position + glm::vec3(0, 1.6f, 0);
-
+    
     // Reset mouse delta
     input.mouseDX = 0.0f;
     input.mouseDY = 0.0f;
