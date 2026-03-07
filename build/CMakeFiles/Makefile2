@@ -685,27 +685,27 @@ src/third_party/CMakeFiles/glad.dir/clean:
 # All Build rule for target.
 src/CMakeFiles/FractalEngine_App.dir/all: src/third_party/CMakeFiles/glad.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/core/CMakeFiles/FractalEngine_Core.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/scene/CMakeFiles/FractalEngine_Scene.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/scene/ecs/CMakeFiles/FractalEngine_Scene_Ecs.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/input/CMakeFiles/FractalEngine_Input.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/ui/CMakeFiles/FractalEngine_Ui.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/scripting/CMakeFiles/FractalEngine_Scripting.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/audio/CMakeFiles/FractalEngine_Audio.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/ui/CMakeFiles/FractalEngine_Ui.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/utils/CMakeFiles/FractalEngine_Utils.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/scripting/CMakeFiles/FractalEngine_Scripting.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/CMakeFiles/FractalEngine_Platform.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/all
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\FractalEngine_App.dir\build.make src/CMakeFiles/FractalEngine_App.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\FractalEngine_App.dir\build.make src/CMakeFiles/FractalEngine_App.dir/build
@@ -835,8 +835,8 @@ src/renderer/CMakeFiles/FractalEngine_Renderer.dir/clean:
 # Target rules for target src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir
 
 # All Build rule for target.
-src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
+src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\opengl\CMakeFiles\FractalEngine_Renderer_Backends_Opengl.dir\build.make src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\opengl\CMakeFiles\FractalEngine_Renderer_Backends_Opengl.dir\build.make src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=57,58,59,60 "Built target FractalEngine_Renderer_Backends_Opengl"
@@ -868,8 +868,8 @@ src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.d
 # Target rules for target src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir
 
 # All Build rule for target.
-src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
+src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\vulkan\CMakeFiles\FractalEngine_Renderer_Backends_Vulkan.dir\build.make src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\vulkan\CMakeFiles\FractalEngine_Renderer_Backends_Vulkan.dir\build.make src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=61,62,63,64 "Built target FractalEngine_Renderer_Backends_Vulkan"
@@ -902,8 +902,8 @@ src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.d
 
 # All Build rule for target.
 src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
-src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
 src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/input/CMakeFiles/FractalEngine_Input.dir/all
+src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
 src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
 	$(MAKE) $(MAKESILENT) -f src\scene\CMakeFiles\FractalEngine_Scene.dir\build.make src/scene/CMakeFiles/FractalEngine_Scene.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\scene\CMakeFiles\FractalEngine_Scene.dir\build.make src/scene/CMakeFiles/FractalEngine_Scene.dir/build

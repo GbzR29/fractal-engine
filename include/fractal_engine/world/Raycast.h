@@ -1,28 +1,30 @@
 #pragma once
 #include <optional>
-#include <glm/glm.hpp>
+#include <third_party/glm/glm.hpp>
 
 namespace fractal_engine::world {
 
 class World;
 
-// ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // RaycastHit — resultado de um raycast contra o mundo de voxels
-// ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 struct RaycastHit {
-    glm::ivec3 blockPos;     // Bloco sólido atingido
-    glm::ivec3 adjacentPos;  // Bloco de ar anterior ao hit (onde colocar bloco)
-    glm::ivec3 faceNormal;   // Normal da face atingida: ex. (0,1,0) = face top
-                              //   Use: adjacentPos = blockPos + faceNormal
-    float      distance;     // Distância da origem até a face do bloco
+    glm::ivec3 blockPos;     // bloco SÓLIDO atingido
+    glm::ivec3 adjacentPos;  // bloco de AR anterior (onde colocar um novo bloco)
+    glm::ivec3 faceNormal;   // normal da face: (0,1,0)=topo (0,-1,0)=fundo etc.
+                              // adjacentPos == blockPos + faceNormal
+    float      distance;     // distância da origem até a face do bloco
 };
 
-// ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// Raycast — DDA (Digital Differential Analysis) contra o mundo de voxels
+// ─────────────────────────────────────────────────────────────────────────────
 class Raycast {
 public:
-    // origin    : posição dos olhos do player (ex: playerPos + {0, 1.6f, 0})
-    // direction : vetor de direção da câmera (não precisa ser normalizado)
-    // maxDistance: alcance máximo em unidades de bloco (ex: 6.0f)
+    // origin      : posição dos olhos do player (ex: playerPos + {0, 1.6f, 0})
+    // direction   : direção da câmera (não precisa estar normalizado)
+    // maxDistance : alcance em blocos (padrão: 6.0f)
     static std::optional<RaycastHit> raycast(
         const World& world,
         glm::vec3    origin,

@@ -1,5 +1,5 @@
-#include "fractal_engine/world/Chunk.h"
-#include "fractal_engine/world/TerrainGenerator.h"
+#include "fractal_engine/world/terrain/Chunk.h"
+#include "fractal_engine/world/terrain/TerrainGenerator.h"
 #include <iostream>
 #include <cmath>
 
