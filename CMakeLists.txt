@@ -1,99 +1,53 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.25)
 
 project(FractalEngine LANGUAGES CXX C)
 
 # =====================
-# C++ Standard
+# C++ Standard & CMake Settings
 # =====================
-
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # =====================
-# Sources (todos os .cpp dentro de src)
+# Build Options
 # =====================
-
-file(GLOB_RECURSE SOURCES
-    ${CMAKE_SOURCE_DIR}/src/*.cpp
-    ${CMAKE_SOURCE_DIR}/src/*.c
-)
-
-add_executable(${PROJECT_NAME} ${SOURCES})
+option(FE_BUILD_TESTS "Build tests" OFF)
+option(FE_BUILD_TOOLS "Build tools" OFF)
 
 # =====================
-# Includes
+# Global include directories
 # =====================
-
-target_include_directories(${PROJECT_NAME} PRIVATE
+include_directories(
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/include/third_party
-    ${CMAKE_SOURCE_DIR}/src
 )
 
 # =====================
-# Library directory
+# Third-party libraries
 # =====================
-
-target_link_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_SOURCE_DIR}/lib
-)
+add_subdirectory(src/third_party)
 
 # =====================
-# Link libraries
+# Main library (all modules)
 # =====================
-
-target_link_libraries(${PROJECT_NAME}
-    glfw3dll
-    lua55
-    SDL3
-    opengl32
-    gdi32
-    user32
-    kernel32
-)
+add_subdirectory(src)
 
 # =====================
-# Flags MinGW
+# Tests
 # =====================
-
-if(MINGW)
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        -Wall
-        -Wextra
-        -g
-    )
+if(FE_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
 endif()
 
 # =====================
-# Copiar DLL runtime
+# Tools
 # =====================
-
-file(GLOB RUNTIME_DLLS
-    ${CMAKE_SOURCE_DIR}/bin/*.dll
-)
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    ${RUNTIME_DLLS}
-    $<TARGET_FILE_DIR:${PROJECT_NAME}>
-)
-
-# =====================
-# Copy shaders and assets to build directory
-# =====================
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/src/shaders
-    $<TARGET_FILE_DIR:${PROJECT_NAME}>/shaders
-    COMMENT "Copying shaders to build directory..."
-)
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/src/assets
-    $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
-    COMMENT "Copying assets to build directory..."
-)
+if(FE_BUILD_TOOLS)
+    add_subdirectory(tools)
+endif()

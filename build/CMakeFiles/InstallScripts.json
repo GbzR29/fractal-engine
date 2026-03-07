@@ -1,7 +1,32 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Projetos/Github Projects/fractal-engine/build/cmake_install.cmake"
+		"C:/Projetos/Github Projects/fractal-engine/build/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/third_party/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/core/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/graphics/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/renderer/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/renderer/backends/opengl/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/renderer/backends/vulkan/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/scene/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/scene/ecs/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/physics/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/physics/collision/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/physics/dynamics/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/input/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/world/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/world/terrain/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/world/streaming/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/audio/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/ui/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/scripting/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/math/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/utils/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/platform/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/platform/win32/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/platform/linux/cmake_install.cmake",
+		"C:/Projetos/Github Projects/fractal-engine/build/src/platform/macos/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

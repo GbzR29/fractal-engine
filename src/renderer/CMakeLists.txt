@@ -1,19 +1,24 @@
-# CMakeLists.txt for Renderer Module
-# Subdirectory: src/renderer
+# =====================
+# Renderer Module
+# =====================
+add_library(FractalEngine_Renderer STATIC)
 
-add_library(fractal_engine_renderer
-    OBJECT
-    Renderer.cpp
+target_sources(FractalEngine_Renderer PRIVATE
     Mesh.cpp
+    MeshBuilder.cpp
+    RenderGraph.cpp
+    RenderPass.cpp
+    Renderer.cpp
 )
 
-target_include_directories(fractal_engine_renderer
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Renderer PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/renderer
+)
+target_link_libraries(FractalEngine_Renderer PUBLIC
+    FractalEngine_Graphics
 )
 
-target_link_libraries(fractal_engine_renderer
-    PUBLIC
-    opengl32
-)
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Renderer PRIVATE -Wall -Wextra)
+endif()

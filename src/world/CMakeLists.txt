@@ -1,21 +1,23 @@
-# CMakeLists.txt for World Module
-# Subdirectory: src/world
+# =====================
+# World Module
+# =====================
+add_library(FractalEngine_World STATIC)
 
-add_library(fractal_engine_world
-    OBJECT
-    Chunk.cpp
-    World.cpp
+target_sources(FractalEngine_World PRIVATE
     Raycast.cpp
-    TerrainGenerator.cpp
+    World.cpp
+    WorldManager.cpp
 )
 
-target_include_directories(fractal_engine_world
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_World PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/world
+)
+target_link_libraries(FractalEngine_World PUBLIC
+    FractalEngine_Graphics
+    FractalEngine_Math
 )
 
-target_link_libraries(fractal_engine_world
-    PUBLIC
-    opengl32
-)
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_World PRIVATE -Wall -Wextra)
+endif()
