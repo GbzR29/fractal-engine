@@ -1,16 +1,24 @@
-# CMakeLists.txt for Scene Module
-# Subdirectory: src/scene
+# =====================
+# Scene Module
+# =====================
+add_library(FractalEngine_Scene STATIC)
 
-add_library(fractal_engine_scene
-    OBJECT
-    Player.cpp
+target_sources(FractalEngine_Scene PRIVATE
     Components.cpp
-    Entity.cpp
+    Player.cpp
     Scene.cpp
 )
 
-target_include_directories(fractal_engine_scene
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Scene PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/scene
 )
+target_link_libraries(FractalEngine_Scene PUBLIC
+    FractalEngine_Graphics
+    FractalEngine_Input
+    FractalEngine_World
+)
+
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Scene PRIVATE -Wall -Wextra)
+endif()

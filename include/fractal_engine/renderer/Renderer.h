@@ -1,17 +1,18 @@
 #pragma once
 
-#include <third_party/glm/glm.hpp>
-#include <third_party/glm/gtc/matrix_transform.hpp>
-#include <third_party/glad/glad.h>
+#ifndef FRACTAL_ENGINE_RENDERER_H
+#define FRACTAL_ENGINE_RENDERER_H
 
 namespace fractal_engine::renderer {
 
-class Renderer {
-public:
-    Renderer() = default;
-    virtual ~Renderer() = default;
+    class Renderer {
+    public:
+        Renderer() = default;
+        ~Renderer() = default;
+        
+        // Renderer interface methods will be implemented here
+    };
 
-    // Renderer methods would go here
-};
+}  // namespace fractal_engine::renderer
 
-} // namespace fractal_engine::renderer
+#endif  // FRACTAL_ENGINE_RENDERER_H

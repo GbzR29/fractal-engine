@@ -1,26 +1,26 @@
-# CMakeLists.txt for Core Module
-# Subdirectory: src/core
+# =====================
+# Core Module
+# =====================
+add_library(FractalEngine_Core STATIC)
 
-add_library(fractal_engine_core
-    OBJECT
-    Program.cpp
-    Program.h
+target_sources(FractalEngine_Core PRIVATE
     Application.cpp
+    Engine.cpp
+    GameScene.cpp
+    Program.cpp
     Time.cpp
     Window.cpp
-    GameScene.cpp
-    GameScene.h
 )
 
-target_include_directories(fractal_engine_core
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Core PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/core
+)
+target_link_libraries(FractalEngine_Core PUBLIC
+    FractalEngine_Graphics
+    FractalEngine_Input
 )
 
-target_link_libraries(fractal_engine_core
-    PUBLIC
-    glfw3dll
-    glfw3
-    opengl32
-)
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Core PRIVATE -Wall -Wextra)
+endif()

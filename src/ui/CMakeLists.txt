@@ -1,21 +1,24 @@
-# CMakeLists.txt for UI Module
-# Subdirectory: src/ui
+# =====================
+# Ui Module
+# =====================
+add_library(FractalEngine_Ui STATIC)
 
-add_library(fractal_engine_ui
-    OBJECT
-    core/UIElement.cpp
-    core/UIEventSystem.cpp
-    core/UIManager.cpp
-    core/UIREnderer.cpp
+target_sources(FractalEngine_Ui PRIVATE
+    Button.cpp
+    Panel.cpp
+    Text.cpp
+    UIManager.cpp
+    Widget.cpp
 )
 
-target_include_directories(fractal_engine_ui
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Ui PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/ui
+)
+target_link_libraries(FractalEngine_Ui PUBLIC
+    FractalEngine_Graphics
 )
 
-target_link_libraries(fractal_engine_ui
-    PUBLIC
-    opengl32
-)
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Ui PRIVATE -Wall -Wextra)
+endif()

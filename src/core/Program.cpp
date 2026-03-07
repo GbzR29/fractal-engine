@@ -1,7 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 
-#include "Program.h"
-#include "GameScene.h"
+#include "fractal_engine/core/Program.h"
+#include "fractal_engine/core/GameScene.h"
 #include "fractal_engine/graphics/Shader.h"
 #include "fractal_engine/input/Input.h"
 #include "fractal_engine/core/Window.h"

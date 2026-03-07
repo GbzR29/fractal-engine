@@ -1,4 +1,4 @@
-#include "core/Program.h"
+#include "fractal_engine/core/Program.h"
 
 /**
  * @brief Application entry point.

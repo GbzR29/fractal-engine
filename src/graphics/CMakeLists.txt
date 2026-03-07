@@ -1,21 +1,22 @@
-# CMakeLists.txt for Graphics Module
-# Subdirectory: src/graphics
+# =====================
+# Graphics Module
+# =====================
+add_library(FractalEngine_Graphics STATIC)
 
-add_library(fractal_engine_graphics
-    OBJECT
+target_sources(FractalEngine_Graphics PRIVATE
     Camera.cpp
+    Framebuffer.cpp
+    Material.cpp
     Shader.cpp
+    ShaderProgram.cpp
     Texture.cpp
     TextureLoader.cpp
 )
 
-target_include_directories(fractal_engine_graphics
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Graphics PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/graphics
 )
 
-target_link_libraries(fractal_engine_graphics
-    PUBLIC
-    opengl32
-)
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Graphics PRIVATE -Wall -Wextra)
+endif()

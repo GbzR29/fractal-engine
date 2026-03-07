@@ -1,4 +1,4 @@
-#include "GameScene.h"
+#include "fractal_engine/core/GameScene.h"
 #include <iostream>
 
 GameScene::GameScene(Shader& worldShader, Shader& uiShader, int width, int height)

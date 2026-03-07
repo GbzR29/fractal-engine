@@ -1,13 +1,21 @@
-# CMakeLists.txt for Input Module
-# Subdirectory: src/input
+# =====================
+# Input Module
+# =====================
+add_library(FractalEngine_Input STATIC)
 
-add_library(fractal_engine_input
-    OBJECT
+target_sources(FractalEngine_Input PRIVATE
+    Gamepad.cpp
     Input.cpp
+    InputManager.cpp
+    InputMapper.cpp
+    Keyboard.cpp
+    Mouse.cpp
 )
 
-target_include_directories(fractal_engine_input
-    PUBLIC
-    ${CMAKE_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/include/third_party
+target_include_directories(FractalEngine_Input PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/fractal_engine/input
 )
+
+if(MINGW OR UNIX)
+    target_compile_options(FractalEngine_Input PRIVATE -Wall -Wextra)
+endif()
