@@ -1,5 +1,4 @@
 #pragma once
-
 #include <third_party/glm/glm.hpp>
 #include <third_party/glm/gtc/matrix_transform.hpp>
 #include <optional>
@@ -19,14 +18,18 @@ struct AABB {
 };
 
 class Player {
+    // ── Hitbox ────────────────────────────────────────────────────────────
+    // width  = largura/profundidade da hitbox (centrada no position)
+    // height = altura total em blocos (2.0 = exatamente 2 blocos)
+    // eyeHeight = onde a câmera fica dentro do corpo (deve ser < height)
+    static constexpr float width     = 0.6f;
+    static constexpr float height    = 2.0f;   // 2 blocos de altura
+    static constexpr float eyeHeight = 1.6f;   // olhos a 1.6 blocos dos pés
 
-    float width = 0.8f;   // Aumentado de 0.6f para corpo maior
-    float height = 2.0f;  // Aumentado de 1.8f para corpo maior
-    
-    AABB getAABB() {
+    AABB getAABB() const {
         return {
-            position - glm::vec3(width/2, 0, width/2), // min (pés)
-            position + glm::vec3(width/2, height, width/2) // max (cabeça)
+            position - glm::vec3(width * 0.5f, 0.0f,         width * 0.5f),
+            position + glm::vec3(width * 0.5f, height,       width * 0.5f)
         };
     }
 
@@ -35,49 +38,31 @@ public:
 
     void update(float dt, Input& input, World& world);
     void applyGravity(float dt);
-
     void renderCamera(Shader& shader, int w, int h);
-    
-    // ────── Matrizes para renderização ──────────────────────────────────────
-    glm::mat4 getView() const { return camera.getView(); }
+    bool checkCollision(World& world);
+    void initializeAtTerrainHeight(const World& world,
+                                   float spawnX = 0.0f,
+                                   float spawnZ = 0.0f);
+
+    // ── Matrizes de câmera ────────────────────────────────────────────────
+    glm::mat4 getView()              const { return camera.getView(); }
     glm::mat4 getProjection(int w, int h) const { return camera.getProjection(w, h); }
 
-    bool checkCollision(World& world);
-
-    /**
-     * @brief Inicializa a posição do player acima do terreno
-     * 
-     * Encontra a altura do terreno na posição X,Z especificada e coloca o player lá
-     * @param world Referência ao mundo para calcular altura do terreno
-     * @param spawnX Coordenada X de spawn
-     * @param spawnZ Coordenada Z de spawn
-     */
-    void initializeAtTerrainHeight(const World& world, float spawnX = 0.0f, float spawnZ = 0.0f);
-
-    bool onGround = false;
+    // ── Estado ────────────────────────────────────────────────────────────
+    bool  onGround  = false;
     float jumpForce = 6.0f;
 
-    // ─────────────────────────────────────────────
-    // SISTEMA DE QUEBRA/CONSTRUÇÃO
-    // ─────────────────────────────────────────────
-    
-    // Bloco atualmente sendo olhado (para render de seleção)
+    // ── Interação com blocos ──────────────────────────────────────────────
     std::optional<RaycastHit> targetBlock;
-    
-    // Alcance máximo de interação com blocos (em blocos)
-    float blockInteractionRange = 5.0f;
-    
-    // Tipo de bloco selecionado para construir
-    BlockType selectedBlockType = BLOCK_STONE;  // Padrão: pedra
+    float     blockInteractionRange = 5.0f;
+    BlockType selectedBlockType     = BLOCK_STONE;
 
 private:
-    Camera camera;
-
-    glm::vec3 position{0.0f, 64.0f, 0.0f};  // Altura muito acima do terreno (BASE_HEIGHT=32, variação ±48)
-    glm::vec3 velocity{0.0f};
-
-    float speed   = 5.0f;
-    float gravity = -9.8f;
+    Camera    camera;
+    glm::vec3 position { 0.0f, 64.0f, 0.0f };
+    glm::vec3 velocity { 0.0f };
+    float     speed    =  5.0f;
+    float     gravity  = -9.8f;
 };
 
 } // namespace fractal_engine::scene

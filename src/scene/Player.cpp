@@ -52,12 +52,13 @@ void Player::update(float dt, Input& input, World& world) {
     }
 
     // ── Câmera ────────────────────────────────────────────────────────────
-    camera.position = position + glm::vec3(0, 1.6f, 0);
+    // Olhos a 1.6f acima dos pés — padrão Minecraft (player tem 1.8 blocos visuais)
+    camera.position = position + glm::vec3(0, eyeHeight, 0);
 
     // ── Raycast e interação ───────────────────────────────────────────────
     targetBlock = Raycast::raycast(world, camera.position, camera.getFront(), blockInteractionRange);
 
-    if (input.leftClickPressed() && targetBlock.has_value())
+    if (input.leftClickPressed()  && targetBlock.has_value())
         world.breakBlock(targetBlock->blockPos);
 
     if (input.rightClickPressed() && targetBlock.has_value())
@@ -71,25 +72,38 @@ void Player::update(float dt, Input& input, World& world) {
     if (input.key3Pressed) selectedBlockType = BLOCK_DIRT;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// checkCollision
+//
+// FIX: O código anterior usava std::ceil() no max da AABB, o que incluía
+// o bloco ACIMA da cabeça do player quando a posição era valor exato
+// (ex: maxY = 22.0 → ceil = 22 → checa bloco 22, além do topo real).
+//
+// Correto: usar std::floor() com epsilon (0.001f) subtraído do max.
+// Isso garante que a AABB cobre exatamente os blocos que ela ocupa,
+// sem incluir blocos adjacentes nas bordas.
+//
+// Exemplo com height=2.0f e position.y=20.0:
+//   box.max.y = 22.0 → floor(22.0 - 0.001) = floor(21.999) = 21 ✓
+//   O player ocupa blocos y=20 e y=21 — correto para 2 blocos de altura.
+// ─────────────────────────────────────────────────────────────────────────────
 bool Player::checkCollision(World& world) {
     AABB box = getAABB();
 
+    static constexpr float EPS = 0.001f;
+
     int minX = static_cast<int>(std::floor(box.min.x));
-    int maxX = static_cast<int>(std::ceil (box.max.x));
+    int maxX = static_cast<int>(std::floor(box.max.x - EPS));
     int minY = static_cast<int>(std::floor(box.min.y));
-    int maxY = static_cast<int>(std::ceil (box.max.y));
+    int maxY = static_cast<int>(std::floor(box.max.y - EPS));
     int minZ = static_cast<int>(std::floor(box.min.z));
-    int maxZ = static_cast<int>(std::ceil (box.max.z));
+    int maxZ = static_cast<int>(std::floor(box.max.z - EPS));
 
     for (int x = minX; x <= maxX; x++)
     for (int y = minY; y <= maxY; y++)
     for (int z = minZ; z <= maxZ; z++) {
-        if (world.isBlockSolid((float)x, (float)y, (float)z)) {
-            if (!(box.max.x <= x      || box.min.x >= x + 1.0f ||
-                  box.max.y <= y      || box.min.y >= y + 1.0f ||
-                  box.max.z <= z      || box.min.z >= z + 1.0f))
-                return true;
-        }
+        if (world.isBlockSolid((float)x, (float)y, (float)z))
+            return true;
     }
     return false;
 }
@@ -106,25 +120,11 @@ void Player::applyGravity(float dt) {
     if (position.y < 4.0f) { position.y = 4.0f; velocity.y = 0.0f; }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// initializeAtTerrainHeight — abordagem "drop from sky"
-//
-// Em vez de tentar calcular matematicamente onde a superfície está
-// (o que pode divergir dependendo de como o fractalNoise normaliza valores),
-// simplesmente varremos de cima para baixo nos blocos reais do mundo.
-//
-// Se o scan falhar (chunk não carregado ainda), colocamos o player no
-// topo absoluto (Chunk::SIZE_Y - 2) e a gravidade + colisão cuidam do resto.
-// ─────────────────────────────────────────────────────────────────────────────
 void Player::initializeAtTerrainHeight(const World& world, float spawnX, float spawnZ) {
-    // Varrer de cima para baixo procurando o primeiro bloco sólido
-    // Começa em SIZE_Y-2 para deixar espaço para o player (altura 2)
     int topY = Chunk::SIZE_Y - 2;
 
     for (int y = topY; y >= 1; y--) {
         if (world.isBlockSolid(spawnX, (float)y, spawnZ)) {
-            // Encontrou terreno: posiciona os PÉS do player em y+1
-            // (y é o bloco sólido, y+1 é o ar acima dele)
             position = glm::vec3(spawnX, (float)(y + 1), spawnZ);
             velocity = glm::vec3(0.0f);
             onGround = false;
@@ -135,8 +135,6 @@ void Player::initializeAtTerrainHeight(const World& world, float spawnX, float s
         }
     }
 
-    // Fallback: nenhum bloco encontrado (chunk vazio ou não carregado)
-    // Spawn no topo — a gravidade vai pousar o player quando o chunk carregar
     position = glm::vec3(spawnX, (float)(Chunk::SIZE_Y - 2), spawnZ);
     velocity = glm::vec3(0.0f);
     onGround = false;
