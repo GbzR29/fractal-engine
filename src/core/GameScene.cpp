@@ -18,7 +18,7 @@ void GameScene::init() {
 
     // ── Sky ───────────────────────────────────────────────────────────────
     SkyConfig skyCfg;
-    skyCfg.dayDurationSeconds = 600.0f;
+    skyCfg.dayDurationSeconds = 20.0f;
     skyCfg.ambientMin         = 0.08f;
     skyCfg.paused             = false;
     sky.init(skyShader, skyCfg);
