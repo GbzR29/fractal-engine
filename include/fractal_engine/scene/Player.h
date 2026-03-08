@@ -6,6 +6,7 @@
 #include "fractal_engine/input/Input.h"
 #include "fractal_engine/world/World.h"
 #include "fractal_engine/world/Raycast.h"
+#include "fractal_engine/scene/Hotbar.h"
 
 using namespace fractal_engine::graphics;
 using namespace fractal_engine::input;
@@ -18,23 +19,22 @@ struct AABB {
 };
 
 class Player {
-    // ── Hitbox ────────────────────────────────────────────────────────────
-    // width  = largura/profundidade da hitbox (centrada no position)
-    // height = altura total em blocos (2.0 = exatamente 2 blocos)
-    // eyeHeight = onde a câmera fica dentro do corpo (deve ser < height)
     static constexpr float width     = 0.6f;
-    static constexpr float height    = 2.0f;   // 2 blocos de altura
-    static constexpr float eyeHeight = 1.6f;   // olhos a 1.6 blocos dos pés
+    static constexpr float height    = 2.0f;
+    static constexpr float eyeHeight = 1.6f;
 
     AABB getAABB() const {
         return {
-            position - glm::vec3(width * 0.5f, 0.0f,         width * 0.5f),
-            position + glm::vec3(width * 0.5f, height,       width * 0.5f)
+            position - glm::vec3(width * 0.5f, 0.0f,   width * 0.5f),
+            position + glm::vec3(width * 0.5f, height, width * 0.5f)
         };
     }
 
 public:
     Player() = default;
+
+    // Deve ser chamado após BlockRegistry::init()
+    void init() { hotbar.init(); }
 
     void update(float dt, Input& input, World& world);
     void applyGravity(float dt);
@@ -44,8 +44,7 @@ public:
                                    float spawnX = 0.0f,
                                    float spawnZ = 0.0f);
 
-    // ── Matrizes de câmera ────────────────────────────────────────────────
-    glm::mat4 getView()              const { return camera.getView(); }
+    glm::mat4 getView()             const { return camera.getView(); }
     glm::mat4 getProjection(int w, int h) const { return camera.getProjection(w, h); }
 
     // ── Estado ────────────────────────────────────────────────────────────
@@ -54,8 +53,10 @@ public:
 
     // ── Interação com blocos ──────────────────────────────────────────────
     std::optional<RaycastHit> targetBlock;
-    float     blockInteractionRange = 5.0f;
-    BlockType selectedBlockType     = BLOCK_STONE;
+    float blockInteractionRange = 5.0f;
+
+    // ── Hotbar (sem BlockType hardcoded) ──────────────────────────────────
+    Hotbar hotbar;
 
 private:
     Camera    camera;

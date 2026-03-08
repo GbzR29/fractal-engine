@@ -687,26 +687,26 @@ src/CMakeFiles/FractalEngine_App.dir/all: src/third_party/CMakeFiles/glad.dir/al
 src/CMakeFiles/FractalEngine_App.dir/all: src/core/CMakeFiles/FractalEngine_Core.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/scene/CMakeFiles/FractalEngine_Scene.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/input/CMakeFiles/FractalEngine_Input.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/scene/ecs/CMakeFiles/FractalEngine_Scene_Ecs.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/world/CMakeFiles/FractalEngine_World.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/audio/CMakeFiles/FractalEngine_Audio.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/ui/CMakeFiles/FractalEngine_Ui.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/utils/CMakeFiles/FractalEngine_Utils.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/scripting/CMakeFiles/FractalEngine_Scripting.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/utils/CMakeFiles/FractalEngine_Utils.dir/all
+src/CMakeFiles/FractalEngine_App.dir/all: src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/CMakeFiles/FractalEngine_Platform.dir/all
 src/CMakeFiles/FractalEngine_App.dir/all: src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/all
-src/CMakeFiles/FractalEngine_App.dir/all: src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/all
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\FractalEngine_App.dir\build.make src/CMakeFiles/FractalEngine_App.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\FractalEngine_App.dir\build.make src/CMakeFiles/FractalEngine_App.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1 "Built target FractalEngine_App"
@@ -747,7 +747,7 @@ src/core/CMakeFiles/FractalEngine_Core.dir/all: src/input/CMakeFiles/FractalEngi
 
 # Build rule for subdir invocation for target.
 src/core/CMakeFiles/FractalEngine_Core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 20
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/core/CMakeFiles/FractalEngine_Core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/core/CMakeFiles/FractalEngine_Core.dir/rule
@@ -774,12 +774,12 @@ src/core/CMakeFiles/FractalEngine_Core.dir/clean:
 src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\graphics\CMakeFiles\FractalEngine_Graphics.dir\build.make src/graphics/CMakeFiles/FractalEngine_Graphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\graphics\CMakeFiles\FractalEngine_Graphics.dir\build.make src/graphics/CMakeFiles/FractalEngine_Graphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=13,14,15,16,17,18,19,20 "Built target FractalEngine_Graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=13,14,15,16,17,18,19 "Built target FractalEngine_Graphics"
 .PHONY : src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 
 # Build rule for subdir invocation for target.
 src/graphics/CMakeFiles/FractalEngine_Graphics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/graphics/CMakeFiles/FractalEngine_Graphics.dir/rule
@@ -791,7 +791,7 @@ FractalEngine_Graphics: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/rule
 # codegen rule for target.
 src/graphics/CMakeFiles/FractalEngine_Graphics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\graphics\CMakeFiles\FractalEngine_Graphics.dir\build.make src/graphics/CMakeFiles/FractalEngine_Graphics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=13,14,15,16,17,18,19,20 "Finished codegen for target FractalEngine_Graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=13,14,15,16,17,18,19 "Finished codegen for target FractalEngine_Graphics"
 .PHONY : src/graphics/CMakeFiles/FractalEngine_Graphics.dir/codegen
 
 # clean rule for target.
@@ -806,12 +806,12 @@ src/graphics/CMakeFiles/FractalEngine_Graphics.dir/clean:
 src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all: src/graphics/CMakeFiles/FractalEngine_Graphics.dir/all
 	$(MAKE) $(MAKESILENT) -f src\renderer\CMakeFiles\FractalEngine_Renderer.dir\build.make src/renderer/CMakeFiles/FractalEngine_Renderer.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\renderer\CMakeFiles\FractalEngine_Renderer.dir\build.make src/renderer/CMakeFiles/FractalEngine_Renderer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=51,52,53,54,55,56 "Built target FractalEngine_Renderer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=50,51,52,53,54 "Built target FractalEngine_Renderer"
 .PHONY : src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
 
 # Build rule for subdir invocation for target.
 src/renderer/CMakeFiles/FractalEngine_Renderer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/renderer/CMakeFiles/FractalEngine_Renderer.dir/rule
@@ -823,7 +823,7 @@ FractalEngine_Renderer: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/rule
 # codegen rule for target.
 src/renderer/CMakeFiles/FractalEngine_Renderer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\renderer\CMakeFiles\FractalEngine_Renderer.dir\build.make src/renderer/CMakeFiles/FractalEngine_Renderer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=51,52,53,54,55,56 "Finished codegen for target FractalEngine_Renderer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=50,51,52,53,54 "Finished codegen for target FractalEngine_Renderer"
 .PHONY : src/renderer/CMakeFiles/FractalEngine_Renderer.dir/codegen
 
 # clean rule for target.
@@ -839,12 +839,12 @@ src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.d
 src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\opengl\CMakeFiles\FractalEngine_Renderer_Backends_Opengl.dir\build.make src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\opengl\CMakeFiles\FractalEngine_Renderer_Backends_Opengl.dir\build.make src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=57,58,59,60 "Built target FractalEngine_Renderer_Backends_Opengl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=55,56,57,58,59 "Built target FractalEngine_Renderer_Backends_Opengl"
 .PHONY : src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
 
 # Build rule for subdir invocation for target.
 src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 18
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/rule
@@ -856,7 +856,7 @@ FractalEngine_Renderer_Backends_Opengl: src/renderer/backends/opengl/CMakeFiles/
 # codegen rule for target.
 src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\opengl\CMakeFiles\FractalEngine_Renderer_Backends_Opengl.dir\build.make src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=57,58,59,60 "Finished codegen for target FractalEngine_Renderer_Backends_Opengl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=55,56,57,58,59 "Finished codegen for target FractalEngine_Renderer_Backends_Opengl"
 .PHONY : src/renderer/backends/opengl/CMakeFiles/FractalEngine_Renderer_Backends_Opengl.dir/codegen
 
 # clean rule for target.
@@ -872,12 +872,12 @@ src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.d
 src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all: src/renderer/CMakeFiles/FractalEngine_Renderer.dir/all
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\vulkan\CMakeFiles\FractalEngine_Renderer_Backends_Vulkan.dir\build.make src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\vulkan\CMakeFiles\FractalEngine_Renderer_Backends_Vulkan.dir\build.make src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=61,62,63,64 "Built target FractalEngine_Renderer_Backends_Vulkan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=60,61,62 "Built target FractalEngine_Renderer_Backends_Vulkan"
 .PHONY : src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all
 
 # Build rule for subdir invocation for target.
 src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 18
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/rule
@@ -889,7 +889,7 @@ FractalEngine_Renderer_Backends_Vulkan: src/renderer/backends/vulkan/CMakeFiles/
 # codegen rule for target.
 src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\renderer\backends\vulkan\CMakeFiles\FractalEngine_Renderer_Backends_Vulkan.dir\build.make src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=61,62,63,64 "Finished codegen for target FractalEngine_Renderer_Backends_Vulkan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=60,61,62 "Finished codegen for target FractalEngine_Renderer_Backends_Vulkan"
 .PHONY : src/renderer/backends/vulkan/CMakeFiles/FractalEngine_Renderer_Backends_Vulkan.dir/codegen
 
 # clean rule for target.
@@ -907,12 +907,12 @@ src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/world/CMakeFiles/FractalEn
 src/scene/CMakeFiles/FractalEngine_Scene.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
 	$(MAKE) $(MAKESILENT) -f src\scene\CMakeFiles\FractalEngine_Scene.dir\build.make src/scene/CMakeFiles/FractalEngine_Scene.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\scene\CMakeFiles\FractalEngine_Scene.dir\build.make src/scene/CMakeFiles/FractalEngine_Scene.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=65,66,67,68 "Built target FractalEngine_Scene"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=63,64,65,66,67,68 "Built target FractalEngine_Scene"
 .PHONY : src/scene/CMakeFiles/FractalEngine_Scene.dir/all
 
 # Build rule for subdir invocation for target.
 src/scene/CMakeFiles/FractalEngine_Scene.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 25
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/scene/CMakeFiles/FractalEngine_Scene.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/scene/CMakeFiles/FractalEngine_Scene.dir/rule
@@ -924,7 +924,7 @@ FractalEngine_Scene: src/scene/CMakeFiles/FractalEngine_Scene.dir/rule
 # codegen rule for target.
 src/scene/CMakeFiles/FractalEngine_Scene.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\scene\CMakeFiles\FractalEngine_Scene.dir\build.make src/scene/CMakeFiles/FractalEngine_Scene.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=65,66,67,68 "Finished codegen for target FractalEngine_Scene"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=63,64,65,66,67,68 "Finished codegen for target FractalEngine_Scene"
 .PHONY : src/scene/CMakeFiles/FractalEngine_Scene.dir/codegen
 
 # clean rule for target.
@@ -971,12 +971,12 @@ src/scene/ecs/CMakeFiles/FractalEngine_Scene_Ecs.dir/clean:
 src/physics/CMakeFiles/FractalEngine_Physics.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\physics\CMakeFiles\FractalEngine_Physics.dir\build.make src/physics/CMakeFiles/FractalEngine_Physics.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\physics\CMakeFiles\FractalEngine_Physics.dir\build.make src/physics/CMakeFiles/FractalEngine_Physics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=31,32 "Built target FractalEngine_Physics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=31 "Built target FractalEngine_Physics"
 .PHONY : src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 
 # Build rule for subdir invocation for target.
 src/physics/CMakeFiles/FractalEngine_Physics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/physics/CMakeFiles/FractalEngine_Physics.dir/rule
@@ -988,7 +988,7 @@ FractalEngine_Physics: src/physics/CMakeFiles/FractalEngine_Physics.dir/rule
 # codegen rule for target.
 src/physics/CMakeFiles/FractalEngine_Physics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\physics\CMakeFiles\FractalEngine_Physics.dir\build.make src/physics/CMakeFiles/FractalEngine_Physics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=31,32 "Finished codegen for target FractalEngine_Physics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=31 "Finished codegen for target FractalEngine_Physics"
 .PHONY : src/physics/CMakeFiles/FractalEngine_Physics.dir/codegen
 
 # clean rule for target.
@@ -1003,12 +1003,12 @@ src/physics/CMakeFiles/FractalEngine_Physics.dir/clean:
 src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all: src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 	$(MAKE) $(MAKESILENT) -f src\physics\collision\CMakeFiles\FractalEngine_Physics_Collision.dir\build.make src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\physics\collision\CMakeFiles\FractalEngine_Physics_Collision.dir\build.make src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=33,34,35,36,37 "Built target FractalEngine_Physics_Collision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=32,33,34,35,36 "Built target FractalEngine_Physics_Collision"
 .PHONY : src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
 
 # Build rule for subdir invocation for target.
 src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/rule
@@ -1020,7 +1020,7 @@ FractalEngine_Physics_Collision: src/physics/collision/CMakeFiles/FractalEngine_
 # codegen rule for target.
 src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\physics\collision\CMakeFiles\FractalEngine_Physics_Collision.dir\build.make src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=33,34,35,36,37 "Finished codegen for target FractalEngine_Physics_Collision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=32,33,34,35,36 "Finished codegen for target FractalEngine_Physics_Collision"
 .PHONY : src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/codegen
 
 # clean rule for target.
@@ -1035,12 +1035,12 @@ src/physics/collision/CMakeFiles/FractalEngine_Physics_Collision.dir/clean:
 src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/all: src/physics/CMakeFiles/FractalEngine_Physics.dir/all
 	$(MAKE) $(MAKESILENT) -f src\physics\dynamics\CMakeFiles\FractalEngine_Physics_Dynamics.dir\build.make src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\physics\dynamics\CMakeFiles\FractalEngine_Physics_Dynamics.dir\build.make src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=38,39,40 "Built target FractalEngine_Physics_Dynamics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=37,38,39 "Built target FractalEngine_Physics_Dynamics"
 .PHONY : src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/all
 
 # Build rule for subdir invocation for target.
 src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/rule
@@ -1052,7 +1052,7 @@ FractalEngine_Physics_Dynamics: src/physics/dynamics/CMakeFiles/FractalEngine_Ph
 # codegen rule for target.
 src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\physics\dynamics\CMakeFiles\FractalEngine_Physics_Dynamics.dir\build.make src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=38,39,40 "Finished codegen for target FractalEngine_Physics_Dynamics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=37,38,39 "Finished codegen for target FractalEngine_Physics_Dynamics"
 .PHONY : src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/codegen
 
 # clean rule for target.
@@ -1067,7 +1067,7 @@ src/physics/dynamics/CMakeFiles/FractalEngine_Physics_Dynamics.dir/clean:
 src/input/CMakeFiles/FractalEngine_Input.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\input\CMakeFiles\FractalEngine_Input.dir\build.make src/input/CMakeFiles/FractalEngine_Input.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\input\CMakeFiles\FractalEngine_Input.dir\build.make src/input/CMakeFiles/FractalEngine_Input.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=21,22,23,24,25,26 "Built target FractalEngine_Input"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=20,21,22,23,24,25 "Built target FractalEngine_Input"
 .PHONY : src/input/CMakeFiles/FractalEngine_Input.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1084,7 +1084,7 @@ FractalEngine_Input: src/input/CMakeFiles/FractalEngine_Input.dir/rule
 # codegen rule for target.
 src/input/CMakeFiles/FractalEngine_Input.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\input\CMakeFiles\FractalEngine_Input.dir\build.make src/input/CMakeFiles/FractalEngine_Input.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=21,22,23,24,25,26 "Finished codegen for target FractalEngine_Input"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=20,21,22,23,24,25 "Finished codegen for target FractalEngine_Input"
 .PHONY : src/input/CMakeFiles/FractalEngine_Input.dir/codegen
 
 # clean rule for target.
@@ -1100,12 +1100,12 @@ src/world/CMakeFiles/FractalEngine_World.dir/all: src/graphics/CMakeFiles/Fracta
 src/world/CMakeFiles/FractalEngine_World.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
 	$(MAKE) $(MAKESILENT) -f src\world\CMakeFiles\FractalEngine_World.dir\build.make src/world/CMakeFiles/FractalEngine_World.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\world\CMakeFiles\FractalEngine_World.dir\build.make src/world/CMakeFiles/FractalEngine_World.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=88,89,90 "Built target FractalEngine_World"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=87,88,89,90,91 "Built target FractalEngine_World"
 .PHONY : src/world/CMakeFiles/FractalEngine_World.dir/all
 
 # Build rule for subdir invocation for target.
 src/world/CMakeFiles/FractalEngine_World.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/world/CMakeFiles/FractalEngine_World.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/world/CMakeFiles/FractalEngine_World.dir/rule
@@ -1117,7 +1117,7 @@ FractalEngine_World: src/world/CMakeFiles/FractalEngine_World.dir/rule
 # codegen rule for target.
 src/world/CMakeFiles/FractalEngine_World.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\world\CMakeFiles\FractalEngine_World.dir\build.make src/world/CMakeFiles/FractalEngine_World.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=88,89,90 "Finished codegen for target FractalEngine_World"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=87,88,89,90,91 "Finished codegen for target FractalEngine_World"
 .PHONY : src/world/CMakeFiles/FractalEngine_World.dir/codegen
 
 # clean rule for target.
@@ -1139,7 +1139,7 @@ src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/all: src/math/CMake
 
 # Build rule for subdir invocation for target.
 src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 20
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/world/terrain/CMakeFiles/FractalEngine_World_Terrain.dir/rule
@@ -1168,12 +1168,12 @@ src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all: src/world/
 src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all: src/math/CMakeFiles/FractalEngine_Math.dir/all
 	$(MAKE) $(MAKESILENT) -f src\world\streaming\CMakeFiles\FractalEngine_World_Streaming.dir\build.make src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\world\streaming\CMakeFiles\FractalEngine_World_Streaming.dir\build.make src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=91,92,93 "Built target FractalEngine_World_Streaming"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=92,93 "Built target FractalEngine_World_Streaming"
 .PHONY : src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all
 
 # Build rule for subdir invocation for target.
 src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 18
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/rule
@@ -1185,7 +1185,7 @@ FractalEngine_World_Streaming: src/world/streaming/CMakeFiles/FractalEngine_Worl
 # codegen rule for target.
 src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\world\streaming\CMakeFiles\FractalEngine_World_Streaming.dir\build.make src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=91,92,93 "Finished codegen for target FractalEngine_World_Streaming"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=92,93 "Finished codegen for target FractalEngine_World_Streaming"
 .PHONY : src/world/streaming/CMakeFiles/FractalEngine_World_Streaming.dir/codegen
 
 # clean rule for target.
@@ -1237,7 +1237,7 @@ src/ui/CMakeFiles/FractalEngine_Ui.dir/all: src/graphics/CMakeFiles/FractalEngin
 
 # Build rule for subdir invocation for target.
 src/ui/CMakeFiles/FractalEngine_Ui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 13
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/ui/CMakeFiles/FractalEngine_Ui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/ui/CMakeFiles/FractalEngine_Ui.dir/rule
@@ -1296,12 +1296,12 @@ src/scripting/CMakeFiles/FractalEngine_Scripting.dir/clean:
 src/math/CMakeFiles/FractalEngine_Math.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\math\CMakeFiles\FractalEngine_Math.dir\build.make src/math/CMakeFiles/FractalEngine_Math.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\math\CMakeFiles\FractalEngine_Math.dir\build.make src/math/CMakeFiles/FractalEngine_Math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=27,28,29,30 "Built target FractalEngine_Math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=26,27,28,29,30 "Built target FractalEngine_Math"
 .PHONY : src/math/CMakeFiles/FractalEngine_Math.dir/all
 
 # Build rule for subdir invocation for target.
 src/math/CMakeFiles/FractalEngine_Math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/math/CMakeFiles/FractalEngine_Math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/math/CMakeFiles/FractalEngine_Math.dir/rule
@@ -1313,7 +1313,7 @@ FractalEngine_Math: src/math/CMakeFiles/FractalEngine_Math.dir/rule
 # codegen rule for target.
 src/math/CMakeFiles/FractalEngine_Math.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\math\CMakeFiles\FractalEngine_Math.dir\build.make src/math/CMakeFiles/FractalEngine_Math.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=27,28,29,30 "Finished codegen for target FractalEngine_Math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=26,27,28,29,30 "Finished codegen for target FractalEngine_Math"
 .PHONY : src/math/CMakeFiles/FractalEngine_Math.dir/codegen
 
 # clean rule for target.
@@ -1328,12 +1328,12 @@ src/math/CMakeFiles/FractalEngine_Math.dir/clean:
 src/utils/CMakeFiles/FractalEngine_Utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\utils\CMakeFiles\FractalEngine_Utils.dir\build.make src/utils/CMakeFiles/FractalEngine_Utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\utils\CMakeFiles\FractalEngine_Utils.dir\build.make src/utils/CMakeFiles/FractalEngine_Utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=82,83,84,85,86,87 "Built target FractalEngine_Utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=82,83,84,85,86 "Built target FractalEngine_Utils"
 .PHONY : src/utils/CMakeFiles/FractalEngine_Utils.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/FractalEngine_Utils.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/utils/CMakeFiles/FractalEngine_Utils.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/utils/CMakeFiles/FractalEngine_Utils.dir/rule
@@ -1345,7 +1345,7 @@ FractalEngine_Utils: src/utils/CMakeFiles/FractalEngine_Utils.dir/rule
 # codegen rule for target.
 src/utils/CMakeFiles/FractalEngine_Utils.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\utils\CMakeFiles\FractalEngine_Utils.dir\build.make src/utils/CMakeFiles/FractalEngine_Utils.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=82,83,84,85,86,87 "Finished codegen for target FractalEngine_Utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=82,83,84,85,86 "Finished codegen for target FractalEngine_Utils"
 .PHONY : src/utils/CMakeFiles/FractalEngine_Utils.dir/codegen
 
 # clean rule for target.
@@ -1360,7 +1360,7 @@ src/utils/CMakeFiles/FractalEngine_Utils.dir/clean:
 src/platform/CMakeFiles/FractalEngine_Platform.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\platform\CMakeFiles\FractalEngine_Platform.dir\build.make src/platform/CMakeFiles/FractalEngine_Platform.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\platform\CMakeFiles\FractalEngine_Platform.dir\build.make src/platform/CMakeFiles/FractalEngine_Platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=41,42 "Built target FractalEngine_Platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=40,41 "Built target FractalEngine_Platform"
 .PHONY : src/platform/CMakeFiles/FractalEngine_Platform.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1377,7 +1377,7 @@ FractalEngine_Platform: src/platform/CMakeFiles/FractalEngine_Platform.dir/rule
 # codegen rule for target.
 src/platform/CMakeFiles/FractalEngine_Platform.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\platform\CMakeFiles\FractalEngine_Platform.dir\build.make src/platform/CMakeFiles/FractalEngine_Platform.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=41,42 "Finished codegen for target FractalEngine_Platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=40,41 "Finished codegen for target FractalEngine_Platform"
 .PHONY : src/platform/CMakeFiles/FractalEngine_Platform.dir/codegen
 
 # clean rule for target.
@@ -1392,12 +1392,12 @@ src/platform/CMakeFiles/FractalEngine_Platform.dir/clean:
 src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\platform\win32\CMakeFiles\FractalEngine_Platform_Win32.dir\build.make src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\platform\win32\CMakeFiles\FractalEngine_Platform_Win32.dir\build.make src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=49,50 "Built target FractalEngine_Platform_Win32"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=47,48,49 "Built target FractalEngine_Platform_Win32"
 .PHONY : src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all
 
 # Build rule for subdir invocation for target.
 src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/rule
@@ -1409,7 +1409,7 @@ FractalEngine_Platform_Win32: src/platform/win32/CMakeFiles/FractalEngine_Platfo
 # codegen rule for target.
 src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\platform\win32\CMakeFiles\FractalEngine_Platform_Win32.dir\build.make src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=49,50 "Finished codegen for target FractalEngine_Platform_Win32"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=47,48,49 "Finished codegen for target FractalEngine_Platform_Win32"
 .PHONY : src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/codegen
 
 # clean rule for target.
@@ -1424,7 +1424,7 @@ src/platform/win32/CMakeFiles/FractalEngine_Platform_Win32.dir/clean:
 src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\platform\linux\CMakeFiles\FractalEngine_Platform_Linux.dir\build.make src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\platform\linux\CMakeFiles\FractalEngine_Platform_Linux.dir\build.make src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=43,44,45 "Built target FractalEngine_Platform_Linux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=42,43,44 "Built target FractalEngine_Platform_Linux"
 .PHONY : src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1441,7 +1441,7 @@ FractalEngine_Platform_Linux: src/platform/linux/CMakeFiles/FractalEngine_Platfo
 # codegen rule for target.
 src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\platform\linux\CMakeFiles\FractalEngine_Platform_Linux.dir\build.make src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=43,44,45 "Finished codegen for target FractalEngine_Platform_Linux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=42,43,44 "Finished codegen for target FractalEngine_Platform_Linux"
 .PHONY : src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/codegen
 
 # clean rule for target.
@@ -1456,12 +1456,12 @@ src/platform/linux/CMakeFiles/FractalEngine_Platform_Linux.dir/clean:
 src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\platform\macos\CMakeFiles\FractalEngine_Platform_Macos.dir\build.make src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\platform\macos\CMakeFiles\FractalEngine_Platform_Macos.dir\build.make src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=46,47,48 "Built target FractalEngine_Platform_Macos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=45,46 "Built target FractalEngine_Platform_Macos"
 .PHONY : src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/all
 
 # Build rule for subdir invocation for target.
 src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/rule
@@ -1473,7 +1473,7 @@ FractalEngine_Platform_Macos: src/platform/macos/CMakeFiles/FractalEngine_Platfo
 # codegen rule for target.
 src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src\platform\macos\CMakeFiles\FractalEngine_Platform_Macos.dir\build.make src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=46,47,48 "Finished codegen for target FractalEngine_Platform_Macos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=45,46 "Finished codegen for target FractalEngine_Platform_Macos"
 .PHONY : src/platform/macos/CMakeFiles/FractalEngine_Platform_Macos.dir/codegen
 
 # clean rule for target.

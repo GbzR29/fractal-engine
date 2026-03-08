@@ -1,51 +1,73 @@
 #include "fractal_engine/core/GameScene.h"
+#include "fractal_engine/world/BlockRegistry.h"
 #include <iostream>
 
-GameScene::GameScene(Shader& worldShader, Shader& uiShader, int width, int height)
-    : worldShader(worldShader), uiShader(uiShader), screenW(width), screenH(height)
+GameScene::GameScene(Shader& worldShader, Shader& uiShader, Shader& skyShader,
+                     int width, int height)
+    : worldShader(worldShader)
+    , uiShader(uiShader)
+    , skyShader(skyShader)
+    , screenW(width)
+    , screenH(height)
 {}
 
 void GameScene::init() {
-    // 1. Gera o mundo completo (blocos + mesh de todos os chunks)
+    BlockRegistry::init();
+
+    player.init(); // sem argumentos
+
+    // ── Sky ───────────────────────────────────────────────────────────────
+    SkyConfig skyCfg;
+    skyCfg.dayDurationSeconds = 600.0f;
+    skyCfg.ambientMin         = 0.08f;
+    skyCfg.paused             = false;
+    sky.init(skyShader, skyCfg);
+    sky.setTimeOfDay(0.5f); // começa ao meio-dia
+
     world.generateWorld(8, 8, worldShader);
-
-    // 2. Spawn do player DEPOIS do mundo pronto — scan de blocos reais
     player.initializeAtTerrainHeight(world, 0.0f, 0.0f);
-
-    // 3. BlockOutline para visualização de bloco selecionado
     blockOutline.init();
-
-    // 4. UI
     initCrosshair();
 }
 
 void GameScene::update(float dt, Input& input, Window& window) {
-    player.update(dt, input, world);
+    sky.update(dt);
+    player.update(dt, input, world); // Player::update recebe World& também
 }
 
 void GameScene::render(Input& input, Window& window) {
-    glClearColor(0.38f, 0.76f, 0.9f, 1.0f);
+    // ── Cor do céu dinâmica ───────────────────────────────────────────────
+    glm::vec3 cc = sky.getClearColor();
+    glClearColor(cc.r, cc.g, cc.b, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    glm::mat4 view       = player.getView();
+    glm::mat4 projection = player.getProjection(screenW, screenH);
+
+    // ── Skybox (antes do mundo, sem escrever no depth buffer) ─────────────
+    sky.render(view, projection);
+
+    // ── Iluminação → shader do mundo ──────────────────────────────────────
+    sky.applyToShader(worldShader);
     player.renderCamera(worldShader, screenW, screenH);
     world.render(worldShader);
-    
-    // ── Renderiza o outline do bloco sendo olhado ──────────────────────────
+
+    // ── Block outline ─────────────────────────────────────────────────────
     blockOutline.render(
         player.targetBlock,
         player.getView(),
         player.getProjection(screenW, screenH)
     );
-    
+
     drawCrosshair();
 }
 
 void GameScene::initCrosshair() {
     float verts[] = {
-        -0.015f,  0.0f, 0.0f,
-         0.015f,  0.0f, 0.0f,
-         0.0f, -0.015f, 0.0f,
-         0.0f,  0.015f, 0.0f,
+        -0.015f,  0.0f,   0.0f,
+         0.015f,  0.0f,   0.0f,
+         0.0f,   -0.015f, 0.0f,
+         0.0f,    0.015f, 0.0f,
     };
     glGenVertexArrays(1, &crosshairVAO);
     glGenBuffers(1, &crosshairVBO);

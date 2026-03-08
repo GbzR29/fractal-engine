@@ -7,6 +7,8 @@ target_sources(FractalEngine_Scene PRIVATE
     Components.cpp
     Player.cpp
     Scene.cpp
+    Hotbar.cpp
+    SkySystem.cpp
 )
 
 target_include_directories(FractalEngine_Scene PUBLIC

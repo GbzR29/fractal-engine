@@ -7,6 +7,7 @@ target_sources(FractalEngine_World PRIVATE
     Raycast.cpp
     World.cpp
     WorldManager.cpp
+    BlockRegistry.cpp
 )
 
 target_include_directories(FractalEngine_World PUBLIC

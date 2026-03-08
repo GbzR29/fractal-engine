@@ -1,119 +1,105 @@
 #include "fractal_engine/world/terrain/Chunk.h"
 #include "fractal_engine/world/terrain/TerrainGenerator.h"
-#include <iostream>
+#include "fractal_engine/world/BlockRegistry.h"
 #include <cmath>
 
 namespace fractal_engine::world {
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FIX: Faces agora usam coordenadas de CANTO [0, 1] em vez de CENTRO [-0.5, 0.5]
+// Light factors por direção de face
 //
-// O sistema de raycasting e colisão trata um bloco em (x, y, z) como ocupando
-// o cubo [x, x+1] × [y, y+1] × [z, z+1].
-// Antes as faces usavam centro em (x, y, z) com extensão ±0.5 — isso causava
-// um deslocamento de meio bloco entre visual e lógica.
+// Simula iluminação direcional sem nenhum cálculo de luz em runtime:
+// os valores são baked no mesh na hora da geração.
+// O shader multiplica por sunIntensity*sunColor para dia/noite.
 //
-// Cada vértice: x, y, z, u, v, faceType
-// faceType: 0=topo, 1=fundo, 2=lateral
+//   TOP    1.0  — face voltada para o sol, mais clara
+//   FRONT  0.8  — face +Z
+//   BACK   0.8  — face -Z
+//   RIGHT  0.6  — face +X
+//   LEFT   0.6  — face -X
+//   BOTTOM 0.4  — face voltada para baixo, nunca recebe luz direta
 // ─────────────────────────────────────────────────────────────────────────────
+static constexpr float LF_TOP    = 1.0f;
+static constexpr float LF_FRONT  = 0.8f;
+static constexpr float LF_BACK   = 0.8f;
+static constexpr float LF_RIGHT  = 0.6f;
+static constexpr float LF_LEFT   = 0.6f;
+static constexpr float LF_BOTTOM = 0.4f;
 
-static const float FACE_RIGHT[] = {   // face +X (x = 1)
-    1,0,0,  0,0, 2,
-    1,1,0,  0,1, 2,
-    1,1,1,  1,1, 2,
-    1,1,1,  1,1, 2,
-    1,0,1,  1,0, 2,
-    1,0,0,  0,0, 2,
+// Faces: [ x, y, z, u, v, placeholder ]
+// O placeholder (último float) é sobrescrito por lightFactor em addFace()
+static const float FACE_RIGHT[] = {
+    1,0,0, 0,0, 0,
+    1,1,0, 0,1, 0,
+    1,1,1, 1,1, 0,
+    1,1,1, 1,1, 0,
+    1,0,1, 1,0, 0,
+    1,0,0, 0,0, 0,
 };
-static const float FACE_LEFT[] = {    // face -X (x = 0)
-    0,0,1,  0,0, 2,
-    0,1,1,  0,1, 2,
-    0,1,0,  1,1, 2,
-    0,1,0,  1,1, 2,
-    0,0,0,  1,0, 2,
-    0,0,1,  0,0, 2,
+static const float FACE_LEFT[] = {
+    0,0,1, 0,0, 0,
+    0,1,1, 0,1, 0,
+    0,1,0, 1,1, 0,
+    0,1,0, 1,1, 0,
+    0,0,0, 1,0, 0,
+    0,0,1, 0,0, 0,
 };
-static const float FACE_TOP[] = {     // face +Y (y = 1)
-    0,1,1,  0,0, 0,
-    1,1,1,  1,0, 0,
-    1,1,0,  1,1, 0,
-    1,1,0,  1,1, 0,
-    0,1,0,  0,1, 0,
-    0,1,1,  0,0, 0,
+static const float FACE_TOP[] = {
+    0,1,1, 0,0, 0,
+    1,1,1, 1,0, 0,
+    1,1,0, 1,1, 0,
+    1,1,0, 1,1, 0,
+    0,1,0, 0,1, 0,
+    0,1,1, 0,0, 0,
 };
-static const float FACE_BOTTOM[] = {  // face -Y (y = 0)
-    0,0,0,  0,1, 1,
-    1,0,0,  1,1, 1,
-    1,0,1,  1,0, 1,
-    1,0,1,  1,0, 1,
-    0,0,1,  0,0, 1,
-    0,0,0,  0,1, 1,
+static const float FACE_BOTTOM[] = {
+    0,0,0, 0,1, 0,
+    1,0,0, 1,1, 0,
+    1,0,1, 1,0, 0,
+    1,0,1, 1,0, 0,
+    0,0,1, 0,0, 0,
+    0,0,0, 0,1, 0,
 };
-static const float FACE_FRONT[] = {   // face +Z (z = 1)
-    0,0,1,  0,0, 2,
-    1,0,1,  1,0, 2,
-    1,1,1,  1,1, 2,
-    1,1,1,  1,1, 2,
-    0,1,1,  0,1, 2,
-    0,0,1,  0,0, 2,
+static const float FACE_FRONT[] = {
+    0,0,1, 0,0, 0,
+    1,0,1, 1,0, 0,
+    1,1,1, 1,1, 0,
+    1,1,1, 1,1, 0,
+    0,1,1, 0,1, 0,
+    0,0,1, 0,0, 0,
 };
-static const float FACE_BACK[] = {    // face -Z (z = 0)
-    1,0,0,  1,0, 2,
-    0,0,0,  0,0, 2,
-    0,1,0,  0,1, 2,
-    0,1,0,  0,1, 2,
-    1,1,0,  1,1, 2,
-    1,0,0,  1,0, 2,
+static const float FACE_BACK[] = {
+    1,0,0, 1,0, 0,
+    0,0,0, 0,0, 0,
+    0,1,0, 0,1, 0,
+    0,1,0, 0,1, 0,
+    1,1,0, 1,1, 0,
+    1,0,0, 1,0, 0,
 };
 
-// ─────────────────────────────────────────────
-// Construtor
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 Chunk::Chunk(glm::vec3 pos, Shader& shader) : position(pos) {
     generateBlocks();
-    generateMesh();
-
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
-    glGenTextures(4, textures);
-
+    generateMesh();
     uploadMesh();
-
-    TextureLoader(textures[0], "assets/textures/grass_top.png");
-    TextureLoader(textures[1], "assets/textures/dirt.png");
-    TextureLoader(textures[2], "assets/textures/grass_side.png");
-    TextureLoader(textures[3], "assets/textures/stone.png");
-
-    shader.use();
-    shader.setInt("texTop",    0);
-    shader.setInt("texBottom", 1);
-    shader.setInt("texSide",   2);
-    shader.setInt("texStone",  3);
 }
 
 Chunk::~Chunk() {
     glDeleteVertexArrays(1, &vao);
     glDeleteBuffers(1, &vbo);
-    glDeleteTextures(4, textures);
 }
 
-// ─────────────────────────────────────────────
-// Geração de blocos com TerrainGenerator
-// ─────────────────────────────────────────────
 void Chunk::generateBlocks() {
     static TerrainGenerator terrainGen(1337);
     terrainGen.generateChunkBlocks(
         &blocks[0][0][0],
-        (int)position.x,
-        (int)position.y,
-        (int)position.z,
+        (int)position.x, (int)position.y, (int)position.z,
         SIZE_X, SIZE_Y, SIZE_Z
     );
 }
 
-// ─────────────────────────────────────────────
-// Acessors
-// ─────────────────────────────────────────────
 bool Chunk::isAir(int x, int y, int z) const {
     if (x < 0 || x >= SIZE_X || y < 0 || y >= SIZE_Y || z < 0 || z >= SIZE_Z)
         return true;
@@ -126,61 +112,52 @@ BlockType Chunk::getBlock(int x, int y, int z) const {
     return blocks[x][y][z];
 }
 
-void Chunk::setBlock(int x, int y, int z, BlockType blockType) {
+void Chunk::setBlock(int x, int y, int z, BlockType type) {
     if (x < 0 || x >= SIZE_X || y < 0 || y >= SIZE_Y || z < 0 || z >= SIZE_Z)
         return;
-    blocks[x][y][z] = blockType;
+    blocks[x][y][z] = type;
 }
 
-// ─────────────────────────────────────────────
-// Geração de mesh com suporte a vizinhos
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// generateMesh — passa lightFactor diferente por direção de face
+// ─────────────────────────────────────────────────────────────────────────────
 void Chunk::generateMesh(std::function<bool(int,int,int)> worldIsAir) {
     vertices.clear();
 
-    for (int x = 0; x < SIZE_X; x++) {
-    for (int y = 0; y < SIZE_Y; y++) {
+    for (int x = 0; x < SIZE_X; x++)
+    for (int y = 0; y < SIZE_Y; y++)
     for (int z = 0; z < SIZE_Z; z++) {
-        if (blocks[x][y][z] == BLOCK_AIR) continue;
+        BlockType type = blocks[x][y][z];
+        if (type == BLOCK_AIR) continue;
 
-        float topFace, botFace, sideFace;
-
-        switch (blocks[x][y][z]) {
-            case BLOCK_GRASS:
-                topFace = 0; botFace = 1; sideFace = 2; break;
-            case BLOCK_STONE:
-                topFace = botFace = sideFace = 3; break;
-            case BLOCK_DIRT:
-            default:
-                topFace = botFace = sideFace = 1; break;
-        }
+        const BlockDef& def = BlockRegistry::get(type);
 
         auto neighborIsAir = [&](int lx, int ly, int lz) -> bool {
             if (lx >= 0 && lx < SIZE_X &&
                 ly >= 0 && ly < SIZE_Y &&
                 lz >= 0 && lz < SIZE_Z)
                 return isAir(lx, ly, lz);
-            if (worldIsAir) {
-                int wx = (int)position.x + lx;
-                int wy = (int)position.y + ly;
-                int wz = (int)position.z + lz;
-                return worldIsAir(wx, wy, wz);
-            }
+            if (worldIsAir)
+                return worldIsAir(
+                    (int)position.x + lx,
+                    (int)position.y + ly,
+                    (int)position.z + lz);
             return true;
         };
 
-        if (neighborIsAir(x+1, y,   z  )) addFace(FACE_RIGHT,  x, y, z, sideFace);
-        if (neighborIsAir(x-1, y,   z  )) addFace(FACE_LEFT,   x, y, z, sideFace);
-        if (neighborIsAir(x,   y+1, z  )) addFace(FACE_TOP,    x, y, z, topFace);
-        if (neighborIsAir(x,   y-1, z  )) addFace(FACE_BOTTOM, x, y, z, botFace);
-        if (neighborIsAir(x,   y,   z+1)) addFace(FACE_FRONT,  x, y, z, sideFace);
-        if (neighborIsAir(x,   y,   z-1)) addFace(FACE_BACK,   x, y, z, sideFace);
-    }}}
+        // texLayer e lightFactor passados juntos por face
+        if (neighborIsAir(x+1, y,   z  )) addFace(FACE_RIGHT,  x, y, z, (float)def.sideLayer, LF_RIGHT);
+        if (neighborIsAir(x-1, y,   z  )) addFace(FACE_LEFT,   x, y, z, (float)def.sideLayer, LF_LEFT);
+        if (neighborIsAir(x,   y+1, z  )) addFace(FACE_TOP,    x, y, z, (float)def.topLayer,  LF_TOP);
+        if (neighborIsAir(x,   y-1, z  )) addFace(FACE_BOTTOM, x, y, z, (float)def.botLayer,  LF_BOTTOM);
+        if (neighborIsAir(x,   y,   z+1)) addFace(FACE_FRONT,  x, y, z, (float)def.sideLayer, LF_FRONT);
+        if (neighborIsAir(x,   y,   z-1)) addFace(FACE_BACK,   x, y, z, (float)def.sideLayer, LF_BACK);
+    }
 }
 
-// ─────────────────────────────────────────────
-// Upload para GPU
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// uploadMesh — attrib 3 agora é texLayer, attrib 4 é lightFactor
+// ─────────────────────────────────────────────────────────────────────────────
 void Chunk::uploadMesh() {
     if (vao == 0) {
         glGenVertexArrays(1, &vao);
@@ -194,53 +171,35 @@ void Chunk::uploadMesh() {
                  vertices.data(),
                  GL_DYNAMIC_DRAW);
 
-    // layout: position(3), uv(2), faceType(1)
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, STRIDE * sizeof(float), (void*)0);
+    // attrib 0: position (x, y, z)
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE,
+                          STRIDE * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, STRIDE * sizeof(float), (void*)(3 * sizeof(float)));
+    // attrib 1: uv (u, v)
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE,
+                          STRIDE * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE, STRIDE * sizeof(float), (void*)(5 * sizeof(float)));
+    // attrib 2: texLayer
+    glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE,
+                          STRIDE * sizeof(float), (void*)(5 * sizeof(float)));
     glEnableVertexAttribArray(2);
+
+    // attrib 3: lightFactor ← novo
+    glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE,
+                          STRIDE * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(3);
 
     glBindVertexArray(0);
 }
 
-// ─────────────────────────────────────────────
-// addFace
-// ─────────────────────────────────────────────
-void Chunk::addFace(const float* face, int x, int y, int z, float faceType) {
-    for (int i = 0; i < 6 * STRIDE; i += STRIDE) {
-        vertices.push_back(face[i + 0] + x);
-        vertices.push_back(face[i + 1] + y);
-        vertices.push_back(face[i + 2] + z);
-        vertices.push_back(face[i + 3]);   // u
-        vertices.push_back(face[i + 4]);   // v
-        vertices.push_back(faceType);      // sobrescreve faceType da face
-    }
-}
-
-// ─────────────────────────────────────────────
-// Draw
-// ─────────────────────────────────────────────
 void Chunk::Draw(Shader& shader) {
     if (vertices.empty()) return;
 
-    // Usar o shader
     shader.use();
-
-    // Setar uniforms dos samplers (CRITICAL!)
-    glUniform1i(glGetUniformLocation(shader.ID, "texTop"),    0);
-    glUniform1i(glGetUniformLocation(shader.ID, "texBottom"), 1);
-    glUniform1i(glGetUniformLocation(shader.ID, "texSide"),   2);
-    glUniform1i(glGetUniformLocation(shader.ID, "texStone"),  3);
-
-    // Bindar texturas nos slots 0-3
-    for (int i = 0; i < 4; i++) {
-        glActiveTexture(GL_TEXTURE0 + i);
-        glBindTexture(GL_TEXTURE_2D, textures[i]);
-    }
+    BlockRegistry::bind(0);
+    shader.setInt("texArray", 0);
 
     glm::mat4 model = glm::translate(glm::mat4(1.0f), position);
     shader.setMat4("model", model);
@@ -248,6 +207,25 @@ void Chunk::Draw(Shader& shader) {
     glBindVertexArray(vao);
     glDrawArrays(GL_TRIANGLES, 0, (GLsizei)(vertices.size() / STRIDE));
     glBindVertexArray(0);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// addFace — escreve 7 floats por vértice (STRIDE=7)
+// ─────────────────────────────────────────────────────────────────────────────
+void Chunk::addFace(const float* face, int x, int y, int z,
+                    float texLayer, float lightFactor)
+{
+    // face[] tem 6 vértices × 6 floats (pos + uv + placeholder)
+    // Escrevemos 7 floats por vértice: pos + uv + texLayer + lightFactor
+    for (int i = 0; i < 6 * 6; i += 6) {
+        vertices.push_back(face[i + 0] + x);
+        vertices.push_back(face[i + 1] + y);
+        vertices.push_back(face[i + 2] + z);
+        vertices.push_back(face[i + 3]);    // u
+        vertices.push_back(face[i + 4]);    // v
+        vertices.push_back(texLayer);       // substitui placeholder
+        vertices.push_back(lightFactor);    // novo
+    }
 }
 
 } // namespace fractal_engine::world
