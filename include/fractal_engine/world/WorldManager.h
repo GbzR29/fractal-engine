@@ -36,16 +36,15 @@ public:
     HeightMap& getHeightMap() { return heightMap; }
 
 private:
-    World&          world;
-    Shader&         shader;
-    TerrainGenerator terrainGen;
-    HeightMap        heightMap;
+    World&           world;
+    Shader&          shader;
+    TerrainGenerator terrainGen; // declarado ANTES de heightMap — ordem importa!
+    HeightMap        heightMap;  // inicializado com terrainGen no construtor
     Config           config;
+    glm::ivec3       lastPlayerChunk { INT_MAX, 0, INT_MAX };
 
-    glm::ivec3 lastPlayerChunk { INT_MAX, 0, INT_MAX };
-
-    glm::ivec3 worldToChunkKey   (glm::vec3 pos) const;
-    void       loadChunksAround  (glm::ivec3 center);
+    glm::ivec3 worldToChunkKey    (glm::vec3 pos) const;
+    void       loadChunksAround   (glm::ivec3 center);
     void       unloadDistantChunks(glm::ivec3 center);
 };
 

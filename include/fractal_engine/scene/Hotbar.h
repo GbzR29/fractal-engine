@@ -2,7 +2,9 @@
 #include "fractal_engine/world/BlockType.h"
 #include "fractal_engine/world/BlockRegistry.h"
 #include "fractal_engine/input/Input.h"
+#include "fractal_engine/scene/GameMode.h"
 #include <array>
+#include <string>
 
 namespace fractal_engine::scene {
 
@@ -11,45 +13,62 @@ using fractal_engine::world::BlockRegistry;
 using fractal_engine::input::Input;
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Hotbar — 9 slots de blocos selecionáveis pelo player
+// SlotStack — bloco + quantidade
 //
-// Não tem nenhum BlockType hardcoded.
-// Os slots são preenchidos automaticamente com os blocos colocáveis
-// registrados no BlockRegistry — se você adicionar 50 blocos, a hotbar
-// simplesmente os terá disponíveis via scroll.
-//
-// Teclas 1-9 selecionam slots diretamente.
-// Scroll do mouse navega entre slots.
+// Em modo criativo: count = -1 (infinito)
+// Em modo survival: count >= 0, max = MAX_STACK
+// ─────────────────────────────────────────────────────────────────────────────
+struct SlotStack {
+    BlockType type  = BlockType::BLOCK_AIR;
+    int       count = 0;   // -1 = infinito (criativo)
+
+    bool isEmpty()    const { return type == BlockType::BLOCK_AIR || count == 0; }
+    bool isInfinite() const { return count == -1; }
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Hotbar — 9 slots com suporte a GameMode
 // ─────────────────────────────────────────────────────────────────────────────
 class Hotbar {
 public:
-    static constexpr int SLOTS = 9;
+    static constexpr int SLOTS     = 9;
+    static constexpr int MAX_STACK = 64;
 
-    // Preenche os slots com os primeiros SLOTS blocos colocáveis do registry
-    void init();
+    // Inicializa com o modo de jogo
+    void init(GameMode mode = GameMode::Creative);
 
-    // Atualiza seleção via input (teclas + scroll)
+    // Muda o modo de jogo (reseta stacks)
+    void setGameMode(GameMode mode);
+    GameMode getGameMode() const { return gameMode; }
+
+    // Atualiza seleção via input
     void update(const Input& input);
 
-    // Bloco atualmente selecionado
-    BlockType getSelectedBlock() const;
+    // ── Acesso ao slot selecionado ─────────────────────────────────────────
+    BlockType          getSelectedBlock() const;
+    const std::string& getSelectedName()  const;
+    int                getSelectedCount() const;
+    int                getSelectedIndex() const { return selectedSlot; }
 
-    // Índice do slot selecionado (0-8)
-    int getSelectedIndex() const { return selectedSlot; }
+    // ── Acesso direto a slots ──────────────────────────────────────────────
+    const SlotStack& getSlot(int index) const;
+    void             setSlot(int index, BlockType type, int count = -1);
 
-    // Nome do bloco selecionado (para HUD)
-    const std::string& getSelectedName() const;
+    // ── Operações de survival ──────────────────────────────────────────────
+    // Consome 1 do slot selecionado (no-op em criativo)
+    // Retorna false se o slot ficou vazio
+    bool consumeSelected();
 
-    // Acesso direto a um slot
-    BlockType getSlot(int index) const;
-    void      setSlot(int index, BlockType type);
+    // Adiciona count itens ao slot (ou ao primeiro slot compatível)
+    // Retorna quantidade que não coube
+    int  addItem(BlockType type, int count = 1);
 
 private:
-    std::array<BlockType, SLOTS> slots {};
-    int selectedSlot  = 0;
-    int prevScrollVal = 0;
+    std::array<SlotStack, SLOTS> slots {};
+    int      selectedSlot  = 0;
+    int      prevScrollVal = 0;
+    GameMode gameMode      = GameMode::Creative;
 
-    // Popula slots com os blocos colocáveis do registry
     void populateFromRegistry();
 };
 

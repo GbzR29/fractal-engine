@@ -8,6 +8,7 @@
 #include "fractal_engine/world/BlockType.h"
 #include "fractal_engine/graphics/Shader.h"
 #include "fractal_engine/graphics/TextureLoader.h"
+#include "fractal_engine/world/terrain/TerrainGenerator.h"
 
 namespace fractal_engine::world {
 
@@ -53,6 +54,7 @@ public:
 
     // ── Blocos ────────────────────────────────────────────────────────────
     void generateBlocks();
+    void generateBlocks(const TerrainGenerator& gen);
     bool      isAir     (int x, int y, int z) const;
     BlockType getBlock  (int x, int y, int z) const;
     void      setBlock  (int x, int y, int z, BlockType type);
@@ -88,9 +90,15 @@ public:
     void clearLight();
 
     // ── Mesh ──────────────────────────────────────────────────────────────
-    void generateMesh(std::function<bool(int,int,int)>  worldIsAir       = nullptr,
-                      std::function<float(int,int,int)> worldGetLight    = nullptr);
+    void generateMesh(std::function<bool(int,int,int)>  worldIsAir    = nullptr,
+                      std::function<float(int,int,int)> worldGetLight = nullptr);
     void uploadMesh();
+
+    // Passagem 1: só blocos opacos
+    void DrawOpaque     (Shader& shader);
+    // Passagem 2: folhas e água (sem culling — controlado pelo World)
+    void DrawTransparent(Shader& shader);
+    // Compat: chama ambas
     void Draw(Shader& shader);
 
     // Público — usado por funções livres (getLightForFace) e pelo World
@@ -104,12 +112,19 @@ private:
     BlockType          blocks  [SIZE_X][SIZE_Y][SIZE_Z] {};
     uint8_t            lightMap[SIZE_X][SIZE_Y][SIZE_Z] {};
 
-    std::vector<float> vertices;
-    GLuint             vao = 0;
-    GLuint             vbo = 0;
+    std::vector<float> vertices;            // blocos opacos
+    std::vector<float> verticesTransparent; // folhas + água
+    GLuint             vao = 0, vbo = 0;
+    GLuint             vaoT = 0, vboT = 0; // transparentes
 
     void addFace(const float* face, int x, int y, int z,
                  float texLayer, float lightFactor, float lightValue);
+
+    // Smooth lighting — luz diferente por vértice
+    void addFaceSmooth(const float* face, int x, int y, int z,
+                       float texLayer, float lightFactor,
+                       float l0, float l1, float l2,
+                       float l3, float l4, float l5);
 };
 
 } // namespace fractal_engine::world

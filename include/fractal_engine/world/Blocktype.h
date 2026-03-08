@@ -20,27 +20,31 @@ enum BlockType : uint8_t {
     BLOCK_WOOD        = 6,
     BLOCK_LEAF        = 7,
     BLOCK_COBBLESTONE = 8,
-    BLOCK_COUNT   // sempre o último
+    BLOCK_SNOW        = 9,   // futuro: bioma neve
+    BLOCK_CACTUS      = 10,  // futuro: bioma deserto
+    BLOCK_COUNT
 };
 
-inline bool isTransparent(BlockType t) { return t == BLOCK_AIR || t == BLOCK_WATER || t == BLOCK_LEAF; }
-inline bool isSolid(BlockType t)       { return t != BLOCK_AIR && t != BLOCK_WATER; }
-inline bool isPlaceable(BlockType t)   { return t != BLOCK_AIR && t != BLOCK_COUNT; }
-
-// Opaco = bloco que bloqueia completamente a luz (nem skylight passa)
+inline bool isTransparent(BlockType t) {
+    return t == BLOCK_AIR || t == BLOCK_WATER || t == BLOCK_LEAF;
+}
+inline bool isSolid(BlockType t) {
+    return t != BLOCK_AIR && t != BLOCK_WATER;
+}
+inline bool isPlaceable(BlockType t) {
+    return t != BLOCK_AIR && t != BLOCK_COUNT;
+}
 inline bool isOpaque(BlockType t) {
-    return t != BLOCK_AIR
-        && t != BLOCK_WATER
-        && t != BLOCK_LEAF;
+    return t != BLOCK_AIR && t != BLOCK_WATER && t != BLOCK_LEAF;
 }
 
-// Emissão de luz do bloco [0-15]
-// 0 = não emite luz, 15 = luz máxima (tocha)
+// Folha = bloco que usa render separado sem face culling
+inline bool isLeafLike(BlockType t) {
+    return t == BLOCK_LEAF;
+}
+
 inline int getLightEmission(BlockType t) {
     switch (t) {
-        // Adicione tochas e outros blocos emissivos aqui no futuro:
-        // case BLOCK_TORCH: return 14;
-        // case BLOCK_GLOWSTONE: return 15;
         default: return 0;
     }
 }

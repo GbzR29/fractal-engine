@@ -1,10 +1,12 @@
 #pragma once
 #include "fractal_engine/world/terrain/Chunk.h"
+#include "fractal_engine/world/terrain/TerrainGenerator.h"
 #include "fractal_engine/world/BlockType.h"
 #include "fractal_engine/graphics/Shader.h"
 #include <third_party/glm/glm.hpp>
 #include <unordered_map>
 #include <functional>
+#include <memory>
 
 namespace fractal_engine::world {
 
@@ -29,42 +31,62 @@ using ChunkMap = std::unordered_map<glm::ivec3, Chunk, IVec3Hash, IVec3Equal>;
 
 class World {
 public:
+    // seed=0 → seed aleatória automática
+    World(unsigned int seed = 0);
+
     ChunkMap&       getChunks()       { return chunks; }
     const ChunkMap& getChunks() const { return chunks; }
 
-    void addChunk   (glm::ivec3 pos, Shader& shader);
-    void removeChunk(glm::ivec3 pos);
     void generateWorld(int radiusX, int radiusZ, Shader& shader);
+
+    // ── Gerenciamento dinâmico de chunks (usado pelo WorldManager) ────────
+    // addChunk: cria e inicializa o chunk se ainda não existir
+    // removeChunk: descarrega o chunk da memória
+    void addChunk   (glm::ivec3 key, Shader& shader);
+    void removeChunk(glm::ivec3 key);
+
+    // ── Render (duas passagens) ───────────────────────────────────────────
+    //   renderOpaque:      blocos sólidos (com face culling)
+    //   renderTransparent: folhas e água  (sem face culling)
+    void renderOpaque     (Shader& shader);
+    void renderTransparent(Shader& shader);
+    // Mantido por compatibilidade — chama ambas as passagens
     void render(Shader& shader);
 
     // ── Queries ───────────────────────────────────────────────────────────
     glm::ivec3 getChunkKey  (int wx, int wy, int wz)       const;
     bool       isAirWorld   (int wx, int wy, int wz)       const;
     bool       isBlockSolid (float wx, float wy, float wz) const;
+    BlockType  getBlockAt   (int wx, int wy, int wz)       const;
     float      getTerrainHeightAt(float worldX, float worldZ,
                                   float maxHeight = (float)(Chunk::SIZE_Y - 1)) const;
 
     // ── Luz ───────────────────────────────────────────────────────────────
-    // Retorna skylight de uma posição mundo
     int   getWorldSkyLight  (int wx, int wy, int wz) const;
-    // Retorna blocklight de uma posição mundo
     int   getWorldBlockLight(int wx, int wy, int wz) const;
-    // Retorna max(sky, block) / 15 como float [0,1]
     float getWorldLightValue(int wx, int wy, int wz) const;
 
-    // ── Edição de blocos ──────────────────────────────────────────────────
+    // ── Edição ────────────────────────────────────────────────────────────
     bool breakBlock(glm::ivec3 pos);
     bool placeBlock(glm::ivec3 pos, BlockType blockType = BLOCK_STONE);
 
+    unsigned int getSeed() const { return terrainSeed; }
+
+    // Acesso ao gerador (para Player::initializeAtTerrainHeight etc.)
+    const TerrainGenerator& getGenerator() const { return *generator; }
+
 private:
-    ChunkMap chunks;
+    ChunkMap     chunks;
+    unsigned int terrainSeed = 0;
+    std::unique_ptr<TerrainGenerator> generator;
 
-    void remeshChunk   (glm::ivec3 key);
-    void remeshNeighbors(glm::ivec3 key);
-
-    // Recalcula luz de um chunk e seus vizinhos
-    void relightChunk  (glm::ivec3 key);
-    void relightWorld  ();   // chamado após generateWorld
+    void plantTrees        (Shader& shader);
+    void plantTreeAt       (int wx, int wz, int trunkH, int crownR);
+    void setBlockWorld     (int wx, int wy, int wz, BlockType type);
+    void remeshChunk       (glm::ivec3 key);
+    void remeshNeighbors   (glm::ivec3 key);
+    void relightChunk      (glm::ivec3 key);
+    void relightWorld      ();
 };
 
 } // namespace fractal_engine::world

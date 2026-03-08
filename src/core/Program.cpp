@@ -1,5 +1,4 @@
 #define STB_IMAGE_IMPLEMENTATION
-
 #include "fractal_engine/core/Program.h"
 #include "fractal_engine/core/GameScene.h"
 #include "fractal_engine/graphics/Shader.h"
@@ -30,16 +29,19 @@ void Init_Program()
     glFrontFace(GL_CCW);
 
     // ── Shaders ───────────────────────────────────────────────────────────
-    Shader worldShader("shaders/glsl/vertex/chunk.vert",   "shaders/glsl/fragment/chunk.frag");
-    Shader uiShader   ("shaders/ui_vShader.vert",          "shaders/ui_fShader.frag");
-    Shader skyShader  ("shaders/glsl/vertex/sky.vert",     "shaders/glsl/fragment/sky.frag"); // ← novo
+    Shader worldShader   ("shaders/glsl/vertex/chunk.vert",    "shaders/glsl/fragment/chunk.frag");
+    Shader uiShader      ("shaders/ui_vShader.vert",           "shaders/ui_fShader.frag");
+    Shader skyShader     ("shaders/glsl/vertex/sky.vert",      "shaders/glsl/fragment/sky.frag");
+    Shader hudSlotShader ("shaders/glsl/hud/hud_slot.vert",    "shaders/glsl/hud/hud_slot.frag");
+    Shader hudIconShader ("shaders/glsl/hud/hud_icon.vert",    "shaders/glsl/hud/hud_icon.frag");
 
     // ── Cena ──────────────────────────────────────────────────────────────
-    GameScene gameScene(worldShader, uiShader, skyShader, SCREEN_W, SCREEN_H);
+    GameScene gameScene(worldShader, uiShader, skyShader,
+                        hudSlotShader, hudIconShader,
+                        SCREEN_W, SCREEN_H);
     gameScene.init();
 
     float lastFrame = (float)glfwGetTime();
-
     while (!window.shouldClose())
     {
         float currentFrame = (float)glfwGetTime();

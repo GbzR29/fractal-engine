@@ -2,11 +2,15 @@
 #include "fractal_engine/world/BlockRegistry.h"
 #include <iostream>
 
-GameScene::GameScene(Shader& worldShader, Shader& uiShader, Shader& skyShader,
+GameScene::GameScene(Shader& worldShader, Shader& uiShader,
+                     Shader& skyShader,   Shader& hudSlotShader,
+                     Shader& hudIconShader,
                      int width, int height)
-    : worldShader(worldShader)
-    , uiShader(uiShader)
-    , skyShader(skyShader)
+    : worldShader   (worldShader)
+    , uiShader      (uiShader)
+    , skyShader     (skyShader)
+    , hudSlotShader (hudSlotShader)
+    , hudIconShader (hudIconShader)
     , screenW(width)
     , screenH(height)
 {}
@@ -14,7 +18,11 @@ GameScene::GameScene(Shader& worldShader, Shader& uiShader, Shader& skyShader,
 void GameScene::init() {
     BlockRegistry::init();
 
-    player.init(); // sem argumentos
+    // ── Player ────────────────────────────────────────────────────────────
+    player.init();  // init da hotbar com GameMode::Creative por padrão
+
+    // Para mudar para survival:
+    // player.hotbar.setGameMode(GameMode::Survival);
 
     // ── Sky ───────────────────────────────────────────────────────────────
     SkyConfig skyCfg;
@@ -22,21 +30,26 @@ void GameScene::init() {
     skyCfg.ambientMin         = 0.08f;
     skyCfg.paused             = false;
     sky.init(skyShader, skyCfg);
-    sky.setTimeOfDay(0.5f); // começa ao meio-dia
+    sky.setTimeOfDay(0.5f);
 
+    // ── Mundo ─────────────────────────────────────────────────────────────
     world.generateWorld(8, 8, worldShader);
     player.initializeAtTerrainHeight(world, 0.0f, 0.0f);
+
+    // ── HUD ───────────────────────────────────────────────────────────────
+    hud.init(hudSlotShader, hudIconShader);
+
+    // ── Outros ────────────────────────────────────────────────────────────
     blockOutline.init();
     initCrosshair();
 }
 
 void GameScene::update(float dt, Input& input, Window& window) {
     sky.update(dt);
-    player.update(dt, input, world); // Player::update recebe World& também
+    player.update(dt, input, world);
 }
 
 void GameScene::render(Input& input, Window& window) {
-    // ── Cor do céu dinâmica ───────────────────────────────────────────────
     glm::vec3 cc = sky.getClearColor();
     glClearColor(cc.r, cc.g, cc.b, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -44,10 +57,10 @@ void GameScene::render(Input& input, Window& window) {
     glm::mat4 view       = player.getView();
     glm::mat4 projection = player.getProjection(screenW, screenH);
 
-    // ── Skybox (antes do mundo, sem escrever no depth buffer) ─────────────
+    // ── Skybox ────────────────────────────────────────────────────────────
     sky.render(view, projection);
 
-    // ── Iluminação → shader do mundo ──────────────────────────────────────
+    // ── Mundo ─────────────────────────────────────────────────────────────
     sky.applyToShader(worldShader);
     player.renderCamera(worldShader, screenW, screenH);
     world.render(worldShader);
@@ -59,6 +72,10 @@ void GameScene::render(Input& input, Window& window) {
         player.getProjection(screenW, screenH)
     );
 
+    // ── HUD (sempre por cima, sem depth) ──────────────────────────────────
+    hud.render(player.hotbar, BlockRegistry::getTextureArray(), screenW, screenH);
+
+    // ── Crosshair ─────────────────────────────────────────────────────────
     drawCrosshair();
 }
 

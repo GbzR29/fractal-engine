@@ -9,6 +9,7 @@ target_sources(FractalEngine_Scene PRIVATE
     Scene.cpp
     Hotbar.cpp
     SkySystem.cpp
+    HudRenderer.cpp
 )
 
 target_include_directories(FractalEngine_Scene PUBLIC
