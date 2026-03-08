@@ -5,17 +5,18 @@
 
 namespace fractal_engine::world {
 
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // Helpers de coordenada
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 glm::ivec3 World::getChunkKey(int wx, int wy, int wz) const {
     auto floorDiv = [](int a, int b) -> int {
         return a / b - (a % b != 0 && (a ^ b) < 0);
     };
-    int cx = floorDiv(wx, Chunk::SIZE_X) * Chunk::SIZE_X;
-    int cy = 0;
-    int cz = floorDiv(wz, Chunk::SIZE_Z) * Chunk::SIZE_Z;
-    return glm::ivec3(cx, cy, cz);
+    return glm::ivec3(
+        floorDiv(wx, Chunk::SIZE_X) * Chunk::SIZE_X,
+        0,
+        floorDiv(wz, Chunk::SIZE_Z) * Chunk::SIZE_Z
+    );
 }
 
 bool World::isAirWorld(int wx, int wy, int wz) const {
@@ -29,65 +30,120 @@ bool World::isAirWorld(int wx, int wy, int wz) const {
 
     if (lx < 0 || lx >= Chunk::SIZE_X ||
         ly < 0 || ly >= Chunk::SIZE_Y ||
-        lz < 0 || lz >= Chunk::SIZE_Z) {
+        lz < 0 || lz >= Chunk::SIZE_Z)
         return true;
-    }
-    
-    bool isAir = it->second.isAir(lx, ly, lz);
-    
-    // DEBUG: Para posição específica
-    static int debugCount = 0;
-    if (!isAir && wx == 0 && wy == 19 && wz == -3 && debugCount++ < 20) {
-        std::cout << "[WORLD] Bloco sólido encontrado em mundo (" << wx << "," << wy << "," << wz << ") "
-                  << "chunk=" << key.x << "," << key.y << "," << key.z << " "
-                  << "local=" << lx << "," << ly << "," << lz << "\n";
-    }
 
-    return isAir;
+    return it->second.isAir(lx, ly, lz);
 }
 
 bool World::isBlockSolid(float wx, float wy, float wz) const {
-    return !isAirWorld(
-        (int)std::floor(wx),
-        (int)std::floor(wy),
-        (int)std::floor(wz)
-    );
+    return !isAirWorld((int)std::floor(wx), (int)std::floor(wy), (int)std::floor(wz));
 }
 
-// ─────────────────────────────────────────────
-// Encontrar altura do terreno
-// ─────────────────────────────────────────────
-float World::getTerrainHeightAt(float worldX, float worldZ, float maxHeight) const {
-    // ─────────────────────────────────────────────────────────────────────
-    // FIX BUG 3: A função original não tinha um maxHeight padrão seguro.
-    // Se chamada sem argumento e o default fosse muito baixo (ex: 40.0f),
-    // o scan começava abaixo da superfície real e nunca encontrava blocos
-    // → retornava o fallback 40.0f → player nascia dentro do chão.
-    //
-    // Agora o maxHeight default é Chunk::SIZE_Y - 1 (topo do chunk),
-    // garantindo que a varredura sempre começa acima de qualquer superfície.
-    //
-    // Além disso, verificamos dois blocos de margem extra para evitar
-    // que o jogador nasça com os pés colidindo com o bloco de grama.
-    // ─────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// Luz — getters mundo
+// ─────────────────────────────────────────────────────────────────────────────
+int World::getWorldSkyLight(int wx, int wy, int wz) const {
+    glm::ivec3 key = getChunkKey(wx, wy, wz);
+    auto it = chunks.find(key);
+    if (it == chunks.end()) return Chunk::SKY_LIGHT_MAX; // fora do mundo = céu
 
-    // Escaneia de cima para baixo procurando o primeiro bloco sólido
-    for (int y = (int)maxHeight; y >= 0; y--) {
-        if (isBlockSolid(worldX, (float)y, worldZ)) {
-            // y é o bloco sólido mais alto.
-            // Retorna y+1 = topo desse bloco (onde o player deve pousar).
-            return (float)(y + 1);
-        }
+    int lx = wx - key.x;
+    int ly = wy - key.y;
+    int lz = wz - key.z;
+    return it->second.getSkyLight(lx, ly, lz);
+}
+
+int World::getWorldBlockLight(int wx, int wy, int wz) const {
+    glm::ivec3 key = getChunkKey(wx, wy, wz);
+    auto it = chunks.find(key);
+    if (it == chunks.end()) return 0;
+
+    int lx = wx - key.x;
+    int ly = wy - key.y;
+    int lz = wz - key.z;
+    return it->second.getBlockLight(lx, ly, lz);
+}
+
+float World::getWorldLightValue(int wx, int wy, int wz) const {
+    int sky   = getWorldSkyLight  (wx, wy, wz);
+    int block = getWorldBlockLight(wx, wy, wz);
+    int best  = sky > block ? sky : block;
+    return (float)best / (float)Chunk::MAX_LIGHT;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// relightChunk
+//
+// Recalcula luz de um chunk inteiro:
+//   1. Zera lightMap
+//   2. initSkyLight (propaga verticalmente dentro do chunk)
+//   3. propagateLight BFS (difunde para os 6 vizinhos dentro do chunk)
+//      com acesso ao blocklight dos chunks vizinhos via worldGetBlockLight
+//
+// ─────────────────────────────────────────────────────────────────────────────
+void World::relightChunk(glm::ivec3 key) {
+    auto it = chunks.find(key);
+    if (it == chunks.end()) return;
+
+    Chunk& chunk = it->second;
+    chunk.clearLight();
+    chunk.initSkyLight();
+
+    // Passa skylight dos vizinhos para o BFS poder injetar luz pelas bordas
+    auto worldGetBlock = [this](int wx, int wy, int wz) -> BlockType {
+        glm::ivec3 k = getChunkKey(wx, wy, wz);
+        auto jt = chunks.find(k);
+        if (jt == chunks.end()) return BLOCK_AIR;
+        int lx = wx - k.x, ly = wy - k.y, lz = wz - k.z;
+        return jt->second.getBlock(lx, ly, lz);
+    };
+
+    auto worldGetSkyLight = [this](int wx, int wy, int wz) -> int {
+        return getWorldSkyLight(wx, wy, wz);
+    };
+
+    chunk.propagateLight(worldGetBlock, worldGetSkyLight);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// relightWorld
+//
+// Recalcula luz de todos os chunks em 2 passagens:
+//   Passagem 1: skylight (initSkyLight em todos)
+//   Passagem 2: propagação BFS (com acesso cross-chunk)
+//
+// Duas passagens garantem que a luz dos vizinhos já está disponível
+// para o BFS de cada chunk.
+// ─────────────────────────────────────────────────────────────────────────────
+void World::relightWorld() {
+    // Passagem 1: skylight vertical em todos os chunks
+    for (auto& [key, chunk] : chunks) {
+        chunk.clearLight();
+        chunk.initSkyLight();
     }
 
-    // Fallback: nenhum bloco encontrado na coluna (chunk vazio ou fora de range)
-    // Usa surfaceLevel padrão como estimativa segura
-    return (float)(Chunk::SIZE_Y / 2);
+    // Passagem 2: BFS completo com acesso cross-chunk
+    auto worldGetBlock = [this](int wx, int wy, int wz) -> BlockType {
+        glm::ivec3 k = getChunkKey(wx, wy, wz);
+        auto it = chunks.find(k);
+        if (it == chunks.end()) return BLOCK_AIR;
+        int lx = wx - k.x, ly = wy - k.y, lz = wz - k.z;
+        return it->second.getBlock(lx, ly, lz);
+    };
+
+    auto worldGetSkyLight = [this](int wx, int wy, int wz) -> int {
+        return getWorldSkyLight(wx, wy, wz);
+    };
+
+    for (auto& [key, chunk] : chunks) {
+        chunk.propagateLight(worldGetBlock, worldGetSkyLight);
+    }
 }
 
-// ─────────────────────────────────────────────
-// Remesh de um chunk
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// remeshChunk — agora passa worldGetLight para iluminar bordas corretamente
+// ─────────────────────────────────────────────────────────────────────────────
 void World::remeshChunk(glm::ivec3 key) {
     auto it = chunks.find(key);
     if (it == chunks.end()) return;
@@ -96,7 +152,11 @@ void World::remeshChunk(glm::ivec3 key) {
         return isAirWorld(wx, wy, wz);
     };
 
-    it->second.generateMesh(worldIsAir);
+    auto worldGetLight = [this](int wx, int wy, int wz) -> float {
+        return getWorldLightValue(wx, wy, wz);
+    };
+
+    it->second.generateMesh(worldIsAir, worldGetLight);
     it->second.uploadMesh();
 }
 
@@ -108,16 +168,49 @@ void World::remeshNeighbors(glm::ivec3 key) {
         {0, 0, -Chunk::SIZE_Z},
     };
     for (auto& off : offsets) {
-        glm::ivec3 neighborKey = key + off;
-        if (chunks.count(neighborKey)) {
-            remeshChunk(neighborKey);
-        }
+        glm::ivec3 nk = key + off;
+        if (chunks.count(nk))
+            remeshChunk(nk);
     }
 }
 
-// ─────────────────────────────────────────────
-// Adicionar chunk
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// generateWorld — 3 passagens: blocos → luz → mesh
+// ─────────────────────────────────────────────────────────────────────────────
+void World::generateWorld(int radiusX, int radiusZ, Shader& shader) {
+    // 1ª passagem: cria todos os chunks e gera blocos
+    for (int cx = -radiusX; cx <= radiusX; cx++)
+    for (int cz = -radiusZ; cz <= radiusZ; cz++) {
+        glm::ivec3 pos(cx * Chunk::SIZE_X, 0, cz * Chunk::SIZE_Z);
+        if (!chunks.count(pos)) {
+            chunks.emplace(std::piecewise_construct,
+                           std::forward_as_tuple(pos),
+                           std::forward_as_tuple(glm::vec3(pos), shader));
+        }
+    }
+
+    // 2ª passagem: calcula luz (skylight + BFS) para todo o mundo
+    relightWorld();
+
+    // 3ª passagem: gera meshes com luz correta e vizinhos disponíveis
+    auto worldIsAir = [this](int wx, int wy, int wz) -> bool {
+        return isAirWorld(wx, wy, wz);
+    };
+    auto worldGetLight = [this](int wx, int wy, int wz) -> float {
+        return getWorldLightValue(wx, wy, wz);
+    };
+
+    for (auto& [key, chunk] : chunks) {
+        chunk.generateMesh(worldIsAir, worldGetLight);
+        chunk.uploadMesh();
+    }
+
+    std::cout << "[World] " << chunks.size() << " chunks gerados com iluminação.\n";
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// addChunk
+// ─────────────────────────────────────────────────────────────────────────────
 void World::addChunk(glm::ivec3 pos, Shader& shader) {
     if (chunks.count(pos)) return;
 
@@ -125,89 +218,70 @@ void World::addChunk(glm::ivec3 pos, Shader& shader) {
                    std::forward_as_tuple(pos),
                    std::forward_as_tuple(glm::vec3(pos), shader));
 
+    relightChunk(pos);
     remeshChunk(pos);
     remeshNeighbors(pos);
 }
 
-// ─────────────────────────────────────────────
-// Gerar mundo em grid
-// ─────────────────────────────────────────────
-void World::generateWorld(int radiusX, int radiusZ, Shader& shader) {
-    // 1ª passagem: gera todos os blocos de todos os chunks
-    for (int cx = -radiusX; cx <= radiusX; cx++) {
-        for (int cz = -radiusZ; cz <= radiusZ; cz++) {
-            glm::ivec3 pos(cx * Chunk::SIZE_X, 0, cz * Chunk::SIZE_Z);
-            if (!chunks.count(pos)) {
-                chunks.emplace(std::piecewise_construct,
-                               std::forward_as_tuple(pos),
-                               std::forward_as_tuple(glm::vec3(pos), shader));
-            }
-        }
+// ─────────────────────────────────────────────────────────────────────────────
+// Altura do terreno
+// ─────────────────────────────────────────────────────────────────────────────
+float World::getTerrainHeightAt(float worldX, float worldZ, float maxHeight) const {
+    for (int y = (int)maxHeight; y >= 0; y--) {
+        if (isBlockSolid(worldX, (float)y, worldZ))
+            return (float)(y + 1);
     }
-
-    // 2ª passagem: gera meshes COM vizinhos (sem costuras nas bordas)
-    auto worldIsAir = [this](int wx, int wy, int wz) -> bool {
-        return isAirWorld(wx, wy, wz);
-    };
-
-    for (auto& [key, chunk] : chunks) {
-        chunk.generateMesh(worldIsAir);
-        chunk.uploadMesh();
-    }
+    return (float)(Chunk::SIZE_Y / 2);
 }
 
-// ─────────────────────────────────────────────
-// Render
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// render
+// ─────────────────────────────────────────────────────────────────────────────
 void World::render(Shader& shader) {
-    for (auto& [key, chunk] : chunks) {
+    for (auto& [key, chunk] : chunks)
         chunk.Draw(shader);
-    }
 }
 
-// ─────────────────────────────────────────────
-// QUEBRAR BLOCO
-// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// breakBlock / placeBlock — recalcula luz após mudança
+// ─────────────────────────────────────────────────────────────────────────────
 bool World::breakBlock(glm::ivec3 pos) {
-    glm::ivec3 chunkKey = getChunkKey(pos.x, pos.y, pos.z);
-    auto it = chunks.find(chunkKey);
+    glm::ivec3 key = getChunkKey(pos.x, pos.y, pos.z);
+    auto it = chunks.find(key);
     if (it == chunks.end()) return false;
 
-    int lx = pos.x - chunkKey.x;
-    int ly = pos.y - chunkKey.y;
-    int lz = pos.z - chunkKey.z;
-
+    int lx = pos.x - key.x, ly = pos.y - key.y, lz = pos.z - key.z;
     if (lx < 0 || lx >= Chunk::SIZE_X ||
         ly < 0 || ly >= Chunk::SIZE_Y ||
         lz < 0 || lz >= Chunk::SIZE_Z) return false;
 
     it->second.setBlock(lx, ly, lz, BLOCK_AIR);
-    remeshChunk(chunkKey);
-    remeshNeighbors(chunkKey);
+
+    // Recalcula luz do chunk afetado e vizinhos, depois remesh
+    relightChunk(key);
+    remeshNeighbors(key);   // vizinhos podem ter bordas iluminadas agora
+    remeshChunk(key);
     return true;
 }
 
-// ─────────────────────────────────────────────
-// COLOCAR BLOCO
-// ─────────────────────────────────────────────
 bool World::placeBlock(glm::ivec3 pos, BlockType blockType) {
     if (!isAirWorld(pos.x, pos.y, pos.z)) return false;
 
-    glm::ivec3 chunkKey = getChunkKey(pos.x, pos.y, pos.z);
-    auto it = chunks.find(chunkKey);
+    glm::ivec3 key = getChunkKey(pos.x, pos.y, pos.z);
+    auto it = chunks.find(key);
     if (it == chunks.end()) return false;
 
-    int lx = pos.x - chunkKey.x;
-    int ly = pos.y - chunkKey.y;
-    int lz = pos.z - chunkKey.z;
-
+    int lx = pos.x - key.x, ly = pos.y - key.y, lz = pos.z - key.z;
     if (lx < 0 || lx >= Chunk::SIZE_X ||
         ly < 0 || ly >= Chunk::SIZE_Y ||
         lz < 0 || lz >= Chunk::SIZE_Z) return false;
 
     it->second.setBlock(lx, ly, lz, blockType);
-    remeshChunk(chunkKey);
-    remeshNeighbors(chunkKey);
+
+    // Bloco novo pode bloquear luz — recalcula
+    relightChunk(key);
+    remeshNeighbors(key);
+    remeshChunk(key);
     return true;
 }
 

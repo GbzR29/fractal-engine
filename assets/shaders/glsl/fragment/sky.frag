@@ -15,13 +15,11 @@ float smoothstep01(float edge0, float edge1, float x) {
 }
 
 // ── Hash functions ────────────────────────────────────────────────────────────
-// Baseadas em operações bit a bit simuladas em float — muito estáveis no MinGW
 float hash21(vec2 p) {
     p = fract(p * vec2(127.1, 311.7));
     p += dot(p, p + 19.19);
     return fract(p.x * p.y);
 }
-
 float hash21b(vec2 p) {
     p = fract(p * vec2(269.5, 183.3));
     p += dot(p, p + 47.53);
@@ -96,44 +94,43 @@ vec3 drawMoon(vec3 dir, vec3 moonDir) {
 
 // ── Campo de estrelas ─────────────────────────────────────────────────────────
 //
-// Técnica: projeção cúbica em 3 faces ortogonais separadas.
-// Cada face usa uma grade 2D independente, eliminando completamente a distorção
-// de polo que ocorre na projeção esférica (theta/phi).
+// Projeção cúbica: cada face do cubo usa grade 2D independente.
+// Estrelas são PONTOS pequenos e nítidos — sem glow exagerado.
 //
-// O céu é dividido em 3 pares de faces do cubo:
-//   Face XY  — olhando para +Z e -Z
-//   Face XZ  — olhando para +Y e -Y (teto e chão)
-//   Face YZ  — olhando para +X e -X
-//
-// Cada face usa coordenadas locais 2D normalizadas, sem distorção.
-// A transição entre faces é suavizada pelo peso (o ângulo de incidência).
+// Na projeção cúbica, as coordenadas UV podem variar bastante dependendo
+// do ângulo de incidência, então usamos escala relativa ao tamanho da célula.
 // ─────────────────────────────────────────────────────────────────────────────
 vec3 starLayer(vec2 uv, float scale, float threshold, float seed) {
-    vec2  sc     = uv * scale;
-    vec2  cellID = floor(sc);
-    vec2  cellUV = fract(sc) - 0.5; // [-0.5, 0.5]
+    vec2 sc     = uv * scale;
+    vec2 cellID = floor(sc);
+    vec2 cellUV = fract(sc); // [0, 1]
 
-    // Centro aleatório dentro da célula
-    vec2  offset = vec2(hash21(cellID + seed), hash21b(cellID + seed)) - 0.5;
-    vec2  delta  = cellUV - offset * 0.7; // offset em 70% da célula
-    float dist   = length(delta);
+    // Posição da estrela dentro da célula (25%~75% para não ficar na borda)
+    float ox = 0.25 + hash21(cellID + seed) * 0.5;
+    float oy = 0.25 + hash21b(cellID + seed) * 0.5;
 
-    float h = hash21(cellID + seed + 7.3);
+    float h = hash21(cellID + seed + 3.1);
     if (h < threshold) return vec3(0.0);
 
-    // Tamanho angular da estrela
-    float sz   = 0.04 + hash21b(cellID + seed) * 0.06;
-    float glow = exp(-dist * dist / (sz * sz));
+    // Distância ao centro da estrela em pixels de célula
+    vec2  delta = cellUV - vec2(ox, oy);
+    float dist  = length(delta);
 
-    // Cor variável
-    float ch = hash21(cellID * 1.7 + seed);
-    vec3  col = mix(
-        mix(vec3(1.0, 0.93, 0.75), vec3(0.75, 0.87, 1.0), ch),
-        vec3(1.0, 1.0, 0.97),
-        smoothstep01(0.85, 1.0, h)
-    );
+    // Tamanho MUITO pequeno — estrelas são pontos, não bolas
+    // 0.04 = ~4% do tamanho da célula = ponto nítido
+    float sz    = 0.035 + hash21b(cellID + seed + 7.7) * 0.025;
 
-    return col * glow * smoothstep01(threshold, 1.0, h);
+    // Perfil sharp: cai rapidamente (exp com sigma pequeno)
+    float glow  = exp(-dist * dist / (sz * sz * 0.5));
+
+    // Sem multiplicador extra de brilho — mantém discreto
+    float bright = smoothstep01(threshold, 1.0, h);
+
+    // Cor: maioria branca/azulada, algumas levemente amareladas
+    float ch = hash21(cellID * 2.3 + seed);
+    vec3  col = mix(vec3(0.85, 0.92, 1.0), vec3(1.0, 0.97, 0.85), ch * ch);
+
+    return col * glow * bright;
 }
 
 vec3 drawStars(vec3 dir) {
@@ -143,39 +140,36 @@ vec3 drawStars(vec3 dir) {
     vec3 d   = normalize(dir);
     vec3 col = vec3(0.0);
 
-    // Pesos de cada face (produto escalar com a normal da face)
-    // Evita estrelas "fantasmas" nas bordas usando suavização cúbica
-    float wx = abs(d.x);
-    float wy = abs(d.y);
-    float wz = abs(d.z);
-    // Eleva ao cubo para transição mais suave
-    wx = wx * wx * wx;
-    wy = wy * wy * wy;
-    wz = wz * wz * wz;
-    float wTotal = wx + wy + wz + 0.0001;
+    // Pesos de face — elevado ao cubo para transição suave e invisível
+    float wx = abs(d.x); wx = wx * wx * wx;
+    float wy = abs(d.y); wy = wy * wy * wy;
+    float wz = abs(d.z); wz = wz * wz * wz;
+    float wt = wx + wy + wz + 0.0001;
 
-    // ── Face Z (front/back) ───────────────────────────────────────────────
-    if (wz > 0.001) {
-        vec2 uv   = d.xy / (abs(d.z) + 0.001);
-        float w   = wz / wTotal;
-        col += starLayer(uv, 12.0, 0.78, 0.0)  * w;
-        col += starLayer(uv, 25.0, 0.84, 13.5) * w * 0.6;
+    // ── Face Z ────────────────────────────────────────────────────────────
+    {
+        vec2  uv = d.xy / (abs(d.z) + 0.001);
+        float w  = wz / wt;
+        // escala 18: ~324 células por face → densidade razoável de estrelas
+        col += starLayer(uv, 18.0, 0.82, 0.00) * w;
+        // escala 38: estrelas menores e mais numerosas no background
+        col += starLayer(uv, 38.0, 0.88, 11.3) * w * 0.55;
     }
 
-    // ── Face Y (top/bottom) ───────────────────────────────────────────────
-    if (wy > 0.001) {
-        vec2 uv   = d.xz / (abs(d.y) + 0.001);
-        float w   = wy / wTotal;
-        col += starLayer(uv, 12.0, 0.78, 31.7) * w;
-        col += starLayer(uv, 25.0, 0.84, 47.2) * w * 0.6;
+    // ── Face Y (teto) ─────────────────────────────────────────────────────
+    {
+        vec2  uv = d.xz / (abs(d.y) + 0.001);
+        float w  = wy / wt;
+        col += starLayer(uv, 18.0, 0.82, 29.7) * w;
+        col += starLayer(uv, 38.0, 0.88, 43.1) * w * 0.55;
     }
 
-    // ── Face X (left/right) ───────────────────────────────────────────────
-    if (wx > 0.001) {
-        vec2 uv   = d.yz / (abs(d.x) + 0.001);
-        float w   = wx / wTotal;
-        col += starLayer(uv, 12.0, 0.78, 61.4) * w;
-        col += starLayer(uv, 25.0, 0.84, 79.8) * w * 0.6;
+    // ── Face X ────────────────────────────────────────────────────────────
+    {
+        vec2  uv = d.yz / (abs(d.x) + 0.001);
+        float w  = wx / wt;
+        col += starLayer(uv, 18.0, 0.82, 57.4) * w;
+        col += starLayer(uv, 38.0, 0.88, 73.9) * w * 0.55;
     }
 
     // Fade no horizonte

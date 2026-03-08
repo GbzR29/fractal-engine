@@ -10,10 +10,6 @@ namespace fractal_engine::world {
 
 using fractal_engine::graphics::Shader;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Hash/Equal para glm::ivec3 — necessário para unordered_map
-// Migrado de std::map + IVec3Cmp para unordered_map: O(1) vs O(log n) no lookup
-// ─────────────────────────────────────────────────────────────────────────────
 struct IVec3Hash {
     size_t operator()(const glm::ivec3& v) const {
         size_t h = std::hash<int>{}(v.x);
@@ -31,38 +27,30 @@ struct IVec3Equal {
 
 using ChunkMap = std::unordered_map<glm::ivec3, Chunk, IVec3Hash, IVec3Equal>;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// World — mapa de todos os chunks carregados, indexados pelo canto inferior
-// ─────────────────────────────────────────────────────────────────────────────
 class World {
 public:
-    // Acesso direto ao mapa (WorldManager e ChunkStreamer iteram aqui)
-    ChunkMap& getChunks()             { return chunks; }
+    ChunkMap&       getChunks()       { return chunks; }
     const ChunkMap& getChunks() const { return chunks; }
 
-    // ── Ciclo de vida dos chunks ───────────────────────────────────────────
-    // Adiciona chunk em pos (ignora se já existe) e remesheia vizinhos
     void addChunk   (glm::ivec3 pos, Shader& shader);
-    // Remove e destrói o chunk (libera VAO/VBO via destrutor de Chunk)
     void removeChunk(glm::ivec3 pos);
-
-    // Gera um grid inicial em 2 passagens:
-    //   1ª: cria todos os chunks e seus blocos
-    //   2ª: gera as meshes COM vizinhos (sem costuras nas bordas)
     void generateWorld(int radiusX, int radiusZ, Shader& shader);
-
-    // ── Render ────────────────────────────────────────────────────────────
     void render(Shader& shader);
 
     // ── Queries ───────────────────────────────────────────────────────────
-    glm::ivec3 getChunkKey   (int wx, int wy, int wz)              const;
-    bool       isAirWorld    (int wx, int wy, int wz)              const;
-    bool       isBlockSolid  (float wx, float wy, float wz)        const;
+    glm::ivec3 getChunkKey  (int wx, int wy, int wz)       const;
+    bool       isAirWorld   (int wx, int wy, int wz)       const;
+    bool       isBlockSolid (float wx, float wy, float wz) const;
+    float      getTerrainHeightAt(float worldX, float worldZ,
+                                  float maxHeight = (float)(Chunk::SIZE_Y - 1)) const;
 
-    // Varre de cima para baixo e retorna y+1 do primeiro bloco sólido encontrado
-    // maxHeight padrão = SIZE_Y - 1 (garante que começa acima de qualquer superfície)
-    float getTerrainHeightAt(float worldX, float worldZ,
-                              float maxHeight = (float)(Chunk::SIZE_Y - 1)) const;
+    // ── Luz ───────────────────────────────────────────────────────────────
+    // Retorna skylight de uma posição mundo
+    int   getWorldSkyLight  (int wx, int wy, int wz) const;
+    // Retorna blocklight de uma posição mundo
+    int   getWorldBlockLight(int wx, int wy, int wz) const;
+    // Retorna max(sky, block) / 15 como float [0,1]
+    float getWorldLightValue(int wx, int wy, int wz) const;
 
     // ── Edição de blocos ──────────────────────────────────────────────────
     bool breakBlock(glm::ivec3 pos);
@@ -73,6 +61,10 @@ private:
 
     void remeshChunk   (glm::ivec3 key);
     void remeshNeighbors(glm::ivec3 key);
+
+    // Recalcula luz de um chunk e seus vizinhos
+    void relightChunk  (glm::ivec3 key);
+    void relightWorld  ();   // chamado após generateWorld
 };
 
 } // namespace fractal_engine::world
