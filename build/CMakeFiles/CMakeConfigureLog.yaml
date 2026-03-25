@@ -65,6 +65,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "/REGISTRY-NOTFOUND/bin/"
       - "c:/MinGW/bin/"
       - "/MinGW/bin/"
@@ -160,8 +161,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -175,6 +176,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -238,6 +240,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Program Files/PowerShell/7/c++.com"
       - "C:/Program Files/PowerShell/7/c++.exe"
@@ -825,8 +828,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -840,6 +843,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -891,8 +895,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -906,6 +910,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -926,7 +931,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/4.2.1/CompilerIdCXX/a.exe
+        C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/4.2.1/CompilerIdCXX/a.exe
       
   -
     kind: "find-v1"
@@ -986,6 +991,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/ar.com"
     found: "C:/mingw64/bin/ar.exe"
@@ -1015,8 +1021,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1030,6 +1036,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1088,6 +1095,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/ranlib.com"
     found: "C:/mingw64/bin/ranlib.exe"
@@ -1117,8 +1125,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1132,6 +1140,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1190,6 +1199,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/strip.com"
     found: "C:/mingw64/bin/strip.exe"
@@ -1219,8 +1229,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1234,6 +1244,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1292,6 +1303,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/ld.com"
     found: "C:/mingw64/bin/ld.exe"
@@ -1321,8 +1333,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1336,6 +1348,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1394,6 +1407,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/nm.com"
     found: "C:/mingw64/bin/nm.exe"
@@ -1423,8 +1437,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1438,6 +1452,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1496,6 +1511,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/objdump.com"
     found: "C:/mingw64/bin/objdump.exe"
@@ -1525,8 +1541,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1540,6 +1556,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1598,6 +1615,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/objcopy.com"
     found: "C:/mingw64/bin/objcopy.exe"
@@ -1627,8 +1645,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1642,6 +1660,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1700,6 +1719,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/readelf.com"
     found: "C:/mingw64/bin/readelf.exe"
@@ -1729,8 +1749,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1744,6 +1764,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1802,6 +1823,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/dlltool.com"
     found: "C:/mingw64/bin/dlltool.exe"
@@ -1831,8 +1853,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1846,6 +1868,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1904,6 +1927,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/addr2line.com"
     found: "C:/mingw64/bin/addr2line.exe"
@@ -1933,8 +1957,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1948,6 +1972,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -2006,6 +2031,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/tapi.com"
       - "C:/mingw64/bin/tapi.exe"
@@ -2121,6 +2147,9 @@ events:
       - "C:/android sdk/platform-tools/tapi.com"
       - "C:/android sdk/platform-tools/tapi.exe"
       - "C:/android sdk/platform-tools/tapi"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/tapi.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/tapi.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -2148,8 +2177,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -2163,6 +2192,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -2224,6 +2254,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ar-14.2.com"
       - "C:/mingw64/bin/gcc-ar-14.2.exe"
@@ -2339,6 +2370,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar-14.2.com"
       - "C:/android sdk/platform-tools/gcc-ar-14.2.exe"
       - "C:/android sdk/platform-tools/gcc-ar-14.2"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2"
       - "C:/mingw64/bin/gcc-ar-14.com"
       - "C:/mingw64/bin/gcc-ar-14.exe"
       - "C:/mingw64/bin/gcc-ar-14"
@@ -2453,6 +2487,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar-14.com"
       - "C:/android sdk/platform-tools/gcc-ar-14.exe"
       - "C:/android sdk/platform-tools/gcc-ar-14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14"
       - "C:/mingw64/bin/gcc-ar14.com"
       - "C:/mingw64/bin/gcc-ar14.exe"
       - "C:/mingw64/bin/gcc-ar14"
@@ -2567,6 +2604,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar14.com"
       - "C:/android sdk/platform-tools/gcc-ar14.exe"
       - "C:/android sdk/platform-tools/gcc-ar14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14"
       - "C:/mingw64/bin/gcc-ar.com"
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
@@ -2595,8 +2635,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -2610,6 +2650,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -2671,6 +2712,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ranlib-14.2.com"
       - "C:/mingw64/bin/gcc-ranlib-14.2.exe"
@@ -2786,6 +2828,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2.com"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2"
       - "C:/mingw64/bin/gcc-ranlib-14.com"
       - "C:/mingw64/bin/gcc-ranlib-14.exe"
       - "C:/mingw64/bin/gcc-ranlib-14"
@@ -2900,6 +2945,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib-14.com"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib-14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14"
       - "C:/mingw64/bin/gcc-ranlib14.com"
       - "C:/mingw64/bin/gcc-ranlib14.exe"
       - "C:/mingw64/bin/gcc-ranlib14"
@@ -3014,6 +3062,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib14.com"
       - "C:/android sdk/platform-tools/gcc-ranlib14.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14"
       - "C:/mingw64/bin/gcc-ranlib.com"
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
@@ -3042,8 +3093,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -3057,6 +3108,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -3116,8 +3168,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -3131,6 +3183,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -3182,8 +3235,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -3197,6 +3250,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -3217,7 +3271,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/4.2.1/CompilerIdC/a.exe
+        C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/4.2.1/CompilerIdC/a.exe
       
   -
     kind: "find-v1"
@@ -3280,6 +3334,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ar-14.2.com"
       - "C:/mingw64/bin/gcc-ar-14.2.exe"
@@ -3395,6 +3450,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar-14.2.com"
       - "C:/android sdk/platform-tools/gcc-ar-14.2.exe"
       - "C:/android sdk/platform-tools/gcc-ar-14.2"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.2"
       - "C:/mingw64/bin/gcc-ar-14.com"
       - "C:/mingw64/bin/gcc-ar-14.exe"
       - "C:/mingw64/bin/gcc-ar-14"
@@ -3509,6 +3567,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar-14.com"
       - "C:/android sdk/platform-tools/gcc-ar-14.exe"
       - "C:/android sdk/platform-tools/gcc-ar-14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-14"
       - "C:/mingw64/bin/gcc-ar14.com"
       - "C:/mingw64/bin/gcc-ar14.exe"
       - "C:/mingw64/bin/gcc-ar14"
@@ -3623,6 +3684,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ar14.com"
       - "C:/android sdk/platform-tools/gcc-ar14.exe"
       - "C:/android sdk/platform-tools/gcc-ar14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar14"
       - "C:/mingw64/bin/gcc-ar.com"
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
@@ -3651,8 +3715,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -3666,6 +3730,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -3727,6 +3792,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ranlib-14.2.com"
       - "C:/mingw64/bin/gcc-ranlib-14.2.exe"
@@ -3842,6 +3908,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2.com"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.2"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.2"
       - "C:/mingw64/bin/gcc-ranlib-14.com"
       - "C:/mingw64/bin/gcc-ranlib-14.exe"
       - "C:/mingw64/bin/gcc-ranlib-14"
@@ -3956,6 +4025,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib-14.com"
       - "C:/android sdk/platform-tools/gcc-ranlib-14.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib-14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-14"
       - "C:/mingw64/bin/gcc-ranlib14.com"
       - "C:/mingw64/bin/gcc-ranlib14.exe"
       - "C:/mingw64/bin/gcc-ranlib14"
@@ -4070,6 +4142,9 @@ events:
       - "C:/android sdk/platform-tools/gcc-ranlib14.com"
       - "C:/android sdk/platform-tools/gcc-ranlib14.exe"
       - "C:/android sdk/platform-tools/gcc-ranlib14"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14.com"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14.exe"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib14"
       - "C:/mingw64/bin/gcc-ranlib.com"
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
@@ -4098,8 +4173,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -4113,6 +4188,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -4174,6 +4250,7 @@ events:
       - "C:/Users/gabri/.dotnet/tools/"
       - "C:/lua55/"
       - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -4308,8 +4385,8 @@ events:
         - "C:\\Program Files\\Git LFS"
         - "C:\\Program Files\\Neovim\\bin"
         - "C:\\Program Files\\CMake\\bin"
-        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -4323,6 +4400,7 @@ events:
         - "C:\\Users\\gabri\\.dotnet\\tools"
         - "C:\\lua55"
         - "C:\\android sdk\\platform-tools"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/FractalEngine"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -4338,8 +4416,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f"
-      binary: "C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f"
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -4349,13 +4427,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f'
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_657d5/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_657d5.dir\\build.make CMakeFiles/cmTC_657d5.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f'
-        Building CXX object CMakeFiles/cmTC_657d5.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_6c9bd/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_6c9bd.dir\\build.make CMakeFiles/cmTC_6c9bd.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct'
+        Building CXX object CMakeFiles/cmTC_6c9bd.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -4364,8 +4442,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_657d5.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\ccdW8EId.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_6c9bd.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\ccy4eCWj.s
         GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -4390,14 +4468,14 @@ events:
          C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 0a151f404c3e06bb380959acc81ec24d
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\ccdW8EId.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\ccy4eCWj.s
         GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r2) 2.43.1
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_657d5.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_657d5.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_6c9bd.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_6c9bd.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
@@ -4409,16 +4487,16 @@ events:
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_657d5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_657d5.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccyyrPea.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_657d5.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_657d5.dir/objects.a --no-whole-archive --out-implib libcmTC_657d5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c9bd.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6c9bd.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccgjl59y.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6c9bd.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_6c9bd.dir/objects.a --no-whole-archive --out-implib libcmTC_6c9bd.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccyyrPea.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_657d5.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_657d5.dir/objects.a --no-whole-archive --out-implib libcmTC_657d5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccgjl59y.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6c9bd.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_6c9bd.dir/objects.a --no-whole-archive --out-implib libcmTC_6c9bd.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r2) 2.43.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_657d5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_657d5.'
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_657d5.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_657d5.dir/objects.a @CMakeFiles\\cmTC_657d5.dir\\objects1.rsp
-        C:\\mingw64\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_657d5.dir/objects.a -Wl,--no-whole-archive -o cmTC_657d5.exe -Wl,--out-implib,libcmTC_657d5.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c9bd.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6c9bd.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_6c9bd.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_6c9bd.dir/objects.a @CMakeFiles\\cmTC_6c9bd.dir\\objects1.rsp
+        C:\\mingw64\\bin\\c++.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_6c9bd.dir/objects.a -Wl,--no-whole-archive -o cmTC_6c9bd.exe -Wl,--out-implib,libcmTC_6c9bd.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct'
         
       exitCode: 0
   -
@@ -4459,13 +4537,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f']
+        ignore line: [Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_657d5/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_657d5.dir\\build.make CMakeFiles/cmTC_657d5.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-3rtf0f']
-        ignore line: [Building CXX object CMakeFiles/cmTC_657d5.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_6c9bd/fast]
+        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_6c9bd.dir\\build.make CMakeFiles/cmTC_6c9bd.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-mkuhct']
+        ignore line: [Building CXX object CMakeFiles/cmTC_6c9bd.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -4474,8 +4552,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r2) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_657d5.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\ccdW8EId.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_6c9bd.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\ccy4eCWj.s]
         ignore line: [GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r2) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -4500,8 +4578,8 @@ events:
         ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 0a151f404c3e06bb380959acc81ec24d]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\ccdW8EId.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\ccy4eCWj.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r2) 2.43.1]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -4512,9 +4590,9 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_657d5.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_657d5.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_657d5.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_6c9bd.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_6c9bd.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_6c9bd.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
@@ -4533,13 +4611,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_657d5.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_657d5.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccyyrPea.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_657d5.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_657d5.dir/objects.a --no-whole-archive --out-implib libcmTC_657d5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c9bd.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6c9bd.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccgjl59y.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_6c9bd.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_6c9bd.dir/objects.a --no-whole-archive --out-implib libcmTC_6c9bd.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccyyrPea.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\ccgjl59y.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -4561,7 +4639,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_657d5.exe] ==> ignore
+          arg [cmTC_6c9bd.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -4572,10 +4650,10 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_657d5.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_6c9bd.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_657d5.dll.a] ==> ignore
+          arg [libcmTC_6c9bd.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -4656,8 +4734,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza"
-      binary: "C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza"
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -4666,13 +4744,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza'
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b510d/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b510d.dir\\build.make CMakeFiles/cmTC_b510d.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza'
-        Building C object CMakeFiles/cmTC_b510d.dir/CMakeCCompilerABI.c.obj
-        C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_4226e/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4226e.dir\\build.make CMakeFiles/cmTC_4226e.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd'
+        Building C object CMakeFiles/cmTC_4226e.dir/CMakeCCompilerABI.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -4681,8 +4759,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_b510d.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\cceQANRE.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_4226e.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\cco9qcxZ.s
         GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -4701,14 +4779,14 @@ events:
          C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 083cdfdb36f80abb23036714270fd518
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\cceQANRE.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\cco9qcxZ.s
         GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r2) 2.43.1
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_b510d.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b510d.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_4226e.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4226e.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
@@ -4720,16 +4798,16 @@ events:
         gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b510d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b510d.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cck73QvO.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b510d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b510d.dir/objects.a --no-whole-archive --out-implib libcmTC_b510d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4226e.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4226e.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cc08Z9M8.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4226e.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4226e.dir/objects.a --no-whole-archive --out-implib libcmTC_4226e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cck73QvO.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b510d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b510d.dir/objects.a --no-whole-archive --out-implib libcmTC_b510d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cc08Z9M8.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4226e.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4226e.dir/objects.a --no-whole-archive --out-implib libcmTC_4226e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r2) 2.43.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b510d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b510d.'
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b510d.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b510d.dir/objects.a @CMakeFiles\\cmTC_b510d.dir\\objects1.rsp
-        C:\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_b510d.dir/objects.a -Wl,--no-whole-archive -o cmTC_b510d.exe -Wl,--out-implib,libcmTC_b510d.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4226e.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4226e.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4226e.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_4226e.dir/objects.a @CMakeFiles\\cmTC_4226e.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_4226e.dir/objects.a -Wl,--no-whole-archive -o cmTC_4226e.exe -Wl,--out-implib,libcmTC_4226e.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd'
         
       exitCode: 0
   -
@@ -4764,13 +4842,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza']
+        ignore line: [Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b510d/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b510d.dir\\build.make CMakeFiles/cmTC_b510d.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/gabri/Desktop/fractal-engine v2.0/build/CMakeFiles/CMakeScratch/TryCompile-hf7lza']
-        ignore line: [Building C object CMakeFiles/cmTC_b510d.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_4226e/fast]
+        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4226e.dir\\build.make CMakeFiles/cmTC_4226e.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-x06bkd']
+        ignore line: [Building C object CMakeFiles/cmTC_4226e.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -4779,8 +4857,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r2) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_b510d.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\cceQANRE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_4226e.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\gabri\\AppData\\Local\\Temp\\cco9qcxZ.s]
         ignore line: [GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r2) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -4799,8 +4877,8 @@ events:
         ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 083cdfdb36f80abb23036714270fd518]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\cceQANRE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj C:\\Users\\gabri\\AppData\\Local\\Temp\\cco9qcxZ.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r2) 2.43.1]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -4811,9 +4889,9 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b510d.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_b510d.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b510d.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_4226e.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_4226e.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4226e.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
@@ -4832,13 +4910,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b510d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b510d.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cck73QvO.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_b510d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b510d.dir/objects.a --no-whole-archive --out-implib libcmTC_b510d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4226e.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4226e.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cc08Z9M8.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_4226e.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_4226e.dir/objects.a --no-whole-archive --out-implib libcmTC_4226e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cck73QvO.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\gabri\\AppData\\Local\\Temp\\cc08Z9M8.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -4860,7 +4938,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_b510d.exe] ==> ignore
+          arg [cmTC_4226e.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -4871,10 +4949,10 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_b510d.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_4226e.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_b510d.dll.a] ==> ignore
+          arg [libcmTC_4226e.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

@@ -53,10 +53,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\gabri\Desktop\fractal-engine v2.0"
+CMAKE_SOURCE_DIR = "C:\Projetos\Github Projects\fractal-engine"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\gabri\Desktop\fractal-engine v2.0\build"
+CMAKE_BINARY_DIR = "C:\Projetos\Github Projects\fractal-engine\build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -413,14 +413,14 @@ src/world/clean:
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=77,78 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=74,75 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -430,7 +430,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=77,78 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=74,75 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -445,14 +445,14 @@ CMakeFiles/glad.dir/clean:
 CMakeFiles/imgui.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imgui.dir\build.make CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imgui.dir\build.make CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=79,80,81,82,83,84,85 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=76,77,78,79,80,81,82 "Built target imgui"
 .PHONY : CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/imgui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/imgui.dir/rule
 
 # Convenience name for target.
@@ -462,7 +462,7 @@ imgui: CMakeFiles/imgui.dir/rule
 # codegen rule for target.
 CMakeFiles/imgui.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imgui.dir\build.make CMakeFiles/imgui.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=79,80,81,82,83,84,85 "Finished codegen for target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=76,77,78,79,80,81,82 "Finished codegen for target imgui"
 .PHONY : CMakeFiles/imgui.dir/codegen
 
 # clean rule for target.
@@ -477,14 +477,14 @@ CMakeFiles/imgui.dir/clean:
 CMakeFiles/imguizmo.dir/all: CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imguizmo.dir\build.make CMakeFiles/imguizmo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imguizmo.dir\build.make CMakeFiles/imguizmo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=86,87 "Built target imguizmo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=83,84 "Built target imguizmo"
 .PHONY : CMakeFiles/imguizmo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imguizmo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 9
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/imguizmo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/imguizmo.dir/rule
 
 # Convenience name for target.
@@ -494,7 +494,7 @@ imguizmo: CMakeFiles/imguizmo.dir/rule
 # codegen rule for target.
 CMakeFiles/imguizmo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imguizmo.dir\build.make CMakeFiles/imguizmo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=86,87 "Finished codegen for target imguizmo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=83,84 "Finished codegen for target imguizmo"
 .PHONY : CMakeFiles/imguizmo.dir/codegen
 
 # clean rule for target.
@@ -511,14 +511,14 @@ CMakeFiles/FractalEngineLib.dir/all: CMakeFiles/imgui.dir/all
 CMakeFiles/FractalEngineLib.dir/all: CMakeFiles/imguizmo.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target FractalEngineLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target FractalEngineLib"
 .PHONY : CMakeFiles/FractalEngineLib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FractalEngineLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 85
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 82
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FractalEngineLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/FractalEngineLib.dir/rule
 
 # Convenience name for target.
@@ -528,7 +528,7 @@ FractalEngineLib: CMakeFiles/FractalEngineLib.dir/rule
 # codegen rule for target.
 CMakeFiles/FractalEngineLib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Finished codegen for target FractalEngineLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Finished codegen for target FractalEngineLib"
 .PHONY : CMakeFiles/FractalEngineLib.dir/codegen
 
 # clean rule for target.
@@ -541,19 +541,19 @@ CMakeFiles/FractalEngineLib.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/FractalEngine.dir/all: CMakeFiles/glad.dir/all
+CMakeFiles/FractalEngine.dir/all: CMakeFiles/FractalEngineLib.dir/all
 CMakeFiles/FractalEngine.dir/all: CMakeFiles/imgui.dir/all
 CMakeFiles/FractalEngine.dir/all: CMakeFiles/imguizmo.dir/all
-CMakeFiles/FractalEngine.dir/all: CMakeFiles/FractalEngineLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=1,2 "Built target FractalEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2 "Built target FractalEngine"
 .PHONY : CMakeFiles/FractalEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FractalEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 87
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 84
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FractalEngine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/FractalEngine.dir/rule
 
 # Convenience name for target.
@@ -563,7 +563,7 @@ FractalEngine: CMakeFiles/FractalEngine.dir/rule
 # codegen rule for target.
 CMakeFiles/FractalEngine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" --progress-num=1,2 "Finished codegen for target FractalEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" --progress-num=1,2 "Finished codegen for target FractalEngine"
 .PHONY : CMakeFiles/FractalEngine.dir/codegen
 
 # clean rule for target.

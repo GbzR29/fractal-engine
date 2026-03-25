@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\gabri\Desktop\fractal-engine v2.0"
+CMAKE_SOURCE_DIR = "C:\Projetos\Github Projects\fractal-engine"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\gabri\Desktop\fractal-engine v2.0\build"
+CMAKE_BINARY_DIR = "C:\Projetos\Github Projects\fractal-engine\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,16 +86,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" "C:\Users\gabri\Desktop\fractal-engine v2.0\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" "C:\Projetos\Github Projects\fractal-engine\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" "C:\Users\gabri\Desktop\fractal-engine v2.0\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" "C:\Projetos\Github Projects\fractal-engine\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gabri\Desktop\fractal-engine v2.0\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles" 0
 .PHONY : codegen
 
 # The main clean target
@@ -1651,78 +1651,6 @@ src/scene/ecs/System.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/System.cpp.s
 .PHONY : src/scene/ecs/System.cpp.s
 
-src/scripting/LuaBinding.obj: src/scripting/LuaBinding.cpp.obj
-.PHONY : src/scripting/LuaBinding.obj
-
-# target to build an object file
-src/scripting/LuaBinding.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/LuaBinding.cpp.obj
-.PHONY : src/scripting/LuaBinding.cpp.obj
-
-src/scripting/LuaBinding.i: src/scripting/LuaBinding.cpp.i
-.PHONY : src/scripting/LuaBinding.i
-
-# target to preprocess a source file
-src/scripting/LuaBinding.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/LuaBinding.cpp.i
-.PHONY : src/scripting/LuaBinding.cpp.i
-
-src/scripting/LuaBinding.s: src/scripting/LuaBinding.cpp.s
-.PHONY : src/scripting/LuaBinding.s
-
-# target to generate assembly for a file
-src/scripting/LuaBinding.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/LuaBinding.cpp.s
-.PHONY : src/scripting/LuaBinding.cpp.s
-
-src/scripting/ScriptContext.obj: src/scripting/ScriptContext.cpp.obj
-.PHONY : src/scripting/ScriptContext.obj
-
-# target to build an object file
-src/scripting/ScriptContext.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptContext.cpp.obj
-.PHONY : src/scripting/ScriptContext.cpp.obj
-
-src/scripting/ScriptContext.i: src/scripting/ScriptContext.cpp.i
-.PHONY : src/scripting/ScriptContext.i
-
-# target to preprocess a source file
-src/scripting/ScriptContext.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptContext.cpp.i
-.PHONY : src/scripting/ScriptContext.cpp.i
-
-src/scripting/ScriptContext.s: src/scripting/ScriptContext.cpp.s
-.PHONY : src/scripting/ScriptContext.s
-
-# target to generate assembly for a file
-src/scripting/ScriptContext.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptContext.cpp.s
-.PHONY : src/scripting/ScriptContext.cpp.s
-
-src/scripting/ScriptEngine.obj: src/scripting/ScriptEngine.cpp.obj
-.PHONY : src/scripting/ScriptEngine.obj
-
-# target to build an object file
-src/scripting/ScriptEngine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.obj
-.PHONY : src/scripting/ScriptEngine.cpp.obj
-
-src/scripting/ScriptEngine.i: src/scripting/ScriptEngine.cpp.i
-.PHONY : src/scripting/ScriptEngine.i
-
-# target to preprocess a source file
-src/scripting/ScriptEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.i
-.PHONY : src/scripting/ScriptEngine.cpp.i
-
-src/scripting/ScriptEngine.s: src/scripting/ScriptEngine.cpp.s
-.PHONY : src/scripting/ScriptEngine.s
-
-# target to generate assembly for a file
-src/scripting/ScriptEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.s
-.PHONY : src/scripting/ScriptEngine.cpp.s
-
 src/ui/imgui/AssetBrowser.obj: src/ui/imgui/AssetBrowser.cpp.obj
 .PHONY : src/ui/imgui/AssetBrowser.obj
 
@@ -2352,15 +2280,6 @@ help:
 	@echo ... src/scene/ecs/System.obj
 	@echo ... src/scene/ecs/System.i
 	@echo ... src/scene/ecs/System.s
-	@echo ... src/scripting/LuaBinding.obj
-	@echo ... src/scripting/LuaBinding.i
-	@echo ... src/scripting/LuaBinding.s
-	@echo ... src/scripting/ScriptContext.obj
-	@echo ... src/scripting/ScriptContext.i
-	@echo ... src/scripting/ScriptContext.s
-	@echo ... src/scripting/ScriptEngine.obj
-	@echo ... src/scripting/ScriptEngine.i
-	@echo ... src/scripting/ScriptEngine.s
 	@echo ... src/ui/imgui/AssetBrowser.obj
 	@echo ... src/ui/imgui/AssetBrowser.i
 	@echo ... src/ui/imgui/AssetBrowser.s
