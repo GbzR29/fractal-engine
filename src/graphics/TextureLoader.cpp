@@ -1,114 +1,193 @@
-#include "fractal_engine/graphics/TextureLoader.h"
+#include "TextureLoader.hpp"
 #include <iostream>
-#include <sstream>
 
-// stb_image deve ser definido UMA VEZ em todo o projeto.
-// Se já foi definido em outro .cpp, remova a linha abaixo.
+// stb_image — define APENAS neste .cpp
 #define STB_IMAGE_IMPLEMENTATION
-#include <third_party/stb_image/stb_image.h>
-
-namespace fractal_engine::graphics {
+#include <stb_image.h>
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Definição do cache estático
+//  Helpers
 // ─────────────────────────────────────────────────────────────────────────────
-std::unordered_map<std::string, GLuint> TextureLoader::s_cache;
+static void ApplySpec(const TextureSpec& spec)
+{
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,     spec.WrapS);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,     spec.WrapT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, spec.MinFilter);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, spec.MagFilter);
+}
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Logger interno
-// ─────────────────────────────────────────────────────────────────────────────
-namespace {
-    void logInfo (const std::string& msg) { std::cout << "[TextureLoader]        " << msg << "\n"; }
-    void logWarn (const std::string& msg) { std::clog << "[TextureLoader][WARN]  " << msg << "\n"; }
-    void logError(const std::string& msg) { std::cerr << "[TextureLoader][ERROR] " << msg << "\n"; }
+static GLenum ChannelsToFormat(int channels)
+{
+    switch (channels)
+    {
+        case 1: return GL_RED;
+        case 2: return GL_RG;
+        case 3: return GL_RGB;
+        case 4: return GL_RGBA;
+        default: return GL_RGBA;
+    }
+}
+
+static GLenum ChannelsToInternalFormat(int channels, bool sRGB)
+{
+    if (sRGB)
+        return (channels == 4) ? GL_SRGB8_ALPHA8 : GL_SRGB8;
+
+    switch (channels)
+    {
+        case 1: return GL_R8;
+        case 2: return GL_RG8;
+        case 3: return GL_RGB8;
+        case 4: return GL_RGBA8;
+        default: return GL_RGBA8;
+    }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Core: carrega uma imagem e envia para um texID já gerado
+//  Texturas de fallback
 // ─────────────────────────────────────────────────────────────────────────────
-void TextureLoader::loadInto(GLuint texID, const char* path) {
-    glBindTexture(GL_TEXTURE_2D, texID);
+Texture2D CreateSolidTexture(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
+{
+    uint8_t data[4] = { r, g, b, a };
+    Texture2D tex;
+    tex.Width    = 1;
+    tex.Height   = 1;
+    tex.Channels = 4;
 
-    // Wrapping e filtragem estilo voxel/pixel-art
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,     GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,     GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+    glGenTextures(1, &tex.ID);
+    glBindTexture(GL_TEXTURE_2D, tex.ID);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, 1, 1, 0,
+                 GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glBindTexture(GL_TEXTURE_2D, 0);
+    return tex;
+}
 
-    stbi_set_flip_vertically_on_load(true);
+Texture2D CreateWhiteTexture()       { return CreateSolidTexture(255, 255, 255, 255); }
+Texture2D CreateBlackTexture()       { return CreateSolidTexture(0,   0,   0,   255); }
+Texture2D CreateDefaultNormalMap()   { return CreateSolidTexture(128, 128, 255, 255); }
 
-    int width = 0, height = 0, channels = 0;
-    unsigned char* data = stbi_load(path, &width, &height, &channels, 0);
+// ─────────────────────────────────────────────────────────────────────────────
+//  TextureLoader::Load
+// ─────────────────────────────────────────────────────────────────────────────
+Texture2D TextureLoader::Load(const std::string& path, const TextureSpec& spec)
+{
+    stbi_set_flip_vertically_on_load(spec.FlipY);
 
-    if (!data) {
-        logError("Failed to load \"" + std::string(path) + "\" — " + stbi_failure_reason());
+    int w, h, ch;
+    unsigned char* data = stbi_load(path.c_str(), &w, &h, &ch, 0);
+    if (!data)
+    {
+        std::cerr << "[TextureLoader] Falha ao carregar: " << path
+                  << " — " << stbi_failure_reason() << "\n";
+        return CreateWhiteTexture();   // fallback visível (branco)
+    }
 
-        // Textura magenta 1x1 como fallback visual (fácil de identificar)
-        unsigned char fallback[] = { 255, 0, 255, 255 };
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, fallback);
+    Texture2D tex;
+    tex.Width    = w;
+    tex.Height   = h;
+    tex.Channels = ch;
+    tex.Path     = path;
+
+    GLenum fmt      = ChannelsToFormat(ch);
+    GLenum intFmt   = ChannelsToInternalFormat(ch, spec.sRGB);
+
+    glGenTextures(1, &tex.ID);
+    glBindTexture(GL_TEXTURE_2D, tex.ID);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, intFmt, w, h, 0,
+                 fmt, GL_UNSIGNED_BYTE, data);
+
+    if (spec.GenerateMips)
         glGenerateMipmap(GL_TEXTURE_2D);
-        glBindTexture(GL_TEXTURE_2D, 0);
-        return;
-    }
 
-    if (channels != 3 && channels != 4) {
-        logWarn("\"" + std::string(path) + "\" has " + std::to_string(channels) +
-                " channels — expected 3 (RGB) or 4 (RGBA). Visual artifacts may occur.");
-    }
+    ApplySpec(spec);
 
-    GLenum format         = (channels == 4) ? GL_RGBA  : GL_RGB;
-    GLenum internalFormat = (channels == 4) ? GL_RGBA8 : GL_RGB8;
-
-    glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-    glGenerateMipmap(GL_TEXTURE_2D);
-    stbi_image_free(data);
-
-    std::ostringstream oss;
-    oss << "Loaded  \"" << path << "\"  "
-        << width << "x" << height << "  "
-        << channels << "ch  id=" << texID;
-    logInfo(oss.str());
+    // Anisotropia (se disponível)
+    float maxAniso = 0.0f;
+    glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &maxAniso);
+    if (maxAniso > 0.0f)
+        glTexParameterf(GL_TEXTURE_2D,
+            GL_TEXTURE_MAX_ANISOTROPY, std::min(maxAniso, 8.0f));
 
     glBindTexture(GL_TEXTURE_2D, 0);
+    stbi_image_free(data);
+
+    std::cout << "[TextureLoader] " << path
+              << " (" << w << "x" << h << " " << ch << "ch)\n";
+    return tex;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Interface original — mantida para compatibilidade com Chunk.cpp
-// Uso: TextureLoader(textures[0], "assets/grass_top.png");
+//  TextureLoader::LoadHDR
 // ─────────────────────────────────────────────────────────────────────────────
-TextureLoader::TextureLoader(GLuint texID, const char* path) {
-    loadInto(texID, path);
-}
+Texture2D TextureLoader::LoadHDR(const std::string& path)
+{
+    stbi_set_flip_vertically_on_load(true);
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Interface com cache — recomendada para novos sistemas
-// Uso: GLuint id = TextureLoader::load("assets/stone.png");
-// ─────────────────────────────────────────────────────────────────────────────
-GLuint TextureLoader::load(const char* path) {
-    std::string key(path);
-
-    auto it = s_cache.find(key);
-    if (it != s_cache.end()) {
-        logInfo("Cache hit  \"" + key + "\"  id=" + std::to_string(it->second));
-        return it->second;
+    int w, h, ch;
+    float* data = stbi_loadf(path.c_str(), &w, &h, &ch, 0);
+    if (!data)
+    {
+        std::cerr << "[TextureLoader] Falha HDR: " << path << "\n";
+        return {};
     }
 
-    GLuint texID = 0;
-    glGenTextures(1, &texID);
-    loadInto(texID, path);
-    s_cache[key] = texID;
-    return texID;
+    Texture2D tex;
+    tex.Width    = w;
+    tex.Height   = h;
+    tex.Channels = ch;
+    tex.Path     = path;
+
+    glGenTextures(1, &tex.ID);
+    glBindTexture(GL_TEXTURE_2D, tex.ID);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, w, h, 0,
+                 GL_RGB, GL_FLOAT, data);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,     GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,     GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    stbi_image_free(data);
+    std::cout << "[TextureLoader] HDR: " << path << " (" << w << "x" << h << ")\n";
+    return tex;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Limpa o cache e deleta as texturas da GPU
-// Chamar em shutdown: TextureLoader::clearCache();
+//  TextureLoader::LoadCubemap
 // ─────────────────────────────────────────────────────────────────────────────
-void TextureLoader::clearCache() {
-    for (auto& [path, id] : s_cache) {
-        glDeleteTextures(1, &id);
-        logInfo("Liberada  \"" + path + "\"  id=" + std::to_string(id));
+GLuint TextureLoader::LoadCubemap(const std::string paths[6])
+{
+    stbi_set_flip_vertically_on_load(false);
+
+    GLuint id;
+    glGenTextures(1, &id);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, id);
+
+    for (int i = 0; i < 6; i++)
+    {
+        int w, h, ch;
+        unsigned char* data = stbi_load(paths[i].c_str(), &w, &h, &ch, 0);
+        if (!data)
+        {
+            std::cerr << "[TextureLoader] Cubemap face " << i
+                      << " falhou: " << paths[i] << "\n";
+            stbi_image_free(data);
+            continue;
+        }
+        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB8,
+                     w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        stbi_image_free(data);
     }
-    s_cache.clear();
+
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+
+    return id;
 }
-} // namespace fractal_engine::graphics

@@ -1,27 +1,15 @@
-# =====================
-# Scene Module
-# =====================
-add_library(FractalEngine_Scene STATIC)
+# src/scene/CMakeLists.txt
 
-target_sources(FractalEngine_Scene PRIVATE
-    Components.cpp
-    Player.cpp
+target_sources(FractalEngineLib PRIVATE
     Scene.cpp
-    Hotbar.cpp
-    SkySystem.cpp
-    HudRenderer.cpp
-)
+    SceneManager.cpp
+    SceneSerializer.cpp
+    SceneFrameBuffer.cpp
 
-target_include_directories(FractalEngine_Scene PUBLIC
-    ${CMAKE_SOURCE_DIR}/include/fractal_engine/scene
+    # ECS
+    ecs/ComponentPool.cpp
+    ecs/Entity.cpp
+    ecs/Registry.cpp
+    ecs/System.cpp
+    
 )
-target_link_libraries(FractalEngine_Scene PUBLIC
-    FractalEngine_Graphics
-    FractalEngine_Input
-    FractalEngine_World
-)
-
-
-if(MINGW OR UNIX)
-    target_compile_options(FractalEngine_Scene PRIVATE -Wall -Wextra)
-endif()

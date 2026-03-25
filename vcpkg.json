@@ -1,0 +1,8 @@
+{
+  "name": "fractal-engine",
+  "version": "0.1.0",
+  "dependencies": [
+    "glfw3", "glm", "assimp", "sdl3",
+    "lua", "entt", "nlohmann-json", "spdlog"
+  ]
+}

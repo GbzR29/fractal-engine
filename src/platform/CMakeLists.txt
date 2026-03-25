@@ -1,16 +1,21 @@
-# =====================
-# Platform Module
-# =====================
-add_library(FractalEngine_Platform STATIC)
+# src/platform/CMakeLists.txt
 
-target_sources(FractalEngine_Platform PRIVATE
+target_sources(FractalEngineLib PRIVATE
     Platform.cpp
 )
 
-target_include_directories(FractalEngine_Platform PUBLIC
-    ${CMAKE_SOURCE_DIR}/include/fractal_engine/platform
-)
-
-if(MINGW OR UNIX)
-    target_compile_options(FractalEngine_Platform PRIVATE -Wall -Wextra)
+if (WIN32)
+    if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/win32/Win32Platform.cpp")
+        target_sources(FractalEngineLib PRIVATE win32/Win32Platform.cpp)
+    else()
+        message(WARNING " [platform] win32/Win32Platform.cpp não encontrado — ignorando.")
+    endif()
+elseif (UNIX AND NOT APPLE)
+    if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/linux/LinuxPlatform.cpp")
+        target_sources(FractalEngineLib PRIVATE linux/LinuxPlatform.cpp)
+    endif()
+elseif (APPLE)
+    if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/macos/MacPlatform.cpp")
+        target_sources(FractalEngineLib PRIVATE macos/MacPlatform.cpp)
+    endif()
 endif()

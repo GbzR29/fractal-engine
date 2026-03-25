@@ -1,16 +1,16 @@
-# =====================
-# Physics Module
-# =====================
-add_library(FractalEngine_Physics STATIC)
+# src/physics/CMakeLists.txt
 
-target_sources(FractalEngine_Physics PRIVATE
+target_sources(FractalEngineLib PRIVATE
+    # collision
+    collision/AABB.cpp
+    collision/BVH.cpp
+    collision/CollisionDetection.cpp
+
+    # dynamics
+    dynamics/Collider.cpp
+    dynamics/Constraint.cpp
+    dynamics/Rigidbody.cpp
+
+    # engine
     PhysicsEngine.cpp
 )
-
-target_include_directories(FractalEngine_Physics PUBLIC
-    ${CMAKE_SOURCE_DIR}/include/fractal_engine/physics
-)
-
-if(MINGW OR UNIX)
-    target_compile_options(FractalEngine_Physics PRIVATE -Wall -Wextra)
-endif()

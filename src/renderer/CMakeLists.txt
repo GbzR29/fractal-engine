@@ -1,24 +1,20 @@
-# =====================
-# Renderer Module
-# =====================
-add_library(FractalEngine_Renderer STATIC)
+# src/renderer/CMakeLists.txt
 
-target_sources(FractalEngine_Renderer PRIVATE
+target_sources(FractalEngineLib PRIVATE
     Mesh.cpp
     MeshBuilder.cpp
     RenderGraph.cpp
     RenderPass.cpp
-    Renderer.cpp
+
+    # Backend OpenGL (sempre ativo)
+    backends/opengl/OpenGLBuffer.cpp
+    backends/opengl/OpenGLRenderer.cpp
+    backends/opengl/OpenGLShader.cpp
+    backends/opengl/OpenGLTexture.cpp
 )
 
-target_include_directories(FractalEngine_Renderer PUBLIC
-    ${CMAKE_SOURCE_DIR}/include/fractal_engine/renderer
-)
-target_link_libraries(FractalEngine_Renderer PUBLIC
-    FractalEngine_Graphics
-)
-
-
-if(MINGW OR UNIX)
-    target_compile_options(FractalEngine_Renderer PRIVATE -Wall -Wextra)
+# Backend Vulkan (opcional)
+if (FE_ENABLE_VULKAN)
+    file(GLOB VULKAN_SOURCES "backends/vulkan/*.cpp")
+    target_sources(FractalEngineLib PRIVATE ${VULKAN_SOURCES})
 endif()

@@ -1,94 +1,108 @@
-#include "fractal_engine/core/Window.h"
+#include "Window.hpp"
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
 
-namespace fractal_engine::core {
-
-Window::Window(int width, int height, const char* title)
-    : window(nullptr), width(width), height(height), title(title)
-{}
-
-Window::~Window()
+bool Window::Init(const WindowProps& props)
 {
-    if (window) glfwDestroyWindow(window);
-    glfwTerminate();
-}
+    m_Props = props;
 
-bool Window::init()
-{
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW\n";
+    glfwSetErrorCallback(ErrorCallback);
+
+    if (!glfwInit())
+    {
+        std::cerr << "[Window] Falha ao inicializar o GLFW.\n";
         return false;
     }
 
+    // ── Hints OpenGL ────────────────────────────────────────────────────────
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE); // começa invisível para centralizar antes de exibir
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
 
-    window = glfwCreateWindow(width, height, title, nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Failed to create GLFW window\n";
+    // ── Criar janela ────────────────────────────────────────────────────────
+    m_Window = glfwCreateWindow(
+        m_Props.Width, m_Props.Height,
+        m_Props.Title.c_str(),
+        nullptr, nullptr
+    );
+
+    if (!m_Window)
+    {
+        std::cerr << "[Window] Falha ao criar a janela GLFW.\n";
         glfwTerminate();
         return false;
     }
 
-    centerWindow(glfwGetPrimaryMonitor());
-    glfwMakeContextCurrent(window);
+    // ── Centralizar na tela ──────────────────────────────────────────────────
+    GLFWmonitor*       monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode    = glfwGetVideoMode(monitor);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cerr << "Failed to initialize GLAD\n";
+    if (monitor && mode)
+    {
+        int posX = (mode->width  - m_Props.Width)  / 2;
+        int posY = (mode->height - m_Props.Height) / 2;
+        glfwSetWindowPos(m_Window, posX, posY);
+    }
+
+    glfwShowWindow(m_Window); // agora exibe já na posição certa
+
+    glfwMakeContextCurrent(m_Window);
+
+    // ── Carregar GLAD ───────────────────────────────────────────────────────
+    if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)))
+    {
+        std::cerr << "[Window] Falha ao inicializar o GLAD.\n";
         return false;
     }
 
-    glEnable(GL_DEPTH_TEST);
+    // ── Viewport & callbacks ─────────────────────────────────────────────────
+    glViewport(0, 0, m_Props.Width, m_Props.Height);
+    glfwSetFramebufferSizeCallback(m_Window, FramebufferSizeCallback);
 
-    glfwSetWindowUserPointer(window, this);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    glfwSetCursorPosCallback      (window, mouse_callback);
-    glfwSetScrollCallback         (window, scroll_callback);           // ← registra
-    glfwSetKeyCallback            (window, key_callback);
-    glfwSetInputMode              (window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    SetVSync(m_Props.VSync);
 
+    std::cout << "[Window] OpenGL " << glGetString(GL_VERSION) << "\n";
     return true;
 }
 
-void Window::centerWindow(GLFWmonitor* monitor)
+void Window::Shutdown()
 {
-    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    int mx, my;
-    glfwGetMonitorPos(monitor, &mx, &my);
-    glfwSetWindowPos(window,
-        mx + (mode->width  - width)  / 2,
-        my + (mode->height - height) / 2);
+    if (m_Window)
+    {
+        glfwDestroyWindow(m_Window);
+        m_Window = nullptr;
+    }
 }
 
-void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void Window::SwapBuffers()
+{
+    glfwSwapBuffers(m_Window);
+}
+
+bool Window::ShouldClose() const
+{
+    return glfwWindowShouldClose(m_Window);
+}
+
+void Window::SetVSync(bool enabled)
+{
+    m_Props.VSync = enabled;
+    glfwSwapInterval(enabled ? 1 : 0);
+}
+
+// ── Callbacks ────────────────────────────────────────────────────────────────
+
+void Window::FramebufferSizeCallback(GLFWwindow* /*window*/, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
 
-void Window::mouse_callback(GLFWwindow* window, double xpos, double ypos)
+void Window::ErrorCallback(int error, const char* description)
 {
-    Window* self = static_cast<Window*>(glfwGetWindowUserPointer(window));
-    self->input.onMouseMove(xpos, ypos);
-    // FIX: removido o std::cout de debug — gerava output massivo todo frame
+    std::cerr << "[GLFW Error " << error << "] " << description << "\n";
 }
-
-// ── Novo ──────────────────────────────────────────────────────────────────────
-void Window::scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-{
-    Window* self = static_cast<Window*>(glfwGetWindowUserPointer(window));
-    self->input.onScroll(xoffset, yoffset);
-}
-
-void Window::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-bool Window::shouldClose() const { return glfwWindowShouldClose(window); }
-void Window::swapBuffers()       { glfwSwapBuffers(window); }
-void Window::pollEvents()        { glfwPollEvents(); }
-GLFWwindow* Window::getNativeWindow() const { return window; }
-
-} // namespace fractal_engine::core

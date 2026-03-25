@@ -1,22 +1,14 @@
-# =====================
-# Graphics Module
-# =====================
-add_library(FractalEngine_Graphics STATIC)
+# src/graphics/CMakeLists.txt
 
-target_sources(FractalEngine_Graphics PRIVATE
+target_sources(FractalEngineLib PRIVATE
     Camera.cpp
+    EditorCamera.cpp
     Framebuffer.cpp
     Material.cpp
     Shader.cpp
     ShaderProgram.cpp
     Texture.cpp
     TextureLoader.cpp
+    ViewportPanel.cpp
+    GLUtils.cpp
 )
-
-target_include_directories(FractalEngine_Graphics PUBLIC
-    ${CMAKE_SOURCE_DIR}/include/fractal_engine/graphics
-)
-
-if(MINGW OR UNIX)
-    target_compile_options(FractalEngine_Graphics PRIVATE -Wall -Wextra)
-endif()

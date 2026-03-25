@@ -1,126 +1,26 @@
-# Git Ignore - Fractal Engine
-
-# =====================
-# Build & Output
-# =====================
+# Build outputs
 build/
-dist/
 bin/
 lib/
-*.exe
-*.out
-*.o
-*.obj
-*.a
-*.lib
-*.dll
-*.so
-*.dylib
 
 # CMake
-CMakeFiles/
 CMakeCache.txt
+CMakeFiles/
 cmake_install.cmake
 Makefile
-*.cmake
 
-# =====================
-# IDE & Editor
-# =====================
+# IDE
 .vscode/
-.vs/
 .idea/
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
-*.sln
-*.sln.DotSettings
-CLion/
-Rider/
+*.user
+*.suo
 
-# VS Code specific
-settings.json
-launch.json
-tasks.json
-.clangd
+# Compiled
+*.o
+*.a
+*.so
+*.dll
+*.exe
 
-# Vim/Neovim
-*.swp
-*.swo
-*~
-.vim/
-
-# Emacs
-*~
-\#*\#
-.\#*
-
-# =====================
-# Dependencies & Packages
-# =====================
-vcpkg
-conan/
-.conan/
-node_modules/
-pip-log.txt
-
-# =====================
-# OS Files
-# =====================
-.DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# =====================
-# Runtime & Logs
-# =====================
+# Logs
 *.log
-*.out
-*.pid
-*.seed
-
-# Debug
-.gdb_history
-.lldb_history
-*.dmp
-
-# =====================
-# Python Cache
-# =====================
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-
-# =====================
-# Temporary Files
-# =====================
-*.tmp
-*.bak
-*.backup
-*~
-.DS_Store
-.directory
-*.swp
-
-# =====================
-# Test Results
-# =====================
-test-results/
-coverage/
-lcov.info
-
-# =====================
-# Documentation Generated
-# =====================
-docs/html/
-docs/latex/
-docs/doxygen/
-
-# =====================
-# Project Specific
-# =====================
-# Adicionar mais conforme necessário

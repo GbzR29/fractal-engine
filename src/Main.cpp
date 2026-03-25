@@ -1,10 +1,14 @@
-#include "fractal_engine/core/Program.h"
+#include "Application.hpp"
 
-/**
- * @brief Application entry point.
- */
 int main()
 {
-    Init_Program();
+    Application app;
+
+    if (!app.Init())
+        return -1;
+
+    app.Run();
+    app.Shutdown();
+
     return 0;
 }
