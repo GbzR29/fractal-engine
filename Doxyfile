@@ -1,0 +1,82 @@
+# Doxyfile — fractal-engine
+# Run: doxygen Doxyfile
+# Output: docs/html/index.html
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Project info
+# ─────────────────────────────────────────────────────────────────────────────
+
+PROJECT_NAME           = "Fractal Engine"
+PROJECT_BRIEF          = "C++23 game engine with OpenGL 4.6 Core Profile, ImGui editor, PBR rendering, and Lua scripting."
+PROJECT_NUMBER         = 0.1.0
+OUTPUT_DIRECTORY       = docs
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Input
+# ─────────────────────────────────────────────────────────────────────────────
+
+INPUT                  = include src
+FILE_PATTERNS          = *.hpp *.cpp
+RECURSIVE              = YES
+
+# Exclude vendored third-party headers
+EXCLUDE_PATTERNS       = */third_party/* */build/* */external/*
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Source browsing
+# ─────────────────────────────────────────────────────────────────────────────
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Output formats
+# ─────────────────────────────────────────────────────────────────────────────
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_COLORSTYLE        = DARK
+
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_XML           = NO
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Diagrams (requires Graphviz dot)
+# ─────────────────────────────────────────────────────────────────────────────
+
+HAVE_DOT               = YES
+DOT_NUM_THREADS        = 4
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+UML_LOOK               = YES
+DOT_IMAGE_FORMAT       = svg
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Preprocessor
+# ─────────────────────────────────────────────────────────────────────────────
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+PREDEFINED             = FE_USE_ASSIMP FE_ENABLE_LUA
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Warnings
+# ─────────────────────────────────────────────────────────────────────────────
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+WARN_LOGFILE           = docs/doxygen_warnings.log

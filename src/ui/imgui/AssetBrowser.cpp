@@ -1,48 +1,38 @@
 #include "AssetBrowser.hpp"
+#include "AssetLoader.hpp"
+#include "EditorTheme.hpp"
+
 #include <imgui.h>
 #include <algorithm>
 #include <cstring>
 #include <cctype>
+#include <iostream>
+
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <shellapi.h>
+#endif
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Dados estáticos
+//  Statics
 // ─────────────────────────────────────────────────────────────────────────────
 
-const char* AssetBrowser::s_Folders[] = {
-    "assets/",
-    "  animations/",
-    "  audio/",
-    "  fonts/",
-    "  models/",
-    "  scenes/",
-    "  shaders/",
-    "  textures/",
-};
-
-const char* AssetBrowser::s_Files[] = {
-    "cube.obj",      "sphere.obj",    "player.fbx",
-    "diffuse.png",   "normal.png",    "roughness.png",
-    "scene_001.json","main.lua",
-    "default.vert",  "default.frag",
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-//  Helpers internos (file-local)
-// ─────────────────────────────────────────────────────────────────────────────
-
-static std::string s_ToLower(const std::string& s) {
+std::string AssetBrowser::ToLower(const std::string& s)
+{
     std::string r = s;
     std::transform(r.begin(), r.end(), r.begin(), ::tolower);
     return r;
 }
 
-static std::string s_ExtractExt(const std::string& fname) {
+std::string AssetBrowser::ExtractExt(const std::string& fname)
+{
     auto dot = fname.rfind('.');
-    return (dot != std::string::npos) ? s_ToLower(fname.substr(dot + 1)) : "";
+    return (dot != std::string::npos) ? ToLower(fname.substr(dot + 1)) : "";
 }
 
-// Abrevia nome longo com "..." para caber na célula
-static std::string s_Truncate(const std::string& s, float maxW) {
+std::string AssetBrowser::Truncate(const std::string& s, float maxW)
+{
     if (ImGui::CalcTextSize(s.c_str()).x <= maxW) return s;
     std::string t = s;
     while (t.size() > 3 && ImGui::CalcTextSize((t + "...").c_str()).x > maxW)
@@ -54,31 +44,124 @@ static std::string s_Truncate(const std::string& s, float maxW) {
 //  Constructor
 // ─────────────────────────────────────────────────────────────────────────────
 
-AssetBrowser::AssetBrowser() {
+AssetBrowser::AssetBrowser()
+{
+    // Usa o assetsRoot já configurado no AssetLoader (default = "assets")
+    SetAssetsRoot(AssetLoader::assetsRoot());
+}
+
+void AssetBrowser::SetAssetsRoot(const fs::path& root)
+{
+    m_RootPath   = fs::absolute(root);
+    m_CurrentDir = m_RootPath;
     RebuildEntries();
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  API pública — injeção de preview de textura
+//  Filesystem helpers
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::RegisterTexturePreview(const std::string& filename, uint32_t texID) {
-    m_PreviewCache[filename] = texID;
+std::string AssetBrowser::RelativeTo(const fs::path& absPath) const
+{
+    std::error_code ec;
+    auto rel = fs::relative(absPath, m_RootPath, ec);
+    return ec ? absPath.generic_string() : rel.generic_string();
+}
+
+void AssetBrowser::NavigateTo(const fs::path& dir)
+{
+    if (fs::exists(dir) && fs::is_directory(dir)) {
+        m_CurrentDir  = dir;
+        m_SelectedIdx = -1;
+        RebuildEntries();
+    }
+}
+
+bool AssetBrowser::ImportFile(const fs::path& src)
+{
+    if (!fs::exists(src) || !fs::is_regular_file(src)) {
+        std::cerr << "[AssetBrowser] Import: arquivo não existe: " << src << "\n";
+        return false;
+    }
+
+    fs::path dest = m_CurrentDir / src.filename();
+
+    // Evita sobrescrever sem querer
+    if (fs::exists(dest)) {
+        std::string stem = src.stem().string();
+        std::string ext  = src.extension().string();
+        int n = 1;
+        do {
+            dest = m_CurrentDir / (stem + "_" + std::to_string(n++) + ext);
+        } while (fs::exists(dest));
+    }
+
+    std::error_code ec;
+    fs::copy_file(src, dest, fs::copy_options::none, ec);
+    if (ec) {
+        std::cerr << "[AssetBrowser] Import falhou: " << ec.message() << "\n";
+        return false;
+    }
+
+    std::cout << "[AssetBrowser] Importado: " << dest << "\n";
+    RebuildEntries();
+    return true;
+}
+
+bool AssetBrowser::DeleteEntry(int idx)
+{
+    if (idx < 0 || idx >= (int)m_AllEntries.size()) return false;
+
+    std::error_code ec;
+    fs::remove(m_AllEntries[idx].absolutePath, ec);
+    if (ec) {
+        std::cerr << "[AssetBrowser] Delete falhou: " << ec.message() << "\n";
+        return false;
+    }
+
+    m_SelectedIdx = -1;
+    RebuildEntries();
+    return true;
+}
+
+void AssetBrowser::ShowInExplorer(const fs::path& path) const
+{
+#ifdef _WIN32
+    std::string cmd = "explorer /select,\"" + path.string() + "\"";
+    std::replace(cmd.begin(), cmd.end(), '/', '\\');
+    system(cmd.c_str());
+#endif
+}
+
+void AssetBrowser::CopyPathToClipboard(const std::string& relPath) const
+{
+    ImGui::SetClipboardText(relPath.c_str());
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  RegisterTexturePreview
+// ─────────────────────────────────────────────────────────────────────────────
+
+void AssetBrowser::RegisterTexturePreview(const std::string& relativePath, uint32_t texID)
+{
+    m_PreviewCache[relativePath] = texID;
     for (auto& e : m_AllEntries)
-        if (e.name == filename) { e.previewTexID = texID; break; }
+        if (e.relativePath == relativePath) { e.previewTexID = texID; break; }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  Mapeamento ext → categoria
 // ─────────────────────────────────────────────────────────────────────────────
 
-AssetFilterType AssetBrowser::CategoryForExt(const std::string& ext) const {
-    if (ext == "obj" || ext == "fbx" || ext == "gltf" || ext == "glb")
+AssetFilterType AssetBrowser::CategoryForExt(const std::string& ext) const
+{
+    if (ext == "obj"  || ext == "fbx"  || ext == "gltf" || ext == "glb"  ||
+        ext == "dae"  || ext == "blend" || ext == "3ds"  || ext == "stl")
         return AssetFilterType::Mesh;
-    if (ext == "png"  || ext == "jpg"  || ext == "jpeg" ||
-        ext == "tga"  || ext == "hdr"  || ext == "exr")
+    if (ext == "png"  || ext == "jpg"  || ext == "jpeg" || ext == "tga"  ||
+        ext == "bmp"  || ext == "hdr"  || ext == "exr")
         return AssetFilterType::Texture;
-    if (ext == "vert" || ext == "frag" || ext == "glsl" || ext == "hlsl" || ext == "comp")
+    if (ext == "vert" || ext == "frag" || ext == "glsl" || ext == "comp" || ext == "geom")
         return AssetFilterType::Shader;
     if (ext == "lua"  || ext == "py"   || ext == "js")
         return AssetFilterType::Script;
@@ -93,7 +176,8 @@ AssetFilterType AssetBrowser::CategoryForExt(const std::string& ext) const {
 //  Ícone e cor por extensão
 // ─────────────────────────────────────────────────────────────────────────────
 
-const char* AssetBrowser::GetIconForExt(const std::string& ext) const {
+const char* AssetBrowser::GetIconForExt(const std::string& ext) const
+{
     switch (CategoryForExt(ext)) {
         case AssetFilterType::Mesh:    return "[M]";
         case AssetFilterType::Texture: return "[T]";
@@ -105,15 +189,13 @@ const char* AssetBrowser::GetIconForExt(const std::string& ext) const {
     }
 }
 
-ImVec4 AssetBrowser::GetColorForExt(const std::string& ext) const {
+ImVec4 AssetBrowser::GetColorForExt(const std::string& ext) const
+{
     return GetColorForFilter(CategoryForExt(ext));
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  Labels e cores dos filtros
-// ─────────────────────────────────────────────────────────────────────────────
-
-const char* AssetBrowser::GetLabelForFilter(AssetFilterType f) const {
+const char* AssetBrowser::GetLabelForFilter(AssetFilterType f) const
+{
     switch (f) {
         case AssetFilterType::All:     return "Todos";
         case AssetFilterType::Mesh:    return "Mesh";
@@ -126,7 +208,8 @@ const char* AssetBrowser::GetLabelForFilter(AssetFilterType f) const {
     }
 }
 
-ImVec4 AssetBrowser::GetColorForFilter(AssetFilterType f) const {
+ImVec4 AssetBrowser::GetColorForFilter(AssetFilterType f) const
+{
     switch (f) {
         case AssetFilterType::Mesh:    return { 0.40f, 0.75f, 0.95f, 1.0f };
         case AssetFilterType::Texture: return { 0.85f, 0.65f, 0.25f, 1.0f };
@@ -139,53 +222,63 @@ ImVec4 AssetBrowser::GetColorForFilter(AssetFilterType f) const {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  RebuildEntries — popula m_AllEntries a partir dos dados estáticos
+//  RebuildEntries — lê o diretório atual do disco
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::RebuildEntries() {
-    int count = (int)(sizeof(s_Files) / sizeof(s_Files[0]));
+void AssetBrowser::RebuildEntries()
+{
     m_AllEntries.clear();
-    m_AllEntries.reserve(count);
+    m_SubDirs.clear();
 
-    for (int i = 0; i < count; ++i) {
+    if (!fs::exists(m_CurrentDir) || !fs::is_directory(m_CurrentDir)) {
+        m_ListDirty = true;
+        return;
+    }
+
+    std::error_code ec;
+    for (const auto& entry : fs::directory_iterator(m_CurrentDir, ec)) {
+        if (entry.is_directory(ec)) {
+            m_SubDirs.push_back(entry.path());
+            continue;
+        }
+        if (!entry.is_regular_file(ec)) continue;
+
         AssetEntry e;
-        e.name     = s_Files[i];
-        e.ext      = s_ExtractExt(e.name);
-        e.category = CategoryForExt(e.ext);
+        e.absolutePath = entry.path();
+        e.name         = entry.path().filename().string();
+        e.ext          = ExtractExt(e.name);
+        e.category     = CategoryForExt(e.ext);
+        e.relativePath = RelativeTo(entry.path());
 
-        // Reaproveita preview já injetado (caso pasta mude e recarregue)
-        auto it = m_PreviewCache.find(e.name);
+        auto it = m_PreviewCache.find(e.relativePath);
         if (it != m_PreviewCache.end())
             e.previewTexID = it->second;
 
         m_AllEntries.push_back(std::move(e));
     }
+
+    // Ordena subpastas por nome
+    std::sort(m_SubDirs.begin(), m_SubDirs.end());
+
     m_ListDirty = true;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  RebuildFiltered — aplica busca + filtro de tipo + ordenação
+//  RebuildFiltered
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::RebuildFiltered() {
+void AssetBrowser::RebuildFiltered()
+{
     m_Filtered.clear();
-    std::string search = s_ToLower(m_SearchBuf);
+    std::string search = ToLower(m_SearchBuf);
 
     for (int i = 0; i < (int)m_AllEntries.size(); ++i) {
         const auto& e = m_AllEntries[i];
-
-        // Filtro de tipo
-        if (m_FilterType != AssetFilterType::All && e.category != m_FilterType)
-            continue;
-
-        // Filtro de busca
-        if (!search.empty() && s_ToLower(e.name).find(search) == std::string::npos)
-            continue;
-
+        if (m_FilterType != AssetFilterType::All && e.category != m_FilterType) continue;
+        if (!search.empty() && ToLower(e.name).find(search) == std::string::npos) continue;
         m_Filtered.push_back(i);
     }
 
-    // Ordenação
     std::sort(m_Filtered.begin(), m_Filtered.end(),
         [&](int a, int b) {
             const auto& ea = m_AllEntries[a];
@@ -207,8 +300,8 @@ void AssetBrowser::RebuildFiltered() {
 //  Draw — ponto de entrada
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::Draw() {
-    // Rebuild lazy — só quando necessário
+void AssetBrowser::Draw()
+{
     if (m_ListDirty) RebuildFiltered();
 
     ImGui::PushStyleColor(ImGuiCol_WindowBg, EditorTheme::Color::BgBase);
@@ -218,9 +311,9 @@ void AssetBrowser::Draw() {
         DrawFilterTabs();
         ImGui::Separator();
 
-        float totalW = ImGui::GetContentRegionAvail().x;
-        constexpr float kTreeW = 138.0f;
-        float gridW = totalW - kTreeW - ImGui::GetStyle().ItemSpacing.x;
+        float totalW  = ImGui::GetContentRegionAvail().x;
+        constexpr float kTreeW = 148.0f;
+        float gridW   = totalW - kTreeW - ImGui::GetStyle().ItemSpacing.x;
 
         ImGui::BeginChild("##FolderPanel", { kTreeW, -ImGui::GetFrameHeightWithSpacing() }, false);
         DrawFolderTree();
@@ -237,28 +330,27 @@ void AssetBrowser::Draw() {
 
     ImGui::End();
     ImGui::PopStyleColor();
+
+    // Popups e modais fora da janela principal para evitar empilhamento de estilos
+    DrawImportPopup();
+    DrawDeleteConfirmModal();
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Toolbar — busca + sort + tamanho de ícone + import
+//  Toolbar
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawToolbar() {
-    // Breadcrumb
+void AssetBrowser::DrawToolbar()
+{
     DrawBreadcrumb();
 
-    // ── Linha de controles ────────────────────────────────────────────────────
     ImGui::PushStyleColor(ImGuiCol_FrameBg, EditorTheme::Color::BgInput);
 
-    // Busca
     ImGui::SetNextItemWidth(180.0f);
-    bool searchChanged = ImGui::InputTextWithHint(
-        "##search", "Buscar assets...", m_SearchBuf, sizeof(m_SearchBuf));
-    if (searchChanged) m_ListDirty = true;
+    if (ImGui::InputTextWithHint("##search", "Buscar assets...", m_SearchBuf, sizeof(m_SearchBuf)))
+        m_ListDirty = true;
 
     ImGui::SameLine();
-
-    // Sort
     ImGui::SetNextItemWidth(110.0f);
     const char* sortLabels[] = { "Nome A-Z", "Nome Z-A", "Tipo" };
     int sortIdx = (int)m_SortMode;
@@ -268,57 +360,78 @@ void AssetBrowser::DrawToolbar() {
     }
 
     ImGui::SameLine();
-
-    // Slider de tamanho de ícone
     ImGui::SetNextItemWidth(80.0f);
     ImGui::PushStyleColor(ImGuiCol_SliderGrab,       EditorTheme::Color::Accent);
     ImGui::PushStyleColor(ImGuiCol_SliderGrabActive, EditorTheme::Color::AccentActive);
     ImGui::SliderFloat("##iconSize", &m_IconSize, 40.0f, 96.0f, "%.0f px");
     ImGui::PopStyleColor(2);
 
-    // Botão Import alinhado à direita
-    ImGui::SameLine(ImGui::GetContentRegionAvail().x + ImGui::GetCursorPosX() - 62.0f);
+    // Botão Refresh
+    ImGui::SameLine();
     ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::BgPanel);
     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::BgHover);
-    ImGui::Button("Import", { 60.0f, 22.0f });
+    if (ImGui::Button("Refresh", { 58.0f, 22.0f })) {
+        SetAssetsRoot(AssetLoader::assetsRoot()); // reseta root e recarrega
+    }
+    ImGui::PopStyleColor(2);
+
+    // Botão Import alinhado à direita
+    ImGui::SameLine(ImGui::GetContentRegionAvail().x + ImGui::GetCursorPosX() - 62.0f);
+    ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::Accent);
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::AccentHover);
+    if (ImGui::Button("Import", { 60.0f, 22.0f })) {
+        m_ShowImportPopup = true;
+        m_ImportSrcBuf[0] = '\0';
+    }
     ImGui::PopStyleColor(2);
 
     ImGui::PopStyleColor(); // FrameBg
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Breadcrumb — caminho atual
+//  Breadcrumb
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawBreadcrumb() {
-    ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
-    ImGui::Text(">");
-    ImGui::PopStyleColor();
+void AssetBrowser::DrawBreadcrumb()
+{
+    // Botão voltar
+    bool atRoot = (m_CurrentDir == m_RootPath);
+    ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::BgPanel);
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::BgHover);
+    if (ImGui::Button("<", { 20, 20 }) && !atRoot)
+        NavigateTo(m_CurrentDir.parent_path());
+    ImGui::PopStyleColor(2);
     ImGui::SameLine();
+
+    // Caminho atual relativo ao root
+    std::string relStr = RelativeTo(m_CurrentDir);
+    if (relStr == ".") relStr = "assets/";
+    else               relStr = "assets/" + relStr + "/";
+
     ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Accent);
-    ImGui::Text("%s", m_CurrentPath.c_str());
+    ImGui::Text("%s", relStr.c_str());
     ImGui::PopStyleColor();
+    ImGui::Spacing();
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Filter tabs — botões de tipo coloridos
+//  Filter tabs
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawFilterTabs() {
-    ImGui::Spacing();
+void AssetBrowser::DrawFilterTabs()
+{
     ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 10.0f);
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing,   { 4.0f, 4.0f });
 
     for (int i = 0; i < (int)AssetFilterType::COUNT; ++i) {
-        auto  f       = (AssetFilterType)i;
-        bool  active  = (m_FilterType == f);
+        auto   f      = (AssetFilterType)i;
+        bool   active = (m_FilterType == f);
         ImVec4 col    = (f == AssetFilterType::All)
                         ? EditorTheme::Color::Accent
                         : GetColorForFilter(f);
 
-        // Botão ativo = cor cheia; inativo = escurecido
-        ImVec4 btnCol   = active ? col : ImVec4{ col.x * 0.35f, col.y * 0.35f, col.z * 0.35f, 1.0f };
-        ImVec4 hoverCol = active ? col : ImVec4{ col.x * 0.55f, col.y * 0.55f, col.z * 0.55f, 1.0f };
+        ImVec4 btnCol   = active ? col : ImVec4{col.x*0.35f, col.y*0.35f, col.z*0.35f, 1.0f};
+        ImVec4 hoverCol = active ? col : ImVec4{col.x*0.55f, col.y*0.55f, col.z*0.55f, 1.0f};
 
         ImGui::PushStyleColor(ImGuiCol_Button,        btnCol);
         ImGui::PushStyleColor(ImGuiCol_ButtonHovered, hoverCol);
@@ -326,30 +439,18 @@ void AssetBrowser::DrawFilterTabs() {
         ImGui::PushStyleColor(ImGuiCol_Text,
             active ? ImVec4{0.05f,0.05f,0.05f,1.0f} : EditorTheme::Color::TextDim);
 
-        // Conta quantos assets tem nesse tipo (exceto "Todos")
         int cnt = 0;
-        if (f == AssetFilterType::All) {
-            cnt = (int)m_AllEntries.size();
-        } else {
-            for (const auto& e : m_AllEntries)
-                if (e.category == f) cnt++;
-        }
+        if (f == AssetFilterType::All) cnt = (int)m_AllEntries.size();
+        else for (const auto& e : m_AllEntries) if (e.category == f) cnt++;
 
         char label[32];
-        if (cnt > 0)
-            snprintf(label, sizeof(label), " %s (%d) ", GetLabelForFilter(f), cnt);
-        else
-            snprintf(label, sizeof(label), " %s ", GetLabelForFilter(f));
+        if (cnt > 0) snprintf(label, sizeof(label), " %s (%d) ", GetLabelForFilter(f), cnt);
+        else         snprintf(label, sizeof(label), " %s ",       GetLabelForFilter(f));
 
-        if (ImGui::Button(label)) {
-            m_FilterType = f;
-            m_ListDirty  = true;
-        }
+        if (ImGui::Button(label)) { m_FilterType = f; m_ListDirty = true; }
 
         ImGui::PopStyleColor(4);
-
-        if (i < (int)AssetFilterType::COUNT - 1)
-            ImGui::SameLine();
+        if (i < (int)AssetFilterType::COUNT - 1) ImGui::SameLine();
     }
 
     ImGui::PopStyleVar(2);
@@ -357,54 +458,90 @@ void AssetBrowser::DrawFilterTabs() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Folder tree (esquerda)
+//  Folder tree — subpastas do diretório atual + root
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawFolderTree() {
+void AssetBrowser::DrawFolderTree()
+{
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, { 4.0f, 3.0f });
 
-    int nFolders = (int)(sizeof(s_Folders) / sizeof(s_Folders[0]));
+    // ── Root ─────────────────────────────────────────────────────────────────
+    bool rootSel = (m_CurrentDir == m_RootPath);
+    ImGui::PushStyleColor(ImGuiCol_HeaderHovered, EditorTheme::Color::BgHover);
+    ImGui::PushStyleColor(ImGuiCol_Header,        EditorTheme::Color::AccentDim);
+    ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Accent);
+    ImGui::Text("[*]");
+    ImGui::PopStyleColor();
+    ImGui::SameLine();
+    ImGui::PushStyleColor(ImGuiCol_Text,
+        rootSel ? EditorTheme::Color::TextBright : EditorTheme::Color::TextNormal);
+    if (ImGui::Selectable("assets/", rootSel))
+        NavigateTo(m_RootPath);
+    ImGui::PopStyleColor(3);
 
-    for (int i = 0; i < nFolders; ++i) {
-        const char* label = s_Folders[i];
-        bool sel = (m_CurrentPath == label);
-        bool isRoot = (label[0] != ' ');   // sem indentação = raiz
+    // ── Subpastas imediatas do root ───────────────────────────────────────────
+    std::vector<fs::path> rootDirs;
+    std::error_code ec;
+    for (const auto& e : fs::directory_iterator(m_RootPath, ec))
+        if (e.is_directory(ec)) rootDirs.push_back(e.path());
+    std::sort(rootDirs.begin(), rootDirs.end());
 
-        ImGui::PushStyleColor(ImGuiCol_HeaderHovered, EditorTheme::Color::BgHover);   // 1
-        ImGui::PushStyleColor(ImGuiCol_Header,        EditorTheme::Color::AccentDim); // 2
-
-        // Ícone de pasta
-        ImGui::PushStyleColor(ImGuiCol_Text,                                           // 3
-            isRoot ? EditorTheme::Color::Accent : EditorTheme::Color::TextDim);
-        ImGui::Text(isRoot ? "[*]" : " >");
-        ImGui::PopStyleColor();                                                         // -3
+    for (const auto& dir : rootDirs) {
+        bool sel = (m_CurrentDir == dir);
+        ImGui::PushStyleColor(ImGuiCol_HeaderHovered, EditorTheme::Color::BgHover);
+        ImGui::PushStyleColor(ImGuiCol_Header,        EditorTheme::Color::AccentDim);
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+        ImGui::Text("  >");
+        ImGui::PopStyleColor();
         ImGui::SameLine();
-
-        // Cor do texto do Selectable
-        ImGui::PushStyleColor(ImGuiCol_Text,                                           // 3
+        ImGui::PushStyleColor(ImGuiCol_Text,
             sel ? EditorTheme::Color::TextBright : EditorTheme::Color::TextDim);
+        std::string label = "  " + dir.filename().string() + "/";
+        if (ImGui::Selectable(label.c_str(), sel))
+            NavigateTo(dir);
+        ImGui::PopStyleColor(3);
+    }
 
-        if (ImGui::Selectable(label, sel, ImGuiSelectableFlags_None, { 0.0f, 0.0f })) {
-            m_CurrentPath = label;
-            RebuildEntries();
+    // ── Subpastas do diretório atual (se não for root) ────────────────────────
+    if (m_CurrentDir != m_RootPath) {
+        ImGui::Separator();
+        for (const auto& sub : m_SubDirs) {
+            bool sel = (m_CurrentDir == sub);
+            ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+            ImGui::Text("    >");
+            ImGui::PopStyleColor();
+            ImGui::SameLine();
+            ImGui::PushStyleColor(ImGuiCol_Text,
+                sel ? EditorTheme::Color::TextBright : EditorTheme::Color::TextDim);
+            std::string subLabel = "    " + sub.filename().string() + "/";
+            if (ImGui::Selectable(subLabel.c_str(), sel))
+                NavigateTo(sub);
+            ImGui::PopStyleColor();
         }
-
-        ImGui::PopStyleColor(3); // Header, HeaderHovered, Text
     }
 
     ImGui::PopStyleVar();
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  File grid (direita) — com preview de textura
+//  File grid
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawFileGrid() {
-    if (m_Filtered.empty()) {
-        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+void AssetBrowser::DrawFileGrid()
+{
+    // Quando a pasta está vazia mostra dica de como importar
+    if (m_AllEntries.empty()) {
         ImGui::Spacing();
-        ImGui::SetCursorPosX(
-            ImGui::GetCursorPosX() + ImGui::GetContentRegionAvail().x * 0.5f - 60.0f);
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+        ImGui::TextWrapped("Pasta vazia.");
+        ImGui::TextWrapped("Use o botao Import (canto superior direito) para adicionar arquivos.");
+        ImGui::PopStyleColor();
+        return;
+    }
+
+    if (m_Filtered.empty()) {
+        ImGui::Spacing();
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
         ImGui::Text("Nenhum asset encontrado.");
         ImGui::PopStyleColor();
         return;
@@ -415,15 +552,10 @@ void AssetBrowser::DrawFileGrid() {
     const float avail = ImGui::GetContentRegionAvail().x;
     const int   cols  = std::max(1, (int)(avail / cellW));
 
-    // ── BeginTable — cada coluna tem largura fixa e gerencia cursor sozinha ──
-    // ImGuiTableFlags_NoPadOuterX remove padding lateral da tabela inteira.
-    // Sem borders para parecer grade livre, não tabela de dados.
     const ImGuiTableFlags tableFlags =
-        ImGuiTableFlags_NoPadOuterX |
-        ImGuiTableFlags_SizingFixedSame;
+        ImGuiTableFlags_NoPadOuterX | ImGuiTableFlags_SizingFixedSame;
 
-    if (!ImGui::BeginTable("##assetGrid", cols, tableFlags))
-        return;
+    if (!ImGui::BeginTable("##assetGrid", cols, tableFlags)) return;
 
     for (int col = 0; col < cols; ++col)
         ImGui::TableSetupColumn("", ImGuiTableColumnFlags_WidthFixed, m_IconSize + pad);
@@ -432,7 +564,7 @@ void AssetBrowser::DrawFileGrid() {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing,   { pad, pad });
 
     for (int fi = 0; fi < (int)m_Filtered.size(); ++fi) {
-        ImGui::TableNextColumn();   // avança coluna; quebra linha automaticamente
+        ImGui::TableNextColumn();
 
         const int         idx = m_Filtered[fi];
         const AssetEntry& e   = m_AllEntries[idx];
@@ -440,7 +572,6 @@ void AssetBrowser::DrawFileGrid() {
 
         ImGui::PushID(idx);
 
-        // ── Botão base ────────────────────────────────────────────────────────
         ImVec4 btnBg = sel ? EditorTheme::Color::AccentDim : EditorTheme::Color::BgPanel;
         ImGui::PushStyleColor(ImGuiCol_Button,        btnBg);
         ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::BgHover);
@@ -452,34 +583,21 @@ void AssetBrowser::DrawFileGrid() {
         if (ImGui::IsItemClicked())
             m_SelectedIdx = idx;
         if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
-            if (m_DropCallback) m_DropCallback(e.name);
+            if (m_DropCallback) m_DropCallback(e.relativePath);
 
         ImGui::PopStyleColor(3);
 
-        // ── Preview de textura ou ícone colorido ──────────────────────────────
+        // ── Ícone / Preview ───────────────────────────────────────────────────
         ImDrawList* dl = ImGui::GetWindowDrawList();
 
         if (e.previewTexID != 0) {
             const float inset = 4.0f;
             dl->AddImage(
                 (ImTextureID)(uintptr_t)e.previewTexID,
-                { btnPos.x + inset,              btnPos.y + inset },
+                { btnPos.x + inset, btnPos.y + inset },
                 { btnPos.x + m_IconSize - inset, btnPos.y + m_IconSize - inset },
                 { 0, 0 }, { 1, 1 });
-
-            // Badge de tipo no canto superior-direito
-            const char* badge    = GetIconForExt(e.ext);
-            ImVec4      badgeCol = GetColorForExt(e.ext);
-            ImVec2      badgeSz  = ImGui::CalcTextSize(badge);
-            dl->AddRectFilled(
-                { btnPos.x + m_IconSize - badgeSz.x - 6.0f, btnPos.y + 2.0f },
-                { btnPos.x + m_IconSize - 2.0f,             btnPos.y + badgeSz.y + 4.0f },
-                ImGui::ColorConvertFloat4ToU32({ 0.0f, 0.0f, 0.0f, 0.7f }), 3.0f);
-            dl->AddText(
-                { btnPos.x + m_IconSize - badgeSz.x - 4.0f, btnPos.y + 3.0f },
-                ImGui::ColorConvertFloat4ToU32(badgeCol), badge);
-        }
-        else {
+        } else {
             const char* icon   = GetIconForExt(e.ext);
             ImVec4      color  = GetColorForExt(e.ext);
             ImVec2      iconSz = ImGui::CalcTextSize(icon);
@@ -498,7 +616,6 @@ void AssetBrowser::DrawFileGrid() {
             }
         }
 
-        // ── Borda de seleção ──────────────────────────────────────────────────
         if (sel) {
             dl->AddRect(btnPos,
                 { btnPos.x + m_IconSize, btnPos.y + m_IconSize },
@@ -506,9 +623,11 @@ void AssetBrowser::DrawFileGrid() {
                 4.0f, 0, 2.0f);
         }
 
-        // ── Drag & Drop ───────────────────────────────────────────────────────
+        // ── Drag & Drop — usa relativePath como payload ───────────────────────
         if (ImGui::BeginDragDropSource(ImGuiDragDropFlags_SourceAllowNullID)) {
-            ImGui::SetDragDropPayload("ASSET_PATH", e.name.c_str(), e.name.size() + 1);
+            // Payload = caminho relativo (ex: "models/character.fbx")
+            ImGui::SetDragDropPayload("ASSET_PATH",
+                e.relativePath.c_str(), e.relativePath.size() + 1);
             ImGui::PushStyleColor(ImGuiCol_Text, GetColorForExt(e.ext));
             ImGui::Text("%s  %s", GetIconForExt(e.ext), e.name.c_str());
             ImGui::PopStyleColor();
@@ -524,8 +643,9 @@ void AssetBrowser::DrawFileGrid() {
             ImGui::Text("%s", e.name.c_str());
             ImGui::PopStyleColor();
             ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+            ImGui::Text("Caminho: %s", e.relativePath.c_str());
             ImGui::Text("Tipo: .%s", e.ext.c_str());
-            ImGui::Text("Duplo clique para usar");
+            ImGui::Text("Duplo clique ou arraste para usar");
             ImGui::PopStyleColor();
             ImGui::EndTooltip();
         }
@@ -536,21 +656,26 @@ void AssetBrowser::DrawFileGrid() {
             ImGui::Text("%s %s", GetIconForExt(e.ext), e.name.c_str());
             ImGui::PopStyleColor();
             ImGui::Separator();
-            ImGui::MenuItem("Abrir");
-            ImGui::MenuItem("Mostrar no Explorer");
-            ImGui::MenuItem("Copiar caminho");
+
+            if (ImGui::MenuItem("Copiar caminho")) {
+                CopyPathToClipboard(e.relativePath);
+            }
+            if (ImGui::MenuItem("Mostrar no Explorer")) {
+                ShowInExplorer(e.absolutePath);
+            }
+
             ImGui::Separator();
             ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Error);
-            ImGui::MenuItem("Deletar");
+            if (ImGui::MenuItem("Deletar")) {
+                m_ConfirmDeleteIdx = idx;
+            }
             ImGui::PopStyleColor();
             ImGui::EndPopup();
         }
 
-        // ── Label abaixo do ícone ─────────────────────────────────────────────
-        // O label fica dentro da mesma célula da tabela — não interfere no Y
-        // das células vizinhas.
+        // ── Label ─────────────────────────────────────────────────────────────
         {
-            std::string truncated = s_Truncate(e.name, m_IconSize);
+            std::string truncated = Truncate(e.name, m_IconSize);
             float nameW = ImGui::CalcTextSize(truncated.c_str()).x;
             float nameX = ImGui::GetCursorPosX() + (m_IconSize - nameW) * 0.5f;
             ImGui::SetCursorPosX(std::max(ImGui::GetCursorPosX(), nameX));
@@ -568,26 +693,156 @@ void AssetBrowser::DrawFileGrid() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Status bar — rodapé informativo
+//  Status bar
 // ─────────────────────────────────────────────────────────────────────────────
 
-void AssetBrowser::DrawStatusBar() {
+void AssetBrowser::DrawStatusBar()
+{
     ImGui::Separator();
     ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
 
-    // Contagem filtrada vs total
     if ((int)m_Filtered.size() == (int)m_AllEntries.size())
         ImGui::Text("%d assets", (int)m_AllEntries.size());
     else
         ImGui::Text("%d / %d assets", (int)m_Filtered.size(), (int)m_AllEntries.size());
 
-    // Nome do selecionado
     if (m_SelectedIdx >= 0 && m_SelectedIdx < (int)m_AllEntries.size()) {
         ImGui::SameLine();
         ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Accent);
-        ImGui::Text("|  %s", m_AllEntries[m_SelectedIdx].name.c_str());
+        ImGui::Text("|  %s", m_AllEntries[m_SelectedIdx].relativePath.c_str());
         ImGui::PopStyleColor();
     }
 
     ImGui::PopStyleColor();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Import popup
+// ─────────────────────────────────────────────────────────────────────────────
+
+void AssetBrowser::DrawImportPopup()
+{
+    if (m_ShowImportPopup) {
+        ImGui::OpenPopup("ImportAsset");
+        m_ShowImportPopup = false;
+    }
+
+    ImGui::SetNextWindowSize({ 500, 0 }, ImGuiCond_Always);
+    if (ImGui::BeginPopupModal("ImportAsset", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Accent);
+        ImGui::Text("Importar Asset");
+        ImGui::PopStyleColor();
+        ImGui::Separator();
+        ImGui::Spacing();
+
+        // Destino
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+        ImGui::Text("Destino:");
+        ImGui::SameLine();
+        ImGui::PopStyleColor();
+
+        std::string relDir = RelativeTo(m_CurrentDir);
+        if (relDir == ".") relDir = "assets/";
+        else               relDir = "assets/" + relDir + "/";
+
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextNormal);
+        ImGui::Text("%s", relDir.c_str());
+        ImGui::PopStyleColor();
+
+        ImGui::Spacing();
+
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+        ImGui::TextWrapped("Cole o caminho completo do arquivo (ex: C:\\Users\\...\\character.fbx):");
+        ImGui::PopStyleColor();
+        ImGui::Spacing();
+
+        ImGui::PushStyleColor(ImGuiCol_FrameBg, EditorTheme::Color::BgInput);
+        ImGui::SetNextItemWidth(-1.0f);
+        ImGui::InputText("##importSrc", m_ImportSrcBuf, sizeof(m_ImportSrcBuf));
+        ImGui::PopStyleColor();
+
+        ImGui::Spacing();
+        ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+        ImGui::TextWrapped("O arquivo sera copiado para a pasta de destino acima.");
+        ImGui::PopStyleColor();
+        ImGui::Spacing();
+        ImGui::Separator();
+
+        ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::Accent);
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::AccentHover);
+        bool doImport = ImGui::Button("Importar", { 100, 0 });
+        ImGui::PopStyleColor(2);
+
+        ImGui::SameLine();
+
+        ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::BgPanel);
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::BgHover);
+        if (ImGui::Button("Cancelar", { 100, 0 }))
+            ImGui::CloseCurrentPopup();
+        ImGui::PopStyleColor(2);
+
+        if (doImport && m_ImportSrcBuf[0] != '\0') {
+            fs::path src(m_ImportSrcBuf);
+            ImportFile(src);
+            ImGui::CloseCurrentPopup();
+        }
+
+        ImGui::EndPopup();
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Delete confirmation modal
+// ─────────────────────────────────────────────────────────────────────────────
+
+void AssetBrowser::DrawDeleteConfirmModal()
+{
+    if (m_ConfirmDeleteIdx >= 0)
+        ImGui::OpenPopup("ConfirmDelete");
+
+    ImGui::SetNextWindowSize({ 360, 0 }, ImGuiCond_Always);
+    if (ImGui::BeginPopupModal("ConfirmDelete", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+
+        if (m_ConfirmDeleteIdx >= 0 && m_ConfirmDeleteIdx < (int)m_AllEntries.size()) {
+            const auto& e = m_AllEntries[m_ConfirmDeleteIdx];
+
+            ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::Error);
+            ImGui::Text("Deletar arquivo?");
+            ImGui::PopStyleColor();
+            ImGui::Separator();
+            ImGui::Spacing();
+
+            ImGui::PushStyleColor(ImGuiCol_Text, EditorTheme::Color::TextDim);
+            ImGui::TextWrapped("%s", e.absolutePath.string().c_str());
+            ImGui::Spacing();
+            ImGui::TextWrapped("Esta acao nao pode ser desfeita.");
+            ImGui::PopStyleColor();
+            ImGui::Spacing();
+            ImGui::Separator();
+
+            ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::Error);
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{0.8f, 0.2f, 0.2f, 1.0f});
+            if (ImGui::Button("Deletar", { 100, 0 })) {
+                DeleteEntry(m_ConfirmDeleteIdx);
+                m_ConfirmDeleteIdx = -1;
+                ImGui::CloseCurrentPopup();
+            }
+            ImGui::PopStyleColor(2);
+
+            ImGui::SameLine();
+            ImGui::PushStyleColor(ImGuiCol_Button,        EditorTheme::Color::BgPanel);
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, EditorTheme::Color::BgHover);
+            if (ImGui::Button("Cancelar", { 100, 0 })) {
+                m_ConfirmDeleteIdx = -1;
+                ImGui::CloseCurrentPopup();
+            }
+            ImGui::PopStyleColor(2);
+        } else {
+            m_ConfirmDeleteIdx = -1;
+            ImGui::CloseCurrentPopup();
+        }
+
+        ImGui::EndPopup();
+    }
 }

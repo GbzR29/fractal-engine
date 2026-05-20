@@ -12,6 +12,13 @@ void GameViewport::Init(int width, int height)
 
 void GameViewport::BindFramebuffer()
 {
+    // Aplica resize pendente ANTES de renderizar — evita frame preto no resize
+    if (m_PendingW > 0 && m_PendingH > 0)
+    {
+        m_FBO.Resize(m_PendingW, m_PendingH);
+        m_PendingW = 0;
+        m_PendingH = 0;
+    }
     m_FBO.Bind();
     glClearColor(0.05f, 0.05f, 0.06f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -42,8 +49,9 @@ void GameViewport::Begin(bool isPlaying, bool isPaused,
 
     if ((int)avail.x != m_FBO.GetWidth() || (int)avail.y != m_FBO.GetHeight())
     {
-        m_FBO.Resize((int)avail.x, (int)avail.y);
-        m_Size = avail;
+        m_PendingW = (int)avail.x;
+        m_PendingH = (int)avail.y;
+        m_Size     = avail;
     }
 
     // Imagem do FBO

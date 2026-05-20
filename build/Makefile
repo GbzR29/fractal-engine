@@ -119,6 +119,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles\VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
@@ -186,6 +187,32 @@ FractalEngine: cmake_check_build_system
 FractalEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/build
 .PHONY : FractalEngine/fast
+
+#=============================================================================
+# Target rules for targets named zlibstatic
+
+# Build rule for target.
+zlibstatic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zlibstatic
+.PHONY : zlibstatic
+
+# fast build rule for target.
+zlibstatic/fast:
+	$(MAKE) $(MAKESILENT) -f include\third_party\assimp\contrib\zlib\CMakeFiles\zlibstatic.dir\build.make include/third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/build
+.PHONY : zlibstatic/fast
+
+#=============================================================================
+# Target rules for targets named assimp
+
+# Build rule for target.
+assimp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 assimp
+.PHONY : assimp
+
+# fast build rule for target.
+assimp/fast:
+	$(MAKE) $(MAKESILENT) -f include\third_party\assimp\code\CMakeFiles\assimp.dir\build.make include/third_party/assimp/code/CMakeFiles/assimp.dir/build
+.PHONY : assimp/fast
 
 include/third_party/glad/src/glad.obj: include/third_party/glad/src/glad.c.obj
 .PHONY : include/third_party/glad/src/glad.obj
@@ -379,30 +406,6 @@ include/third_party/imguizmo/ImGuizmo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\imguizmo.dir\build.make CMakeFiles/imguizmo.dir/include/third_party/imguizmo/ImGuizmo.cpp.s
 .PHONY : include/third_party/imguizmo/ImGuizmo.cpp.s
 
-src/audio/AudioClip.obj: src/audio/AudioClip.cpp.obj
-.PHONY : src/audio/AudioClip.obj
-
-# target to build an object file
-src/audio/AudioClip.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioClip.cpp.obj
-.PHONY : src/audio/AudioClip.cpp.obj
-
-src/audio/AudioClip.i: src/audio/AudioClip.cpp.i
-.PHONY : src/audio/AudioClip.i
-
-# target to preprocess a source file
-src/audio/AudioClip.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioClip.cpp.i
-.PHONY : src/audio/AudioClip.cpp.i
-
-src/audio/AudioClip.s: src/audio/AudioClip.cpp.s
-.PHONY : src/audio/AudioClip.s
-
-# target to generate assembly for a file
-src/audio/AudioClip.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioClip.cpp.s
-.PHONY : src/audio/AudioClip.cpp.s
-
 src/audio/AudioEngine.obj: src/audio/AudioEngine.cpp.obj
 .PHONY : src/audio/AudioEngine.obj
 
@@ -426,54 +429,6 @@ src/audio/AudioEngine.s: src/audio/AudioEngine.cpp.s
 src/audio/AudioEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioEngine.cpp.s
 .PHONY : src/audio/AudioEngine.cpp.s
-
-src/audio/AudioListener.obj: src/audio/AudioListener.cpp.obj
-.PHONY : src/audio/AudioListener.obj
-
-# target to build an object file
-src/audio/AudioListener.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioListener.cpp.obj
-.PHONY : src/audio/AudioListener.cpp.obj
-
-src/audio/AudioListener.i: src/audio/AudioListener.cpp.i
-.PHONY : src/audio/AudioListener.i
-
-# target to preprocess a source file
-src/audio/AudioListener.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioListener.cpp.i
-.PHONY : src/audio/AudioListener.cpp.i
-
-src/audio/AudioListener.s: src/audio/AudioListener.cpp.s
-.PHONY : src/audio/AudioListener.s
-
-# target to generate assembly for a file
-src/audio/AudioListener.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioListener.cpp.s
-.PHONY : src/audio/AudioListener.cpp.s
-
-src/audio/AudioSource.obj: src/audio/AudioSource.cpp.obj
-.PHONY : src/audio/AudioSource.obj
-
-# target to build an object file
-src/audio/AudioSource.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioSource.cpp.obj
-.PHONY : src/audio/AudioSource.cpp.obj
-
-src/audio/AudioSource.i: src/audio/AudioSource.cpp.i
-.PHONY : src/audio/AudioSource.i
-
-# target to preprocess a source file
-src/audio/AudioSource.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioSource.cpp.i
-.PHONY : src/audio/AudioSource.cpp.i
-
-src/audio/AudioSource.s: src/audio/AudioSource.cpp.s
-.PHONY : src/audio/AudioSource.s
-
-# target to generate assembly for a file
-src/audio/AudioSource.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/audio/AudioSource.cpp.s
-.PHONY : src/audio/AudioSource.cpp.s
 
 src/core/Application.obj: src/core/Application.cpp.obj
 .PHONY : src/core/Application.obj
@@ -499,78 +454,6 @@ src/core/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Application.cpp.s
 .PHONY : src/core/Application.cpp.s
 
-src/core/Engine.obj: src/core/Engine.cpp.obj
-.PHONY : src/core/Engine.obj
-
-# target to build an object file
-src/core/Engine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Engine.cpp.obj
-.PHONY : src/core/Engine.cpp.obj
-
-src/core/Engine.i: src/core/Engine.cpp.i
-.PHONY : src/core/Engine.i
-
-# target to preprocess a source file
-src/core/Engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Engine.cpp.i
-.PHONY : src/core/Engine.cpp.i
-
-src/core/Engine.s: src/core/Engine.cpp.s
-.PHONY : src/core/Engine.s
-
-# target to generate assembly for a file
-src/core/Engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Engine.cpp.s
-.PHONY : src/core/Engine.cpp.s
-
-src/core/EventSystem.obj: src/core/EventSystem.cpp.obj
-.PHONY : src/core/EventSystem.obj
-
-# target to build an object file
-src/core/EventSystem.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/EventSystem.cpp.obj
-.PHONY : src/core/EventSystem.cpp.obj
-
-src/core/EventSystem.i: src/core/EventSystem.cpp.i
-.PHONY : src/core/EventSystem.i
-
-# target to preprocess a source file
-src/core/EventSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/EventSystem.cpp.i
-.PHONY : src/core/EventSystem.cpp.i
-
-src/core/EventSystem.s: src/core/EventSystem.cpp.s
-.PHONY : src/core/EventSystem.s
-
-# target to generate assembly for a file
-src/core/EventSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/EventSystem.cpp.s
-.PHONY : src/core/EventSystem.cpp.s
-
-src/core/Time.obj: src/core/Time.cpp.obj
-.PHONY : src/core/Time.obj
-
-# target to build an object file
-src/core/Time.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Time.cpp.obj
-.PHONY : src/core/Time.cpp.obj
-
-src/core/Time.i: src/core/Time.cpp.i
-.PHONY : src/core/Time.i
-
-# target to preprocess a source file
-src/core/Time.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Time.cpp.i
-.PHONY : src/core/Time.cpp.i
-
-src/core/Time.s: src/core/Time.cpp.s
-.PHONY : src/core/Time.s
-
-# target to generate assembly for a file
-src/core/Time.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Time.cpp.s
-.PHONY : src/core/Time.cpp.s
-
 src/core/Window.obj: src/core/Window.cpp.obj
 .PHONY : src/core/Window.obj
 
@@ -595,30 +478,6 @@ src/core/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/core/Window.cpp.s
 .PHONY : src/core/Window.cpp.s
 
-src/graphics/Camera.obj: src/graphics/Camera.cpp.obj
-.PHONY : src/graphics/Camera.obj
-
-# target to build an object file
-src/graphics/Camera.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Camera.cpp.obj
-.PHONY : src/graphics/Camera.cpp.obj
-
-src/graphics/Camera.i: src/graphics/Camera.cpp.i
-.PHONY : src/graphics/Camera.i
-
-# target to preprocess a source file
-src/graphics/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Camera.cpp.i
-.PHONY : src/graphics/Camera.cpp.i
-
-src/graphics/Camera.s: src/graphics/Camera.cpp.s
-.PHONY : src/graphics/Camera.s
-
-# target to generate assembly for a file
-src/graphics/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Camera.cpp.s
-.PHONY : src/graphics/Camera.cpp.s
-
 src/graphics/EditorCamera.obj: src/graphics/EditorCamera.cpp.obj
 .PHONY : src/graphics/EditorCamera.obj
 
@@ -642,30 +501,6 @@ src/graphics/EditorCamera.s: src/graphics/EditorCamera.cpp.s
 src/graphics/EditorCamera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/EditorCamera.cpp.s
 .PHONY : src/graphics/EditorCamera.cpp.s
-
-src/graphics/Framebuffer.obj: src/graphics/Framebuffer.cpp.obj
-.PHONY : src/graphics/Framebuffer.obj
-
-# target to build an object file
-src/graphics/Framebuffer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Framebuffer.cpp.obj
-.PHONY : src/graphics/Framebuffer.cpp.obj
-
-src/graphics/Framebuffer.i: src/graphics/Framebuffer.cpp.i
-.PHONY : src/graphics/Framebuffer.i
-
-# target to preprocess a source file
-src/graphics/Framebuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Framebuffer.cpp.i
-.PHONY : src/graphics/Framebuffer.cpp.i
-
-src/graphics/Framebuffer.s: src/graphics/Framebuffer.cpp.s
-.PHONY : src/graphics/Framebuffer.s
-
-# target to generate assembly for a file
-src/graphics/Framebuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Framebuffer.cpp.s
-.PHONY : src/graphics/Framebuffer.cpp.s
 
 src/graphics/GLUtils.obj: src/graphics/GLUtils.cpp.obj
 .PHONY : src/graphics/GLUtils.obj
@@ -715,6 +550,30 @@ src/graphics/Material.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Material.cpp.s
 .PHONY : src/graphics/Material.cpp.s
 
+src/graphics/SceneRenderer.obj: src/graphics/SceneRenderer.cpp.obj
+.PHONY : src/graphics/SceneRenderer.obj
+
+# target to build an object file
+src/graphics/SceneRenderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SceneRenderer.cpp.obj
+.PHONY : src/graphics/SceneRenderer.cpp.obj
+
+src/graphics/SceneRenderer.i: src/graphics/SceneRenderer.cpp.i
+.PHONY : src/graphics/SceneRenderer.i
+
+# target to preprocess a source file
+src/graphics/SceneRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SceneRenderer.cpp.i
+.PHONY : src/graphics/SceneRenderer.cpp.i
+
+src/graphics/SceneRenderer.s: src/graphics/SceneRenderer.cpp.s
+.PHONY : src/graphics/SceneRenderer.s
+
+# target to generate assembly for a file
+src/graphics/SceneRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SceneRenderer.cpp.s
+.PHONY : src/graphics/SceneRenderer.cpp.s
+
 src/graphics/Shader.obj: src/graphics/Shader.cpp.obj
 .PHONY : src/graphics/Shader.obj
 
@@ -739,29 +598,29 @@ src/graphics/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/Shader.cpp.s
 .PHONY : src/graphics/Shader.cpp.s
 
-src/graphics/ShaderProgram.obj: src/graphics/ShaderProgram.cpp.obj
-.PHONY : src/graphics/ShaderProgram.obj
+src/graphics/SkyRenderer.obj: src/graphics/SkyRenderer.cpp.obj
+.PHONY : src/graphics/SkyRenderer.obj
 
 # target to build an object file
-src/graphics/ShaderProgram.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/ShaderProgram.cpp.obj
-.PHONY : src/graphics/ShaderProgram.cpp.obj
+src/graphics/SkyRenderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SkyRenderer.cpp.obj
+.PHONY : src/graphics/SkyRenderer.cpp.obj
 
-src/graphics/ShaderProgram.i: src/graphics/ShaderProgram.cpp.i
-.PHONY : src/graphics/ShaderProgram.i
+src/graphics/SkyRenderer.i: src/graphics/SkyRenderer.cpp.i
+.PHONY : src/graphics/SkyRenderer.i
 
 # target to preprocess a source file
-src/graphics/ShaderProgram.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/ShaderProgram.cpp.i
-.PHONY : src/graphics/ShaderProgram.cpp.i
+src/graphics/SkyRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SkyRenderer.cpp.i
+.PHONY : src/graphics/SkyRenderer.cpp.i
 
-src/graphics/ShaderProgram.s: src/graphics/ShaderProgram.cpp.s
-.PHONY : src/graphics/ShaderProgram.s
+src/graphics/SkyRenderer.s: src/graphics/SkyRenderer.cpp.s
+.PHONY : src/graphics/SkyRenderer.s
 
 # target to generate assembly for a file
-src/graphics/ShaderProgram.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/ShaderProgram.cpp.s
-.PHONY : src/graphics/ShaderProgram.cpp.s
+src/graphics/SkyRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/SkyRenderer.cpp.s
+.PHONY : src/graphics/SkyRenderer.cpp.s
 
 src/graphics/Texture.obj: src/graphics/Texture.cpp.obj
 .PHONY : src/graphics/Texture.obj
@@ -835,53 +694,173 @@ src/graphics/ViewportPanel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/ViewportPanel.cpp.s
 .PHONY : src/graphics/ViewportPanel.cpp.s
 
-src/input/Gamepad.obj: src/input/Gamepad.cpp.obj
-.PHONY : src/input/Gamepad.obj
+src/graphics/asset_loader/Animation.obj: src/graphics/asset_loader/Animation.cpp.obj
+.PHONY : src/graphics/asset_loader/Animation.obj
 
 # target to build an object file
-src/input/Gamepad.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Gamepad.cpp.obj
-.PHONY : src/input/Gamepad.cpp.obj
+src/graphics/asset_loader/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Animation.cpp.obj
+.PHONY : src/graphics/asset_loader/Animation.cpp.obj
 
-src/input/Gamepad.i: src/input/Gamepad.cpp.i
-.PHONY : src/input/Gamepad.i
+src/graphics/asset_loader/Animation.i: src/graphics/asset_loader/Animation.cpp.i
+.PHONY : src/graphics/asset_loader/Animation.i
 
 # target to preprocess a source file
-src/input/Gamepad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Gamepad.cpp.i
-.PHONY : src/input/Gamepad.cpp.i
+src/graphics/asset_loader/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Animation.cpp.i
+.PHONY : src/graphics/asset_loader/Animation.cpp.i
 
-src/input/Gamepad.s: src/input/Gamepad.cpp.s
-.PHONY : src/input/Gamepad.s
+src/graphics/asset_loader/Animation.s: src/graphics/asset_loader/Animation.cpp.s
+.PHONY : src/graphics/asset_loader/Animation.s
 
 # target to generate assembly for a file
-src/input/Gamepad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Gamepad.cpp.s
-.PHONY : src/input/Gamepad.cpp.s
+src/graphics/asset_loader/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Animation.cpp.s
+.PHONY : src/graphics/asset_loader/Animation.cpp.s
 
-src/input/InputManager.obj: src/input/InputManager.cpp.obj
-.PHONY : src/input/InputManager.obj
+src/graphics/asset_loader/AssetLoader.obj: src/graphics/asset_loader/AssetLoader.cpp.obj
+.PHONY : src/graphics/asset_loader/AssetLoader.obj
 
 # target to build an object file
-src/input/InputManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/InputManager.cpp.obj
-.PHONY : src/input/InputManager.cpp.obj
+src/graphics/asset_loader/AssetLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetLoader.cpp.obj
+.PHONY : src/graphics/asset_loader/AssetLoader.cpp.obj
 
-src/input/InputManager.i: src/input/InputManager.cpp.i
-.PHONY : src/input/InputManager.i
+src/graphics/asset_loader/AssetLoader.i: src/graphics/asset_loader/AssetLoader.cpp.i
+.PHONY : src/graphics/asset_loader/AssetLoader.i
 
 # target to preprocess a source file
-src/input/InputManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/InputManager.cpp.i
-.PHONY : src/input/InputManager.cpp.i
+src/graphics/asset_loader/AssetLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetLoader.cpp.i
+.PHONY : src/graphics/asset_loader/AssetLoader.cpp.i
 
-src/input/InputManager.s: src/input/InputManager.cpp.s
-.PHONY : src/input/InputManager.s
+src/graphics/asset_loader/AssetLoader.s: src/graphics/asset_loader/AssetLoader.cpp.s
+.PHONY : src/graphics/asset_loader/AssetLoader.s
 
 # target to generate assembly for a file
-src/input/InputManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/InputManager.cpp.s
-.PHONY : src/input/InputManager.cpp.s
+src/graphics/asset_loader/AssetLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetLoader.cpp.s
+.PHONY : src/graphics/asset_loader/AssetLoader.cpp.s
+
+src/graphics/asset_loader/AssetManager.obj: src/graphics/asset_loader/AssetManager.cpp.obj
+.PHONY : src/graphics/asset_loader/AssetManager.obj
+
+# target to build an object file
+src/graphics/asset_loader/AssetManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetManager.cpp.obj
+.PHONY : src/graphics/asset_loader/AssetManager.cpp.obj
+
+src/graphics/asset_loader/AssetManager.i: src/graphics/asset_loader/AssetManager.cpp.i
+.PHONY : src/graphics/asset_loader/AssetManager.i
+
+# target to preprocess a source file
+src/graphics/asset_loader/AssetManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetManager.cpp.i
+.PHONY : src/graphics/asset_loader/AssetManager.cpp.i
+
+src/graphics/asset_loader/AssetManager.s: src/graphics/asset_loader/AssetManager.cpp.s
+.PHONY : src/graphics/asset_loader/AssetManager.s
+
+# target to generate assembly for a file
+src/graphics/asset_loader/AssetManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/AssetManager.cpp.s
+.PHONY : src/graphics/asset_loader/AssetManager.cpp.s
+
+src/graphics/asset_loader/Mesh.obj: src/graphics/asset_loader/Mesh.cpp.obj
+.PHONY : src/graphics/asset_loader/Mesh.obj
+
+# target to build an object file
+src/graphics/asset_loader/Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Mesh.cpp.obj
+.PHONY : src/graphics/asset_loader/Mesh.cpp.obj
+
+src/graphics/asset_loader/Mesh.i: src/graphics/asset_loader/Mesh.cpp.i
+.PHONY : src/graphics/asset_loader/Mesh.i
+
+# target to preprocess a source file
+src/graphics/asset_loader/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Mesh.cpp.i
+.PHONY : src/graphics/asset_loader/Mesh.cpp.i
+
+src/graphics/asset_loader/Mesh.s: src/graphics/asset_loader/Mesh.cpp.s
+.PHONY : src/graphics/asset_loader/Mesh.s
+
+# target to generate assembly for a file
+src/graphics/asset_loader/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Mesh.cpp.s
+.PHONY : src/graphics/asset_loader/Mesh.cpp.s
+
+src/graphics/asset_loader/Model.obj: src/graphics/asset_loader/Model.cpp.obj
+.PHONY : src/graphics/asset_loader/Model.obj
+
+# target to build an object file
+src/graphics/asset_loader/Model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Model.cpp.obj
+.PHONY : src/graphics/asset_loader/Model.cpp.obj
+
+src/graphics/asset_loader/Model.i: src/graphics/asset_loader/Model.cpp.i
+.PHONY : src/graphics/asset_loader/Model.i
+
+# target to preprocess a source file
+src/graphics/asset_loader/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Model.cpp.i
+.PHONY : src/graphics/asset_loader/Model.cpp.i
+
+src/graphics/asset_loader/Model.s: src/graphics/asset_loader/Model.cpp.s
+.PHONY : src/graphics/asset_loader/Model.s
+
+# target to generate assembly for a file
+src/graphics/asset_loader/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/Model.cpp.s
+.PHONY : src/graphics/asset_loader/Model.cpp.s
+
+src/graphics/asset_loader/ModelLoader.obj: src/graphics/asset_loader/ModelLoader.cpp.obj
+.PHONY : src/graphics/asset_loader/ModelLoader.obj
+
+# target to build an object file
+src/graphics/asset_loader/ModelLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/ModelLoader.cpp.obj
+.PHONY : src/graphics/asset_loader/ModelLoader.cpp.obj
+
+src/graphics/asset_loader/ModelLoader.i: src/graphics/asset_loader/ModelLoader.cpp.i
+.PHONY : src/graphics/asset_loader/ModelLoader.i
+
+# target to preprocess a source file
+src/graphics/asset_loader/ModelLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/ModelLoader.cpp.i
+.PHONY : src/graphics/asset_loader/ModelLoader.cpp.i
+
+src/graphics/asset_loader/ModelLoader.s: src/graphics/asset_loader/ModelLoader.cpp.s
+.PHONY : src/graphics/asset_loader/ModelLoader.s
+
+# target to generate assembly for a file
+src/graphics/asset_loader/ModelLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/ModelLoader.cpp.s
+.PHONY : src/graphics/asset_loader/ModelLoader.cpp.s
+
+src/graphics/asset_loader/PrimitiveMesh.obj: src/graphics/asset_loader/PrimitiveMesh.cpp.obj
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.obj
+
+# target to build an object file
+src/graphics/asset_loader/PrimitiveMesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/PrimitiveMesh.cpp.obj
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.cpp.obj
+
+src/graphics/asset_loader/PrimitiveMesh.i: src/graphics/asset_loader/PrimitiveMesh.cpp.i
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.i
+
+# target to preprocess a source file
+src/graphics/asset_loader/PrimitiveMesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/PrimitiveMesh.cpp.i
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.cpp.i
+
+src/graphics/asset_loader/PrimitiveMesh.s: src/graphics/asset_loader/PrimitiveMesh.cpp.s
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.s
+
+# target to generate assembly for a file
+src/graphics/asset_loader/PrimitiveMesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/graphics/asset_loader/PrimitiveMesh.cpp.s
+.PHONY : src/graphics/asset_loader/PrimitiveMesh.cpp.s
 
 src/input/InputMapper.obj: src/input/InputMapper.cpp.obj
 .PHONY : src/input/InputMapper.obj
@@ -907,54 +886,6 @@ src/input/InputMapper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/InputMapper.cpp.s
 .PHONY : src/input/InputMapper.cpp.s
 
-src/input/Keyboard.obj: src/input/Keyboard.cpp.obj
-.PHONY : src/input/Keyboard.obj
-
-# target to build an object file
-src/input/Keyboard.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Keyboard.cpp.obj
-.PHONY : src/input/Keyboard.cpp.obj
-
-src/input/Keyboard.i: src/input/Keyboard.cpp.i
-.PHONY : src/input/Keyboard.i
-
-# target to preprocess a source file
-src/input/Keyboard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Keyboard.cpp.i
-.PHONY : src/input/Keyboard.cpp.i
-
-src/input/Keyboard.s: src/input/Keyboard.cpp.s
-.PHONY : src/input/Keyboard.s
-
-# target to generate assembly for a file
-src/input/Keyboard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Keyboard.cpp.s
-.PHONY : src/input/Keyboard.cpp.s
-
-src/input/Mouse.obj: src/input/Mouse.cpp.obj
-.PHONY : src/input/Mouse.obj
-
-# target to build an object file
-src/input/Mouse.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Mouse.cpp.obj
-.PHONY : src/input/Mouse.cpp.obj
-
-src/input/Mouse.i: src/input/Mouse.cpp.i
-.PHONY : src/input/Mouse.i
-
-# target to preprocess a source file
-src/input/Mouse.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Mouse.cpp.i
-.PHONY : src/input/Mouse.cpp.i
-
-src/input/Mouse.s: src/input/Mouse.cpp.s
-.PHONY : src/input/Mouse.s
-
-# target to generate assembly for a file
-src/input/Mouse.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/input/Mouse.cpp.s
-.PHONY : src/input/Mouse.cpp.s
-
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -978,510 +909,6 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngine.dir\build.make CMakeFiles/FractalEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/math/MathUtils.obj: src/math/MathUtils.cpp.obj
-.PHONY : src/math/MathUtils.obj
-
-# target to build an object file
-src/math/MathUtils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/MathUtils.cpp.obj
-.PHONY : src/math/MathUtils.cpp.obj
-
-src/math/MathUtils.i: src/math/MathUtils.cpp.i
-.PHONY : src/math/MathUtils.i
-
-# target to preprocess a source file
-src/math/MathUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/MathUtils.cpp.i
-.PHONY : src/math/MathUtils.cpp.i
-
-src/math/MathUtils.s: src/math/MathUtils.cpp.s
-.PHONY : src/math/MathUtils.s
-
-# target to generate assembly for a file
-src/math/MathUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/MathUtils.cpp.s
-.PHONY : src/math/MathUtils.cpp.s
-
-src/math/Noise.obj: src/math/Noise.cpp.obj
-.PHONY : src/math/Noise.obj
-
-# target to build an object file
-src/math/Noise.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Noise.cpp.obj
-.PHONY : src/math/Noise.cpp.obj
-
-src/math/Noise.i: src/math/Noise.cpp.i
-.PHONY : src/math/Noise.i
-
-# target to preprocess a source file
-src/math/Noise.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Noise.cpp.i
-.PHONY : src/math/Noise.cpp.i
-
-src/math/Noise.s: src/math/Noise.cpp.s
-.PHONY : src/math/Noise.s
-
-# target to generate assembly for a file
-src/math/Noise.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Noise.cpp.s
-.PHONY : src/math/Noise.cpp.s
-
-src/math/Random.obj: src/math/Random.cpp.obj
-.PHONY : src/math/Random.obj
-
-# target to build an object file
-src/math/Random.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Random.cpp.obj
-.PHONY : src/math/Random.cpp.obj
-
-src/math/Random.i: src/math/Random.cpp.i
-.PHONY : src/math/Random.i
-
-# target to preprocess a source file
-src/math/Random.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Random.cpp.i
-.PHONY : src/math/Random.cpp.i
-
-src/math/Random.s: src/math/Random.cpp.s
-.PHONY : src/math/Random.s
-
-# target to generate assembly for a file
-src/math/Random.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Random.cpp.s
-.PHONY : src/math/Random.cpp.s
-
-src/math/Transform.obj: src/math/Transform.cpp.obj
-.PHONY : src/math/Transform.obj
-
-# target to build an object file
-src/math/Transform.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Transform.cpp.obj
-.PHONY : src/math/Transform.cpp.obj
-
-src/math/Transform.i: src/math/Transform.cpp.i
-.PHONY : src/math/Transform.i
-
-# target to preprocess a source file
-src/math/Transform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Transform.cpp.i
-.PHONY : src/math/Transform.cpp.i
-
-src/math/Transform.s: src/math/Transform.cpp.s
-.PHONY : src/math/Transform.s
-
-# target to generate assembly for a file
-src/math/Transform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/math/Transform.cpp.s
-.PHONY : src/math/Transform.cpp.s
-
-src/physics/PhysicsEngine.obj: src/physics/PhysicsEngine.cpp.obj
-.PHONY : src/physics/PhysicsEngine.obj
-
-# target to build an object file
-src/physics/PhysicsEngine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/PhysicsEngine.cpp.obj
-.PHONY : src/physics/PhysicsEngine.cpp.obj
-
-src/physics/PhysicsEngine.i: src/physics/PhysicsEngine.cpp.i
-.PHONY : src/physics/PhysicsEngine.i
-
-# target to preprocess a source file
-src/physics/PhysicsEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/PhysicsEngine.cpp.i
-.PHONY : src/physics/PhysicsEngine.cpp.i
-
-src/physics/PhysicsEngine.s: src/physics/PhysicsEngine.cpp.s
-.PHONY : src/physics/PhysicsEngine.s
-
-# target to generate assembly for a file
-src/physics/PhysicsEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/PhysicsEngine.cpp.s
-.PHONY : src/physics/PhysicsEngine.cpp.s
-
-src/physics/collision/AABB.obj: src/physics/collision/AABB.cpp.obj
-.PHONY : src/physics/collision/AABB.obj
-
-# target to build an object file
-src/physics/collision/AABB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/AABB.cpp.obj
-.PHONY : src/physics/collision/AABB.cpp.obj
-
-src/physics/collision/AABB.i: src/physics/collision/AABB.cpp.i
-.PHONY : src/physics/collision/AABB.i
-
-# target to preprocess a source file
-src/physics/collision/AABB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/AABB.cpp.i
-.PHONY : src/physics/collision/AABB.cpp.i
-
-src/physics/collision/AABB.s: src/physics/collision/AABB.cpp.s
-.PHONY : src/physics/collision/AABB.s
-
-# target to generate assembly for a file
-src/physics/collision/AABB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/AABB.cpp.s
-.PHONY : src/physics/collision/AABB.cpp.s
-
-src/physics/collision/BVH.obj: src/physics/collision/BVH.cpp.obj
-.PHONY : src/physics/collision/BVH.obj
-
-# target to build an object file
-src/physics/collision/BVH.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/BVH.cpp.obj
-.PHONY : src/physics/collision/BVH.cpp.obj
-
-src/physics/collision/BVH.i: src/physics/collision/BVH.cpp.i
-.PHONY : src/physics/collision/BVH.i
-
-# target to preprocess a source file
-src/physics/collision/BVH.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/BVH.cpp.i
-.PHONY : src/physics/collision/BVH.cpp.i
-
-src/physics/collision/BVH.s: src/physics/collision/BVH.cpp.s
-.PHONY : src/physics/collision/BVH.s
-
-# target to generate assembly for a file
-src/physics/collision/BVH.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/BVH.cpp.s
-.PHONY : src/physics/collision/BVH.cpp.s
-
-src/physics/collision/CollisionDetection.obj: src/physics/collision/CollisionDetection.cpp.obj
-.PHONY : src/physics/collision/CollisionDetection.obj
-
-# target to build an object file
-src/physics/collision/CollisionDetection.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/CollisionDetection.cpp.obj
-.PHONY : src/physics/collision/CollisionDetection.cpp.obj
-
-src/physics/collision/CollisionDetection.i: src/physics/collision/CollisionDetection.cpp.i
-.PHONY : src/physics/collision/CollisionDetection.i
-
-# target to preprocess a source file
-src/physics/collision/CollisionDetection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/CollisionDetection.cpp.i
-.PHONY : src/physics/collision/CollisionDetection.cpp.i
-
-src/physics/collision/CollisionDetection.s: src/physics/collision/CollisionDetection.cpp.s
-.PHONY : src/physics/collision/CollisionDetection.s
-
-# target to generate assembly for a file
-src/physics/collision/CollisionDetection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/collision/CollisionDetection.cpp.s
-.PHONY : src/physics/collision/CollisionDetection.cpp.s
-
-src/physics/dynamics/Collider.obj: src/physics/dynamics/Collider.cpp.obj
-.PHONY : src/physics/dynamics/Collider.obj
-
-# target to build an object file
-src/physics/dynamics/Collider.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Collider.cpp.obj
-.PHONY : src/physics/dynamics/Collider.cpp.obj
-
-src/physics/dynamics/Collider.i: src/physics/dynamics/Collider.cpp.i
-.PHONY : src/physics/dynamics/Collider.i
-
-# target to preprocess a source file
-src/physics/dynamics/Collider.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Collider.cpp.i
-.PHONY : src/physics/dynamics/Collider.cpp.i
-
-src/physics/dynamics/Collider.s: src/physics/dynamics/Collider.cpp.s
-.PHONY : src/physics/dynamics/Collider.s
-
-# target to generate assembly for a file
-src/physics/dynamics/Collider.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Collider.cpp.s
-.PHONY : src/physics/dynamics/Collider.cpp.s
-
-src/physics/dynamics/Constraint.obj: src/physics/dynamics/Constraint.cpp.obj
-.PHONY : src/physics/dynamics/Constraint.obj
-
-# target to build an object file
-src/physics/dynamics/Constraint.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Constraint.cpp.obj
-.PHONY : src/physics/dynamics/Constraint.cpp.obj
-
-src/physics/dynamics/Constraint.i: src/physics/dynamics/Constraint.cpp.i
-.PHONY : src/physics/dynamics/Constraint.i
-
-# target to preprocess a source file
-src/physics/dynamics/Constraint.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Constraint.cpp.i
-.PHONY : src/physics/dynamics/Constraint.cpp.i
-
-src/physics/dynamics/Constraint.s: src/physics/dynamics/Constraint.cpp.s
-.PHONY : src/physics/dynamics/Constraint.s
-
-# target to generate assembly for a file
-src/physics/dynamics/Constraint.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Constraint.cpp.s
-.PHONY : src/physics/dynamics/Constraint.cpp.s
-
-src/physics/dynamics/Rigidbody.obj: src/physics/dynamics/Rigidbody.cpp.obj
-.PHONY : src/physics/dynamics/Rigidbody.obj
-
-# target to build an object file
-src/physics/dynamics/Rigidbody.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Rigidbody.cpp.obj
-.PHONY : src/physics/dynamics/Rigidbody.cpp.obj
-
-src/physics/dynamics/Rigidbody.i: src/physics/dynamics/Rigidbody.cpp.i
-.PHONY : src/physics/dynamics/Rigidbody.i
-
-# target to preprocess a source file
-src/physics/dynamics/Rigidbody.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Rigidbody.cpp.i
-.PHONY : src/physics/dynamics/Rigidbody.cpp.i
-
-src/physics/dynamics/Rigidbody.s: src/physics/dynamics/Rigidbody.cpp.s
-.PHONY : src/physics/dynamics/Rigidbody.s
-
-# target to generate assembly for a file
-src/physics/dynamics/Rigidbody.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/physics/dynamics/Rigidbody.cpp.s
-.PHONY : src/physics/dynamics/Rigidbody.cpp.s
-
-src/platform/Platform.obj: src/platform/Platform.cpp.obj
-.PHONY : src/platform/Platform.obj
-
-# target to build an object file
-src/platform/Platform.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/platform/Platform.cpp.obj
-.PHONY : src/platform/Platform.cpp.obj
-
-src/platform/Platform.i: src/platform/Platform.cpp.i
-.PHONY : src/platform/Platform.i
-
-# target to preprocess a source file
-src/platform/Platform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/platform/Platform.cpp.i
-.PHONY : src/platform/Platform.cpp.i
-
-src/platform/Platform.s: src/platform/Platform.cpp.s
-.PHONY : src/platform/Platform.s
-
-# target to generate assembly for a file
-src/platform/Platform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/platform/Platform.cpp.s
-.PHONY : src/platform/Platform.cpp.s
-
-src/renderer/Mesh.obj: src/renderer/Mesh.cpp.obj
-.PHONY : src/renderer/Mesh.obj
-
-# target to build an object file
-src/renderer/Mesh.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/Mesh.cpp.obj
-.PHONY : src/renderer/Mesh.cpp.obj
-
-src/renderer/Mesh.i: src/renderer/Mesh.cpp.i
-.PHONY : src/renderer/Mesh.i
-
-# target to preprocess a source file
-src/renderer/Mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/Mesh.cpp.i
-.PHONY : src/renderer/Mesh.cpp.i
-
-src/renderer/Mesh.s: src/renderer/Mesh.cpp.s
-.PHONY : src/renderer/Mesh.s
-
-# target to generate assembly for a file
-src/renderer/Mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/Mesh.cpp.s
-.PHONY : src/renderer/Mesh.cpp.s
-
-src/renderer/MeshBuilder.obj: src/renderer/MeshBuilder.cpp.obj
-.PHONY : src/renderer/MeshBuilder.obj
-
-# target to build an object file
-src/renderer/MeshBuilder.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/MeshBuilder.cpp.obj
-.PHONY : src/renderer/MeshBuilder.cpp.obj
-
-src/renderer/MeshBuilder.i: src/renderer/MeshBuilder.cpp.i
-.PHONY : src/renderer/MeshBuilder.i
-
-# target to preprocess a source file
-src/renderer/MeshBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/MeshBuilder.cpp.i
-.PHONY : src/renderer/MeshBuilder.cpp.i
-
-src/renderer/MeshBuilder.s: src/renderer/MeshBuilder.cpp.s
-.PHONY : src/renderer/MeshBuilder.s
-
-# target to generate assembly for a file
-src/renderer/MeshBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/MeshBuilder.cpp.s
-.PHONY : src/renderer/MeshBuilder.cpp.s
-
-src/renderer/RenderGraph.obj: src/renderer/RenderGraph.cpp.obj
-.PHONY : src/renderer/RenderGraph.obj
-
-# target to build an object file
-src/renderer/RenderGraph.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderGraph.cpp.obj
-.PHONY : src/renderer/RenderGraph.cpp.obj
-
-src/renderer/RenderGraph.i: src/renderer/RenderGraph.cpp.i
-.PHONY : src/renderer/RenderGraph.i
-
-# target to preprocess a source file
-src/renderer/RenderGraph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderGraph.cpp.i
-.PHONY : src/renderer/RenderGraph.cpp.i
-
-src/renderer/RenderGraph.s: src/renderer/RenderGraph.cpp.s
-.PHONY : src/renderer/RenderGraph.s
-
-# target to generate assembly for a file
-src/renderer/RenderGraph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderGraph.cpp.s
-.PHONY : src/renderer/RenderGraph.cpp.s
-
-src/renderer/RenderPass.obj: src/renderer/RenderPass.cpp.obj
-.PHONY : src/renderer/RenderPass.obj
-
-# target to build an object file
-src/renderer/RenderPass.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderPass.cpp.obj
-.PHONY : src/renderer/RenderPass.cpp.obj
-
-src/renderer/RenderPass.i: src/renderer/RenderPass.cpp.i
-.PHONY : src/renderer/RenderPass.i
-
-# target to preprocess a source file
-src/renderer/RenderPass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderPass.cpp.i
-.PHONY : src/renderer/RenderPass.cpp.i
-
-src/renderer/RenderPass.s: src/renderer/RenderPass.cpp.s
-.PHONY : src/renderer/RenderPass.s
-
-# target to generate assembly for a file
-src/renderer/RenderPass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/RenderPass.cpp.s
-.PHONY : src/renderer/RenderPass.cpp.s
-
-src/renderer/backends/opengl/OpenGLBuffer.obj: src/renderer/backends/opengl/OpenGLBuffer.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.obj
-
-# target to build an object file
-src/renderer/backends/opengl/OpenGLBuffer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLBuffer.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.cpp.obj
-
-src/renderer/backends/opengl/OpenGLBuffer.i: src/renderer/backends/opengl/OpenGLBuffer.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.i
-
-# target to preprocess a source file
-src/renderer/backends/opengl/OpenGLBuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLBuffer.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.cpp.i
-
-src/renderer/backends/opengl/OpenGLBuffer.s: src/renderer/backends/opengl/OpenGLBuffer.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.s
-
-# target to generate assembly for a file
-src/renderer/backends/opengl/OpenGLBuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLBuffer.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLBuffer.cpp.s
-
-src/renderer/backends/opengl/OpenGLRenderer.obj: src/renderer/backends/opengl/OpenGLRenderer.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.obj
-
-# target to build an object file
-src/renderer/backends/opengl/OpenGLRenderer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLRenderer.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.cpp.obj
-
-src/renderer/backends/opengl/OpenGLRenderer.i: src/renderer/backends/opengl/OpenGLRenderer.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.i
-
-# target to preprocess a source file
-src/renderer/backends/opengl/OpenGLRenderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLRenderer.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.cpp.i
-
-src/renderer/backends/opengl/OpenGLRenderer.s: src/renderer/backends/opengl/OpenGLRenderer.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.s
-
-# target to generate assembly for a file
-src/renderer/backends/opengl/OpenGLRenderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLRenderer.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLRenderer.cpp.s
-
-src/renderer/backends/opengl/OpenGLShader.obj: src/renderer/backends/opengl/OpenGLShader.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLShader.obj
-
-# target to build an object file
-src/renderer/backends/opengl/OpenGLShader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLShader.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLShader.cpp.obj
-
-src/renderer/backends/opengl/OpenGLShader.i: src/renderer/backends/opengl/OpenGLShader.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLShader.i
-
-# target to preprocess a source file
-src/renderer/backends/opengl/OpenGLShader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLShader.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLShader.cpp.i
-
-src/renderer/backends/opengl/OpenGLShader.s: src/renderer/backends/opengl/OpenGLShader.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLShader.s
-
-# target to generate assembly for a file
-src/renderer/backends/opengl/OpenGLShader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLShader.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLShader.cpp.s
-
-src/renderer/backends/opengl/OpenGLTexture.obj: src/renderer/backends/opengl/OpenGLTexture.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.obj
-
-# target to build an object file
-src/renderer/backends/opengl/OpenGLTexture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLTexture.cpp.obj
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.cpp.obj
-
-src/renderer/backends/opengl/OpenGLTexture.i: src/renderer/backends/opengl/OpenGLTexture.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.i
-
-# target to preprocess a source file
-src/renderer/backends/opengl/OpenGLTexture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLTexture.cpp.i
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.cpp.i
-
-src/renderer/backends/opengl/OpenGLTexture.s: src/renderer/backends/opengl/OpenGLTexture.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.s
-
-# target to generate assembly for a file
-src/renderer/backends/opengl/OpenGLTexture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/renderer/backends/opengl/OpenGLTexture.cpp.s
-.PHONY : src/renderer/backends/opengl/OpenGLTexture.cpp.s
-
-src/scene/Scene.obj: src/scene/Scene.cpp.obj
-.PHONY : src/scene/Scene.obj
-
-# target to build an object file
-src/scene/Scene.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/Scene.cpp.obj
-.PHONY : src/scene/Scene.cpp.obj
-
-src/scene/Scene.i: src/scene/Scene.cpp.i
-.PHONY : src/scene/Scene.i
-
-# target to preprocess a source file
-src/scene/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/Scene.cpp.i
-.PHONY : src/scene/Scene.cpp.i
-
-src/scene/Scene.s: src/scene/Scene.cpp.s
-.PHONY : src/scene/Scene.s
-
-# target to generate assembly for a file
-src/scene/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/Scene.cpp.s
-.PHONY : src/scene/Scene.cpp.s
 
 src/scene/SceneFrameBuffer.obj: src/scene/SceneFrameBuffer.cpp.obj
 .PHONY : src/scene/SceneFrameBuffer.obj
@@ -1507,149 +934,29 @@ src/scene/SceneFrameBuffer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneFrameBuffer.cpp.s
 .PHONY : src/scene/SceneFrameBuffer.cpp.s
 
-src/scene/SceneManager.obj: src/scene/SceneManager.cpp.obj
-.PHONY : src/scene/SceneManager.obj
+src/scripting/ScriptEngine.obj: src/scripting/ScriptEngine.cpp.obj
+.PHONY : src/scripting/ScriptEngine.obj
 
 # target to build an object file
-src/scene/SceneManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneManager.cpp.obj
-.PHONY : src/scene/SceneManager.cpp.obj
+src/scripting/ScriptEngine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.obj
+.PHONY : src/scripting/ScriptEngine.cpp.obj
 
-src/scene/SceneManager.i: src/scene/SceneManager.cpp.i
-.PHONY : src/scene/SceneManager.i
-
-# target to preprocess a source file
-src/scene/SceneManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneManager.cpp.i
-.PHONY : src/scene/SceneManager.cpp.i
-
-src/scene/SceneManager.s: src/scene/SceneManager.cpp.s
-.PHONY : src/scene/SceneManager.s
-
-# target to generate assembly for a file
-src/scene/SceneManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneManager.cpp.s
-.PHONY : src/scene/SceneManager.cpp.s
-
-src/scene/SceneSerializer.obj: src/scene/SceneSerializer.cpp.obj
-.PHONY : src/scene/SceneSerializer.obj
-
-# target to build an object file
-src/scene/SceneSerializer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneSerializer.cpp.obj
-.PHONY : src/scene/SceneSerializer.cpp.obj
-
-src/scene/SceneSerializer.i: src/scene/SceneSerializer.cpp.i
-.PHONY : src/scene/SceneSerializer.i
+src/scripting/ScriptEngine.i: src/scripting/ScriptEngine.cpp.i
+.PHONY : src/scripting/ScriptEngine.i
 
 # target to preprocess a source file
-src/scene/SceneSerializer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneSerializer.cpp.i
-.PHONY : src/scene/SceneSerializer.cpp.i
+src/scripting/ScriptEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.i
+.PHONY : src/scripting/ScriptEngine.cpp.i
 
-src/scene/SceneSerializer.s: src/scene/SceneSerializer.cpp.s
-.PHONY : src/scene/SceneSerializer.s
-
-# target to generate assembly for a file
-src/scene/SceneSerializer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/SceneSerializer.cpp.s
-.PHONY : src/scene/SceneSerializer.cpp.s
-
-src/scene/ecs/ComponentPool.obj: src/scene/ecs/ComponentPool.cpp.obj
-.PHONY : src/scene/ecs/ComponentPool.obj
-
-# target to build an object file
-src/scene/ecs/ComponentPool.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/ComponentPool.cpp.obj
-.PHONY : src/scene/ecs/ComponentPool.cpp.obj
-
-src/scene/ecs/ComponentPool.i: src/scene/ecs/ComponentPool.cpp.i
-.PHONY : src/scene/ecs/ComponentPool.i
-
-# target to preprocess a source file
-src/scene/ecs/ComponentPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/ComponentPool.cpp.i
-.PHONY : src/scene/ecs/ComponentPool.cpp.i
-
-src/scene/ecs/ComponentPool.s: src/scene/ecs/ComponentPool.cpp.s
-.PHONY : src/scene/ecs/ComponentPool.s
+src/scripting/ScriptEngine.s: src/scripting/ScriptEngine.cpp.s
+.PHONY : src/scripting/ScriptEngine.s
 
 # target to generate assembly for a file
-src/scene/ecs/ComponentPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/ComponentPool.cpp.s
-.PHONY : src/scene/ecs/ComponentPool.cpp.s
-
-src/scene/ecs/Entity.obj: src/scene/ecs/Entity.cpp.obj
-.PHONY : src/scene/ecs/Entity.obj
-
-# target to build an object file
-src/scene/ecs/Entity.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Entity.cpp.obj
-.PHONY : src/scene/ecs/Entity.cpp.obj
-
-src/scene/ecs/Entity.i: src/scene/ecs/Entity.cpp.i
-.PHONY : src/scene/ecs/Entity.i
-
-# target to preprocess a source file
-src/scene/ecs/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Entity.cpp.i
-.PHONY : src/scene/ecs/Entity.cpp.i
-
-src/scene/ecs/Entity.s: src/scene/ecs/Entity.cpp.s
-.PHONY : src/scene/ecs/Entity.s
-
-# target to generate assembly for a file
-src/scene/ecs/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Entity.cpp.s
-.PHONY : src/scene/ecs/Entity.cpp.s
-
-src/scene/ecs/Registry.obj: src/scene/ecs/Registry.cpp.obj
-.PHONY : src/scene/ecs/Registry.obj
-
-# target to build an object file
-src/scene/ecs/Registry.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Registry.cpp.obj
-.PHONY : src/scene/ecs/Registry.cpp.obj
-
-src/scene/ecs/Registry.i: src/scene/ecs/Registry.cpp.i
-.PHONY : src/scene/ecs/Registry.i
-
-# target to preprocess a source file
-src/scene/ecs/Registry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Registry.cpp.i
-.PHONY : src/scene/ecs/Registry.cpp.i
-
-src/scene/ecs/Registry.s: src/scene/ecs/Registry.cpp.s
-.PHONY : src/scene/ecs/Registry.s
-
-# target to generate assembly for a file
-src/scene/ecs/Registry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/Registry.cpp.s
-.PHONY : src/scene/ecs/Registry.cpp.s
-
-src/scene/ecs/System.obj: src/scene/ecs/System.cpp.obj
-.PHONY : src/scene/ecs/System.obj
-
-# target to build an object file
-src/scene/ecs/System.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/System.cpp.obj
-.PHONY : src/scene/ecs/System.cpp.obj
-
-src/scene/ecs/System.i: src/scene/ecs/System.cpp.i
-.PHONY : src/scene/ecs/System.i
-
-# target to preprocess a source file
-src/scene/ecs/System.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/System.cpp.i
-.PHONY : src/scene/ecs/System.cpp.i
-
-src/scene/ecs/System.s: src/scene/ecs/System.cpp.s
-.PHONY : src/scene/ecs/System.s
-
-# target to generate assembly for a file
-src/scene/ecs/System.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scene/ecs/System.cpp.s
-.PHONY : src/scene/ecs/System.cpp.s
+src/scripting/ScriptEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/scripting/ScriptEngine.cpp.s
+.PHONY : src/scripting/ScriptEngine.cpp.s
 
 src/ui/imgui/AssetBrowser.obj: src/ui/imgui/AssetBrowser.cpp.obj
 .PHONY : src/ui/imgui/AssetBrowser.obj
@@ -1723,6 +1030,78 @@ src/ui/imgui/EditorGrid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorGrid.cpp.s
 .PHONY : src/ui/imgui/EditorGrid.cpp.s
 
+src/ui/imgui/EditorHierarchy.obj: src/ui/imgui/EditorHierarchy.cpp.obj
+.PHONY : src/ui/imgui/EditorHierarchy.obj
+
+# target to build an object file
+src/ui/imgui/EditorHierarchy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorHierarchy.cpp.obj
+.PHONY : src/ui/imgui/EditorHierarchy.cpp.obj
+
+src/ui/imgui/EditorHierarchy.i: src/ui/imgui/EditorHierarchy.cpp.i
+.PHONY : src/ui/imgui/EditorHierarchy.i
+
+# target to preprocess a source file
+src/ui/imgui/EditorHierarchy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorHierarchy.cpp.i
+.PHONY : src/ui/imgui/EditorHierarchy.cpp.i
+
+src/ui/imgui/EditorHierarchy.s: src/ui/imgui/EditorHierarchy.cpp.s
+.PHONY : src/ui/imgui/EditorHierarchy.s
+
+# target to generate assembly for a file
+src/ui/imgui/EditorHierarchy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorHierarchy.cpp.s
+.PHONY : src/ui/imgui/EditorHierarchy.cpp.s
+
+src/ui/imgui/EditorInspector.obj: src/ui/imgui/EditorInspector.cpp.obj
+.PHONY : src/ui/imgui/EditorInspector.obj
+
+# target to build an object file
+src/ui/imgui/EditorInspector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorInspector.cpp.obj
+.PHONY : src/ui/imgui/EditorInspector.cpp.obj
+
+src/ui/imgui/EditorInspector.i: src/ui/imgui/EditorInspector.cpp.i
+.PHONY : src/ui/imgui/EditorInspector.i
+
+# target to preprocess a source file
+src/ui/imgui/EditorInspector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorInspector.cpp.i
+.PHONY : src/ui/imgui/EditorInspector.cpp.i
+
+src/ui/imgui/EditorInspector.s: src/ui/imgui/EditorInspector.cpp.s
+.PHONY : src/ui/imgui/EditorInspector.s
+
+# target to generate assembly for a file
+src/ui/imgui/EditorInspector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorInspector.cpp.s
+.PHONY : src/ui/imgui/EditorInspector.cpp.s
+
+src/ui/imgui/EditorProject.obj: src/ui/imgui/EditorProject.cpp.obj
+.PHONY : src/ui/imgui/EditorProject.obj
+
+# target to build an object file
+src/ui/imgui/EditorProject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorProject.cpp.obj
+.PHONY : src/ui/imgui/EditorProject.cpp.obj
+
+src/ui/imgui/EditorProject.i: src/ui/imgui/EditorProject.cpp.i
+.PHONY : src/ui/imgui/EditorProject.i
+
+# target to preprocess a source file
+src/ui/imgui/EditorProject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorProject.cpp.i
+.PHONY : src/ui/imgui/EditorProject.cpp.i
+
+src/ui/imgui/EditorProject.s: src/ui/imgui/EditorProject.cpp.s
+.PHONY : src/ui/imgui/EditorProject.s
+
+# target to generate assembly for a file
+src/ui/imgui/EditorProject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/EditorProject.cpp.s
+.PHONY : src/ui/imgui/EditorProject.cpp.s
+
 src/ui/imgui/EditorViewport.obj: src/ui/imgui/EditorViewport.cpp.obj
 .PHONY : src/ui/imgui/EditorViewport.obj
 
@@ -1771,318 +1150,6 @@ src/ui/imgui/GameViewport.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/ui/imgui/GameViewport.cpp.s
 .PHONY : src/ui/imgui/GameViewport.cpp.s
 
-src/utils/FileSystem.obj: src/utils/FileSystem.cpp.obj
-.PHONY : src/utils/FileSystem.obj
-
-# target to build an object file
-src/utils/FileSystem.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/FileSystem.cpp.obj
-.PHONY : src/utils/FileSystem.cpp.obj
-
-src/utils/FileSystem.i: src/utils/FileSystem.cpp.i
-.PHONY : src/utils/FileSystem.i
-
-# target to preprocess a source file
-src/utils/FileSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/FileSystem.cpp.i
-.PHONY : src/utils/FileSystem.cpp.i
-
-src/utils/FileSystem.s: src/utils/FileSystem.cpp.s
-.PHONY : src/utils/FileSystem.s
-
-# target to generate assembly for a file
-src/utils/FileSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/FileSystem.cpp.s
-.PHONY : src/utils/FileSystem.cpp.s
-
-src/utils/Logger.obj: src/utils/Logger.cpp.obj
-.PHONY : src/utils/Logger.obj
-
-# target to build an object file
-src/utils/Logger.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Logger.cpp.obj
-.PHONY : src/utils/Logger.cpp.obj
-
-src/utils/Logger.i: src/utils/Logger.cpp.i
-.PHONY : src/utils/Logger.i
-
-# target to preprocess a source file
-src/utils/Logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Logger.cpp.i
-.PHONY : src/utils/Logger.cpp.i
-
-src/utils/Logger.s: src/utils/Logger.cpp.s
-.PHONY : src/utils/Logger.s
-
-# target to generate assembly for a file
-src/utils/Logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Logger.cpp.s
-.PHONY : src/utils/Logger.cpp.s
-
-src/utils/MemoryPool.obj: src/utils/MemoryPool.cpp.obj
-.PHONY : src/utils/MemoryPool.obj
-
-# target to build an object file
-src/utils/MemoryPool.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/MemoryPool.cpp.obj
-.PHONY : src/utils/MemoryPool.cpp.obj
-
-src/utils/MemoryPool.i: src/utils/MemoryPool.cpp.i
-.PHONY : src/utils/MemoryPool.i
-
-# target to preprocess a source file
-src/utils/MemoryPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/MemoryPool.cpp.i
-.PHONY : src/utils/MemoryPool.cpp.i
-
-src/utils/MemoryPool.s: src/utils/MemoryPool.cpp.s
-.PHONY : src/utils/MemoryPool.s
-
-# target to generate assembly for a file
-src/utils/MemoryPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/MemoryPool.cpp.s
-.PHONY : src/utils/MemoryPool.cpp.s
-
-src/utils/StringUtils.obj: src/utils/StringUtils.cpp.obj
-.PHONY : src/utils/StringUtils.obj
-
-# target to build an object file
-src/utils/StringUtils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/StringUtils.cpp.obj
-.PHONY : src/utils/StringUtils.cpp.obj
-
-src/utils/StringUtils.i: src/utils/StringUtils.cpp.i
-.PHONY : src/utils/StringUtils.i
-
-# target to preprocess a source file
-src/utils/StringUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/StringUtils.cpp.i
-.PHONY : src/utils/StringUtils.cpp.i
-
-src/utils/StringUtils.s: src/utils/StringUtils.cpp.s
-.PHONY : src/utils/StringUtils.s
-
-# target to generate assembly for a file
-src/utils/StringUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/StringUtils.cpp.s
-.PHONY : src/utils/StringUtils.cpp.s
-
-src/utils/Timer.obj: src/utils/Timer.cpp.obj
-.PHONY : src/utils/Timer.obj
-
-# target to build an object file
-src/utils/Timer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Timer.cpp.obj
-.PHONY : src/utils/Timer.cpp.obj
-
-src/utils/Timer.i: src/utils/Timer.cpp.i
-.PHONY : src/utils/Timer.i
-
-# target to preprocess a source file
-src/utils/Timer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Timer.cpp.i
-.PHONY : src/utils/Timer.cpp.i
-
-src/utils/Timer.s: src/utils/Timer.cpp.s
-.PHONY : src/utils/Timer.s
-
-# target to generate assembly for a file
-src/utils/Timer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/utils/Timer.cpp.s
-.PHONY : src/utils/Timer.cpp.s
-
-src/world/World.obj: src/world/World.cpp.obj
-.PHONY : src/world/World.obj
-
-# target to build an object file
-src/world/World.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/World.cpp.obj
-.PHONY : src/world/World.cpp.obj
-
-src/world/World.i: src/world/World.cpp.i
-.PHONY : src/world/World.i
-
-# target to preprocess a source file
-src/world/World.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/World.cpp.i
-.PHONY : src/world/World.cpp.i
-
-src/world/World.s: src/world/World.cpp.s
-.PHONY : src/world/World.s
-
-# target to generate assembly for a file
-src/world/World.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/World.cpp.s
-.PHONY : src/world/World.cpp.s
-
-src/world/WorldManager.obj: src/world/WorldManager.cpp.obj
-.PHONY : src/world/WorldManager.obj
-
-# target to build an object file
-src/world/WorldManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/WorldManager.cpp.obj
-.PHONY : src/world/WorldManager.cpp.obj
-
-src/world/WorldManager.i: src/world/WorldManager.cpp.i
-.PHONY : src/world/WorldManager.i
-
-# target to preprocess a source file
-src/world/WorldManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/WorldManager.cpp.i
-.PHONY : src/world/WorldManager.cpp.i
-
-src/world/WorldManager.s: src/world/WorldManager.cpp.s
-.PHONY : src/world/WorldManager.s
-
-# target to generate assembly for a file
-src/world/WorldManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/WorldManager.cpp.s
-.PHONY : src/world/WorldManager.cpp.s
-
-src/world/streaming/AsyncLoader.obj: src/world/streaming/AsyncLoader.cpp.obj
-.PHONY : src/world/streaming/AsyncLoader.obj
-
-# target to build an object file
-src/world/streaming/AsyncLoader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/AsyncLoader.cpp.obj
-.PHONY : src/world/streaming/AsyncLoader.cpp.obj
-
-src/world/streaming/AsyncLoader.i: src/world/streaming/AsyncLoader.cpp.i
-.PHONY : src/world/streaming/AsyncLoader.i
-
-# target to preprocess a source file
-src/world/streaming/AsyncLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/AsyncLoader.cpp.i
-.PHONY : src/world/streaming/AsyncLoader.cpp.i
-
-src/world/streaming/AsyncLoader.s: src/world/streaming/AsyncLoader.cpp.s
-.PHONY : src/world/streaming/AsyncLoader.s
-
-# target to generate assembly for a file
-src/world/streaming/AsyncLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/AsyncLoader.cpp.s
-.PHONY : src/world/streaming/AsyncLoader.cpp.s
-
-src/world/streaming/ChunkStreamer.obj: src/world/streaming/ChunkStreamer.cpp.obj
-.PHONY : src/world/streaming/ChunkStreamer.obj
-
-# target to build an object file
-src/world/streaming/ChunkStreamer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/ChunkStreamer.cpp.obj
-.PHONY : src/world/streaming/ChunkStreamer.cpp.obj
-
-src/world/streaming/ChunkStreamer.i: src/world/streaming/ChunkStreamer.cpp.i
-.PHONY : src/world/streaming/ChunkStreamer.i
-
-# target to preprocess a source file
-src/world/streaming/ChunkStreamer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/ChunkStreamer.cpp.i
-.PHONY : src/world/streaming/ChunkStreamer.cpp.i
-
-src/world/streaming/ChunkStreamer.s: src/world/streaming/ChunkStreamer.cpp.s
-.PHONY : src/world/streaming/ChunkStreamer.s
-
-# target to generate assembly for a file
-src/world/streaming/ChunkStreamer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/streaming/ChunkStreamer.cpp.s
-.PHONY : src/world/streaming/ChunkStreamer.cpp.s
-
-src/world/terrain/Chunk.obj: src/world/terrain/Chunk.cpp.obj
-.PHONY : src/world/terrain/Chunk.obj
-
-# target to build an object file
-src/world/terrain/Chunk.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/Chunk.cpp.obj
-.PHONY : src/world/terrain/Chunk.cpp.obj
-
-src/world/terrain/Chunk.i: src/world/terrain/Chunk.cpp.i
-.PHONY : src/world/terrain/Chunk.i
-
-# target to preprocess a source file
-src/world/terrain/Chunk.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/Chunk.cpp.i
-.PHONY : src/world/terrain/Chunk.cpp.i
-
-src/world/terrain/Chunk.s: src/world/terrain/Chunk.cpp.s
-.PHONY : src/world/terrain/Chunk.s
-
-# target to generate assembly for a file
-src/world/terrain/Chunk.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/Chunk.cpp.s
-.PHONY : src/world/terrain/Chunk.cpp.s
-
-src/world/terrain/ChunkMesh.obj: src/world/terrain/ChunkMesh.cpp.obj
-.PHONY : src/world/terrain/ChunkMesh.obj
-
-# target to build an object file
-src/world/terrain/ChunkMesh.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/ChunkMesh.cpp.obj
-.PHONY : src/world/terrain/ChunkMesh.cpp.obj
-
-src/world/terrain/ChunkMesh.i: src/world/terrain/ChunkMesh.cpp.i
-.PHONY : src/world/terrain/ChunkMesh.i
-
-# target to preprocess a source file
-src/world/terrain/ChunkMesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/ChunkMesh.cpp.i
-.PHONY : src/world/terrain/ChunkMesh.cpp.i
-
-src/world/terrain/ChunkMesh.s: src/world/terrain/ChunkMesh.cpp.s
-.PHONY : src/world/terrain/ChunkMesh.s
-
-# target to generate assembly for a file
-src/world/terrain/ChunkMesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/ChunkMesh.cpp.s
-.PHONY : src/world/terrain/ChunkMesh.cpp.s
-
-src/world/terrain/HeightMap.obj: src/world/terrain/HeightMap.cpp.obj
-.PHONY : src/world/terrain/HeightMap.obj
-
-# target to build an object file
-src/world/terrain/HeightMap.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/HeightMap.cpp.obj
-.PHONY : src/world/terrain/HeightMap.cpp.obj
-
-src/world/terrain/HeightMap.i: src/world/terrain/HeightMap.cpp.i
-.PHONY : src/world/terrain/HeightMap.i
-
-# target to preprocess a source file
-src/world/terrain/HeightMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/HeightMap.cpp.i
-.PHONY : src/world/terrain/HeightMap.cpp.i
-
-src/world/terrain/HeightMap.s: src/world/terrain/HeightMap.cpp.s
-.PHONY : src/world/terrain/HeightMap.s
-
-# target to generate assembly for a file
-src/world/terrain/HeightMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/HeightMap.cpp.s
-.PHONY : src/world/terrain/HeightMap.cpp.s
-
-src/world/terrain/TerrainGenerator.obj: src/world/terrain/TerrainGenerator.cpp.obj
-.PHONY : src/world/terrain/TerrainGenerator.obj
-
-# target to build an object file
-src/world/terrain/TerrainGenerator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/TerrainGenerator.cpp.obj
-.PHONY : src/world/terrain/TerrainGenerator.cpp.obj
-
-src/world/terrain/TerrainGenerator.i: src/world/terrain/TerrainGenerator.cpp.i
-.PHONY : src/world/terrain/TerrainGenerator.i
-
-# target to preprocess a source file
-src/world/terrain/TerrainGenerator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/TerrainGenerator.cpp.i
-.PHONY : src/world/terrain/TerrainGenerator.cpp.i
-
-src/world/terrain/TerrainGenerator.s: src/world/terrain/TerrainGenerator.cpp.s
-.PHONY : src/world/terrain/TerrainGenerator.s
-
-# target to generate assembly for a file
-src/world/terrain/TerrainGenerator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FractalEngineLib.dir\build.make CMakeFiles/FractalEngineLib.dir/src/world/terrain/TerrainGenerator.cpp.s
-.PHONY : src/world/terrain/TerrainGenerator.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -2094,9 +1161,11 @@ help:
 	@echo ... rebuild_cache
 	@echo ... FractalEngine
 	@echo ... FractalEngineLib
+	@echo ... assimp
 	@echo ... glad
 	@echo ... imgui
 	@echo ... imguizmo
+	@echo ... zlibstatic
 	@echo ... include/third_party/glad/src/glad.obj
 	@echo ... include/third_party/glad/src/glad.i
 	@echo ... include/third_party/glad/src/glad.s
@@ -2121,54 +1190,33 @@ help:
 	@echo ... include/third_party/imguizmo/ImGuizmo.obj
 	@echo ... include/third_party/imguizmo/ImGuizmo.i
 	@echo ... include/third_party/imguizmo/ImGuizmo.s
-	@echo ... src/audio/AudioClip.obj
-	@echo ... src/audio/AudioClip.i
-	@echo ... src/audio/AudioClip.s
 	@echo ... src/audio/AudioEngine.obj
 	@echo ... src/audio/AudioEngine.i
 	@echo ... src/audio/AudioEngine.s
-	@echo ... src/audio/AudioListener.obj
-	@echo ... src/audio/AudioListener.i
-	@echo ... src/audio/AudioListener.s
-	@echo ... src/audio/AudioSource.obj
-	@echo ... src/audio/AudioSource.i
-	@echo ... src/audio/AudioSource.s
 	@echo ... src/core/Application.obj
 	@echo ... src/core/Application.i
 	@echo ... src/core/Application.s
-	@echo ... src/core/Engine.obj
-	@echo ... src/core/Engine.i
-	@echo ... src/core/Engine.s
-	@echo ... src/core/EventSystem.obj
-	@echo ... src/core/EventSystem.i
-	@echo ... src/core/EventSystem.s
-	@echo ... src/core/Time.obj
-	@echo ... src/core/Time.i
-	@echo ... src/core/Time.s
 	@echo ... src/core/Window.obj
 	@echo ... src/core/Window.i
 	@echo ... src/core/Window.s
-	@echo ... src/graphics/Camera.obj
-	@echo ... src/graphics/Camera.i
-	@echo ... src/graphics/Camera.s
 	@echo ... src/graphics/EditorCamera.obj
 	@echo ... src/graphics/EditorCamera.i
 	@echo ... src/graphics/EditorCamera.s
-	@echo ... src/graphics/Framebuffer.obj
-	@echo ... src/graphics/Framebuffer.i
-	@echo ... src/graphics/Framebuffer.s
 	@echo ... src/graphics/GLUtils.obj
 	@echo ... src/graphics/GLUtils.i
 	@echo ... src/graphics/GLUtils.s
 	@echo ... src/graphics/Material.obj
 	@echo ... src/graphics/Material.i
 	@echo ... src/graphics/Material.s
+	@echo ... src/graphics/SceneRenderer.obj
+	@echo ... src/graphics/SceneRenderer.i
+	@echo ... src/graphics/SceneRenderer.s
 	@echo ... src/graphics/Shader.obj
 	@echo ... src/graphics/Shader.i
 	@echo ... src/graphics/Shader.s
-	@echo ... src/graphics/ShaderProgram.obj
-	@echo ... src/graphics/ShaderProgram.i
-	@echo ... src/graphics/ShaderProgram.s
+	@echo ... src/graphics/SkyRenderer.obj
+	@echo ... src/graphics/SkyRenderer.i
+	@echo ... src/graphics/SkyRenderer.s
 	@echo ... src/graphics/Texture.obj
 	@echo ... src/graphics/Texture.i
 	@echo ... src/graphics/Texture.s
@@ -2178,108 +1226,39 @@ help:
 	@echo ... src/graphics/ViewportPanel.obj
 	@echo ... src/graphics/ViewportPanel.i
 	@echo ... src/graphics/ViewportPanel.s
-	@echo ... src/input/Gamepad.obj
-	@echo ... src/input/Gamepad.i
-	@echo ... src/input/Gamepad.s
-	@echo ... src/input/InputManager.obj
-	@echo ... src/input/InputManager.i
-	@echo ... src/input/InputManager.s
+	@echo ... src/graphics/asset_loader/Animation.obj
+	@echo ... src/graphics/asset_loader/Animation.i
+	@echo ... src/graphics/asset_loader/Animation.s
+	@echo ... src/graphics/asset_loader/AssetLoader.obj
+	@echo ... src/graphics/asset_loader/AssetLoader.i
+	@echo ... src/graphics/asset_loader/AssetLoader.s
+	@echo ... src/graphics/asset_loader/AssetManager.obj
+	@echo ... src/graphics/asset_loader/AssetManager.i
+	@echo ... src/graphics/asset_loader/AssetManager.s
+	@echo ... src/graphics/asset_loader/Mesh.obj
+	@echo ... src/graphics/asset_loader/Mesh.i
+	@echo ... src/graphics/asset_loader/Mesh.s
+	@echo ... src/graphics/asset_loader/Model.obj
+	@echo ... src/graphics/asset_loader/Model.i
+	@echo ... src/graphics/asset_loader/Model.s
+	@echo ... src/graphics/asset_loader/ModelLoader.obj
+	@echo ... src/graphics/asset_loader/ModelLoader.i
+	@echo ... src/graphics/asset_loader/ModelLoader.s
+	@echo ... src/graphics/asset_loader/PrimitiveMesh.obj
+	@echo ... src/graphics/asset_loader/PrimitiveMesh.i
+	@echo ... src/graphics/asset_loader/PrimitiveMesh.s
 	@echo ... src/input/InputMapper.obj
 	@echo ... src/input/InputMapper.i
 	@echo ... src/input/InputMapper.s
-	@echo ... src/input/Keyboard.obj
-	@echo ... src/input/Keyboard.i
-	@echo ... src/input/Keyboard.s
-	@echo ... src/input/Mouse.obj
-	@echo ... src/input/Mouse.i
-	@echo ... src/input/Mouse.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/math/MathUtils.obj
-	@echo ... src/math/MathUtils.i
-	@echo ... src/math/MathUtils.s
-	@echo ... src/math/Noise.obj
-	@echo ... src/math/Noise.i
-	@echo ... src/math/Noise.s
-	@echo ... src/math/Random.obj
-	@echo ... src/math/Random.i
-	@echo ... src/math/Random.s
-	@echo ... src/math/Transform.obj
-	@echo ... src/math/Transform.i
-	@echo ... src/math/Transform.s
-	@echo ... src/physics/PhysicsEngine.obj
-	@echo ... src/physics/PhysicsEngine.i
-	@echo ... src/physics/PhysicsEngine.s
-	@echo ... src/physics/collision/AABB.obj
-	@echo ... src/physics/collision/AABB.i
-	@echo ... src/physics/collision/AABB.s
-	@echo ... src/physics/collision/BVH.obj
-	@echo ... src/physics/collision/BVH.i
-	@echo ... src/physics/collision/BVH.s
-	@echo ... src/physics/collision/CollisionDetection.obj
-	@echo ... src/physics/collision/CollisionDetection.i
-	@echo ... src/physics/collision/CollisionDetection.s
-	@echo ... src/physics/dynamics/Collider.obj
-	@echo ... src/physics/dynamics/Collider.i
-	@echo ... src/physics/dynamics/Collider.s
-	@echo ... src/physics/dynamics/Constraint.obj
-	@echo ... src/physics/dynamics/Constraint.i
-	@echo ... src/physics/dynamics/Constraint.s
-	@echo ... src/physics/dynamics/Rigidbody.obj
-	@echo ... src/physics/dynamics/Rigidbody.i
-	@echo ... src/physics/dynamics/Rigidbody.s
-	@echo ... src/platform/Platform.obj
-	@echo ... src/platform/Platform.i
-	@echo ... src/platform/Platform.s
-	@echo ... src/renderer/Mesh.obj
-	@echo ... src/renderer/Mesh.i
-	@echo ... src/renderer/Mesh.s
-	@echo ... src/renderer/MeshBuilder.obj
-	@echo ... src/renderer/MeshBuilder.i
-	@echo ... src/renderer/MeshBuilder.s
-	@echo ... src/renderer/RenderGraph.obj
-	@echo ... src/renderer/RenderGraph.i
-	@echo ... src/renderer/RenderGraph.s
-	@echo ... src/renderer/RenderPass.obj
-	@echo ... src/renderer/RenderPass.i
-	@echo ... src/renderer/RenderPass.s
-	@echo ... src/renderer/backends/opengl/OpenGLBuffer.obj
-	@echo ... src/renderer/backends/opengl/OpenGLBuffer.i
-	@echo ... src/renderer/backends/opengl/OpenGLBuffer.s
-	@echo ... src/renderer/backends/opengl/OpenGLRenderer.obj
-	@echo ... src/renderer/backends/opengl/OpenGLRenderer.i
-	@echo ... src/renderer/backends/opengl/OpenGLRenderer.s
-	@echo ... src/renderer/backends/opengl/OpenGLShader.obj
-	@echo ... src/renderer/backends/opengl/OpenGLShader.i
-	@echo ... src/renderer/backends/opengl/OpenGLShader.s
-	@echo ... src/renderer/backends/opengl/OpenGLTexture.obj
-	@echo ... src/renderer/backends/opengl/OpenGLTexture.i
-	@echo ... src/renderer/backends/opengl/OpenGLTexture.s
-	@echo ... src/scene/Scene.obj
-	@echo ... src/scene/Scene.i
-	@echo ... src/scene/Scene.s
 	@echo ... src/scene/SceneFrameBuffer.obj
 	@echo ... src/scene/SceneFrameBuffer.i
 	@echo ... src/scene/SceneFrameBuffer.s
-	@echo ... src/scene/SceneManager.obj
-	@echo ... src/scene/SceneManager.i
-	@echo ... src/scene/SceneManager.s
-	@echo ... src/scene/SceneSerializer.obj
-	@echo ... src/scene/SceneSerializer.i
-	@echo ... src/scene/SceneSerializer.s
-	@echo ... src/scene/ecs/ComponentPool.obj
-	@echo ... src/scene/ecs/ComponentPool.i
-	@echo ... src/scene/ecs/ComponentPool.s
-	@echo ... src/scene/ecs/Entity.obj
-	@echo ... src/scene/ecs/Entity.i
-	@echo ... src/scene/ecs/Entity.s
-	@echo ... src/scene/ecs/Registry.obj
-	@echo ... src/scene/ecs/Registry.i
-	@echo ... src/scene/ecs/Registry.s
-	@echo ... src/scene/ecs/System.obj
-	@echo ... src/scene/ecs/System.i
-	@echo ... src/scene/ecs/System.s
+	@echo ... src/scripting/ScriptEngine.obj
+	@echo ... src/scripting/ScriptEngine.i
+	@echo ... src/scripting/ScriptEngine.s
 	@echo ... src/ui/imgui/AssetBrowser.obj
 	@echo ... src/ui/imgui/AssetBrowser.i
 	@echo ... src/ui/imgui/AssetBrowser.s
@@ -2289,51 +1268,21 @@ help:
 	@echo ... src/ui/imgui/EditorGrid.obj
 	@echo ... src/ui/imgui/EditorGrid.i
 	@echo ... src/ui/imgui/EditorGrid.s
+	@echo ... src/ui/imgui/EditorHierarchy.obj
+	@echo ... src/ui/imgui/EditorHierarchy.i
+	@echo ... src/ui/imgui/EditorHierarchy.s
+	@echo ... src/ui/imgui/EditorInspector.obj
+	@echo ... src/ui/imgui/EditorInspector.i
+	@echo ... src/ui/imgui/EditorInspector.s
+	@echo ... src/ui/imgui/EditorProject.obj
+	@echo ... src/ui/imgui/EditorProject.i
+	@echo ... src/ui/imgui/EditorProject.s
 	@echo ... src/ui/imgui/EditorViewport.obj
 	@echo ... src/ui/imgui/EditorViewport.i
 	@echo ... src/ui/imgui/EditorViewport.s
 	@echo ... src/ui/imgui/GameViewport.obj
 	@echo ... src/ui/imgui/GameViewport.i
 	@echo ... src/ui/imgui/GameViewport.s
-	@echo ... src/utils/FileSystem.obj
-	@echo ... src/utils/FileSystem.i
-	@echo ... src/utils/FileSystem.s
-	@echo ... src/utils/Logger.obj
-	@echo ... src/utils/Logger.i
-	@echo ... src/utils/Logger.s
-	@echo ... src/utils/MemoryPool.obj
-	@echo ... src/utils/MemoryPool.i
-	@echo ... src/utils/MemoryPool.s
-	@echo ... src/utils/StringUtils.obj
-	@echo ... src/utils/StringUtils.i
-	@echo ... src/utils/StringUtils.s
-	@echo ... src/utils/Timer.obj
-	@echo ... src/utils/Timer.i
-	@echo ... src/utils/Timer.s
-	@echo ... src/world/World.obj
-	@echo ... src/world/World.i
-	@echo ... src/world/World.s
-	@echo ... src/world/WorldManager.obj
-	@echo ... src/world/WorldManager.i
-	@echo ... src/world/WorldManager.s
-	@echo ... src/world/streaming/AsyncLoader.obj
-	@echo ... src/world/streaming/AsyncLoader.i
-	@echo ... src/world/streaming/AsyncLoader.s
-	@echo ... src/world/streaming/ChunkStreamer.obj
-	@echo ... src/world/streaming/ChunkStreamer.i
-	@echo ... src/world/streaming/ChunkStreamer.s
-	@echo ... src/world/terrain/Chunk.obj
-	@echo ... src/world/terrain/Chunk.i
-	@echo ... src/world/terrain/Chunk.s
-	@echo ... src/world/terrain/ChunkMesh.obj
-	@echo ... src/world/terrain/ChunkMesh.i
-	@echo ... src/world/terrain/ChunkMesh.s
-	@echo ... src/world/terrain/HeightMap.obj
-	@echo ... src/world/terrain/HeightMap.i
-	@echo ... src/world/terrain/HeightMap.s
-	@echo ... src/world/terrain/TerrainGenerator.obj
-	@echo ... src/world/terrain/TerrainGenerator.i
-	@echo ... src/world/terrain/TerrainGenerator.s
 .PHONY : help
 
 
@@ -2345,6 +1294,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P "C:\Projetos\Github Projects\fractal-engine\build\CMakeFiles\VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

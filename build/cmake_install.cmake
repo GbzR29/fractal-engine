@@ -39,6 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Projetos/Github Projects/fractal-engine/build/src/cmake_install.cmake")
 endif()
 

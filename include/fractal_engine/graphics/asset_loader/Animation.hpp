@@ -1,27 +1,45 @@
+/**
+ * @file Animation.hpp
+ * @brief Skeletal animation: keyframe data, animation clips, and the Animator runtime.
+ *
+ * Data flow:
+ * 1. @ref ModelLoader populates @ref Animation clips inside a @ref Model.
+ * 2. @ref Animator::play() selects an active clip.
+ * 3. @ref Animator::update() advances time and fills @c m_boneTransforms.
+ * 4. @ref Model::drawAnimated() uploads the bone transforms to the skinning shader.
+ */
 #pragma once
 
 #include "Skeleton.hpp"
-#include <glm/gtx/quaternion.hpp>
+#include <glm/gtc/quaternion.hpp>
 #include <vector>
 #include <string>
 #include <unordered_map>
 
-// ──────────────────────────────────────────────
-//  Keyframes
-// ──────────────────────────────────────────────
-struct KeyPosition { glm::vec3 value; float time; };
-struct KeyRotation { glm::quat value; float time; };
-struct KeyScale    { glm::vec3 value; float time; };
+// ─────────────────────────────────────────────
+//  Keyframe types
+// ─────────────────────────────────────────────
 
-// ──────────────────────────────────────────────
+struct KeyPosition { glm::vec3 value; float time; }; ///< A single position keyframe.
+struct KeyRotation { glm::quat value; float time; }; ///< A single rotation keyframe (quaternion).
+struct KeyScale    { glm::vec3 value; float time; }; ///< A single scale keyframe.
+
+// ─────────────────────────────────────────────
 //  Per-bone animation channel
-// ──────────────────────────────────────────────
-struct BoneChannel {
-    std::string            boneName;
-    std::vector<KeyPosition> positions;
-    std::vector<KeyRotation> rotations;
-    std::vector<KeyScale>    scales;
+// ─────────────────────────────────────────────
 
+/// @brief Keyframe tracks for a single bone within one animation clip.
+struct BoneChannel {
+    std::string              boneName;  ///< Bone name; must match a key in @ref Skeleton::boneMap.
+    std::vector<KeyPosition> positions; ///< Position keyframe track.
+    std::vector<KeyRotation> rotations; ///< Rotation keyframe track.
+    std::vector<KeyScale>    scales;    ///< Scale keyframe track.
+
+    /**
+     * @brief Evaluates the combined TRS matrix at the given animation time.
+     * @param animTime  Time in animation ticks.
+     * @return Interpolated local-space bone transform.
+     */
     glm::mat4 interpolate(float animTime) const;
 
 private:
@@ -37,34 +55,64 @@ private:
     }
 };
 
-// ──────────────────────────────────────────────
+// ─────────────────────────────────────────────
 //  Animation clip
-// ──────────────────────────────────────────────
+// ─────────────────────────────────────────────
+
+/// @brief One named animation clip as imported from the source asset.
 class Animation {
 public:
-    std::string name;
-    float       duration       = 0.0f; // in ticks
-    float       ticksPerSecond = 25.0f;
+    std::string name;                                        ///< Clip name (e.g. "Walk", "Idle").
+    float       duration       = 0.0f;                      ///< Total duration in animation ticks.
+    float       ticksPerSecond = 25.0f;                     ///< Ticks-per-second rate from the source file.
 
-    std::unordered_map<std::string, BoneChannel> channels;
+    std::unordered_map<std::string, BoneChannel> channels;  ///< Per-bone keyframe tracks, keyed by bone name.
 
-    float durationSeconds() const { return duration / ticksPerSecond; }
-    float toTicks(float seconds) const { return seconds * ticksPerSecond; }
+    float durationSeconds() const { return duration / ticksPerSecond; }         ///< @return Clip duration in seconds.
+    float toTicks(float seconds) const { return seconds * ticksPerSecond; }     ///< @return Converts seconds to animation ticks.
 };
 
-// ──────────────────────────────────────────────
+// ─────────────────────────────────────────────
 //  Animator — drives bone transforms
-// ──────────────────────────────────────────────
+// ─────────────────────────────────────────────
+
+/// @brief Runtime animation player: evaluates a clip each frame and produces bone transforms.
 class Animator {
 public:
-    static constexpr int MAX_BONES = 100;
+    static constexpr int MAX_BONES = 100; ///< Maximum number of bones per skeleton.
 
-    void update(float deltaTime);
+    /**
+     * @brief Advances the playback time and recomputes the bone transform palette.
+     * @param deltaTime  Seconds elapsed since the last frame.
+     * @param skeleton   The skeleton whose bind pose is used as the base.
+     */
+    void update(float deltaTime, const Skeleton& skeleton);
+
+    /**
+     * @brief Starts playback of an animation clip.
+     * @param anim  Clip to play; must remain valid for the lifetime of the Animator.
+     * @param loop  Whether to loop the clip when it reaches the end.
+     */
     void play(const Animation* anim, bool loop = true);
+
+    /**
+     * @brief Cross-fades to a new animation clip over the given duration.
+     * @param anim           Target clip.
+     * @param blendDuration  Blend-in time in seconds.
+     * @param loop           Whether to loop the target clip.
+     */
     void crossFadeTo(const Animation* anim, float blendDuration, bool loop = true);
 
+    /// @return The current bone transform palette (one mat4 per bone, up to @ref MAX_BONES).
     const std::vector<glm::mat4>& getBoneTransforms() const { return m_boneTransforms; }
 
+    /**
+     * @brief Recursively evaluates the skeleton hierarchy and fills the transform palette.
+     * @param node             Current skeleton node.
+     * @param parentTransform  Accumulated parent world transform.
+     * @param skeleton         Skeleton definition.
+     * @param animTime         Current animation time in ticks.
+     */
     void computeTransforms(const SkeletonNode& node,
                            const glm::mat4&    parentTransform,
                            const Skeleton&     skeleton,

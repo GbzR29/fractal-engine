@@ -5026,3 +5026,856 @@ events:
       Running the C compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-D__USE_MINGW_ANSI_STDIO=0 -I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-D__USE_MINGW_ANSI_STDIO=0 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe" "--version"
       
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:139 (find_package)"
+    name: "assimp"
+    configs:
+      -
+        filename: "assimpConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "assimp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "assimp"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/pkgRedirects/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/pkgRedirects/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/VulkanSDK/1.4.341.1/Bin/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/VulkanSDK/1.4.341.1/Bin/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Docker/Docker/resources/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Docker/Docker/resources/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git LFS/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git LFS/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Neovim/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Neovim/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7-preview/preview/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7-preview/preview/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Python/Python313/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Programs/Python/Python313/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-24/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-24/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/mingw64/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/mingw64/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Roaming/npm/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/AppData/Roaming/npm/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Flutter SDK/flutter/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Flutter SDK/flutter/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/lua55/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/lua55/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/android sdk/platform-tools/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/android sdk/platform-tools/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/.lmstudio/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/.lmstudio/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/bin/vendor_perl/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/bin/vendor_perl/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/bin/core_perl/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/bin/core_perl/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/.claude/plugins/cache/obsidian-skills/obsidian/1.0.1/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/gabri/.claude/plugins/cache/obsidian-skills/obsidian/1.0.1/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/assimpConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/assimp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\gabri\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\gabri\\bin"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\VulkanSDK\\1.4.341.1\\Bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\Windows\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git LFS"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\cursor\\resources\\app\\codeBin"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313"
+        - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-24\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\Users\\gabri\\AppData\\Roaming\\npm"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Flutter SDK\\flutter\\bin"
+        - "C:\\Users\\gabri\\.dotnet\\tools"
+        - "C:\\lua55"
+        - "C:\\android sdk\\platform-tools"
+        - "C:\\Users\\gabri\\.lmstudio\\bin"
+        - "C:\\Users\\gabri\\.local\\bin\\claude.exe"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\gabri\\.claude\\plugins\\cache\\obsidian-skills\\obsidian\\1.0.1\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/FractalEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/FractalEngine"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "include/third_party/assimp/CMakeLists.txt:94 (find_program)"
+    mode: "program"
+    variable: "CCACHE_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/VulkanSDK/1.4.341.1/Bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/Git LFS/"
+      - "C:/Program Files/Neovim/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/PowerShell/7-preview/preview/"
+      - "C:/Users/gabri/AppData/Local/Programs/cursor/resources/app/codeBin/"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files/Java/jdk-24/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/mingw64/bin/"
+      - "C:/Users/gabri/AppData/Roaming/npm/"
+      - "C:/Users/gabri/AppData/Local/Programs/Ollama/"
+      - "C:/Flutter SDK/flutter/bin/"
+      - "C:/Users/gabri/.dotnet/tools/"
+      - "C:/lua55/"
+      - "C:/android sdk/platform-tools/"
+      - "C:/Users/gabri/.lmstudio/bin/"
+      - "C:/Users/gabri/.local/bin/claude.exe/"
+      - "C:/Users/gabri/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/FractalEngine/bin/"
+      - "C:/Program Files (x86)/FractalEngine/sbin/"
+      - "C:/Program Files (x86)/FractalEngine/"
+    searched_directories:
+      - "C:/Program Files/PowerShell/7/ccache.com"
+      - "C:/Program Files/PowerShell/7/ccache.exe"
+      - "C:/Program Files/PowerShell/7/ccache"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ccache.com"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ccache.exe"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ccache"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ccache.com"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ccache.exe"
+      - "C:/Users/gabri/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ccache"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/ccache"
+      - "C:/VulkanSDK/1.4.341.1/Bin/ccache.com"
+      - "C:/VulkanSDK/1.4.341.1/Bin/ccache.exe"
+      - "C:/VulkanSDK/1.4.341.1/Bin/ccache"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/ccache"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/ccache.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/ccache.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/ccache"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/ccache.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/ccache.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/ccache"
+      - "C:/Windows/System32/ccache.com"
+      - "C:/Windows/System32/ccache.exe"
+      - "C:/Windows/System32/ccache"
+      - "C:/Windows/ccache.com"
+      - "C:/Windows/ccache.exe"
+      - "C:/Windows/ccache"
+      - "C:/Windows/System32/wbem/ccache.com"
+      - "C:/Windows/System32/wbem/ccache.exe"
+      - "C:/Windows/System32/wbem/ccache"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache"
+      - "C:/Windows/System32/OpenSSH/ccache.com"
+      - "C:/Windows/System32/OpenSSH/ccache.exe"
+      - "C:/Windows/System32/OpenSSH/ccache"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/ccache"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/ccache"
+      - "C:/Program Files/Git/cmd/ccache.com"
+      - "C:/Program Files/Git/cmd/ccache.exe"
+      - "C:/Program Files/Git/cmd/ccache"
+      - "C:/Program Files/dotnet/ccache.com"
+      - "C:/Program Files/dotnet/ccache.exe"
+      - "C:/Program Files/dotnet/ccache"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache.com"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache.exe"
+      - "C:/Program Files/Docker/Docker/resources/bin/ccache"
+      - "C:/Program Files/nodejs/ccache.com"
+      - "C:/Program Files/nodejs/ccache.exe"
+      - "C:/Program Files/nodejs/ccache"
+      - "C:/Program Files/Git LFS/ccache.com"
+      - "C:/Program Files/Git LFS/ccache.exe"
+      - "C:/Program Files/Git LFS/ccache"
+      - "C:/Program Files/Neovim/bin/ccache.com"
+      - "C:/Program Files/Neovim/bin/ccache.exe"
+      - "C:/Program Files/Neovim/bin/ccache"
+      - "C:/Program Files/CMake/bin/ccache.com"
+      - "C:/Program Files/CMake/bin/ccache.exe"
+      - "C:/Program Files/CMake/bin/ccache"
+      - "C:/Program Files/PowerShell/7-preview/preview/ccache.com"
+      - "C:/Program Files/PowerShell/7-preview/preview/ccache.exe"
+      - "C:/Program Files/PowerShell/7-preview/preview/ccache"
+      - "C:/Users/gabri/AppData/Local/Programs/cursor/resources/app/codeBin/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Programs/cursor/resources/app/codeBin/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Programs/cursor/resources/app/codeBin/ccache"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/Scripts/ccache"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Programs/Python/Python313/ccache"
+      - "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Microsoft/WindowsApps/ccache"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/bin/ccache.com"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/bin/ccache.exe"
+      - "C:/Users/gabri/AppData/Local/Programs/Microsoft VS Code/bin/ccache"
+      - "C:/Program Files/Java/jdk-24/bin/ccache.com"
+      - "C:/Program Files/Java/jdk-24/bin/ccache.exe"
+      - "C:/Program Files/Java/jdk-24/bin/ccache"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/ccache.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/ccache.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/ccache"
+      - "C:/mingw64/bin/ccache.com"
+    found: "C:/mingw64/bin/ccache.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\gabri\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\gabri\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\VulkanSDK\\1.4.341.1\\Bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\Git LFS"
+        - "C:\\Program Files\\Neovim\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7-preview\\preview"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "c:\\Users\\gabri\\AppData\\Local\\Programs\\cursor\\resources\\app\\codeBin"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\gabri\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-24\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\Users\\gabri\\AppData\\Roaming\\npm"
+        - "C:\\Users\\gabri\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Flutter SDK\\flutter\\bin"
+        - "C:\\Users\\gabri\\.dotnet\\tools"
+        - "C:\\lua55"
+        - "C:\\android sdk\\platform-tools"
+        - "C:\\Users\\gabri\\.lmstudio\\bin"
+        - "C:\\Users\\gabri\\.local\\bin\\claude.exe"
+        - "c:\\Users\\gabri\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/FractalEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/FractalEngine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:35 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-2w0ilu"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-2w0ilu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-2w0ilu'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_87318/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_87318.dir\\build.make CMakeFiles/cmTC_87318.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-2w0ilu'
+        Building C object CMakeFiles/cmTC_87318.dir/CheckIncludeFile.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_87318.dir\\CheckIncludeFile.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2w0ilu\\CheckIncludeFile.c"
+        Linking C executable cmTC_87318.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_87318.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_87318.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_87318.dir/objects.a @CMakeFiles\\cmTC_87318.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_87318.dir/objects.a -Wl,--no-whole-archive -o cmTC_87318.exe -Wl,--out-implib,libcmTC_87318.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_87318.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-2w0ilu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:36 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-kn2ev3"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-kn2ev3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-kn2ev3'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_46515/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_46515.dir\\build.make CMakeFiles/cmTC_46515.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-kn2ev3'
+        Building C object CMakeFiles/cmTC_46515.dir/CheckIncludeFile.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_46515.dir\\CheckIncludeFile.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kn2ev3\\CheckIncludeFile.c"
+        Linking C executable cmTC_46515.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_46515.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_46515.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_46515.dir/objects.a @CMakeFiles\\cmTC_46515.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_46515.dir/objects.a -Wl,--no-whole-archive -o cmTC_46515.exe -Wl,--out-implib,libcmTC_46515.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_46515.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-kn2ev3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:37 (check_include_file)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-4jdr7o"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-4jdr7o"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-4jdr7o'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_35a6c/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_35a6c.dir\\build.make CMakeFiles/cmTC_35a6c.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-4jdr7o'
+        Building C object CMakeFiles/cmTC_35a6c.dir/CheckIncludeFile.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_35a6c.dir\\CheckIncludeFile.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4jdr7o\\CheckIncludeFile.c"
+        Linking C executable cmTC_35a6c.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_35a6c.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_35a6c.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_35a6c.dir/objects.a @CMakeFiles\\cmTC_35a6c.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_35a6c.dir/objects.a -Wl,--no-whole-archive -o cmTC_35a6c.exe -Wl,--out-implib,libcmTC_35a6c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_35a6c.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-4jdr7o'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:55 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-f635bu"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-f635bu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-f635bu'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_53346/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_53346.dir\\build.make CMakeFiles/cmTC_53346.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-f635bu'
+        Building C object CMakeFiles/cmTC_53346.dir/OFF64_T.c.obj
+        C:\\mingw64\\bin\\gcc.exe -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_53346.dir\\OFF64_T.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f635bu\\OFF64_T.c"
+        Linking C executable cmTC_53346.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_53346.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_53346.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_53346.dir/objects.a @CMakeFiles\\cmTC_53346.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_53346.dir/objects.a -Wl,--no-whole-archive -o cmTC_53346.exe -Wl,--out-implib,libcmTC_53346.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_53346.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-f635bu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:64 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-u9izgj"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-u9izgj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-u9izgj'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_82506/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_82506.dir\\build.make CMakeFiles/cmTC_82506.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-u9izgj'
+        Building C object CMakeFiles/cmTC_82506.dir/CheckFunctionExists.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC  -DCHECK_FUNCTION_EXISTS=fseeko -std=gnu99 -o CMakeFiles\\cmTC_82506.dir\\CheckFunctionExists.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u9izgj\\CheckFunctionExists.c"
+        Linking C executable cmTC_82506.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_82506.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_82506.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_82506.dir/objects.a @CMakeFiles\\cmTC_82506.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC  -DCHECK_FUNCTION_EXISTS=fseeko -Wl,--whole-archive CMakeFiles\\cmTC_82506.dir/objects.a -Wl,--no-whole-archive -o cmTC_82506.exe -Wl,--out-implib,libcmTC_82506.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_82506.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-u9izgj'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "include/third_party/assimp/contrib/zlib/CMakeLists.txt:72 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-tfutdt"
+      binary: "C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-tfutdt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Projetos/Github Projects/fractal-engine/include/third_party/assimp/cmake-modules"
+    buildResult:
+      variable: "Z_HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-tfutdt'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_984ca/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_984ca.dir\\build.make CMakeFiles/cmTC_984ca.dir/build
+        mingw32-make[1]: Entering directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-tfutdt'
+        Building C object CMakeFiles/cmTC_984ca.dir/CheckIncludeFile.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_984ca.dir\\CheckIncludeFile.c.obj -c "C:\\Projetos\\Github Projects\\fractal-engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tfutdt\\CheckIncludeFile.c"
+        Linking C executable cmTC_984ca.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_984ca.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_984ca.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_984ca.dir/objects.a @CMakeFiles\\cmTC_984ca.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_984ca.dir/objects.a -Wl,--no-whole-archive -o cmTC_984ca.exe -Wl,--out-implib,libcmTC_984ca.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_984ca.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/CMakeScratch/TryCompile-tfutdt'
+        
+      exitCode: 0
+...

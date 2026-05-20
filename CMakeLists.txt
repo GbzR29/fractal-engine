@@ -124,7 +124,7 @@ if (FE_ENABLE_LUA)
 endif()
 
 # ─────────────────────────────────────────────────────────────────────────────
-#  Assimp (Compilação via Subdirectory)
+#  Assimp — subdirectory (fonte completa) ou find_package (vcpkg/sistema)
 # ─────────────────────────────────────────────────────────────────────────────
 if (FE_USE_ASSIMP)
     if (EXISTS "${TP}/assimp/CMakeLists.txt")
@@ -133,8 +133,19 @@ if (FE_USE_ASSIMP)
         set(ASSIMP_INSTALL              OFF CACHE BOOL "" FORCE)
         set(BUILD_SHARED_LIBS           OFF CACHE BOOL "" FORCE)
         add_subdirectory("${TP}/assimp")
+        # Assimp define CMAKE_DEBUG_POSTFIX "d" globalmente — impede que nossos targets ganhem o sufixo
+        set(CMAKE_DEBUG_POSTFIX "" CACHE STRING "" FORCE)
+        set(FE_ASSIMP_TARGET assimp)
+        message(STATUS " Assimp   : compilando do source em ${TP}/assimp")
     else()
-        set(FE_USE_ASSIMP OFF)
+        find_package(assimp CONFIG QUIET)
+        if (assimp_FOUND)
+            set(FE_ASSIMP_TARGET assimp::assimp)
+            message(STATUS " Assimp   : encontrado via find_package (vcpkg/sistema)")
+        else()
+            set(FE_USE_ASSIMP OFF)
+            message(WARNING " Assimp   : nao encontrado — coloque o source em ${TP}/assimp/ ou instale via vcpkg.")
+        endif()
     endif()
 endif()
 
@@ -143,7 +154,7 @@ endif()
 # ─────────────────────────────────────────────────────────────────────────────
 add_library(FractalEngineLib STATIC)
 
-file(GLOB_RECURSE FRACTAL_ENGINE_DIRS LIST_DIRECTORIES true "${CMAKE_SOURCE_DIR}/include/fractal_engine/*")
+file(GLOB_RECURSE FRACTAL_ENGINE_DIRS CONFIGURE_DEPENDS LIST_DIRECTORIES true "${CMAKE_SOURCE_DIR}/include/fractal_engine/*")
 set(ENGINE_INCLUDE_PATHS "${CMAKE_SOURCE_DIR}/include")
 foreach(dir ${FRACTAL_ENGINE_DIRS})
     if(IS_DIRECTORY ${dir})
@@ -185,9 +196,19 @@ if (FE_ENABLE_LUA)
 endif()
 
 if (FE_USE_ASSIMP)
-    target_link_libraries(FractalEngineLib PUBLIC assimp)
+    target_link_libraries(FractalEngineLib PUBLIC ${FE_ASSIMP_TARGET})
     target_compile_definitions(FractalEngineLib PUBLIC FE_USE_ASSIMP)
 endif()
+
+# Caminho absoluto para assets em tempo de compilação (resolve o problema de CWD ≠ source root)
+# Usa configure_file para evitar problemas de escaping com espaços no caminho
+set(FE_ASSETS_ROOT_PATH "${CMAKE_SOURCE_DIR}/assets")
+configure_file(
+    "${CMAKE_SOURCE_DIR}/cmake/AssetsRoot.hpp.in"
+    "${CMAKE_BINARY_DIR}/generated/AssetsRoot.hpp"
+    @ONLY
+)
+target_include_directories(FractalEngineLib PUBLIC "${CMAKE_BINARY_DIR}/generated")
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  Executável Principal
@@ -197,6 +218,11 @@ target_link_libraries(FractalEngine PRIVATE FractalEngineLib)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release" AND WIN32)
     target_link_options(FractalEngine PRIVATE -mwindows)
+endif()
+
+# MinGW + Assimp (static): evita conflito de símbolos typeinfo/RTTI entre libstdc++ e assimp
+if (MINGW)
+    target_link_options(FractalEngine PRIVATE -Wl,--allow-multiple-definition)
 endif()
 
 if (FE_BUILD_TOOLS)

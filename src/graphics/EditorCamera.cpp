@@ -118,3 +118,17 @@ void EditorCamera::RecalculateProjection()
     m_Projection = glm::perspective(
         ToRad(m_FOV), m_AspectRatio, m_Near, m_Far);
 }
+
+void EditorCamera::SetFromViewMatrix(const glm::mat4& view)
+{
+    // Extrai posição e direção da câmera a partir da view matrix
+    glm::mat4 invView = glm::inverse(view);
+    glm::vec3 camPos  = glm::vec3(invView[3]);
+    glm::vec3 forward = glm::normalize(-glm::vec3(invView[2])); // -Z da câmera = frente
+
+    m_Pitch      = glm::degrees(asin(glm::clamp(forward.y, -1.0f, 1.0f)));
+    m_Yaw        = glm::degrees(atan2(forward.z, forward.x));
+    m_FocalPoint = camPos + forward * m_Distance;
+
+    RecalculateView();
+}

@@ -1,8 +1,7 @@
 #include "TextureLoader.hpp"
 #include <iostream>
 
-// stb_image — define APENAS neste .cpp
-#define STB_IMAGE_IMPLEMENTATION
+// STB_IMAGE_IMPLEMENTATION lives in Texture.cpp (single translation unit)
 #include <stb_image.h>
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -73,7 +72,7 @@ Texture2D CreateDefaultNormalMap()   { return CreateSolidTexture(128, 128, 255, 
 // ─────────────────────────────────────────────────────────────────────────────
 Texture2D TextureLoader::Load(const std::string& path, const TextureSpec& spec)
 {
-    stbi_set_flip_vertically_on_load(spec.FlipY);
+    stbi_set_flip_vertically_on_load_thread(spec.FlipY ? 1 : 0);
 
     int w, h, ch;
     unsigned char* data = stbi_load(path.c_str(), &w, &h, &ch, 0);
@@ -124,7 +123,7 @@ Texture2D TextureLoader::Load(const std::string& path, const TextureSpec& spec)
 // ─────────────────────────────────────────────────────────────────────────────
 Texture2D TextureLoader::LoadHDR(const std::string& path)
 {
-    stbi_set_flip_vertically_on_load(true);
+    stbi_set_flip_vertically_on_load_thread(1);
 
     int w, h, ch;
     float* data = stbi_loadf(path.c_str(), &w, &h, &ch, 0);
@@ -160,7 +159,7 @@ Texture2D TextureLoader::LoadHDR(const std::string& path)
 // ─────────────────────────────────────────────────────────────────────────────
 GLuint TextureLoader::LoadCubemap(const std::string paths[6])
 {
-    stbi_set_flip_vertically_on_load(false);
+    stbi_set_flip_vertically_on_load_thread(0);
 
     GLuint id;
     glGenTextures(1, &id);

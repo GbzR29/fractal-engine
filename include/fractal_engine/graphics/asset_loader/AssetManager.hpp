@@ -1,282 +1,132 @@
+/**
+ * @file AssetManager.hpp
+ * @brief Thread-safe asset cache and async loader for models and textures.
+ *
+ * Assets are keyed by their absolute path string.  Duplicate load requests return
+ * the cached @c shared_ptr without re-reading the file.
+ *
+ * Async workflow:
+ * 1. Call @ref loadModelAsync() / @ref loadTextureAsync() from any thread.
+ * 2. Call @ref flushPendingLoads() on the GL thread once per frame to complete GPU uploads.
+ *
+ * Prefer the @ref AssetLoader façade for path resolution and high-level access.
+ */
 #pragma once
+
 #include "Model.hpp"
 #include "Texture.hpp"
-#include "ModelLoader.hpp"
 
-#include <filesystem>
-#include <future>
-#include <mutex>
-#include <thread>
-#include <unordered_map>
-#include <functional>
-#include <queue>
 #include <atomic>
-#include <variant>
 #include <chrono>
-#include <iostream>
+#include <filesystem>
+#include <functional>
+#include <memory>
+#include <mutex>
+#include <queue>
+#include <string>
+#include <unordered_map>
 
 namespace fs = std::filesystem;
 
-// ──────────────────────────────────────────────────────────────────────────
-//  LoadResult — sent from async threads to the GL main thread
-// ──────────────────────────────────────────────────────────────────────────
+/// @brief Result of an async load operation — queued until @ref AssetManager::flushPendingLoads().
 struct LoadResult {
-    std::string                  key;
-    std::shared_ptr<Model>       model;   // non-null if a Model was loaded
-    std::shared_ptr<Texture>     texture; // non-null if a Texture was loaded
-    std::function<void()>        onReady; // optional callback
+    std::string              key;      ///< Cache key (absolute path).
+    std::shared_ptr<Model>   model;    ///< Loaded model (null if this is a texture load).
+    std::shared_ptr<Texture> texture;  ///< Loaded texture (null if this is a model load).
+    std::function<void()>    onReady;  ///< Optional callback invoked after GPU upload.
 };
 
-// ──────────────────────────────────────────────────────────────────────────
-//  AssetManager
-// ──────────────────────────────────────────────────────────────────────────
+/// @brief Singleton asset cache with optional async loading and hot-reload watching.
 class AssetManager {
 public:
-    // ── Singleton ────────────────────────────────────────────────
-    static AssetManager& get() {
-        static AssetManager instance;
-        return instance;
-    }
+    /// @return The global AssetManager singleton.
+    static AssetManager& get();
 
     AssetManager(const AssetManager&)            = delete;
     AssetManager& operator=(const AssetManager&) = delete;
 
-    // ──────────────────────────────────────────────────────────────
-    //  Synchronous load  (blocks caller, returns immediately)
-    // ──────────────────────────────────────────────────────────────
-    std::shared_ptr<Model> loadModel(const std::string& path) {
-        {
-            std::lock_guard lock(m_modelMtx);
-            auto it = m_models.find(path);
-            if (it != m_models.end()) return it->second;
-        }
+    /**
+     * @brief Loads a model synchronously (blocks the calling thread).
+     * @param path  Absolute path to the model file.
+     * @return Cached or newly loaded model, or @c nullptr on failure.
+     */
+    std::shared_ptr<Model> loadModel(const std::string& path);
 
-        auto model = ModelLoader::load(path);
-        if (model) {
-            model->uploadToGPU(); // sync path — we're on the GL thread
-            std::lock_guard lock(m_modelMtx);
-            m_models[path] = model;
-        }
-        return model;
-    }
-
+    /**
+     * @brief Loads a texture synchronously (blocks the calling thread).
+     * @param path   Absolute path to the image file.
+     * @param type   Semantic texture type for PBR binding.
+     * @param flipY  Flip image vertically (OpenGL expects origin at bottom-left).
+     * @param sRGB   Upload as sRGB (gamma-correct for albedo / emissive maps).
+     * @return Cached or newly loaded texture, or @c nullptr on failure.
+     */
     std::shared_ptr<Texture> loadTexture(const std::string& path,
-                                          TextureType type = TextureType::Unknown,
-                                          bool flipY = true,
-                                          bool sRGB  = false)
-    {
-        {
-            std::lock_guard lock(m_texMtx);
-            auto it = m_textures.find(path);
-            if (it != m_textures.end()) return it->second;
-        }
+                                         TextureType type  = TextureType::Unknown,
+                                         bool        flipY = true,
+                                         bool        sRGB  = false);
 
-        auto tex = Texture::load(path, type, flipY, sRGB);
-        if (tex) {
-            std::lock_guard lock(m_texMtx);
-            m_textures[path] = tex;
-        }
-        return tex;
-    }
-
-    // ──────────────────────────────────────────────────────────────
-    //  Asynchronous load
-    //  onReady is called on the GL thread (inside flushPendingLoads)
-    // ──────────────────────────────────────────────────────────────
+    /**
+     * @brief Launches an async model load on a worker thread.
+     * @param path     Absolute path to the model file.
+     * @param onReady  Optional callback invoked on the GL thread after GPU upload.
+     */
     void loadModelAsync(const std::string& path,
-                        std::function<void(std::shared_ptr<Model>)> onReady = nullptr)
-    {
-        {
-            std::lock_guard lock(m_modelMtx);
-            if (m_models.count(path)) {
-                if (onReady) onReady(m_models[path]);
-                return;
-            }
-        }
+                        std::function<void(std::shared_ptr<Model>)> onReady = nullptr);
 
-        std::thread([this, path, cb = std::move(onReady)]() {
-            auto model = ModelLoader::load(path); // CPU work — no GL calls
-
-            LoadResult r;
-            r.key   = path;
-            r.model = model;
-            if (cb) r.onReady = [cb, model]() { cb(model); };
-
-            std::lock_guard lock(m_resultMtx);
-            m_pendingResults.push(std::move(r));
-        }).detach();
-    }
-
+    /**
+     * @brief Launches an async texture load on a worker thread.
+     * @param path     Absolute path to the image file.
+     * @param onReady  Optional callback invoked on the GL thread after GPU upload.
+     * @param type     Semantic texture type.
+     * @param flipY    Flip image vertically.
+     * @param sRGB     Upload as sRGB.
+     */
     void loadTextureAsync(const std::string& path,
                           std::function<void(std::shared_ptr<Texture>)> onReady = nullptr,
-                          TextureType type = TextureType::Unknown,
-                          bool flipY = true, bool sRGB = false)
-    {
-        {
-            std::lock_guard lock(m_texMtx);
-            if (m_textures.count(path)) {
-                if (onReady) onReady(m_textures[path]);
-                return;
-            }
-        }
+                          TextureType type  = TextureType::Unknown,
+                          bool        flipY = true,
+                          bool        sRGB  = false);
 
-        std::thread([this, path, type, flipY, sRGB, cb = std::move(onReady)]() {
-            auto tex = Texture::load(path, type, flipY, sRGB);
+    /// Uploads pending async results to the GPU.  Must be called on the GL thread each frame.
+    void flushPendingLoads();
 
-            LoadResult r;
-            r.key     = path;
-            r.texture = tex;
-            if (cb) r.onReady = [cb, tex]() { cb(tex); };
-
-            std::lock_guard lock(m_resultMtx);
-            m_pendingResults.push(std::move(r));
-        }).detach();
-    }
-
-    // ──────────────────────────────────────────────────────────────
-    //  Must be called once per frame on the GL thread.
-    //  Uploads GPU data for all finished background loads.
-    // ──────────────────────────────────────────────────────────────
-    void flushPendingLoads() {
-        std::queue<LoadResult> local;
-        {
-            std::lock_guard lock(m_resultMtx);
-            std::swap(local, m_pendingResults);
-        }
-
-        while (!local.empty()) {
-            auto& r = local.front();
-
-            if (r.model) {
-                r.model->uploadToGPU();
-                std::lock_guard lock(m_modelMtx);
-                m_models[r.key] = r.model;
-            }
-
-            if (r.texture) {
-                // Texture upload already happened inside Texture::load
-                // (stb + glTexImage2D are bundled), but if you split them
-                // in the future, do GPU upload here.
-                std::lock_guard lock(m_texMtx);
-                m_textures[r.key] = r.texture;
-            }
-
-            if (r.onReady) r.onReady();
-
-            local.pop();
-        }
-    }
-
-    // ──────────────────────────────────────────────────────────────
-    //  Hot-reload  (call from a background thread or each frame)
-    //
-    //  Checks file modification times; reloads changed assets.
-    //  Safe: queues results through the same pending-results channel.
-    // ──────────────────────────────────────────────────────────────
+    /**
+     * @brief Starts a background thread that polls asset files for modifications.
+     * @param pollInterval  How often to check file timestamps.
+     */
     void startHotReloadWatcher(std::chrono::milliseconds pollInterval =
-                                    std::chrono::milliseconds(500))
-    {
-        if (m_watcherRunning.exchange(true)) return; // already running
+                                   std::chrono::milliseconds(500));
 
-        std::thread([this, pollInterval]() {
-            using Clock = std::filesystem::file_time_type::clock;
+    /// Stops the hot-reload watcher thread.
+    void stopHotReloadWatcher();
 
-            // Build initial timestamps
-            std::unordered_map<std::string, fs::file_time_type> stamps;
-            auto snapshot = [&]() {
-                std::lock_guard lm(m_modelMtx);
-                std::lock_guard lt(m_texMtx);
-                for (auto& [k, _] : m_models)   stamps[k] = lastWrite(k);
-                for (auto& [k, _] : m_textures)  stamps[k] = lastWrite(k);
-            };
-            snapshot();
+    /// @return Cached model by key, or @c nullptr if not in cache.
+    std::shared_ptr<Model>   getModel  (const std::string& key) const;
 
-            while (m_watcherRunning) {
-                std::this_thread::sleep_for(pollInterval);
+    /// @return Cached texture by key, or @c nullptr if not in cache.
+    std::shared_ptr<Texture> getTexture(const std::string& key) const;
 
-                // Check models
-                {
-                    std::lock_guard lock(m_modelMtx);
-                    for (auto& [path, _] : m_models) {
-                        auto t = lastWrite(path);
-                        if (t != stamps[path]) {
-                            stamps[path] = t;
-                            std::cout << "[HotReload] Reloading model: " << path << "\n";
-                            auto model = ModelLoader::load(path);
-                            if (model) {
-                                LoadResult r; r.key = path; r.model = model;
-                                std::lock_guard rl(m_resultMtx);
-                                m_pendingResults.push(std::move(r));
-                            }
-                        }
-                    }
-                }
+    void evictModel  (const std::string& key); ///< Removes a model from the cache.
+    void evictTexture(const std::string& key); ///< Removes a texture from the cache.
+    void clearAll();                            ///< Clears all cached models and textures.
 
-                // Check textures
-                {
-                    std::lock_guard lock(m_texMtx);
-                    for (auto& [path, tex] : m_textures) {
-                        auto t = lastWrite(path);
-                        if (t != stamps[path]) {
-                            stamps[path] = t;
-                            std::cout << "[HotReload] Reloading texture: " << path << "\n";
-                            auto type  = tex ? tex->type  : TextureType::Unknown;
-                            auto newTex = Texture::load(path, type);
-                            if (newTex) {
-                                LoadResult r; r.key = path; r.texture = newTex;
-                                std::lock_guard rl(m_resultMtx);
-                                m_pendingResults.push(std::move(r));
-                            }
-                        }
-                    }
-                }
-            }
-        }).detach();
-    }
-
-    void stopHotReloadWatcher() { m_watcherRunning = false; }
-
-    // ──────────────────────────────────────────────────────────────
-    //  Cache queries
-    // ──────────────────────────────────────────────────────────────
-    std::shared_ptr<Model>   getModel  (const std::string& key) const {
-        std::lock_guard l(m_modelMtx);
-        auto it = m_models.find(key); return it != m_models.end() ? it->second : nullptr;
-    }
-    std::shared_ptr<Texture> getTexture(const std::string& key) const {
-        std::lock_guard l(m_texMtx);
-        auto it = m_textures.find(key); return it != m_textures.end() ? it->second : nullptr;
-    }
-
-    void evictModel  (const std::string& key) { std::lock_guard l(m_modelMtx);   m_models.erase(key);   }
-    void evictTexture(const std::string& key) { std::lock_guard l(m_texMtx);     m_textures.erase(key); }
-    void clearAll()                           { std::lock_guard lm(m_modelMtx), lt(m_texMtx);
-                                                m_models.clear(); m_textures.clear(); }
-
-    size_t modelCount()   const { std::lock_guard l(m_modelMtx);  return m_models.size();   }
-    size_t textureCount() const { std::lock_guard l(m_texMtx);    return m_textures.size(); }
+    size_t modelCount()   const; ///< @return Number of models currently in cache.
+    size_t textureCount() const; ///< @return Number of textures currently in cache.
 
 private:
-    AssetManager()  = default;
-    ~AssetManager() { stopHotReloadWatcher(); }
+    AssetManager();
+    ~AssetManager();
 
-    static fs::file_time_type lastWrite(const std::string& path) {
-        std::error_code ec;
-        auto t = fs::last_write_time(path, ec);
-        return ec ? fs::file_time_type{} : t;
-    }
+    static fs::file_time_type lastWrite(const std::string& path);
 
-    // Caches
     mutable std::mutex                                       m_modelMtx;
-    std::unordered_map<std::string, std::shared_ptr<Model>>  m_models;
+    std::unordered_map<std::string, std::shared_ptr<Model>> m_models;
 
     mutable std::mutex                                         m_texMtx;
-    std::unordered_map<std::string, std::shared_ptr<Texture>>  m_textures;
+    std::unordered_map<std::string, std::shared_ptr<Texture>> m_textures;
 
-    // Async results queue (write: bg threads; read: GL thread)
     std::mutex             m_resultMtx;
     std::queue<LoadResult> m_pendingResults;
 
-    // Hot-reload watcher
     std::atomic<bool> m_watcherRunning{ false };
 };

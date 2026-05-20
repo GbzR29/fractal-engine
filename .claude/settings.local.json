@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmake .. -G \"MinGW Makefiles\")",
+      "Bash(cmake --build . --target FractalEngine)",
+      "Bash(ls \"C:/vcpkg/\" 2>/dev/null | head -10 || ls \"C:/Users/gabri/vcpkg/\" 2>/dev/null | head -10 || echo \"vcpkg não encontrado nos caminhos padrão\")",
+      "Read(//c//**)",
+      "Read(//c/Users/gabri/**)",
+      "Bash(where vcpkg *)",
+      "Bash(xargs grep -l \"SceneFramebuffer\")",
+      "Bash(mingw32-make -j8)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Projetos\\\\Github Projects\\\\fractal-engine\" -Depth 0)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(grep -E \"\\\\.\\(h|hpp|cpp\\)$\")",
+      "Bash(rm -rf src/math src/physics src/platform src/renderer src/utils src/world)",
+      "Bash(rm -rf tools tests)",
+      "Bash(rm -rf include/fractal_engine/renderer include/fractal_engine/world)",
+      "Bash(rm -f docs/README.md)",
+      "Bash(rm -f src/core/Engine.cpp src/core/EventSystem.cpp src/core/Time.cpp)",
+      "Bash(rm -f src/graphics/Camera.cpp src/graphics/FrameBuffer.cpp src/graphics/ShaderProgram.cpp)",
+      "Bash(rm -f src/input/Gamepad.cpp src/input/InputManager.cpp src/input/Keyboard.cpp src/input/Mouse.cpp)",
+      "Bash(rm -f src/scene/Scene.cpp src/scene/SceneManager.cpp src/scene/SceneSerializer.cpp)",
+      "Bash(rm -f src/scene/ecs/ComponentPool.cpp src/scene/ecs/Entity.cpp src/scene/ecs/Registry.cpp src/scene/ecs/System.cpp)"
+    ]
+  }
+}

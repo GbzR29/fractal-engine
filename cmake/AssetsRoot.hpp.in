@@ -1,0 +1,3 @@
+#pragma once
+// Auto-gerado por CMake — não editar manualmente
+#define FE_ASSETS_DEFAULT_ROOT "@FE_ASSETS_ROOT_PATH@"

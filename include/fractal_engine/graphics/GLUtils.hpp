@@ -1,27 +1,40 @@
+/**
+ * @file GLUtils.hpp
+ * @brief OpenGL utility helpers: error checking, VAO/VBO/UBO wrappers, and state shortcuts.
+ *
+ * Include this header instead of including OpenGL headers directly in subsystem code.
+ * Debug checks are compiled out in Release builds — no runtime overhead in production.
+ */
 #pragma once
 #include <glad/glad.h>
 #include <string>
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Debug — verificação de erros
+//  Error checking
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Converte GLenum de erro para string legível
+/// @return A human-readable string for an OpenGL error code (e.g. "GL_INVALID_ENUM").
 const char* GLErrorToString(GLenum error);
 
-// Checa erros OpenGL e printa no stderr com arquivo/linha
-// Use via macro GL_CHECK()
+/** @brief Checks for pending OpenGL errors and prints them to @c stderr with file/line context.
+ *  @return @c false if any error was found.
+ *  Prefer the @ref GL_CHECK macro over calling this function directly.
+ */
 bool _GLCheckError(const char* file, int line);
 
+/** @def GL_CHECK(call)
+ *  Wraps an OpenGL call and asserts no error occurred (debug builds only).
+ *  @code GL_CHECK(glBindVertexArray(vao)); @endcode
+ */
 #ifdef _DEBUG
-    #define GL_CHECK(call)  call; _GLCheckError(__FILE__, __LINE__)
+    #define GL_CHECK(call)    call; _GLCheckError(__FILE__, __LINE__)
     #define GL_CHECK_ERRORS() _GLCheckError(__FILE__, __LINE__)
 #else
     #define GL_CHECK(call)    call
     #define GL_CHECK_ERRORS() (void)0
 #endif
 
-// Debug callback do OpenGL 4.3+ (registra em glDebugMessageCallback)
+/// Registers @c glDebugMessageCallback for OpenGL 4.3+ debug output.  Call once after context creation.
 void GLEnableDebugOutput();
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -5,6 +5,14 @@ C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/FractalEngineLib.dir
 C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/FractalEngine.dir
 C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/edit_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/CMakeFiles/rebuild_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/CMakeFiles/edit_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/CMakeFiles/rebuild_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/contrib/zlib/CMakeFiles/edit_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/contrib/zlib/CMakeFiles/rebuild_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/code/CMakeFiles/assimp.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/code/CMakeFiles/edit_cache.dir
+C:/Projetos/Github Projects/fractal-engine/build/include/third_party/assimp/code/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/CMakeFiles/edit_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/core/CMakeFiles/edit_cache.dir
@@ -13,14 +21,6 @@ C:/Projetos/Github Projects/fractal-engine/build/src/graphics/CMakeFiles/edit_ca
 C:/Projetos/Github Projects/fractal-engine/build/src/graphics/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/input/CMakeFiles/edit_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/input/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/math/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/math/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/physics/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/physics/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/platform/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/platform/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/renderer/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/renderer/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/scene/CMakeFiles/edit_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/scene/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/scripting/CMakeFiles/edit_cache.dir
@@ -29,7 +29,3 @@ C:/Projetos/Github Projects/fractal-engine/build/src/audio/CMakeFiles/edit_cache
 C:/Projetos/Github Projects/fractal-engine/build/src/audio/CMakeFiles/rebuild_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/ui/CMakeFiles/edit_cache.dir
 C:/Projetos/Github Projects/fractal-engine/build/src/ui/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/utils/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/utils/CMakeFiles/rebuild_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/world/CMakeFiles/edit_cache.dir
-C:/Projetos/Github Projects/fractal-engine/build/src/world/CMakeFiles/rebuild_cache.dir

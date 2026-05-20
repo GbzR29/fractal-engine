@@ -42,56 +42,49 @@ static const char* s_GridFrag = R"(
 in vec3 vNearPoint;
 in vec3 vFarPoint;
 
+uniform mat4  uView;
+uniform mat4  uProj;
 uniform vec3  uCamPos;
 uniform vec2  uNearFar;   // x=near, y=far
 
 out vec4 FragColor;
 
-// Retorna cor + alpha da grade num ponto do plano XZ
 vec4 Grid(vec3 fragPos3D, float scale)
 {
     vec2 coord = fragPos3D.xz * scale;
-    vec2 deriv = fwidth(coord);          // anti-aliasing automático
+    vec2 deriv = fwidth(coord);
     vec2 grid  = abs(fract(coord - 0.5) - 0.5) / deriv;
     float line = min(grid.x, grid.y);
     float alpha = 1.0 - min(line, 1.0);
 
-    // Eixos X e Z com cores diferentes
     float minX = min(deriv.x, 1.0);
     float minZ = min(deriv.y, 1.0);
     vec4 color = vec4(0.3, 0.3, 0.35, alpha * 0.6);
 
-    // Eixo Z (vermelho)
     if (fragPos3D.x > -minX * 0.5 && fragPos3D.x < minX * 0.5)
         color = vec4(0.85, 0.25, 0.25, 1.0);
-    // Eixo X (azul)
     if (fragPos3D.z > -minZ * 0.5 && fragPos3D.z < minZ * 0.5)
         color = vec4(0.25, 0.40, 0.90, 1.0);
 
     return color;
 }
 
-float ComputeDepth(vec3 pos)
-{
-    vec4 clip = gl_FragCoord;   // não usado aqui — só para referência
-    return pos.y;               // descartado em favor do t
-}
-
 void main()
 {
-    // Ponto de interseção raio-plano Y=0
     float t = -vNearPoint.y / (vFarPoint.y - vNearPoint.y);
-    if (t < 0.0) discard;       // plano atrás da câmera
+    if (t < 0.0) discard;
 
     vec3 fragPos = vNearPoint + t * (vFarPoint - vNearPoint);
 
-    // Fade baseado na distância à câmera
+    // Depth correto a partir da posição world-space — sem isso a grid se sobrepõe à geometria
+    vec4 clip = uProj * uView * vec4(fragPos, 1.0);
+    gl_FragDepth = clamp((clip.z / clip.w) * 0.5 + 0.5, 0.0, 1.0);
+
     float dist  = length(fragPos.xz - uCamPos.xz);
     float fade  = 1.0 - smoothstep(uNearFar.y * 0.3, uNearFar.y * 0.9, dist);
 
-    // Duas escalas: grade fina + grade grossa
-    vec4 g1 = Grid(fragPos, 1.0);    // 1 unidade
-    vec4 g2 = Grid(fragPos, 0.1);    // 10 unidades
+    vec4 g1 = Grid(fragPos, 1.0);
+    vec4 g2 = Grid(fragPos, 0.1);
 
     vec4 color = g1 + g2 * 0.6;
     color.a   *= fade;
